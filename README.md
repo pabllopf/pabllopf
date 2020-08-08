@@ -11,7 +11,11 @@
 <details>
   <summary>Read More</summary>
   <br>
-  <p><i>Siri play ME! by Taylor Swift ft. Brendon Urie 🎶</i><p>
+  <details>
+    <summary>Stats</summary>
+    <br>
+    <p><i>Siri play ME! by Taylor Swift ft. Brendon Urie 🎶</i><p>
+  </details>
   
   <img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
 
