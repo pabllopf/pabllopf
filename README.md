@@ -5,7 +5,7 @@
 <!-- STATS -->
 <p align="center">
   <a href="https://github.com/pabllopf">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=pabllopf&show_icons=true" />
+    <img width="100%" height="180em" src="https://github-readme-stats.vercel.app/api?username=pabllopf&show_icons=true" />
   </a>
 </p>
 
