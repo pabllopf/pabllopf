@@ -1,3 +1,6 @@
+<!-- VISITS -->
+<img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
+
 <!-- HEADER -->
 <img src="https://github.com/pabllopf/pabllopf/blob/master/images/background.png">
 
@@ -9,15 +12,11 @@
 </p>
 
 <details>
-  <summary>### Read More</summary>
-  <br>
-  <details>
-    <summary>Stats</summary>
-    <br>
-    <p><i>Siri play ME! by Taylor Swift ft. Brendon Urie 🎶</i><p>
-  </details>
+  <summary>Read More</summary>
+  <p> I am working in this section...</p>
   
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
+  
+  
 
   - I post random photos and trip snippets at **[VSCO](https://vsco.co/jayehernandez)**. (Look at the Journal's tab!)
   - My go to jam when coding: musicals. Non-stop. ⭐️
