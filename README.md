@@ -1,5 +1,7 @@
 <img src="https://github.com/pabllopf/pabllopf/blob/master/images/background.png">
+
 ### About Me
+
 <p align="left">
   Curious, creative, lover of pursuing excellence in what I do every day, I am ready to start a professional journey marked by these premises and the desire to continue learning.
 </p>
