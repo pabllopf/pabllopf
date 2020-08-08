@@ -8,6 +8,22 @@
   Curious, creative, lover of pursuing excellence in what I do every day, I am ready to start a professional journey marked by these premises and the desire to continue learning.
 </p>
 
+<details>
+  <summary>Read More</summary>
+  <br>
+  <p><i>Siri play ME! by Taylor Swift ft. Brendon Urie 🎶</i><p>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
+
+  - I post random photos and trip snippets at **[VSCO](https://vsco.co/jayehernandez)**. (Look at the Journal's tab!)
+  - My go to jam when coding: musicals. Non-stop. ⭐️
+  - I absolutely adore Eevee, the best Pokemon.
+  
+
+  ![My github stats](https://github-readme-stats.vercel.app/api?username=jayehernandez&show_icons=true)
+  <br><br>
+</details>
+
+
 <!-- CONTACT -->
 <p align="center">
   <a href="https://www.pabllopf.tk/">
@@ -52,5 +68,3 @@
     <img align="center" src="https://visitor-badge.glitch.me/badge?page_id=jayehernandez.visitor-badge">
   </p>
 </p>
-
-<img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/dcd7447c179f5a1131590b6ccba2223e879ab655/readme/bottom.svg" alt="bottom">
