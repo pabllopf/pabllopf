@@ -1,4 +1,4 @@
-<img src="https://github.com/pabllopf/pabllopf/blob/master/images/background.png">
+<img height="130em" src="https://github.com/pabllopf/pabllopf/blob/master/images/background.png">
 
 
 ## hola
