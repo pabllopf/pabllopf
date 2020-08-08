@@ -46,3 +46,5 @@
 <!--
 
 - 🔭 I’m currently working on ...-->
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pabllopf&hide=javascript,html)](https://github.com/anuraghazra/github-readme-stats)
