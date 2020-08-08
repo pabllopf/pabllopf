@@ -2,14 +2,6 @@
 
 <img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
 
-<!-- STATS -->
-<p align="center">
-  <a href="https://github.com/pabllopf">
-    <img src="https://github-readme-stats.vercel.app/api?username=pabllopf&show_icons=true" />
-  </a>
-</p>
-
-
 <!-- CONTACT -->
 <p align="center">
   <a href="https://www.pabllopf.tk/">
@@ -21,9 +13,4 @@
   <a href="https://twitter.com/pabllopf">
     <img alt="Twitter" src="https://img.shields.io/badge/Twitter-pabllopf-blue?style=flat&logo=twitter">
   </a>
-</p>
-
-<p align = "center">
-  <img src = "https://github-readme-stats-9hr7tmt2n.vercel.app/api?username=pabllopf&show_icons=true&theme=radical&line_height=27">
-  <img src = "https://github-readme-stats-9hr7tmt2n.vercel.app/api/top-langs/?username=pabllopf&hide=css,html&theme=tokyonight">
 </p>
