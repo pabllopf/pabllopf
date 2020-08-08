@@ -15,7 +15,6 @@
 
 <img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
 
-
 <details>
   <summary>Some other facts about me-e-e</summary>
   <br>
