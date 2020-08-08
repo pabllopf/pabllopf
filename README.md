@@ -22,5 +22,5 @@
   </a>
   <a href="https://twitter.com/pabllopf">
     <img alt="Twitter" src="https://img.shields.io/badge/Twitter-pabllopf-blue?style=flat&logo=twitter">
-  </a>TK
+  </a>
 </p>
