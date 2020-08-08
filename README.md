@@ -15,12 +15,12 @@
 <!-- CONTACT -->
 <p align="center">
   <a href="https://www.pabllopf.tk/">
-    <img alt="Website" src="https://img.shields.io/badge/Website-pabllopf.me-blue?style=flat&logo=google-chrome">
+    <img alt="Website" src="https://img.shields.io/badge/Website-pabllopf.tk-blue?style=flat&logo=google-chrome">
   </a>
   <a href="https://www.linkedin.com/in/pablo-perdomo-385a0b18a/">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIN-pabllopf%20Raveendran-blue?style=flat&logo=linkedin">
+    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIN-pabllopf-blue?style=flat&logo=linkedin">
   </a>
   <a href="https://twitter.com/pabllopf">
-    <img alt="Twitter" src="https://img.shields.io/badge/Twitter-pabllopf%20R-blue?style=flat&logo=twitter">
-  </a>
+    <img alt="Twitter" src="https://img.shields.io/badge/Twitter-pabllopf-blue?style=flat&logo=twitter">
+  </a>TK
 </p>
