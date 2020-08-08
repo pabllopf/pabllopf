@@ -1,8 +1,5 @@
 <img src="https://github.com/pabllopf/pabllopf/blob/master/images/background.png">
 
-
-## hola
-
 <!-- CONTACT -->
 <p align="center">
   <a href="https://www.pabllopf.tk/">
