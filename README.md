@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+<img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id=Dineshkarthik">
+
 <!-- STATS -->
 <p align="center">
   <a href="https://github.com/pabllopf">
