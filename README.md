@@ -1,12 +1,12 @@
+<!-- HEADER -->
 <img src="https://github.com/pabllopf/pabllopf/blob/master/images/background.png">
 
+<!-- ABOUT -->
 ### About Me
 
 <p align="left">
   Curious, creative, lover of pursuing excellence in what I do every day, I am ready to start a professional journey marked by these premises and the desire to continue learning.
 </p>
-
-
 
 <!-- CONTACT -->
 <p align="center">
@@ -21,12 +21,11 @@
   </a>
 </p>
 
-<img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
-
 <details>
-  <summary>Some other facts about me-e-e</summary>
+  <summary>Read More</summary>
   <br>
   <p><i>Siri play ME! by Taylor Swift ft. Brendon Urie 🎶</i><p>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
 
   - I post random photos and trip snippets at **[VSCO](https://vsco.co/jayehernandez)**. (Look at the Journal's tab!)
   - My go to jam when coding: musicals. Non-stop. ⭐️
