@@ -23,6 +23,8 @@
   <br><br>
 </details>
 
+<hr>
+
 
 <!-- CONTACT -->
 <p align="center">
