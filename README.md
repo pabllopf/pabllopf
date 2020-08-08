@@ -9,7 +9,7 @@
 </p>
 
 <details>
-  <summary>Read More</summary>
+  <summary>### Read More</summary>
   <br>
   <details>
     <summary>Stats</summary>
