@@ -1,7 +1,6 @@
+<img alt="" src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
 # Hi!!, I'm Pablo  
-<p align="left">
-  Welcome, visitor: <img alt="" src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
-</p>
+
 ## hola
 
 <img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
