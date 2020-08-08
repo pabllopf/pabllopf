@@ -22,3 +22,8 @@
     <img alt="Twitter" src="https://img.shields.io/badge/Twitter-pabllopf-blue?style=flat&logo=twitter">
   </a>
 </p>
+
+<p align = "center">
+  <img src = "https://github-readme-stats.vercel.app/api?username=pabllopf&show_icons=true&theme=radical&line_height=27">
+  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=pabllopf&hide=css,html&theme=tokyonight">
+</p>
