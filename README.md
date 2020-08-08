@@ -1,11 +1,10 @@
 <p align="left">
-  <img alt="" src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
+  <img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
 </p>
+
 # Hi!!, I'm Pablo  
 
 ## hola
-
-<img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">
 
 <!-- CONTACT -->
 <p align="center">
