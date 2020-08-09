@@ -11,10 +11,12 @@
   Curious, creative, lover of pursuing excellence in what I do every day, I am ready to start a professional journey marked by these premises and the desire to continue learning.
 </p>
 
+<!-- 
 <details>
   <summary>Read More</summary>
   <p> I am working in this section...</p>
 </details>
+-->
 
 <!-- LINE -->
 <hr>
