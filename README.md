@@ -29,4 +29,7 @@
   <a href="https://www.linkedin.com/in/pablo-perdomo-385a0b18a/">
     <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIN--blue?style=flat&logo=linkedin">
   </a>
+  <a href="https://www.pabllopf.tk/#contact">
+    <img alt="Gmail" src="https://img.shields.io/badge/Gmail--blue?style=flat&logo=gmail">
+  </a>  
 </p>
