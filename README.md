@@ -31,5 +31,8 @@
   </a>
   <a href="https://www.pabllopf.tk/#contact">
     <img alt="Gmail" src="https://img.shields.io/badge/Gmail--blue?style=flat&logo=gmail">
+  </a>
+   <a href="https://www.youtube.com/channel/UCuq6vJXAHf3byMA2hlHm2NQ">
+    <img alt="Gmail" src="https://img.shields.io/badge/YouTube--blue?style=flat&logo=youtube">
   </a>  
 </p>
