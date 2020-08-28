@@ -2,7 +2,7 @@
 <img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">  
 
 <!-- HEADER -->
-<img src="https://github.com/pabllopf/pabllopf/blob/master/images/background.png">
+<img src="https://github.com/pabllopf/pabllopf/blob/master/images/background.gif">
 
 <!-- ABOUT -->
 ### About Me
