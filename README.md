@@ -1,6 +1,3 @@
-<!-- VISITS -->
-<img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">  
-
 <!-- HEADER -->
 <img src="https://github.com/pabllopf/pabllopf/blob/master/images/Banner_1.gif">
 
@@ -23,6 +20,9 @@
 
 <!-- CONTACT -->
 <p align="center">
+  <a href="https://www.pabllopf.tk/">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">  
+  </a>
   <a href="https://www.pabllopf.tk/">
     <img alt="Porfolio" src="https://img.shields.io/badge/Porfolio--blue?style=flat&logo=google-chrome">
   </a>
