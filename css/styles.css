@@ -220,7 +220,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/background.png);
+    background: url(../images/Back.gif);
     background-size: cover;
     padding: 15px;
     overflow: hidden
@@ -270,7 +270,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(19, 44, 61, 0.9);
+    background: rgba(19, 44, 61, 0.85);
     z-index: 1
 }
 
@@ -576,8 +576,13 @@ footer {
 
 #contact {
     padding: 50px 15px;
-    background: #3498db;
+    
+    background:linear-gradient(rgba(19, 44, 61, 0.85) 100%, rgba(19, 44, 61, 0.85)100%),url("../images/Back.gif");
     text-align: center
+}
+
+#contact::before{
+    background: ;
 }
 
 #contact h2 {
