@@ -26,13 +26,10 @@
   <a href="https://www.pabllopf.dev/">
     <img alt="Porfolio" src="https://img.shields.io/badge/Porfolio--blue?style=flat&logo=google-chrome">
   </a>
-  <a href="https://www.linkedin.com/in/pablo-perdomo-385a0b18a/">
+  <a href="https://www.linkedin.com/in/pabllopf">
     <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIN--blue?style=flat&logo=linkedin">
   </a>
-  <a href="https://www.pabllopf.tk/#contact">
+  <a href="https://www.pabllopf.dev/#contact">
     <img alt="Gmail" src="https://img.shields.io/badge/Gmail--blue?style=flat&logo=gmail">
   </a>
-   <a href="https://www.youtube.com/channel/UCuq6vJXAHf3byMA2hlHm2NQ">
-    <img alt="Gmail" src="https://img.shields.io/badge/YouTube--blue?style=flat&logo=youtube">
-  </a>  
 </p>
