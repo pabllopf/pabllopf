@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<img src="https://github.com/pabllopf/pabllopf/blob/master/images/hello.gif">
+<img src="https://github.com/pabllopf/pabllopf/blob/master/images/mi_gif_2.gif">
 
 <!-- ABOUT -->
 ### About Me
