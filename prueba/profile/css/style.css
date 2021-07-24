@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 144, 0, 0.9);
+  background: #010f4c;
 }
 #fh5co-header .display-t,
 .fh5co-cover .display-t {
@@ -1180,21 +1180,21 @@ input[type="text"] {
 }
 
 .btn-warning {
-  background: #f0ad4e;
+  background: #0a1d72;
   color: #fff;
-  border: 2px solid #f0ad4e;
+  border: 2px solid #0a1d72;
 }
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active {
-  background: #eea236 !important;
-  border-color: #eea236 !important;
+  background: #0a1d72 !important;
+  border-color: #0a1d72 !important;
 }
 .btn-warning.btn-outline {
   background: transparent;
-  color: #f0ad4e;
-  border: 2px solid #f0ad4e;
+  color: #0a1d72;
+  border: 2px solid #0a1d72;
 }
 .btn-warning.btn-outline:hover, .btn-warning.btn-outline:focus, .btn-warning.btn-outline:active {
-  background: #f0ad4e;
+  background: #0a1d72;
   color: #fff;
 }
 
