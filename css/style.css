@@ -24,11 +24,37 @@ body {
   transition: .5s ease all
 }
 
+
 .btn-rounded-white:hover {
-  color: #3498db;
-  background: #fff;
-  text-decoration: none
+  transform: translateY(-3px);
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.432);
+  border-color: rgba(255, 255, 255, 0.432);
 }
+
+.btn-rounded-white:active {
+  transform: translateY(-1px);
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+}
+
+.btn-rounded-white:after{
+  transform: translateY(-1px);
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+}
+
+.btn-rounded-white:focus {
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  color: #fff;
+}
+
 
 
 #page {
@@ -58,17 +84,7 @@ body {
   content: "";
 }
 
-a {
-  color: #010f4c;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-a:hover, a:active, a:focus {
-  color: #010f4c;
-  outline: none;
-  text-decoration: none;
-}
+
 
 p {
   margin-bottom: 30px;
@@ -1604,4 +1620,6 @@ Stretchy Nav style - common to:
   -moz-animation-delay: 0.25s;
   animation-delay: 0.25s;
 }
+
+
 
