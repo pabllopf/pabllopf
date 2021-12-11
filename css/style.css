@@ -55,6 +55,14 @@ body {
   color: #fff;
 }
 
+.active-yes{
+  background-color: #3e443d;
+}
+
+.active-no{
+  background-color: rgba(255, 255, 255, 0);
+}
+
 
 
 #page {
@@ -1335,6 +1343,15 @@ Stretchy Nav style - common to:
   pointer-events: none;
   
 }
+
+.cd-stretchy-nav-lang {
+  position: fixed;
+  z-index: 2;
+  top: 30px;
+  left: 1.5%;
+}
+
+
 .cd-stretchy-nav .stretchy-nav-bg {
   /* this is the stretching navigation background */
   position: absolute;
