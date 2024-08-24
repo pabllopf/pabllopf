@@ -1,6 +1,3 @@
-<!-- ABOUT -->
-### About Me
-
 <p align="left">
   Hello!👋
   I am Pablo, a graduate in Computer Engineering specialized in Software Design and Architecture. My main focus is as a Tech Lead or Technical Lead in software development projects.
