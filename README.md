@@ -26,8 +26,8 @@
 
 <!-- Alinear estadísticas en el centro y ocupar todo el ancho -->
 <div align="center" style="display: flex; align-items: center; justify-content: center; gap: 20px; width: 100%;">
-  <img src="https://github-readme-stats.vercel.app/api?username=pabllopf&show_icons=true&theme=radical" style="flex: 1; max-width: auto; height: 205px;" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pabllopf&layout=compact&theme=radical" style="flex: 1; max-width: auto; height: 205px;" />
+  <img src="https://github-readme-stats.vercel.app/api?username=pabllopf&show_icons=true&theme=radical" style="flex: 1; max-width: auto; height: 200px;" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pabllopf&layout=compact&theme=radical" style="flex: 1; max-width: auto; height: 200px;" />
 </div>
 
 <!-- Reducir tamaño de los trofeos -->
