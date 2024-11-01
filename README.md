@@ -1,3 +1,6 @@
+<!-- HEADER -->
+<img src="https://github.com/pabllopf/pabllopf/blob/master/images/mi_gif_2.gif">
+
 <p align="left">
   Hello!👋
   I am Pablo, a graduate in Computer Engineering specialized in Software Design and Architecture. My main focus is as a Tech Lead or Technical Lead in software development projects.
