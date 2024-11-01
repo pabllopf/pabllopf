@@ -1,5 +1,8 @@
-<!-- HEADER -->
-<img src="https://github.com/pabllopf/pabllopf/blob/master/images/mi_gif_2.gif">
+<!-- Encabezado tipo banner -->
+<div align="center">
+  <img src="https://github.com/pabllopf/pabllopf/blob/master/images/mi_gif_2.gif" style="width: 1100px; height: 250px;  object-fit: cover;" alt="Banner Image">
+</div>
+
 
 <p align="left">
   Hello!👋
@@ -20,6 +23,18 @@
   <p> I am working in this section...</p>
 </details>
 -->
+
+<!-- Alinear estadísticas en el centro y ajustar tamaño -->
+<div align="center" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+  <img src="https://github-readme-stats.vercel.app/api?username=pabllopf&show_icons=true&theme=radical" style="height: 180px;" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pabllopf&layout=compact&theme=radical" style="height: 180px;" />
+</div>
+
+<!-- Reducir tamaño de los trofeos -->
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=pabllopf&theme=onedark&row=1&column=8&margin-w=10&margin-h=10" style="transform: scale(0.8);" />
+</div>
+
 
 <!-- LINE -->
 <hr>
