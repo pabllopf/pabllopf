@@ -1,4 +1,12 @@
 {
+  "readMoreText": {
+  "en": "Read more",
+  "es": "Leer más"
+},
+"showLessText": {
+  "en": "Show less",
+  "es": "Mostrar menos"
+},
   "en": {
     "title": "Experience",
     "experienceTitle": "Actuality",

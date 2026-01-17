@@ -67,52 +67,83 @@ async function loadAboutContent(lang) {
 
 async function loadMyExperienceContent(lang) {
     try {
-        const response = await fetch("content/experience.json"); // JSON de experiencia + educación
+        const response = await fetch("content/experience.json");
         const data = await response.json();
-        const content = data[lang] || data[DEFAULT_LANG];
 
-        // Título principal de la sección
-        document.getElementById("resume-title-experience").textContent = content.title;
+        const content = data[lang];
+        if (!content) return console.error(`No data for language: ${lang}`);
 
-        // Heading de Experiencia
-        document.getElementById("experience-title").textContent = content.experienceTitle;
+        const titleEl = document.getElementById("resume-title-experience");
+        const headingEl = document.getElementById("experience-title");
+        const timelineEl = document.getElementById("resume-timeline-experience");
 
-        const timeline = document.getElementById("resume-timeline-experience");
+        if (!titleEl || !headingEl || !timelineEl) {
+            console.error("Missing HTML elements for experience section");
+            return;
+        }
+
+        // Asignar títulos
+        titleEl.textContent = content.title;
+        headingEl.textContent = content.experienceTitle;
 
         // Limpiar items previos
-        const existingItems = timeline.querySelectorAll(".timeline-inverted, .timeline-unverted");
-        existingItems.forEach(item => item.remove());
+        timelineEl.innerHTML = `
+            <li class="timeline-heading text-center animate-box">
+                <div><h3 id="experience-title">${content.experienceTitle}</h3></div>
+            </li>
+        `;
 
-        // Función interna para crear un item (Experiencia o Educación)
-        function createTimelineItem(item, icon = "icon-suitcase", inverted = false) {
+        // Textos del botón desde JSON (nivel superior)
+        const readMoreText = data.readMoreText?.[lang] || "Leer más";
+        const showLessText = data.showLessText?.[lang] || (lang === "es" ? "Mostrar menos" : "Show less");
+
+        function createTimelineItem(item, inverted = false) {
             const li = document.createElement("li");
             li.className = `animate-box ${inverted ? "timeline-inverted" : "timeline-unverted"}`;
 
+            // Convertimos la descripción en un contenedor ocultable
+            const fullDescription = item.description.map(p => `<p>${p}</p>`).join("");
+            const shortDescription = item.description.length > 0 ? `<p>${item.description[0]}</p>` : "";
+
             li.innerHTML = `
-                <div class="timeline-badge"><i class="${icon}"></i></div>
+                <div class="timeline-badge"><i class="icon-suitcase"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h3 class="timeline-title">${item.role || item.title}</h3>
                         <span class="company">${item.company}</span>
                     </div>
                     <div class="timeline-body">
-                        ${item.description.map(p => `<p>${p}</p>`).join("")}
+                        <div class="description-short">${shortDescription}</div>
+                        <div class="description-full" style="display:none;">${fullDescription}</div>
+                        <button class="read-more">${readMoreText}</button>
                     </div>
                 </div>
             `;
+
+            // Añadir funcionalidad al botón
+            const btn = li.querySelector(".read-more");
+            const shortDiv = li.querySelector(".description-short");
+            const fullDiv = li.querySelector(".description-full");
+
+            btn.addEventListener("click", () => {
+                const isExpanded = fullDiv.style.display === "block";
+                fullDiv.style.display = isExpanded ? "none" : "block";
+                shortDiv.style.display = isExpanded ? "block" : "none";
+                btn.textContent = isExpanded ? readMoreText : showLessText;
+            });
+
             return li;
         }
 
-        // Renderizar toda la experiencia
-        content.experience.forEach((item, index) => {
-            const li = createTimelineItem(item, "icon-suitcase", index % 2 === 1);
-            timeline.appendChild(li);
+        content.experience.forEach((item, idx) => {
+            const li = createTimelineItem(item, idx % 2 === 1);
+            timelineEl.appendChild(li);
         });
+
     } catch (err) {
         console.error("Error loading experience.json:", err);
     }
 }
-
 
 
 async function loadMyEducationContent(lang) {
