@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Pabllopf</title>
@@ -11,7 +12,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 
@@ -30,453 +31,182 @@
 	<link rel="stylesheet" href="css/flag-icon.css">
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBC5LX6B6S"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+	<script src="js/app.js"></script>
 
-	gtag('config', 'G-XBC5LX6B6S');
-	</script>
 
-	</head>
-	<body>
-		
+</head>
+
+<body>
+
 	<div class="fh5co-loader"></div>
-	
+
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        HEADER                                                  -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        HEADER                                                  -->
+	<!---------------------------------------------------------------------------------------------------->
 
-	<div id="page">	
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<div class="profile-thumb" style="background: url(images/logo_v4.webp);"></div>
-							<h1><span>Pablo Perdomo Falcón</span></h1>
-							<h3><span>Software Engineer</span></h3>
-							<p>
+	<div id="page">
+		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="display-t js-fullheight">
+							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+
+								<!-- Perfil -->
+								<div class="profile-thumb" style="background: url(images/logo_v4.webp);"></div>
+								<h1><span id="header-name"></span></h1>
+								<h3><span id="header-title"></span></h3>
+
+								<h3>
+									<a id="header-cv" href="#" target="_blank" class="btn-rounded-white" download></a>
+								</h3>
+
 								<ul class="fh5co-social-icons">
-									<li><a href="https://www.linkedin.com/in/pabllopf" target="_blank"><i class="icon-linkedin2"></i></a></li>
-									<li><a href="https://github.com/pabllopf" target="_blank"><i class="icon-github" target="_blank"></i></a></li>
-									<li><a href="#fh5co-consult" ><i class="icon-email"></i></a></li>
-									<li><a href="https://www.instagram.com/pabllopf/" target="_blank" ><i class="icon-instagram"  ></i></a></li>
+									<li><a id="linkedin-link" href="#" target="_blank"><i
+												class="icon-linkedin2"></i></a></li>
+									<li><a id="github-link" href="#" target="_blank"><i class="icon-github"></i></a>
+									</li>
+									<li><a id="email-link" href="#"><i class="icon-email"></i></a></li>
+									<li><a id="instagram-link" href="#" target="_blank"><i
+												class="icon-instagram"></i></a></li>
 								</ul>
-							</p>
 
-							<h3>
-								<a href="files/Pablopf.pdf" target="_blank" class="btn-rounded-white" download>
-									Download Curriculum Vitae
-								</a>
-							</h3>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="btn-group cd-stretchy-nav-lang" role="group">
-			<a href="#"  class="btn btn-default active-yes"><span class="flag-icon flag-icon-gbr"></span></a>
-			<a href="es/index.html" class="btn btn-default active-no"><span class="flag-icon flag-icon-esp"></span></a>
-		</div>
+			<!-- Selector de idiomas -->
+			<div class="btn-group cd-stretchy-nav-lang" role="group">
+				<a href="#" class="btn btn-default active-yes" data-lang="en">
+					<span class="flag-icon flag-icon-gbr"></span>
+				</a>
+				<a href="#" class="btn btn-default active-no" data-lang="es">
+					<span class="flag-icon flag-icon-esp"></span>
+				</a>
+			</div>
 
-		<nav class="cd-stretchy-nav">
-			<a class="cd-nav-trigger" href="#0">
-				<span aria-hidden="true"></span>
-			</a>
-	
-			<ul>
-				<li>
-					<a href="#fh5co-about"><span>About</span></a>
-				</li>
+			<!-- Menú -->
+			<nav class="cd-stretchy-nav">
+				<a class="cd-nav-trigger" href="#0">
+					<span aria-hidden="true"></span>
+				</a>
+				<ul>
+					<li><a href="#fh5co-about" id="menu-about"><span></span></a></li>
+					<li><a href="#fh5co-resume" id="menu-resume"><span></span></a></li>
+					<li><a href="#fh5co-skills" id="menu-skills"><span></span></a></li>
+					<li><a href="#fh5co-consult" id="menu-contact"><span></span></a></li>
+				</ul>
+				<span aria-hidden="true" class="stretchy-nav-bg"></span>
+			</nav>
 
-				<li>
-					<a href="#fh5co-resume"><span>Resumen</span></a>
-				</li>
+		</header>
+	</div>
 
-				<li>
-					<a href="#fh5co-skills"><span>Skills</span></a>
-				</li>
 
-				<li>
-					<a href="#fh5co-consult"><span>Contact</span></a>
-				</li>
-			</ul>
-	
-			<span aria-hidden="true" class="stretchy-nav-bg"></span>
-		</nav>
-	</header>
 
-	
 
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        ABOUT                                                   -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        ABOUT                                                   -->
+	<!---------------------------------------------------------------------------------------------------->
 
-	<div id="fh5co-about" class="animate-box">
+	<section id="fh5co-about" class="animate-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>About Me</h2>
+					<h2 id="about-title"></h2>
 				</div>
 			</div>
+
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Hello!👋</h2>
-					<p>
-						I am Pablo, a graduate in Computer Engineering specialized in Software Design and Architecture. My main focus is as a Tech Lead or Technical Lead in software development projects.
-					</p>
-					<p>
-						I am passionate about project management and hold a master's degree in Project Management, which has provided me with a solid foundation in planning, organizing, and coordinating development teams. Throughout my professional career, I have led teams of between 5 and 10 people, ensuring effective collaboration and achieving established goals. 🧑‍💻📊
-					</p>
-					<p>
-						I consider myself a curious and creative person, always seeking excellence in everything I do. I am committed to continuous learning and stay updated on the latest trends and advancements in the field of computer engineering and software design. 💡💻
-					</p>
-					<p>
-						As a Tech Lead, my focus is on building strong relationships with team members and other professionals, fostering a collaborative and motivating work environment. I work closely with developers, helping to define and analyze business needs and guiding the implementation of effective technical solutions. My goal is to lead with vision, facilitating individual and collective growth to achieve project success. 🤝💼
-					</p>
-					<p>
-						If you wish to get in touch with me, feel free to send me an email at <u>pabloperdomofalcon@gmail.com</u> or a message through LinkedIn. I would be happy to meet you and have conversations about any topic you consider relevant. Let's talk! 😊
-					</p>
+					<h2 id="about-heading"></h2>
+					<div id="about-content"></div>
 				</div>
 			</div>
-			
 		</div>
-	</div>
+	</section>
 
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        RESUMEN                                                 -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        EXPERIENCE                                                 -->
+	<!---------------------------------------------------------------------------------------------------->
 
 	<div id="fh5co-resume" class="fh5co-bg-color">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>My Resume</h2>
+					<h2 id="resume-title-experience"></h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						
+					<ul class="timeline" id="resume-timeline-experience">
+
 						<!---------------------------------------------------------------------------------------------------->
-						<!--                                        Experience                                              -->
+						<!--                                        Experience Heading                                       -->
 						<!---------------------------------------------------------------------------------------------------->
-						
 						<li class="timeline-heading text-center animate-box">
 							<div>
-								<h3>Experience</h3>
+								<h3 id="experience-title"></h3>
 							</div>
 						</li>
-						
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Techlead, B2B Products & Pricing/Demand and Prices Iberia</h3>
-									<span class="company">🏢 Demand and Prices, <b>Endesa Energia S.A.U</b> <br> 🗄️ Permanent contract  <br> 📍 Madrid, Spain <br> 🗓️  Apr 2022 - Present</span>
-								</div>
-								<div class="timeline-body">
-									<p>
-										As a TechLead, I lead the development of technical solutions that address business needs in the creation of products and pricing for the Business-to-Business (B2B) segment.
-									</p>
-									<br />
-									
-									<p>
-									The main functions of the position are:
-									</p>
-									<br />
-									
-									<p>
-									1) Detecting and managing the needs for tools and products.
-									</p>
-									<br />
-									
-									<p>
-									2) Support and follow-up in the management of Corporate Tools, acting as a liaison between Demand and Prices and Digital Solutions Iberia (DSI).
-									</p>
-									<br />
-						
-									<p>
-									3) Analysis, design, implementation, maintenance, and improvement of the departmental tools for Demand and Prices.
-									</p>
-									<br />
-									
-									<p>
-									4) Managing the DevTeam (staffing, planning, development tracking, budgets, etc).
-									</p>
-									<br />
-						
-									<p>
-									5) Analysis, optimization, and automation of Demand and Prices processes.
-									</p>
-									<br />
-						
-									<p>
-									6) Participation in cross-company projects representing Demand and Prices.
-									</p>
-									<br />
-									
-									<p>
-										To be able to perform the above functions with a deep and expert understanding of the energy marketing business, these functions are combined with:
-									</p>
-									<br />
-										<p>
-										1) Calculation and preparation of offers and contracts for B2B clients. Using pricing tools to calculate customized offers, and generating and recording offers and contracts in corporate systems.
-									</p>	
-									<br />
-										<p>
-										2) Comparing products according to each client's needs, monitoring and analyzing competition, simulating alternatives, and evaluating the best option for each client.
-									</p>
-									<br />
-										<p>
-										3) Attention, follow-up, and training of the B2B sales force.
-									</p>
-									<br />
-										<p>
-										4) Collaboration with the B2B team in any other tasks related to the day-to-day support of the sales force, calculation and generation of offers and contracts, negotiation tracking, use of commercial systems, incident correction, etc.
-									</p>
-								</div>
-							</div>
-						</li>
-						
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">TechLead, Demand & Prices Services</h3>
-									<span class="company">🏢 Demand and Prices, <b>Endesa Energia S.A.U</b> <br> 🗄️ Temporary contract  <br> 📍 Madrid, Spain <br> 🗓️  Nov 2021 - Apr 2022 (6 months)</span>
-								</div>
-								<div class="timeline-body">
-									<p>
-										As a TechLead, I led the development of technical solutions that address business needs in the field of corporate or departmental tools and systems.
-									</p>
-									<br />
-									
-									<p>
-									The main functions of the position are:
-									</p>
-									<br />
-									
-									<p>
-									1) Detecting and managing the needs for tools and products.
-									</p>
-									<br />
-									
-									<p>
-									2) Support and follow-up in the management of Corporate Tools, acting as a liaison between Demand and Prices and Digital Solutions Iberia (DSI).
-									</p>
-									<br />
-						
-									<p>
-									3) Analysis, design, implementation, maintenance, and improvement of the departmental tools for Demand and Prices.
-									</p>
-									<br />
-									
-									<p>
-									4) Managing the DevTeam (staffing, planning, development tracking, budgets, etc).
-									</p>
-									<br />
-						
-									<p>
-									5) Analysis, optimization, and automation of Demand and Prices processes.
-									</p>
-									<br />
-						
-									<p>
-									6) Participation in cross-company projects representing Demand and Prices.
-									</p>		
-								</div>
-							</div>
-						</li>
-						
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">TechLead Intern, Demand & Prices Services</h3>
-									<span class="company">🏢 Demand and Prices, <b>Endesa Energia S.A.U</b> <br> 🗄️ Training contract <br> 📍 Madrid, Spain <br> 🗓️  Nov 2020 - Nov 2021 (1 year)</span>
-								</div>
-								<div class="timeline-body">
-									<p>
-										During my internship as a TechLead, I actively participated in the development of a product for advising and serving large clients (B2B), including pre-sales management and post-sales services.
-									</p>
-									<br />
-									<p>
-										Based on this, I had to make decisions, analyze business requirements, act as a liaison between the business and the development team, supervise the budget, design system integrations, participate in database modeling, automate processes, and manage incidents.
-									</p>
-									<br />
-									<p>
-										I also participated, within an 'agile' multidisciplinary team, in the definition, planning, and production launch of an application for issuing recommendations for customer renewal and acquisition.
-									</p>
-									<br />
-									<p>
-										Additionally, I worked on defining and building a framework that allows the models department to reduce the integration time of their models with the systems. It also offers the ability to control the execution of all models through a digital portal, automatically or manually, providing an ideal work environment for developing future integrations.
-									</p>
-								</div>
-							</div>
-						</li>
-						
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Internship as Software Engineer</h3>
-									<span class="company">🏢 Monentia SL <br> 🗄️ Internship contract <br> 📍 Las Palmas de Gran Canaria, Spain <br> 🗓️ Oct 2020 - Nov 2020 (4 months) </span>
-								</div>
-								<div class="timeline-body">
-									<p>
-										I worked with a framework (proprietary to the company) for web/mobile development based on Lambda architecture. Additionally, I was responsible for developing a web/mobile application that included the use of the aforementioned framework and also had a significant data handling (Big Data) component.
-									</p>	
-									<br />
-						
-									<p>
-										I also developed two modules:
-									</p>
-									<br />
-						
-									<p>
-										1. “Sequencer”: responsible for obtaining all COBOL format data from a server and serializing it for subsequent analysis and storage in a SQL Server database.
-									</p>
-									<br />
-						
-									<p>
-										2. "Converter": a rest-type web service that applies a set of predefined templates to transform binary files of various formats into plain text files.
-									</p>
-						
-								</div>
-							</div>
-						</li>
-						
 
 						<!---------------------------------------------------------------------------------------------------->
-						<!--                                        Education                                               -->
+						<!--                                        Experience Items Placeholder                             -->
 						<!---------------------------------------------------------------------------------------------------->
+						<!-- Los items de experiencia se añadirán aquí con JS -->
 
-						<br>
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Education</h3></div>
-						</li>
-
-						<li class="timeline-unverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Master's in Project Management</h3>
-									<span class="company">📍 Universidad Internacional de Valencia <br> ✅ Grade: 8.25/10 <br> 🗓️ October 2022 - June 2023</span>
-									<div class="timeline-body">
-										<p>
-											This program provided me with a solid foundation in business administration and management, focusing on professional techniques and the application of sciences to food and equipment, as well as professional technology.
-										</p>
-										<br />
-										<p>
-											During the master's program, I acquired a deep understanding of the project manager profession and its context, learning to define strategies for project execution. The training emphasized the importance of overseeing all project stages, efficiently coordinating teams, and anticipating potential issues. I also developed skills for optimal distribution of human and material resources, all with the goal of achieving pre-established objectives and ensuring business success in a constantly changing global environment.
-										</p>
-									</div>
-								</div>
-							</div>
-						</li>
-
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Master in Productivity and Personal Development</h3>
-									<span class="company">📍 Universidad de Alcalá <br> ✅ Grade: 8.14/10 <br> 🗓️ December 2020 - December 2021</span>
-									<div class="timeline-body">
-										<p>
-											1. Develop personal skills of interest to the student, preparing them in those transversal professional skills that complement their technical training.
-										</p>
-										<p>
-											2. Enhance student employability in the company, facilitating their entry into the labor market through an initial professional experience and training tailored to market demands.
-										</p>
-										<p>
-											3. Encourage students to apply business planning tools to their personal lives.
-										</p>
-										<p>
-											4. Offer companies the opportunity for qualified young graduates to undertake a period of professional internships in which they develop professional skills complemented by their online studies.
-										</p>
-									</div>
-								</div>
-							</div>
-						</li>
-
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Bachelor's Degree in Software Engineering</h3>
-									<span class="company">📍 Universidad de las Palmas de Gran Canaria (ULPGC) <br> ✅ Final Project: 9.9/10 (Honors) <br> ✅ Internship: 9.9/10 <br> 🗓️ September 2017 - July 2021</span>
-								</div>
-								<div class="timeline-body">
-									<p>
-										The Bachelor's Degree in Computer Engineering trains qualified professionals in the field of Technical Engineering in Computer Science, following the recommendations of the Council of Universities. It provides solid common training in computer science that enables designing, developing, maintaining, and evaluating applications, systems, and computer services using engineering methods, ensuring their reliability, security, and quality.
-									</p>
-									<br>
-									<p>
-										Specialization in Software Engineering:
-									</p>
-									<br> 
-									<p>
-										Focused on the design and development of medium and large-scale applications. It enables the development, maintenance, and evaluation of software services and systems that meet all user requirements, operate reliably and efficiently, are affordable to develop and maintain, and comply with quality standards, applying theories, principles, methods, and practices of Software Engineering.
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">B1 Preliminary: English</h3>
-									<span class="company">📍 Cambridge Assessment English <br> ✅ Grade: 9.5/10 <br> 🗓️ July 2018</span>
-								</div>
-								<div class="timeline-body">
-									<p> Official language certification.</p>
-								</div>
-							</div>
-						</li>
-
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">High School: Science and Technology (L.O.E.)</h3>
-									<span class="company">📍 I.E.S. Amurga <br> ✅ Grade: 9.18/10 <br> 🗓️ September 2015 - July 2017 </span>
-								</div>
-								<div class="timeline-body">
-									<p> Award for the best academic record upon completing the fourth year of Compulsory Secondary Education.</p>
-								</div>
-							</div>
-						</li>
-
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Scientific Robotics Campus</h3>
-									<span class="company"> 📍 Cytema / Universidad de Castilla-La Mancha <br> ✅ Grade: 9.56/10 <br> 🗓️ September 2012 - July 2015</span>
-								</div>
-								<div class="timeline-body">
-									<p> I attended this campus at the end of the first year of high school, sponsored by the Ministry of Education and Science of Spain and the Spanish Foundation for Science and Technology, after being selected among students from all over Spain based on my academic record.
-								</div>
-							</div>
-						</li>
-
-						
-			    	</ul>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
+
+	<!---------------------------------------------------------------------------------------------------->
+	<!--                                        EDUCATION                                                 -->
+	<!---------------------------------------------------------------------------------------------------->
+
+	<div id="fh5co-resume" class="fh5co-bg-color">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2 id="resume-title-education"></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0">
+					<ul class="timeline" id="resume-timeline-education">
+
+						<!---------------------------------------------------------------------------------------------------->
+						<!--                                        Education Heading                                       -->
+						<!---------------------------------------------------------------------------------------------------->
+						<li class="timeline-heading text-center animate-box">
+							<div>
+								<h3 id="education-title"></h3>
+							</div>
+						</li>
+
+						<!---------------------------------------------------------------------------------------------------->
+						<!--                                        Education Items Placeholder                             -->
+						<!---------------------------------------------------------------------------------------------------->
+						<!-- Los items de experiencia se añadirán aquí con JS -->
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	
+
+
+
+
 	<!---------------------------------------------------------------------------------------------------->
 	<!--                                        Services                                                -->
 	<!---------------------------------------------------------------------------------------------------->
@@ -497,7 +227,8 @@
 							</span>
 							<div class="feature-copy">
 								<h3>Resilience</h3>
-								<p>In a situation like the current one, you have to be able to adapt to adverse situations and stay strong, patient and calm in a crisis environment.</p>
+								<p>In a situation like the current one, you have to be able to adapt to adverse
+									situations and stay strong, patient and calm in a crisis environment.</p>
 							</div>
 						</div>
 					</div>
@@ -509,7 +240,8 @@
 							</span>
 							<div class="feature-copy">
 								<h3>Self Learning</h3>
-								<p>It is known as 'growth mindset'. Or what is the same: being willing to face new challenges and with a vision of the future.</p>
+								<p>It is known as 'growth mindset'. Or what is the same: being willing to face new
+									challenges and with a vision of the future.</p>
 							</div>
 						</div>
 
@@ -522,7 +254,8 @@
 							<div class="feature-copy">
 								<h3>Creativity</h3>
 								<p>
-									Creativity is the ability to generate new ideas or concepts, of new associations between known ideas and concepts, which usually produce original solutions.</p>
+									Creativity is the ability to generate new ideas or concepts, of new associations
+									between known ideas and concepts, which usually produce original solutions.</p>
 							</div>
 						</div>
 					</div>
@@ -563,7 +296,8 @@
 							</span>
 							<div class="feature-copy">
 								<h3>Social skills</h3>
-								<p>Social skills are the skills we use everyday to interact and communicate with others.</p>
+								<p>Social skills are the skills we use everyday to interact and communicate with
+									others.</p>
 							</div>
 						</div>
 					</div>
@@ -573,8 +307,8 @@
 	</div>
 
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        SKILSS                                                  -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        SKILSS                                                  -->
+	<!---------------------------------------------------------------------------------------------------->
 
 	<div id="fh5co-skills" class="animate-box">
 		<div class="container">
@@ -583,218 +317,219 @@
 					<h2>Skills</h2>
 				</div>
 			</div>
-			
+
 			<div class="row">
 
 				<h3>Cross-platform applications</h3>
 				<div class="progress-wrap">
 					<h3><span class="name-left">C#</span><span class="value-right">95%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-					aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:95%">
-					</div>
+						<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
+							aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">C++</span><span class="value-right">75%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-					aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-					</div>
+						<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
+							aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">Java</span><span class="value-right">90%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-					aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-					</div>
+						<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
+							aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+						</div>
 					</div>
 				</div>
 			</div>
 
 
-			<div class="row"> 
+			<div class="row">
 				<div class="progress-wrap"></div>
 				<h3>Web</h3>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">HTML / CSS</span><span class="value-right">70%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-					aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+						<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
+							aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+						</div>
 					</div>
-					</div>
-					
+
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">JavaScript</span><span class="value-right">60%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
-					aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-					</div>
+						<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
+							aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">Angular</span><span class="value-right">60%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-					</div>
+						<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">React</span><span class="value-right">50%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-					</div>
+						<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="row"> 
+			<div class="row">
 				<div class="progress-wrap"></div>
 				<h3>Databases</h3>
-				
+
 				<div class="progress-wrap">
 					<h3><span class="name-left">MySQL</span><span class="value-right">75%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-					</div>
+						<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">SQL Server</span><span class="value-right">80%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-					</div>
+						<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">Redshift</span><span class="value-right">70%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-					</div>
+						<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">MongoDB</span><span class="value-right">60%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-					</div>
+						<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+						</div>
 					</div>
 				</div>
-				
+
 			</div>
 
-			<div class="row"> 
+			<div class="row">
 				<div class="progress-wrap"></div>
 				<h3>Analysis and Statistics</h3>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">Python</span><span class="value-right">80%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-					</div>
+						<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">R / R Studio</span><span class="value-right">60%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-					</div>
+						<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">Matlab</span><span class="value-right">60%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-					</div>
+						<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">Power BI</span><span class="value-right">65%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:65%">
-					</div>
+						<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+						</div>
 					</div>
 				</div>
 
 			</div>
 
-			<div class="row"> 
+			<div class="row">
 				<div class="progress-wrap"></div>
 				<h3>Documentation</h3>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">LATEX</span><span class="value-right">85%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-					</div>
+						<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">DOXIGEN</span><span class="value-right">90%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-					</div>
+						<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+						</div>
 					</div>
 				</div>
 
 			</div>
 
-			<div class="row"> 
+			<div class="row">
 				<div class="progress-wrap"></div>
 				<h3>Others</h3>
-				
+
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">Unity 5</span><span class="value-right">90%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-					</div>
+						<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
 					<h3><span class="name-left">Unreal engine</span><span class="value-right">60%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-					</div>
+						<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+						</div>
 					</div>
 				</div>
 
 				<div class="progress-wrap">
-					<h3><span class="name-left">Office (Word / PowerPoint / Excel / Sharepoint / etc)</span><span class="value-right">75%</span></h3>
+					<h3><span class="name-left">Office (Word / PowerPoint / Excel / Sharepoint / etc)</span><span
+							class="value-right">75%</span></h3>
 					<div class="progress">
-					<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-					aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-					</div>
+						<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
+							aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -802,8 +537,8 @@
 	</div>
 
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        Work                                               -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        Work                                               -->
+	<!---------------------------------------------------------------------------------------------------->
 
 	<div id="fh5co-work" class="fh5co-bg-dark">
 		<div class="container">
@@ -814,15 +549,18 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/pabllopf/Snake" target="_blank" class="work" style="background-image: url(images/gameplay.webp);">
+					<a href="https://github.com/pabllopf/Snake" target="_blank" class="work"
+						style="background-image: url(images/gameplay.webp);">
 						<div class="desc">
 							<h3>Snake Game</h3>
-							<span>Clasic snake videogame made with windows form in c# (only available for Windows).</span>
+							<span>Clasic snake videogame made with windows form in c# (only available for
+								Windows).</span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/pabllopf/Mingw64-10.2.0" target="_blank" class="work" style="background-image: url(images/compiler.webp);">
+					<a href="https://github.com/pabllopf/Mingw64-10.2.0" target="_blank" class="work"
+						style="background-image: url(images/compiler.webp);">
 						<div class="desc">
 							<h3>Mingw64-10.2.0</h3>
 							<span>Compiler configured and ready to use (Windows XP, Vista, 7, 8 and 10).</span>
@@ -830,7 +568,8 @@
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/pabllopf/ChatTing" target="_blank" class="work" style="background-image: url(images/giphy.webp);">
+					<a href="https://github.com/pabllopf/ChatTing" target="_blank" class="work"
+						style="background-image: url(images/giphy.webp);">
 						<div class="desc">
 							<h3>ChatTing</h3>
 							<span>Chat with yours friends!!!. Java Enterprise web application.</span>
@@ -838,7 +577,8 @@
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/pabllopf/PlayHarmony" target="_blank" class="work" style="background-image: url(images/music-icons_2x.webp);">
+					<a href="https://github.com/pabllopf/PlayHarmony" target="_blank" class="work"
+						style="background-image: url(images/music-icons_2x.webp);">
 						<div class="desc">
 							<h3>PlayHarmony</h3>
 							<span>Desktop application to play music. Made with Java 8 and Java FX.</span>
@@ -846,7 +586,8 @@
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/pabllopf/Algorithm-Collection" target="_blank" class="work" style="background-image: url(images/algoritmo.webp);">
+					<a href="https://github.com/pabllopf/Algorithm-Collection" target="_blank" class="work"
+						style="background-image: url(images/algoritmo.webp);">
 						<div class="desc">
 							<h3>Algorithm-Collection</h3>
 							<span>Collection of algorithms made in C++.</span>
@@ -855,7 +596,8 @@
 				</div>
 
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/pabllopf/Concurrency-Collection" target="_blank" class="work" style="background-image: url(images/multitask.webp);">
+					<a href="https://github.com/pabllopf/Concurrency-Collection" target="_blank" class="work"
+						style="background-image: url(images/multitask.webp);">
 						<div class="desc">
 							<h3>Concurrency-Collection</h3>
 							<span>Concurrency exercises made in Java 8.</span>
@@ -864,7 +606,8 @@
 				</div>
 
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/pabllopf/Dataset-Animals" target="_blank" class="work" style="background-image: url(images/dataset.webp);">
+					<a href="https://github.com/pabllopf/Dataset-Animals" target="_blank" class="work"
+						style="background-image: url(images/dataset.webp);">
 						<div class="desc">
 							<h3>Datasets</h3>
 							<span>Don't miss the image datasets that I have prepared for machine learning.</span>
@@ -872,7 +615,8 @@
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/pabllopf/SoundRecorder" target="_blank" class="work" style="background-image: url(images/recorder.webp);">
+					<a href="https://github.com/pabllopf/SoundRecorder" target="_blank" class="work"
+						style="background-image: url(images/recorder.webp);">
 						<div class="desc">
 							<h3>SoundRecorder</h3>
 							<span>Sound recorder made with windows form in c# (only available for Windows).</span>
@@ -885,8 +629,8 @@
 
 
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        Post on Medium                                                 -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        Post on Medium                                                 -->
+	<!---------------------------------------------------------------------------------------------------->
 
 	<div id="fh5co-blog">
 		<div class="container">
@@ -899,58 +643,68 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="https://github.com/pabllopf/Alis" target="_blank" class="blog-bg" style="background-image: url(images/Alis.webp);"></a>
+						<a href="https://github.com/pabllopf/Alis" target="_blank" class="blog-bg"
+							style="background-image: url(images/Alis.webp);"></a>
 						<div class="blog-text">
 							<span class="posted_on">Nov 2020 - Jul 2021</span>
-							<h3><a href="https://github.com/pabllopf/Alis" target="_blank" >ALIS</a></h3>
-							<p>Framework for develop videogames (final degree project with 9.9 / 10). Available on MacOs, Linux, Windows. </p>
+							<h3><a href="https://github.com/pabllopf/Alis" target="_blank">ALIS</a></h3>
+							<p>Framework for develop videogames (final degree project with 9.9 / 10). Available on
+								MacOs, Linux, Windows. </p>
 							<ul class="stuff">
 								<li><i class="icon-heart2"></i>+6K</li>
 								<li><i class="icon-eye2"></i>+8k</li>
-								<li><a href="http://www.alisengine.com/" target="_blank">Read More<i class="icon-arrow-right22"></i></a></li>
+								<li><a href="http://www.alisengine.com/" target="_blank">Read More<i
+											class="icon-arrow-right22"></i></a></li>
 							</ul>
-						</div> 
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="https://github.com/pabllopf/Inefable" target="_blank"  class="blog-bg" style="background-image: url(images/inefable.webp);"></a>
+						<a href="https://github.com/pabllopf/Inefable" target="_blank" class="blog-bg"
+							style="background-image: url(images/inefable.webp);"></a>
 						<div class="blog-text">
 							<span class="posted_on">Jan 2019 - Oct 2020</span>
-							<h3><a href="https://github.com/pabllopf/Inefable" target="_blank" >Inefable</a></h3>
-							<p>2D roguelike multiplayer game with arcade components made with unity 5 using C# (available MacOs, Linux, Windows, IOS and Android).</p>
+							<h3><a href="https://github.com/pabllopf/Inefable" target="_blank">Inefable</a></h3>
+							<p>2D roguelike multiplayer game with arcade components made with unity 5 using C#
+								(available MacOs, Linux, Windows, IOS and Android).</p>
 							<ul class="stuff">
 								<li><i class="icon-heart2"></i>+200</li>
 								<li><i class="icon-eye2"></i>+600</li>
-								<li><a href="https://github.com/pabllopf/Inefable" target="_blank" >Read More<i class="icon-arrow-right22"></i></a></li>
+								<li><a href="https://github.com/pabllopf/Inefable" target="_blank">Read More<i
+											class="icon-arrow-right22"></i></a></li>
 							</ul>
-						</div> 
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="https://github.com/pabllopf/IrisStudio" target="_blank" class="blog-bg" style="background-image: url(images/irisStudio.webp);"></a>
+						<a href="https://github.com/pabllopf/IrisStudio" target="_blank" class="blog-bg"
+							style="background-image: url(images/irisStudio.webp);"></a>
 						<div class="blog-text">
 							<span class="posted_on">Mar 2018</span>
-							<h3><a href="https://github.com/pabllopf/IrisStudio" target="_blank">IrisStudio IDE</a></h3>
-							<p>C++ programming environment made with java, javafx, maven and using the mingw compiler for windows (available only for windows).
+							<h3><a href="https://github.com/pabllopf/IrisStudio" target="_blank">IrisStudio IDE</a>
+							</h3>
+							<p>C++ programming environment made with java, javafx, maven and using the mingw
+								compiler for windows (available only for windows).
 							</p>
 							<ul class="stuff">
 								<li><i class="icon-heart2"></i>+20</li>
 								<li><i class="icon-eye2"></i>+50</li>
-								<li><a href="https://github.com/pabllopf/IrisStudio" target="_blank">Read More<i class="icon-arrow-right22"></i></a></li>
+								<li><a href="https://github.com/pabllopf/IrisStudio" target="_blank">Read More<i
+											class="icon-arrow-right22"></i></a></li>
 							</ul>
-						</div> 
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        CONNECT                                                 -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        CONNECT                                                 -->
+	<!---------------------------------------------------------------------------------------------------->
 
 	<div id="fh5co-started" class="fh5co-bg-dark">
 		<div class="overlay"></div>
@@ -958,15 +712,16 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Let's connect on linkedin!</h2>
-					<p><a href="https://www.linkedin.com/in/pabllopf" target="_blank" class="btn btn-default btn-lg">Connect</a></p>
+					<p><a href="https://www.linkedin.com/in/pabllopf" target="_blank"
+							class="btn btn-default btn-lg">Connect</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        CONTACT                                                 -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        CONTACT                                                 -->
+	<!---------------------------------------------------------------------------------------------------->
 
 
 	<div id="fh5co-consult">
@@ -985,13 +740,15 @@
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="email" name="_replyto" id="email" class="form-control" placeholder="Your email address" required>
+						<input type="email" name="_replyto" id="email" class="form-control"
+							placeholder="Your email address" required>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Text..." required></textarea>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control"
+							placeholder="Text..." required></textarea>
 					</div>
 				</div>
 
@@ -1000,20 +757,22 @@
 						<input type="submit" value="Send Message" class="btn btn-primary">
 					</div>
 				</div>
-            </form>
+			</form>
 		</div>
 	</div>
 
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        FOOTER                                                  -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        FOOTER                                                  -->
+	<!---------------------------------------------------------------------------------------------------->
 
 
 	<div id="fh5co-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-24 text-center" >
-					<p>&copy; 2021 General Public License v3.0 <br>Maded by <a href="https://github.com/pabllopf" target="_blank">Pabllopf</a> <br> <a href="https://www.pabllopf.dev/"><img src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf">  </a> </p>
+				<div class="col-md-24 text-center">
+					<p>&copy; 2021 General Public License v3.0 <br>Maded by <a href="https://github.com/pabllopf"
+							target="_blank">Pabllopf</a> <br> <a href="https://www.pabllopf.dev/"><img
+								src="https://visitor-badge.laobi.icu/badge?page_id=pabllopf"> </a> </p>
 				</div>
 			</div>
 		</div>
@@ -1021,14 +780,14 @@
 
 
 	<!---------------------------------------------------------------------------------------------------->
-    <!--                                        GO UP                                                   -->
-    <!---------------------------------------------------------------------------------------------------->
+	<!--                                        GO UP                                                   -->
+	<!---------------------------------------------------------------------------------------------------->
 
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -1041,12 +800,12 @@
 	<script src="js/jquery.stellar.min.js"></script>
 	<!-- Easy PieChart -->
 	<script src="js/jquery.easypiechart.min.js"></script>
-		
+
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
 
 
-	</body>
-</html>
+</body>
 
+</html>

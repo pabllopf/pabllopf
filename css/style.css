@@ -92,6 +92,18 @@ body {
   content: "";
 }
 
+.cd-stretchy-nav-lang {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+}
+
+.cd-stretchy-nav-lang a.active-yes {
+  background: #111;
+  color: #fff;
+}
+
 
 
 p {
@@ -1319,7 +1331,7 @@ input[type="text"] {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url(../images/loader.gif) center no-repeat #fff;
+  background: url(../images/loader.webp) center no-repeat #fff;
 }
 
 .js .animate-box {

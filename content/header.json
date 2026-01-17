@@ -1,0 +1,56 @@
+{
+  "en": {
+    "name": "Pablo Perdomo Falcón",
+    "title": "Software Engineer",
+    "cv": "files/Pablopf.pdf",
+    "cvText": "Download Curriculum Vitae",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/pabllopf",
+      "github": "https://github.com/pabllopf",
+      "email": "mailto:pabloperdomofalcon@gmail.com",
+      "instagram": "https://www.instagram.com/pabllopf/"
+    },
+    "menu": {
+      "about": "About",
+      "resume": "Resume",
+      "skills": "Skills",
+      "contact": "Contact"
+    }
+  },
+  "es": {
+    "name": "Pablo Perdomo Falcón",
+    "title": "Ingeniero de Software",
+    "cv": "files/Pablopf.pdf",
+    "cvText": "Descargar Currículum Vitae",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/pabllopf",
+      "github": "https://github.com/pabllopf",
+      "email": "mailto:pabloperdomofalcon@gmail.com",
+      "instagram": "https://www.instagram.com/pabllopf/"
+    },
+    "menu": {
+      "about": "Sobre mí",
+      "resume": "Resumen",
+      "skills": "Habilidades",
+      "contact": "Contacto"
+    }
+  },
+  "fr": {
+    "name": "Pablo Perdomo Falcón",
+    "title": "Ingénieur Logiciel",
+    "cv": "files/Pablopf.pdf",
+    "cvText": "Télécharger le CV",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/pabllopf",
+      "github": "https://github.com/pabllopf",
+      "email": "mailto:pabloperdomofalcon@gmail.com",
+      "instagram": "https://www.instagram.com/pabllopf/"
+    },
+    "menu": {
+      "about": "À propos",
+      "resume": "CV",
+      "skills": "Compétences",
+      "contact": "Contact"
+    }
+  }
+}

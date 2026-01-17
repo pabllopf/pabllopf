@@ -1,0 +1,108 @@
+{
+  "en": {
+    "title": "Education",
+    "educationTitle": "Actuality",
+    "education": [
+      {
+        "title": "Master's in Project Management",
+        "company": "📍 Universidad Internacional de Valencia <br> ✅ Grade: 8.25/10 <br> 🗓️ October 2022 - June 2023",
+        "description": [
+          "This program provided me with a solid foundation in business administration and management, focusing on professional techniques and the application of sciences to food and equipment, as well as professional technology.",
+          "During the master's program, I acquired a deep understanding of the project manager profession and its context, learning to define strategies for project execution. The training emphasized the importance of overseeing all project stages, efficiently coordinating teams, and anticipating potential issues. I also developed skills for optimal distribution of human and material resources, all with the goal of achieving pre-established objectives and ensuring business success in a constantly changing global environment."
+        ]
+      },
+      {
+        "title": "Master in Productivity and Personal Development",
+        "company": "📍 Universidad de Alcalá <br> ✅ Grade: 8.14/10 <br> 🗓️ December 2020 - December 2021",
+        "description": [
+          "1. Develop personal skills of interest to the student, preparing them in those transversal professional skills that complement their technical training.",
+          "2. Enhance student employability in the company, facilitating their entry into the labor market through an initial professional experience and training tailored to market demands.",
+          "3. Encourage students to apply business planning tools to their personal lives.",
+          "4. Offer companies the opportunity for qualified young graduates to undertake a period of professional internships in which they develop professional skills complemented by their online studies."
+        ]
+      },
+      {
+        "title": "Bachelor's Degree in Software Engineering",
+        "company": "📍 Universidad de las Palmas de Gran Canaria (ULPGC) <br> ✅ Final Project: 9.9/10 (Honors) <br> ✅ Internship: 9.9/10 <br> 🗓️ September 2017 - July 2021",
+        "description": [
+          "The Bachelor's Degree in Computer Engineering trains qualified professionals in the field of Technical Engineering in Computer Science, following the recommendations of the Council of Universities. It provides solid common training in computer science that enables designing, developing, maintaining, and evaluating applications, systems, and computer services using engineering methods, ensuring their reliability, security, and quality.",
+          "Specialization in Software Engineering: Focused on the design and development of medium and large-scale applications. It enables the development, maintenance, and evaluation of software services and systems that meet all user requirements, operate reliably and efficiently, are affordable to develop and maintain, and comply with quality standards, applying theories, principles, methods, and practices of Software Engineering."
+        ]
+      },
+      {
+        "title": "B1 Preliminary: English",
+        "company": "📍 Cambridge Assessment English <br> ✅ Grade: 9.5/10 <br> 🗓️ July 2018",
+        "description": [
+          "Official language certification."
+        ]
+      },
+      {
+        "title": "High School: Science and Technology (L.O.E.)",
+        "company": "📍 I.E.S. Amurga <br> ✅ Grade: 9.18/10 <br> 🗓️ September 2015 - July 2017",
+        "description": [
+          "Award for the best academic record upon completing the fourth year of Compulsory Secondary Education."
+        ]
+      },
+      {
+        "title": "Scientific Robotics Campus",
+        "company": "📍 Cytema / Universidad de Castilla-La Mancha <br> ✅ Grade: 9.56/10 <br> 🗓️ September 2012 - July 2015",
+        "description": [
+          "I attended this campus at the end of the first year of high school, sponsored by the Ministry of Education and Science of Spain and the Spanish Foundation for Science and Technology, after being selected among students from all over Spain based on my academic record."
+        ]
+      }
+    ]
+  },
+  "es": {
+    "title": "Educación",
+    "educationTitle": "Actualidad",
+    "education": [
+      {
+        "title": "Máster en Gestión de Proyectos",
+        "company": "📍 Universidad Internacional de Valencia <br> ✅ Nota: 8.25/10 <br> 🗓️ Octubre 2022 - Junio 2023",
+        "description": [
+          "Este programa me proporcionó una sólida base en administración y gestión de empresas, enfocándose en técnicas profesionales y la aplicación de ciencias a la alimentación y equipos, así como en tecnología profesional.",
+          "Durante el máster adquirí una comprensión profunda de la profesión de gestor de proyectos y su contexto, aprendiendo a definir estrategias para la ejecución de proyectos. La formación enfatizó la importancia de supervisar todas las etapas del proyecto, coordinar equipos de manera eficiente y anticipar posibles problemas. También desarrollé habilidades para la distribución óptima de recursos humanos y materiales, todo con el objetivo de alcanzar los objetivos preestablecidos y garantizar el éxito empresarial en un entorno global en constante cambio."
+        ]
+      },
+      {
+        "title": "Máster en Productividad y Desarrollo Personal",
+        "company": "📍 Universidad de Alcalá <br> ✅ Nota: 8.14/10 <br> 🗓️ Diciembre 2020 - Diciembre 2021",
+        "description": [
+          "1. Desarrollar habilidades personales de interés para el estudiante, preparándolos en aquellas competencias transversales que complementan su formación técnica.",
+          "2. Mejorar la empleabilidad del estudiante en la empresa, facilitando su entrada en el mercado laboral mediante una experiencia profesional inicial y formación adaptada a las demandas del mercado.",
+          "3. Animar a los estudiantes a aplicar herramientas de planificación empresarial en su vida personal.",
+          "4. Ofrecer a las empresas la oportunidad de que jóvenes titulados cualificados realicen un período de prácticas profesionales en el que desarrollen competencias profesionales complementadas con sus estudios online."
+        ]
+      },
+      {
+        "title": "Grado en Ingeniería Informática",
+        "company": "📍 Universidad de Las Palmas de Gran Canaria (ULPGC) <br> ✅ Proyecto Final: 9.9/10 (Matrícula de Honor) <br> ✅ Prácticas: 9.9/10 <br> 🗓️ Septiembre 2017 - Julio 2021",
+        "description": [
+          "El Grado en Ingeniería Informática forma profesionales cualificados en el ámbito de la Ingeniería Técnica en Informática, siguiendo las recomendaciones del Consejo de Universidades. Proporciona una formación común sólida que permite diseñar, desarrollar, mantener y evaluar aplicaciones, sistemas y servicios informáticos utilizando métodos de ingeniería, garantizando su fiabilidad, seguridad y calidad.",
+          "Especialización en Ingeniería del Software: Enfocada en el diseño y desarrollo de aplicaciones de mediano y gran tamaño. Permite el desarrollo, mantenimiento y evaluación de servicios y sistemas de software que cumplen todos los requisitos del usuario, operan de manera fiable y eficiente, son asequibles de desarrollar y mantener, y cumplen con los estándares de calidad, aplicando teorías, principios, métodos y prácticas de la Ingeniería del Software."
+        ]
+      },
+      {
+        "title": "B1 Preliminary: Inglés",
+        "company": "📍 Cambridge Assessment English <br> ✅ Nota: 9.5/10 <br> 🗓️ Julio 2018",
+        "description": [
+          "Certificación oficial de idioma."
+        ]
+      },
+      {
+        "title": "Bachillerato: Ciencia y Tecnología (L.O.E.)",
+        "company": "📍 I.E.S. Amurga <br> ✅ Nota: 9.18/10 <br> 🗓️ Septiembre 2015 - Julio 2017",
+        "description": [
+          "Premio al mejor expediente académico al completar el cuarto curso de Educación Secundaria Obligatoria."
+        ]
+      },
+      {
+        "title": "Campus de Robótica Científica",
+        "company": "📍 Cytema / Universidad de Castilla-La Mancha <br> ✅ Nota: 9.56/10 <br> 🗓️ Septiembre 2012 - Julio 2015",
+        "description": [
+          "Asistí a este campus al final del primer año de la ESO, patrocinado por el Ministerio de Educación y Ciencia de España y la Fundación Española para la Ciencia y la Tecnología, tras ser seleccionado entre estudiantes de toda España en base a mi expediente académico."
+        ]
+      }
+    ]
+  }
+}
