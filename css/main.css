@@ -293,3 +293,44 @@ textarea.input1 {
     opacity: 1;
   }
 }
+
+.project-platforms {
+  display: flex;
+  justify-content: flex-start; /* alineadas a la izquierda */
+  flex-wrap: nowrap;           /* una sola fila */
+  margin: 1px 0;
+  gap: 4px;
+  overflow: hidden;            /* ocultamos cualquier desbordamiento */
+}
+
+.project-platform {
+  flex: 1 1 auto;               /* se encogen proporcionalmente */
+  min-width: 0;                 /* permite que se reduzcan más allá de su contenido */
+  text-align: center;
+  white-space: nowrap;          /* evita salto de línea dentro de la caja */
+  overflow: hidden;             /* corta cualquier exceso de contenido */
+  text-overflow: ellipsis;      /* agrega "..." si el texto se queda corto */
+  border: 1px solid #ccc;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: clamp(6px, 1vw, 10px); /* fuente que se ajusta a la pantalla */
+  background-color: #f8f8f8;
+  box-sizing: border-box;       /* incluye padding en ancho total */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;                     /* espacio entre iconos si hay varios */
+}
+
+/* Forzamos tamaño máximo a todos los SVG e icon fonts dentro */
+.project-platform svg,
+.project-platform i {
+  width: 1.5em;       /* igual que la altura de la fuente */
+  height: 1.5em;
+  max-width: 100%;  /* que no desborde la caja */
+  max-height: 100%;
+  vertical-align: text-top;
+  fill: currentColor; /* el SVG toma el color del texto */
+}
+
+
