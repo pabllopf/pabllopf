@@ -1,0 +1,18 @@
+{
+  "en": {
+    "title": "Contact",
+    "emailPlaceholder": "Your email address",
+    "emailValidate": "Valid email is required: ex@abc.xyz",
+    "subject": "Contact request from personal website",
+    "messagePlaceholder": "Message",
+    "button": "Send Email"
+  },
+  "es": {
+    "title": "Contacto",
+    "emailPlaceholder": "Tu correo electrónico",
+    "emailValidate": "Se requiere un correo válido: ex@abc.xyz",
+    "subject": "Solicitud de contacto desde mi web personal",
+    "messagePlaceholder": "Mensaje",
+    "button": "Enviar Email"
+  }
+}

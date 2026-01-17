@@ -163,6 +163,34 @@ async function loadMyEducationContent(lang) {
 }
 
 
+async function loadContactContent(lang) {
+	try {
+		const response = await fetch("content/contact.json");
+		const data = await response.json();
+		const content = data[lang] || data[DEFAULT_LANG];
+
+		document.getElementById("contact-title").textContent = content.title;
+
+		const emailInput = document.getElementById("email");
+		emailInput.placeholder = content.emailPlaceholder;
+
+		document.getElementById("contact-email-validate")
+			.setAttribute("data-validate", content.emailValidate);
+
+		document.getElementById("contact-subject").value = content.subject;
+
+		document.getElementById("contact-message").placeholder = content.messagePlaceholder;
+
+		document.getElementById("contact-button-text").innerHTML = `
+			${content.button} <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+		`;
+
+	} catch (err) {
+		console.error("Error loading contact.json:", err);
+	}
+}
+
+
 
 
 // Marca el botón activo
@@ -181,6 +209,7 @@ function initLanguageSelector() {
     loadAboutContent(initialLang);
     loadMyExperienceContent(initialLang);
     loadMyEducationContent(initialLang);
+    loadContactContent(initialLang);
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -191,6 +220,7 @@ function initLanguageSelector() {
             loadAboutContent(lang);
             loadMyExperienceContent(lang);
             loadMyEducationContent(lang);
+            loadContactContent(lang);
             setActiveLangButton(lang);
         });
     });

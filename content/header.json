@@ -34,23 +34,5 @@
       "skills": "Habilidades",
       "contact": "Contacto"
     }
-  },
-  "fr": {
-    "name": "Pablo Perdomo Falcón",
-    "title": "Ingénieur Logiciel",
-    "cv": "files/Pablopf.pdf",
-    "cvText": "Télécharger le CV",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/pabllopf",
-      "github": "https://github.com/pabllopf",
-      "email": "mailto:pabloperdomofalcon@gmail.com",
-      "instagram": "https://www.instagram.com/pabllopf/"
-    },
-    "menu": {
-      "about": "À propos",
-      "resume": "CV",
-      "skills": "Compétences",
-      "contact": "Contact"
-    }
   }
 }
