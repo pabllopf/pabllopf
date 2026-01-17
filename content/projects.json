@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "repo": "Alis",
+      "image": "images/Alis.webp"
+    },
+    {
+      "repo": "Inefable",
+      "image": "images/inefable.webp"
+    },
+    {
+      "repo": "IrisStudio",
+      "image": "images/irisStudio.webp"
+    }
+  ]
+}

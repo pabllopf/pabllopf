@@ -191,6 +191,67 @@ async function loadContactContent(lang) {
 }
 
 
+async function loadProjects() {
+  try {
+    const res = await fetch("content/projects.json");
+    const config = await res.json();
+
+    const projectsContainer = document.getElementById("projects-list");
+    projectsContainer.innerHTML = ""; // limpiar previo
+
+    const requests = config.projects.map(async projectConfig => {
+      const apiUrl = `https://api.github.com/repos/pabllopf/${projectConfig.repo}`;
+      const repoRes = await fetch(apiUrl);
+      const repoData = await repoRes.json();
+
+      return {
+        ...projectConfig,
+        name: repoData.name,
+        description: repoData.description,
+        stars: repoData.stargazers_count,
+        forks: repoData.forks_count,
+        updated: repoData.updated_at,
+        url: repoData.html_url
+      };
+    });
+
+    const projects = await Promise.all(requests);
+
+    // Renderizar
+    projects.forEach(proj => {
+      const div = document.createElement("div");
+      div.className = "col-md-4";
+
+      // Fecha legible
+      const updatedDate = new Date(proj.updated).toLocaleDateString();
+
+      div.innerHTML = `
+        <div class="fh5co-blog animate-box">
+          <a href="${proj.url}" target="_blank" class="blog-bg" style="background-image: url(${proj.image});"></a>
+          <div class="blog-text">
+            <span class="posted_on">${updatedDate}</span>
+            <h3><a href="${proj.url}" target="_blank">${proj.name}</a></h3>
+            <p>${proj.description || ""}</p>
+
+            <ul class="stuff">
+              <li><i class="icon-heart2"></i>${proj.stars}</li>
+              <li><i class="icon-eye2"></i>${proj.forks}</li>
+              <li><a href="${proj.url}" target="_blank">
+                  View Repo <i class="icon-arrow-right22"></i>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      `;
+
+      projectsContainer.appendChild(div);
+    });
+
+  } catch (err) {
+    console.error("Error loading projects:", err);
+  }
+}
+
 
 
 // Marca el botón activo
@@ -210,6 +271,7 @@ function initLanguageSelector() {
     loadMyExperienceContent(initialLang);
     loadMyEducationContent(initialLang);
     loadContactContent(initialLang);
+    loadProjects();
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -221,6 +283,7 @@ function initLanguageSelector() {
             loadMyExperienceContent(lang);
             loadMyEducationContent(lang);
             loadContactContent(lang);
+            loadProjects();
             setActiveLangButton(lang);
         });
     });
