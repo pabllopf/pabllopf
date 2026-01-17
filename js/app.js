@@ -114,6 +114,7 @@ async function loadMyExperienceContent(lang) {
 }
 
 
+
 async function loadMyEducationContent(lang) {
     try {
         const response = await fetch("content/education.json"); // JSON de experiencia + educación
@@ -162,6 +163,43 @@ async function loadMyEducationContent(lang) {
     }
 }
 
+async function loadCertifications(lang) {
+  try {
+    const res = await fetch("content/certification.json");
+    const data = await res.json();
+
+    // Título y subtítulo
+    document.getElementById("certifications-title").textContent =
+      data.certificationsSection?.title?.[lang] || data.certificationsSection?.title?.["en"];
+    document.getElementById("certifications-subtitle").textContent =
+      data.certificationsSection?.subtitle?.[lang] || data.certificationsSection?.subtitle?.["en"];
+
+    const container = document.getElementById("certifications-list");
+    container.innerHTML = "";
+
+    data.certifications.forEach(cert => {
+      const div = document.createElement("div");
+      div.className = "col-md-4 text-center col-padding animate-box";
+      div.innerHTML = `
+        <a href="${cert.url}" target="_blank" class="work" style="background-image: url(${cert.image});">
+          <div class="desc">
+            <h3>${cert.name?.[lang] || cert.name?.["en"]}</h3>
+            <span>${cert.description?.[lang] || cert.description?.["en"]}</span>
+          </div>
+        </a>
+      `;
+      container.appendChild(div);
+    });
+
+  } catch (err) {
+    console.error("Error loading certifications:", err);
+  }
+}
+
+// Ejemplo de uso
+loadCertifications("en"); // o "es"
+
+
 // Mapa de plataformas a SVG
 const platformIcons = {
   "Windows": `<span class="project-platform"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M96 157.7L279.6 132.4L279.6 309.8L96 309.8L96 157.7zM96 482.3L279.6 507.6L279.6 332.4L96 332.4L96 482.3zM299.8 510.3L544 544L544 332.4L299.8 332.4L299.8 510.3zM299.8 129.7L299.8 309.8L544 309.8L544 96L299.8 129.7z"/></svg> </span>`,
@@ -176,26 +214,45 @@ async function loadProjects(lang) {
     const res = await fetch("content/projects.json");
     const config = await res.json();
 
-    document.getElementById("projects-title").textContent = config.projectsSection?.title?.[lang] || config.projectsSection?.title?.["en"];
-    document.getElementById("projects-subtitle").textContent = config.projectsSection?.subtitle?.[lang] || config.projectsSection?.subtitle?.["en"];
+    document.getElementById("projects-title").textContent =
+      config.projectsSection?.title?.[lang] || config.projectsSection?.title?.["en"];
+    document.getElementById("projects-subtitle").textContent =
+      config.projectsSection?.subtitle?.[lang] || config.projectsSection?.subtitle?.["en"];
 
     const projectsContainer = document.getElementById("projects-list");
     projectsContainer.innerHTML = "";
 
-    config.projects.forEach(proj => {
+    config.projects.forEach((proj, index) => {
       const div = document.createElement("div");
+      div.className = "col-md-4";
 
-      // Convertir nombres de plataforma a iconos
+      // Plataformas
       const platformsHTML = (proj.platforms || [])
         .map(p => platformIcons[p] || p)
         .join("");
 
+      // Descripción
       const description = proj.description?.[lang] || proj.description?.["en"] || "";
 
-      div.className = "col-md-4";
+      // Generar carrusel si hay más de 1 imagen
+      let imagesHTML = "";
+      if (proj.images && proj.images.length > 1) {
+        imagesHTML = `
+          <div class="project-carousel" id="carousel-${index}">
+            ${proj.images.map((img, i) => `
+              <div class="carousel-slide" style="background-image: url(${img}); ${i === 0 ? 'display:block;' : ''}"></div>
+            `).join("")}
+            <button class="carousel-prev" onclick="prevSlide(${index})">&#10094;</button>
+            <button class="carousel-next" onclick="nextSlide(${index})">&#10095;</button>
+          </div>
+        `;
+      } else {
+        imagesHTML = `<a href="${proj.url}" target="_blank" class="blog-bg" style="background-image: url(${proj.images[0]});"></a>`;
+      }
+
       div.innerHTML = `
         <div class="fh5co-blog animate-box">
-          <a href="${proj.url}" target="_blank" class="blog-bg" style="background-image: url(${proj.image});"></a>
+          ${imagesHTML}
           <div class="blog-text">
             <div class="project-platforms">${platformsHTML}</div>
             <h3><a href="${proj.url}" target="_blank">${proj.name}</a></h3>
@@ -214,12 +271,30 @@ async function loadProjects(lang) {
           </div>
         </div>
       `;
+
       projectsContainer.appendChild(div);
     });
 
   } catch (err) {
     console.error("Error loading projects:", err);
   }
+}
+
+// Carrusel JS simple
+function nextSlide(index) {
+  const carousel = document.getElementById(`carousel-${index}`);
+  const slides = carousel.querySelectorAll(".carousel-slide");
+  let current = Array.from(slides).findIndex(slide => slide.style.display === "block");
+  slides[current].style.display = "none";
+  slides[(current + 1) % slides.length].style.display = "block";
+}
+
+function prevSlide(index) {
+  const carousel = document.getElementById(`carousel-${index}`);
+  const slides = carousel.querySelectorAll(".carousel-slide");
+  let current = Array.from(slides).findIndex(slide => slide.style.display === "block");
+  slides[current].style.display = "none";
+  slides[(current - 1 + slides.length) % slides.length].style.display = "block";
 }
 
 
@@ -268,6 +343,7 @@ function initLanguageSelector() {
     loadMyEducationContent(initialLang);
     loadContactContent(initialLang);
     loadProjects(initialLang);
+    loadCertifications(initialLang);
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -280,6 +356,7 @@ function initLanguageSelector() {
             loadMyEducationContent(lang);
             loadContactContent(lang);
             loadProjects(lang);
+            loadCertifications(lang);
             setActiveLangButton(lang);
         });
     });

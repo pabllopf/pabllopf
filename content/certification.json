@@ -1,0 +1,50 @@
+{
+  "certificationsSection": {
+    "title": {
+      "en": "Certifications",
+      "es": "Certificaciones"
+    },
+    "subtitle": {
+      "en": "Professional certifications I have earned to enhance my skills.",
+      "es": "Certificaciones profesionales que he obtenido para potenciar mis habilidades."
+    }
+  },
+  "certifications": [
+    {
+      "name": {
+        "en": "Product Owner",
+        "es": "Product Owner"
+      },
+      "description": {
+        "en": "Certified Product Owner, skilled in managing backlogs and driving value for agile projects.",
+        "es": "Product Owner certificado, experto en gestionar backlogs y generar valor en proyectos ágiles."
+      },
+      "image": "images/product-owner.webp",
+      "url": "#"
+    },
+    {
+      "name": {
+        "en": "Scrum Master",
+        "es": "Scrum Master"
+      },
+      "description": {
+        "en": "Certified Scrum Master, experienced in facilitating agile teams and ensuring smooth sprint execution.",
+        "es": "Scrum Master certificado, con experiencia facilitando equipos ágiles y asegurando la ejecución de sprints."
+      },
+      "image": "images/scrum-master.webp",
+      "url": "#"
+    },
+    {
+      "name": {
+        "en": "Kanvas",
+        "es": "Kanvas"
+      },
+      "description": {
+        "en": "Certified in Kanvas methodology, focused on strategic planning and business model design.",
+        "es": "Certificado en metodología Kanvas, enfocado en planificación estratégica y diseño de modelos de negocio."
+      },
+      "image": "images/kanvas.webp",
+      "url": "#"
+    }
+  ]
+}
