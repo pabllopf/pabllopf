@@ -26,14 +26,6 @@
         "desc": "Coordinación y mentoring de equipos de desarrollo.",
         "result": "Equipos más autónomos y entregas más eficientes.",
         "tech": "Git, Jenkins, Azure DevOps"
-      },
-      {
-        "tag": "Cloud",
-        "icon": "☁️",
-        "title": "Despliegue de microservicios en Azure",
-        "desc": "Automatización y escalabilidad de servicios críticos.",
-        "result": "Mayor resiliencia y reducción de tiempos de caída.",
-        "tech": "Azure, Docker, CI/CD"
       }
     ]
   },
@@ -65,14 +57,6 @@
         "desc": "Technical mentoring and coordination of development teams.",
         "result": "Higher delivery efficiency and team autonomy.",
         "tech": "Git, Jenkins, Azure DevOps"
-      },
-      {
-        "tag": "Cloud",
-        "icon": "☁️",
-        "title": "Microservices deployment on Azure",
-        "desc": "Scalable and automated cloud service setup.",
-        "result": "Increased system resilience and uptime.",
-        "tech": "Azure, Docker, CI/CD"
       }
     ]
   }
