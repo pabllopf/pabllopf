@@ -371,69 +371,73 @@ async function loadRecommendationLetters(lang) {
 
 
 async function loadTestimonials(lang) {
-  try {
-    const res = await fetch("content/testimonials.json");
-    const data = await res.json();
-    const content = data[lang];
-    if (!content) return console.error(`No data for language: ${lang}`);
+    try {
+        const res = await fetch("content/testimonials.json");
+        const data = await res.json();
+        const content = data[lang];
+        if (!content) return console.error(`No data for language: ${lang}`);
 
-    document.getElementById("pm-testimonials-title").textContent = content.title;
+        document.getElementById("pm-testimonials-title").textContent = content.title;
 
-    const carousel = document.getElementById("pm-testimonials-carousel");
-    carousel.innerHTML = "";
+        const carousel = document.getElementById("pm-testimonials-carousel");
+        carousel.innerHTML = "";
 
-    content.testimonials.forEach(t => {
-      const div = document.createElement("div");
-      div.className = "pm-testimonial-card";
-      div.innerHTML = `
-        <img src="${t.image || 'images/default-user.png'}" alt="${t.name}" class="testimonial-img">
-        <div class="testimonial-content">
-          <div class="testimonial-header">
-            <h3>${t.name}</h3>
-            <div class="testimonial-position-company">${t.position} | ${t.company ? t.company : ""} | ${t.date || ""}</div>
-          </div>
-          <p>"${t.comment}"</p>
-        </div>
-      `;
-      carousel.appendChild(div);
-    });
+        content.testimonials.forEach(t => {
+            const div = document.createElement("div");
+            div.className = "pm-testimonial-card";
+            div.innerHTML = `
+    <div class="testimonial-left">
+      <img src="${t.image || 'images/default-user.png'}" alt="${t.name}" class="testimonial-img">
+      <div class="testimonial-info">
+        <h3>${t.name}</h3>
+        <div class="testimonial-position-company">${t.position}${t.company ? " | " + t.company : ""}</div>
+        <div class="testimonial-date">${t.date || ""}</div>
+      </div>
+    </div>
+    <div class="testimonial-right">
+      <p>"${t.comment}"</p>
+    </div>
+  `;
+            carousel.appendChild(div);
+        });
 
-    const wrapper = document.querySelector(".pm-testimonials-wrapper");
-    let autoScroll = 0;
-    const speed = 0.5;
-    let isManual = false;
 
-    function scrollLoop() {
-      if (!isManual) {
-        autoScroll += speed;
-        if (autoScroll >= carousel.scrollWidth - wrapper.clientWidth) autoScroll = 0;
-        wrapper.scrollLeft = autoScroll;
-      }
-      requestAnimationFrame(scrollLoop);
+        const wrapper = document.querySelector(".pm-testimonials-wrapper");
+        let autoScroll = 0;
+        const speed = 0.5;
+        let isManual = false;
+
+        function scrollLoop() {
+            if (!isManual) {
+                autoScroll += speed;
+                if (autoScroll >= carousel.scrollWidth - wrapper.clientWidth) autoScroll = 0;
+                wrapper.scrollLeft = autoScroll;
+            }
+            requestAnimationFrame(scrollLoop);
+        }
+        requestAnimationFrame(scrollLoop);
+
+        // Flechas funcionales
+        const leftBtn = document.getElementById("pm-testimonials-left");
+        const rightBtn = document.getElementById("pm-testimonials-right");
+        const cardWidth = carousel.querySelector(".pm-testimonial-card").offsetWidth + 20;
+
+        leftBtn.addEventListener("click", () => {
+            isManual = true;
+            wrapper.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+        rightBtn.addEventListener("click", () => {
+            isManual = true;
+            wrapper.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+
+        // Modo manual al pasar ratón sobre wrapper
+        wrapper.addEventListener("mouseenter", () => { isManual = true; });
+        wrapper.addEventListener("mouseleave", () => { isManual = false; });
+
+    } catch (err) {
+        console.error("Error loading testimonials:", err);
     }
-    requestAnimationFrame(scrollLoop);
-
-    // Flechas funcionales
-    const leftBtn = document.getElementById("pm-testimonials-left");
-    const rightBtn = document.getElementById("pm-testimonials-right");
-    const cardWidth = carousel.querySelector(".pm-testimonial-card").offsetWidth + 20;
-
-    leftBtn.addEventListener("click", () => {
-      isManual = true;
-      wrapper.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    rightBtn.addEventListener("click", () => {
-      isManual = true;
-      wrapper.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
-
-    // Modo manual al pasar ratón sobre wrapper
-    wrapper.addEventListener("mouseenter", () => { isManual = true; });
-    wrapper.addEventListener("mouseleave", () => { isManual = false; });
-
-  } catch (err) {
-    console.error("Error loading testimonials:", err);
-  }
 }
 
 
