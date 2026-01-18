@@ -1,0 +1,50 @@
+{
+  "es": {
+    "title": "Hobbies & Juegos",
+    "subtitle": "Mis proyectos personales y juegos publicados",
+    "hobbies": [
+      {
+        "title": "Pixel Quest",
+        "description": "Un juego indie de plataformas con mecánicas clásicas y niveles desafiantes.",
+        "icon": "🎮",
+        "url": "https://example.com/pixel-quest"
+      },
+      {
+        "title": "Space Miner",
+        "description": "Juego de estrategia espacial donde gestionas recursos y combates en la galaxia.",
+        "icon": "🪐",
+        "url": "https://example.com/space-miner"
+      },
+      {
+        "title": "Dungeon Runner",
+        "description": "Un roguelike con mazmorras generadas proceduralmente y enemigos únicos.",
+        "icon": "⚔️",
+        "url": "https://example.com/dungeon-runner"
+      }
+    ]
+  },
+  "en": {
+    "title": "Hobbies & Games",
+    "subtitle": "My personal projects and published games",
+    "hobbies": [
+      {
+        "title": "Pixel Quest",
+        "description": "An indie platformer with classic mechanics and challenging levels.",
+        "icon": "🎮",
+        "url": "https://example.com/pixel-quest"
+      },
+      {
+        "title": "Space Miner",
+        "description": "A space strategy game where you manage resources and combat in the galaxy.",
+        "icon": "🪐",
+        "url": "https://example.com/space-miner"
+      },
+      {
+        "title": "Dungeon Runner",
+        "description": "A roguelike with procedurally generated dungeons and unique enemies.",
+        "icon": "⚔️",
+        "url": "https://example.com/dungeon-runner"
+      }
+    ]
+  }
+}

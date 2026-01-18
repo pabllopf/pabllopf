@@ -374,32 +374,71 @@ async function loadAwards(lang) {
   try {
     const res = await fetch("content/awards.json");
     const data = await res.json();
+
     const content = data[lang];
     if (!content) return console.error(`No data for language: ${lang}`);
 
     document.getElementById("awards-title").textContent = content.title;
+    document.getElementById("awards-heading").textContent = content.awardsHeading;
 
-    const timeline = document.getElementById("awards-timeline");
-    timeline.innerHTML = "";
+    const timelineEl = document.getElementById("awards-timeline");
+    timelineEl.innerHTML = `
+      <li class="timeline-heading text-center animate-box">
+        <div><h3 id="awards-heading">${content.awardsHeading}</h3></div>
+      </li>
+    `;
 
-    content.awards.forEach(a => {
+    const readMoreText = data.readMoreText?.[lang] || "Leer más";
+    const showLessText = data.showLessText?.[lang] || (lang === "es" ? "Mostrar menos" : "Show less");
+
+    function createTimelineItem(item, inverted = false) {
       const li = document.createElement("li");
-      li.className = "timeline-item animate-box";
+      li.className = `animate-box ${inverted ? "timeline-inverted" : "timeline-unverted"}`;
+
+      const fullDesc = item.description.map(p => `<p>${p}</p>`).join("");
+      const shortDesc = item.description.length > 0 ? `<p>${item.description[0]}</p>` : "";
+
       li.innerHTML = `
-        <div class="timeline-badge"></div>
+        <div class="timeline-badge"><i class="icon-trophy"></i></div>
         <div class="timeline-panel">
-          <h3>${a.title}</h3>
-          <span class="timeline-institution">${a.institution} · ${a.date}</span>
-          <p>${a.description}</p>
+          <div class="timeline-heading">
+            <h3 class="timeline-title">${item.title}</h3>
+            <span class="timeline-institution">${item.institution} · ${item.date}</span>
+          </div>
+          <div class="timeline-body">
+            <div class="description-short">${shortDesc}</div>
+            <div class="description-full" style="display:none;">${fullDesc}</div>
+            ${item.description.length > 1 ? `<button class="read-more">${readMoreText}</button>` : ""}
+          </div>
         </div>
       `;
-      timeline.appendChild(li);
+
+      const btn = li.querySelector(".read-more");
+      if (btn) {
+        const shortDiv = li.querySelector(".description-short");
+        const fullDiv = li.querySelector(".description-full");
+
+        btn.addEventListener("click", () => {
+          const isExpanded = fullDiv.style.display === "block";
+          fullDiv.style.display = isExpanded ? "none" : "block";
+          shortDiv.style.display = isExpanded ? "block" : "none";
+          btn.textContent = isExpanded ? readMoreText : showLessText;
+        });
+      }
+
+      return li;
+    }
+
+    content.awards.forEach((item, idx) => {
+      const li = createTimelineItem(item, idx % 2 === 1);
+      timelineEl.appendChild(li);
     });
 
   } catch (err) {
     console.error("Error loading awards:", err);
   }
 }
+
 
 
 
@@ -552,6 +591,39 @@ async function loadCoursesCarousel(lang) {
     } catch (err) {
         console.error("Error loading courses:", err);
     }
+}
+
+
+
+async function loadHobbies(lang) {
+  try {
+    const res = await fetch("content/hobbies.json");
+    const data = await res.json();
+    const content = data[lang];
+    if (!content) return console.error(`No data for language: ${lang}`);
+
+    document.getElementById("hobbies-title").textContent = content.title;
+    document.getElementById("hobbies-subtitle").textContent = content.subtitle;
+
+    const container = document.getElementById("hobbies-list");
+    container.innerHTML = "";
+
+    content.hobbies.forEach(hobby => {
+      const div = document.createElement("div");
+      div.className = "col-md-4";
+      div.innerHTML = `
+        <div class="hobby-card" onclick="window.open('${hobby.url}', '_blank')">
+          <div class="hobby-icon">${hobby.icon}</div>
+          <h3>${hobby.title}</h3>
+          <p>${hobby.description}</p>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+
+  } catch (err) {
+    console.error("Error loading hobbies:", err);
+  }
 }
 
 
@@ -898,6 +970,7 @@ function initLanguageSelector() {
     loadBlogs(initialLang);
     loadSkills(initialLang);
     loadAndRenderImpact(initialLang);
+    loadHobbies(initialLang);
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -919,6 +992,7 @@ function initLanguageSelector() {
             loadBlogs(lang);
             loadSkills(lang);
             loadAndRenderImpact(lang);
+            loadHobbies(lang);
             setActiveLangButton(lang);
         });
     });

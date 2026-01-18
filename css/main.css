@@ -1073,3 +1073,57 @@ textarea.input1 {
     padding: 0 10px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+/* Hobbies / Games cards */
+.hobby-card {
+    background: #fff;
+    border: 2px solid #010f4c;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hobby-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border-color: #00ffff;
+}
+
+.hobby-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #010f4c;
+}
+
+.hobby-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #010f4c;
+}
+
+.hobby-card p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Grid 3 por fila en desktop, 1 en mobile */
+#hobbies-list .col-md-4 {
+    display: flex;
+}

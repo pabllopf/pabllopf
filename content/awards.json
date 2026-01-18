@@ -1,35 +1,47 @@
 {
+  "readMoreText": { "en": "Read more", "es": "Leer más" },
+  "showLessText": { "en": "Show less", "es": "Mostrar menos" },
   "en": {
     "title": "Awards & Recognitions",
+    "awardsHeading": "Professional Achievements",
     "awards": [
       {
-        "title": "Matrícula de Honor en el TFG",
+        "title": "Honors in Final Degree Project",
         "institution": "Universidad de Las Palmas de Gran Canaria (ULPGC)",
         "date": "Jun. 2022",
-        "description": "Matrícula de Honor en el Trabajo Fin de Grado (TFG), \"Alis: un framework orientado a aspectos para el desarrollo de videojuegos indies\", calificado con una nota de 9,9/10."
+        "description": [
+          "Honors in Final Degree Project (TFG): 'Alis: an aspect-oriented framework for indie game development', scored 9.9/10."
+        ]
       },
       {
-        "title": "Best Academic Record in ESO of San Bartolomé de Tirajana",
+        "title": "Best ESO Academic Record",
         "institution": "Municipio de San Bartolomé de Tirajana",
         "date": "Jul. 2015",
-        "description": "Awarded for the best academic record in ESO of the municipality of San Bartolomé de Tirajana in 2015, with an average grade of 9.2/10."
+        "description": [
+          "Awarded for the best ESO academic record in San Bartolomé de Tirajana in 2015, with an average grade of 9.2/10."
+        ]
       }
     ]
   },
   "es": {
     "title": "Reconocimientos y Premios",
+    "awardsHeading": "Logros Profesionales",
     "awards": [
       {
         "title": "Matrícula de Honor en el TFG",
         "institution": "Universidad de Las Palmas de Gran Canaria (ULPGC)",
         "date": "jun. 2022",
-        "description": "Matrícula de Honor en el Trabajo Fin de Grado (TFG), \"Alis: un framework orientado a aspectos para el desarrollo de videojuegos indies\", calificado con una nota de 9,9/10."
+        "description": [
+          "Matrícula de Honor en el Trabajo Fin de Grado (TFG): 'Alis: un framework orientado a aspectos para el desarrollo de videojuegos indies', calificado con 9,9/10."
+        ]
       },
       {
-        "title": "Mejor expediente académico de ESO de San Bartolomé de Tirajana",
+        "title": "Mejor expediente académico de ESO",
         "institution": "Municipio de San Bartolomé de Tirajana",
         "date": "jul. 2015",
-        "description": "Premio al mejor expediente de ESO del municipio de San Bartolomé de Tirajana del año 2015, con una nota media de 9,2/10."
+        "description": [
+          "Premio al mejor expediente de ESO del municipio de San Bartolomé de Tirajana en 2015, con una nota media de 9,2/10."
+        ]
       }
     ]
   }
