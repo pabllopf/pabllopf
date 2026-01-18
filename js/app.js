@@ -370,6 +370,39 @@ async function loadRecommendationLetters(lang) {
 }
 
 
+async function loadAwards(lang) {
+  try {
+    const res = await fetch("content/awards.json");
+    const data = await res.json();
+    const content = data[lang];
+    if (!content) return console.error(`No data for language: ${lang}`);
+
+    document.getElementById("awards-title").textContent = content.title;
+
+    const timeline = document.getElementById("awards-timeline");
+    timeline.innerHTML = "";
+
+    content.awards.forEach(a => {
+      const li = document.createElement("li");
+      li.className = "timeline-item animate-box";
+      li.innerHTML = `
+        <div class="timeline-badge"></div>
+        <div class="timeline-panel">
+          <h3>${a.title}</h3>
+          <span class="timeline-institution">${a.institution} · ${a.date}</span>
+          <p>${a.description}</p>
+        </div>
+      `;
+      timeline.appendChild(li);
+    });
+
+  } catch (err) {
+    console.error("Error loading awards:", err);
+  }
+}
+
+
+
 async function loadTestimonials(lang) {
     try {
         const res = await fetch("content/testimonials.json");
@@ -677,6 +710,7 @@ function initLanguageSelector() {
     loadCertifications(initialLang);
     loadTestimonials(initialLang);
     loadCoursesCarousel(initialLang);
+    loadAwards(initialLang);
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -694,6 +728,7 @@ function initLanguageSelector() {
             loadCertifications(lang);
             loadTestimonials(lang);
             loadCoursesCarousel(lang);
+            loadAwards(lang);
             setActiveLangButton(lang);
         });
     });

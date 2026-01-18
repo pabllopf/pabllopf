@@ -1,0 +1,36 @@
+{
+  "en": {
+    "title": "Awards & Recognitions",
+    "awards": [
+      {
+        "title": "Matrícula de Honor en el TFG",
+        "institution": "Universidad de Las Palmas de Gran Canaria (ULPGC)",
+        "date": "Jun. 2022",
+        "description": "Matrícula de Honor en el Trabajo Fin de Grado (TFG), \"Alis: un framework orientado a aspectos para el desarrollo de videojuegos indies\", calificado con una nota de 9,9/10."
+      },
+      {
+        "title": "Best Academic Record in ESO of San Bartolomé de Tirajana",
+        "institution": "Municipio de San Bartolomé de Tirajana",
+        "date": "Jul. 2015",
+        "description": "Awarded for the best academic record in ESO of the municipality of San Bartolomé de Tirajana in 2015, with an average grade of 9.2/10."
+      }
+    ]
+  },
+  "es": {
+    "title": "Reconocimientos y Premios",
+    "awards": [
+      {
+        "title": "Matrícula de Honor en el TFG",
+        "institution": "Universidad de Las Palmas de Gran Canaria (ULPGC)",
+        "date": "jun. 2022",
+        "description": "Matrícula de Honor en el Trabajo Fin de Grado (TFG), \"Alis: un framework orientado a aspectos para el desarrollo de videojuegos indies\", calificado con una nota de 9,9/10."
+      },
+      {
+        "title": "Mejor expediente académico de ESO de San Bartolomé de Tirajana",
+        "institution": "Municipio de San Bartolomé de Tirajana",
+        "date": "jul. 2015",
+        "description": "Premio al mejor expediente de ESO del municipio de San Bartolomé de Tirajana del año 2015, con una nota media de 9,2/10."
+      }
+    ]
+  }
+}
