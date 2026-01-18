@@ -778,63 +778,109 @@ textarea.input1 {
 
 
 
-/* Contenedor de card moderna */
-.blog-article-card {
-  display: block;
-  background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.08));
-  border-radius: 16px;
-  padding: 20px;
-  text-decoration: none;
+
+
+
+
+
+
+.blogs-search-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  background: rgba(255,255,255,0.05);
   color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.95rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.blogs-search-input::placeholder {
+  color: #ccc;
+}
+
+/* Grid artículos */
+#blogs-list .col-md-3 {
+  margin-bottom: 20px;
+}
+
+/* Card tipo artículo con esquina partida */
+.blog-pin-card {
   position: relative;
-  overflow: hidden;
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px 20px 15px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #010f4c;
+  height: 100%;
 }
 
-/* Efecto hover: levanta y sombra */
-.blog-article-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: rgba(0,255,255,0.05);
-  transform: rotate(45deg);
-  transition: all 0.5s ease;
-  pointer-events: none;
-}
-
-.blog-article-card:hover::before {
-  transform: rotate(0deg);
-  background: rgba(0,255,255,0.08);
-}
-
-.blog-article-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+.blog-pin-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
   border-color: #00ffff;
 }
 
-/* Contenido de la card */
-.blog-article-content h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: #00ffff; /* color de acento */
+.blog-pin-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #010f4c;
+  margin-bottom: 5px;
 }
 
-.blog-article-content .blog-meta {
+.blog-meta {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 10px;
   display: block;
-  font-size: 0.8rem;
-  color: #ccc;
-  margin-bottom: 12px;
 }
 
-.blog-article-content p {
+.blog-pin-card p {
   font-size: 0.95rem;
+  color: #333;
   line-height: 1.5;
-  color: #fff;
   margin: 0;
 }
+
+/* Chincheta emoji */
+.blog-pin-card .blog-pin {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+}
+
+/* Paginación moderna y legible */
+.blogs-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pagination-btn {
+  background: #fff;
+  border: 1px solid #010f4c;
+  color: #010f4c;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.pagination-btn.active {
+  background: #fff;
+  border: 2px solid #00ffff;
+  color: #010f4c;
+}
+
+.pagination-btn:hover {
+  border-color: #00ffff;
+  color: #010f4c;
+}
+
+

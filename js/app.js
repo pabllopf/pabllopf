@@ -661,6 +661,12 @@ function prevSlide(index) {
 
 
 
+
+
+let currentPage = 1;
+const itemsPerPage = 8; // 2 filas de 4
+let allBlogs = [];
+
 async function loadBlogs(lang) {
   try {
     const res = await fetch("content/blogs.json");
@@ -669,29 +675,76 @@ async function loadBlogs(lang) {
     if (!content) return console.error(`No data for language: ${lang}`);
 
     document.getElementById("blogs-title").textContent = content.title;
+    allBlogs = content.blogs;
 
-    const blogsContainer = document.getElementById("blogs-list");
-    blogsContainer.innerHTML = "";
-
-    content.blogs.forEach(blog => {
-      const div = document.createElement("div");
-      div.className = "col-md-6 col-lg-4 mb-4"; // Responsive
-      div.innerHTML = `
-        <a href="${blog.link}" target="_blank" class="blog-article-card">
-          <div class="blog-article-content">
-            <h3>${blog.title}</h3>
-            <span class="blog-meta">${blog.platform} · ${blog.date}</span>
-            <p>${blog.description}</p>
-          </div>
-        </a>
-      `;
-      blogsContainer.appendChild(div);
-    });
-
+    renderBlogs();
+    setupSearch();
   } catch (err) {
     console.error("Error loading blogs:", err);
   }
 }
+
+function renderBlogs(filter = '') {
+  const blogsContainer = document.getElementById("blogs-list");
+  blogsContainer.innerHTML = "";
+
+  const filteredBlogs = allBlogs.filter(blog =>
+    blog.title.toLowerCase().includes(filter.toLowerCase()) ||
+    blog.description.toLowerCase().includes(filter.toLowerCase())
+  );
+
+  const totalPages = Math.ceil(filteredBlogs.length / itemsPerPage);
+  if (currentPage > totalPages) currentPage = 1;
+
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const blogsToShow = filteredBlogs.slice(start, end);
+
+  blogsToShow.forEach(blog => {
+    const div = document.createElement("div");
+    div.className = "col-md-3 col-sm-6"; 
+    div.innerHTML = `
+      <br>
+      <div class="blog-pin-card" onclick="window.open('${blog.url}', '_blank')">
+        <div class="blog-pin">📍</div>
+        <h3>${blog.title}</h3>
+        <span class="blog-meta">${blog.platform} · ${blog.date}</span>
+        <p>${blog.description}</p>
+      </div>
+    `;
+    blogsContainer.appendChild(div);
+  });
+
+  renderPagination(totalPages, filter);
+}
+
+function renderPagination(totalPages, filter) {
+  const paginationContainer = document.getElementById("blogs-pagination");
+  paginationContainer.innerHTML = "";
+
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+    btn.className = "pagination-btn" + (i === currentPage ? " active" : "");
+    btn.textContent = i;
+    btn.addEventListener("click", () => {
+      currentPage = i;
+      renderBlogs(filter);
+    });
+    paginationContainer.appendChild(btn);
+  }
+}
+
+function setupSearch() {
+  const searchInput = document.getElementById("blogs-search");
+  searchInput.addEventListener("input", (e) => {
+    currentPage = 1;
+    renderBlogs(e.target.value);
+  });
+}
+
+
+
+
 
 
 
