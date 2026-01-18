@@ -393,10 +393,12 @@ async function loadTestimonials(lang) {
         <div class="testimonial-position-company">${t.position}${t.company ? " | " + t.company : ""}</div>
         <div class="testimonial-date">${t.date || ""}</div>
       </div>
+
+      <div class="testimonial-right">
+        <p>"${t.comment}"</p>
+      </div>
     </div>
-    <div class="testimonial-right">
-      <p>"${t.comment}"</p>
-    </div>
+    
   `;
             carousel.appendChild(div);
         });
