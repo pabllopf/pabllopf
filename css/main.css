@@ -436,6 +436,11 @@ textarea.input1 {
 
 
 
+
+
+
+
+
 .recommendation-card {
   position: relative;
   color: white; /* Texto en blanco */
@@ -473,7 +478,6 @@ textarea.input1 {
 .recommendation-card p {
   margin: 5px 0;
   color: white; /* Texto en blanco */
-  text-align: center;
 }
 
 /* Modal */
@@ -485,6 +489,8 @@ textarea.input1 {
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
   display: none;
+  justify-content: center;
+  align-items: center;
   z-index: 9999;
 }
 
@@ -525,3 +531,181 @@ textarea.input1 {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.2);
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Carrusel horizontal */
+.testimonials-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+/* Ocultar scrollbar */
+.testimonials-carousel::-webkit-scrollbar {
+  display: none;
+}
+.testimonials-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tarjeta de comentario */
+.testimonial-card {
+  flex: 0 0 320px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+.testimonial-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.testimonial-card h4 {
+  margin: 5px 0 10px 0;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #ccc;
+}
+
+.testimonial-card p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Tarjetas de cursos */
+.course-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.course-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.course-card .course-content {
+  padding: 10px;
+}
+.course-card .course-content h3 {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #111;
+}
+.course-card .course-content p {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 3px 0;
+}
+
+/* Modal PDF */
+.course-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.course-modal-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+.course-modal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.course-modal .close-modal {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  box-shadow: 0 0 10px black;
+}
+
+/* Paginación */
+#courses-pagination {
+  margin-top: 20px;
+}
+.page-btn {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.page-btn.active {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+.page-btn:hover {
+  background: #555;
+  color: #fff;
+}
+

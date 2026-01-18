@@ -1,0 +1,121 @@
+{
+  "coursesSection": {
+    "title": { "en": "Courses", "es": "Cursos" },
+    "subtitle": { "en": "Courses I have completed", "es": "Cursos que he completado" }
+  },
+  "courses": [
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    },
+    {
+      "name": { "en": "React Advanced", "es": "React Avanzado" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Jan 2026", "es": "Ene 2026" },
+      "duration": 12,
+      "image": "images/banner_1.png",
+      "pdf": "files/monentia.pdf"
+    }
+  ],
+  "showMoreText": { "en": "Show more", "es": "Mostrar más" }
+}

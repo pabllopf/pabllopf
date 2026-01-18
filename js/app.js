@@ -370,6 +370,124 @@ async function loadRecommendationLetters(lang) {
 }
 
 
+async function loadTestimonials(lang) {
+    try {
+        const res = await fetch("content/testimonials.json");
+        const data = await res.json();
+
+        const content = data[lang];
+        if (!content) return console.error(`No data for language: ${lang}`);
+
+        document.getElementById("testimonials-title").textContent = content.title;
+
+        const carousel = document.getElementById("testimonials-carousel");
+        carousel.innerHTML = "";
+
+        content.testimonials.forEach(t => {
+            const div = document.createElement("div");
+            div.className = "testimonial-card";
+            div.innerHTML = `
+                <h3>${t.name}</h3>
+                <h4>${t.position}${t.date ? " | " + t.date : ""}</h4>
+                <p>${t.comment}</p>
+            `;
+            carousel.appendChild(div);
+        });
+
+        // Desplazamiento automático
+        let scrollAmount = 0;
+        const scrollStep = 2; // velocidad
+        const scrollMax = carousel.scrollWidth - carousel.clientWidth;
+
+        setInterval(() => {
+            scrollAmount += scrollStep;
+            if(scrollAmount >= scrollMax) scrollAmount = 0;
+            carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+        }, 50);
+
+    } catch(err) {
+        console.error("Error loading testimonials:", err);
+    }
+}
+
+
+async function loadCoursesCarousel(lang) {
+    try {
+        const res = await fetch("content/courses.json");
+        const data = await res.json();
+
+        const courses = data.courses;
+        const container = document.getElementById("courses-list");
+        const pagination = document.getElementById("courses-pagination");
+
+        // Títulos
+        document.getElementById("courses-title").textContent = data.coursesSection?.title?.[lang] || data.coursesSection?.title?.["en"];
+        document.getElementById("courses-subtitle").textContent = data.coursesSection?.subtitle?.[lang] || data.coursesSection?.subtitle?.["en"];
+
+        const itemsPerPage = 8;
+        const totalPages = Math.ceil(courses.length / itemsPerPage);
+        let currentPage = 1;
+
+        function renderPage(page) {
+            container.innerHTML = "";
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pageItems = courses.slice(start, end);
+
+            pageItems.forEach(course => {
+                const col = document.createElement("div");
+                col.className = "col-md-3 col-sm-6 col-xs-12"; // 4 columnas en escritorio
+                col.innerHTML = `
+                    <div class="course-card" data-pdf="${course.pdf || '#'}">
+                        <img src="${course.image}" alt="${course.name?.[lang] || course.name?.en}">
+                        <div class="course-content">
+                            <h3>${course.name?.[lang] || course.name?.en}</h3>
+                            <p class="institution">${course.institution?.[lang] || course.institution?.en}</p>
+                            <p class="date">${course.date}</p>
+                            <p class="duration">${course.duration} hours</p>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(col);
+
+                // Abrir PDF
+                col.querySelector(".course-card").addEventListener("click", () => {
+                    const modal = document.querySelector(".course-modal");
+                    modal.style.display = "flex";
+                    document.getElementById("course-pdf-frame").src = course.pdf || "#";
+                });
+            });
+
+            // Actualizar paginación
+            pagination.innerHTML = "";
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement("span");
+                btn.className = `page-btn ${i === page ? "active" : ""}`;
+                btn.textContent = i;
+                btn.addEventListener("click", () => {
+                    renderPage(i);
+                });
+                pagination.appendChild(btn);
+            }
+        }
+
+        renderPage(1);
+
+        // Cerrar modal
+        document.querySelector(".course-modal .close-modal").addEventListener("click", () => {
+            document.querySelector(".course-modal").style.display = "none";
+            document.getElementById("course-pdf-frame").src = "";
+        });
+
+    } catch (err) {
+        console.error("Error loading courses:", err);
+    }
+}
+
+
+
+
+
 
 // Mapa de plataformas a SVG
 const platformIcons = {
@@ -520,6 +638,8 @@ function initLanguageSelector() {
     loadProjects(initialLang);
     loadRecommendationLetters(initialLang);
     loadCertifications(initialLang);
+    loadTestimonials(initialLang);
+    loadCoursesCarousel(initialLang);
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -535,6 +655,8 @@ function initLanguageSelector() {
             loadRecommendationLetters(lang);
             loadProjects(lang);
             loadCertifications(lang);
+            loadTestimonials(lang);
+            loadCoursesCarousel(lang);
             setActiveLangButton(lang);
         });
     });
