@@ -1,0 +1,7 @@
+# robots.txt for https://www.pabllopf.dev/
+
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://www.pabllopf.dev/sitemap.xml
