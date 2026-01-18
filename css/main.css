@@ -296,41 +296,55 @@ textarea.input1 {
 
 .project-platforms {
   display: flex;
-  justify-content: flex-start; /* alineadas a la izquierda */
-  flex-wrap: nowrap;           /* una sola fila */
+  justify-content: flex-start;
+  /* alineadas a la izquierda */
+  flex-wrap: nowrap;
+  /* una sola fila */
   margin: 1px 0;
   gap: 4px;
-  overflow: hidden;            /* ocultamos cualquier desbordamiento */
+  overflow: hidden;
+  /* ocultamos cualquier desbordamiento */
 }
 
 .project-platform {
-  flex: 1 1 auto;               /* se encogen proporcionalmente */
-  min-width: 0;                 /* permite que se reduzcan más allá de su contenido */
+  flex: 1 1 auto;
+  /* se encogen proporcionalmente */
+  min-width: 0;
+  /* permite que se reduzcan más allá de su contenido */
   text-align: center;
-  white-space: nowrap;          /* evita salto de línea dentro de la caja */
-  overflow: hidden;             /* corta cualquier exceso de contenido */
-  text-overflow: ellipsis;      /* agrega "..." si el texto se queda corto */
+  white-space: nowrap;
+  /* evita salto de línea dentro de la caja */
+  overflow: hidden;
+  /* corta cualquier exceso de contenido */
+  text-overflow: ellipsis;
+  /* agrega "..." si el texto se queda corto */
   border: 1px solid #ccc;
   padding: 2px 4px;
   border-radius: 4px;
-  font-size: clamp(6px, 1vw, 10px); /* fuente que se ajusta a la pantalla */
+  font-size: clamp(6px, 1vw, 10px);
+  /* fuente que se ajusta a la pantalla */
   background-color: #f8f8f8;
-  box-sizing: border-box;       /* incluye padding en ancho total */
+  box-sizing: border-box;
+  /* incluye padding en ancho total */
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;                     /* espacio entre iconos si hay varios */
+  gap: 2px;
+  /* espacio entre iconos si hay varios */
 }
 
 /* Forzamos tamaño máximo a todos los SVG e icon fonts dentro */
 .project-platform svg,
 .project-platform i {
-  width: 1.5em;       /* igual que la altura de la fuente */
+  width: 1.5em;
+  /* igual que la altura de la fuente */
   height: 1.5em;
-  max-width: 100%;  /* que no desborde la caja */
+  max-width: 100%;
+  /* que no desborde la caja */
   max-height: 100%;
   vertical-align: text-top;
-  fill: currentColor; /* el SVG toma el color del texto */
+  fill: currentColor;
+  /* el SVG toma el color del texto */
 }
 
 
@@ -356,7 +370,7 @@ textarea.input1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   border: none;
   padding: 4px 8px;
@@ -364,15 +378,20 @@ textarea.input1 {
   border-radius: 4px;
 }
 
-.carousel-prev { left: 8px; }
-.carousel-next { right: 8px; }
+.carousel-prev {
+  left: 8px;
+}
+
+.carousel-next {
+  right: 8px;
+}
 
 
 
 /* Ajuste visual del grid */
 .cert-card {
   cursor: pointer;
-  height: 220px;
+  height: 250px;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -391,7 +410,7 @@ textarea.input1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,3 +431,83 @@ textarea.input1 {
   color: white;
   cursor: pointer;
 }
+
+.recommendation-card {
+  position: relative;
+  color: white; /* Texto en blanco */
+  border: 1px solid white; /* Borde blanco fino */
+  border-radius: 10px; /* Esquinas redondeadas */
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px) scale(1.02); /* Efecto hover: subir y ampliar ligeramente */
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3); /* Sombra sutil */
+}
+
+.recommendation-card img {
+  width: 100%;
+  height: 150px; /* Ajusta altura fija para todas */
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 15px;
+}
+
+.recommendation-card h3,
+.recommendation-card p {
+  margin: 5px 0;
+  color: white; /* Texto en blanco */
+}
+
+
+
+.recommendation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.recommendation-modal-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+}
+
+.recommendation-modal iframe,
+.recommendation-modal img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.close-modal {
+  position: fixed; /* Fijo respecto al viewport */
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  box-shadow: 0 0 10px black;
+}
+
+

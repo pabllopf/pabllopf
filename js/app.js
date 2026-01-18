@@ -329,6 +329,47 @@ function enableCertificationPreview() {
   });
 }
 
+async function loadRecommendationLetters(lang) {
+  const res = await fetch("content/recommendation_letters.json");
+  const data = await res.json();
+
+  document.getElementById("letters-title").textContent = data.section.title[lang];
+  document.getElementById("letters-subtitle").textContent = data.section.subtitle[lang];
+
+  const container = document.getElementById("letters-list");
+  container.innerHTML = "";
+
+  const modal = document.getElementById("letters-modal");
+  const iframe = document.getElementById("letters-modal-pdf");
+  const closeBtn = modal.querySelector(".close-modal");
+
+  closeBtn.onclick = () => { modal.style.display = "none"; };
+  modal.onclick = e => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+
+  data.letters.forEach(letter => {
+    const div = document.createElement("div");
+    div.className = "col-md-4 animate-box";
+
+    div.innerHTML = `
+      <div class="recommendation-card" style="cursor:pointer;">
+        <img src="${letter.preview}" style="width:100%; height:auto; object-fit:cover;">
+        <h3>${letter.person}</h3>
+        <span>${letter.company} — ${letter.date}</span>
+      </div>
+    `;
+
+    div.querySelector(".recommendation-card").onclick = () => {
+      iframe.src = letter.pdf;   // Si es imagen, cambiar a <img> en el modal
+      modal.style.display = "flex";
+    };
+
+    container.appendChild(div);
+  });
+}
+
+
 
 // Mapa de plataformas a SVG
 const platformIcons = {
@@ -428,6 +469,9 @@ function prevSlide(index) {
 }
 
 
+
+
+
 async function loadContactContent(lang) {
 	try {
 		const response = await fetch("content/contact.json");
@@ -474,6 +518,7 @@ function initLanguageSelector() {
     loadMyEducationContent(initialLang);
     loadContactContent(initialLang);
     loadProjects(initialLang);
+    loadRecommendationLetters(initialLang);
     loadCertifications(initialLang);
     setActiveLangButton(initialLang);
 
@@ -487,6 +532,7 @@ function initLanguageSelector() {
             loadMyExperienceContent(lang);
             loadMyEducationContent(lang);
             loadContactContent(lang);
+            loadRecommendationLetters(lang);
             loadProjects(lang);
             loadCertifications(lang);
             setActiveLangButton(lang);

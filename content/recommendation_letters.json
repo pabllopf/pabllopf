@@ -1,0 +1,36 @@
+{
+  "section": {
+    "title": {
+      "en": "Letters of Recommendation",
+      "es": "Cartas de Recomendación"
+    },
+    "subtitle": {
+      "en": "Official recommendation letters from companies I worked with.",
+      "es": "Cartas oficiales de recomendación de empresas donde he trabajado."
+    }
+  },
+
+  "letters": [
+    {
+      "person": "Carlos Fernández",
+      "company": "Endesa",
+      "date": "2024",
+      "pdf": "files/monentia.pdf",
+      "preview": "images/monentia.png"
+    },
+    {
+      "person": "Laura Gómez",
+      "company": "OpenBank",
+      "date": "2023",
+      "pdf": "files/monentia.pdf",
+      "preview": "images/monentia.png"
+    },
+    {
+      "person": "Laura Gómez",
+      "company": "OpenBank",
+      "date": "2023",
+      "pdf": "files/monentia.pdf",
+      "preview": "images/monentia.png"
+    }
+  ]
+}
