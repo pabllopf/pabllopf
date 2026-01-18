@@ -536,23 +536,10 @@ textarea.input1 {
 
 
 
-
-
-
-
-
 .pm-testimonials-wrapper {
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  overflow-x: hidden; /* ocultar scroll manual */
   position: relative;
-}
-
-.pm-testimonials-wrapper::-webkit-scrollbar {
-  display: none;
-}
-.pm-testimonials-wrapper {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  padding: 20px 60px;
 }
 
 .pm-testimonials-carousel {
@@ -560,6 +547,7 @@ textarea.input1 {
   gap: 20px;
   min-width: max-content; /* fila horizontal */
 }
+
 .pm-testimonial-card {
   flex: 0 0 450px;
   display: flex;
@@ -596,35 +584,26 @@ textarea.input1 {
   flex: 1;
 }
 
-.pm-testimonial-card .testimonial-header {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
-
-.pm-testimonial-card h3 {
+/* Header (nombre + posición + empresa + fecha) */
+.pm-testimonial-card .testimonial-header h3 {
   margin: 0;
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
 }
 
-.pm-testimonial-card .testimonial-position-company {
+.pm-testimonial-card .testimonial-position-company,
+.pm-testimonial-card .testimonial-date {
   font-size: 0.85rem;
   color: #ccc;
   margin-top: 2px;
-}
-
-.pm-testimonial-card .testimonial-date {
-  font-size: 0.75rem;
-  color: #aaa;
-  margin-top: 2px;
+  transition: opacity 0.3s ease;
 }
 
 /* Comentario en comillas */
 .pm-testimonial-card p {
   margin: 0;
-  font-size: 0.95rem; /* un poco más grande */
+  font-size: 1rem; /* tamaño más grande */
   line-height: 1.5;
   color: #fff;
   position: relative;
@@ -634,24 +613,8 @@ textarea.input1 {
   font-style: italic;
 }
 
-/* Comillas decorativas */
-.pm-testimonial-card p::before,
-.pm-testimonial-card p::after {
-  content: '"';
-  font-size: 1.5rem;
-  color: rgba(255,255,255,0.7);
-  position: absolute;
-}
-
-.pm-testimonial-card p::before {
-  top: -10px;
-  left: 5px;
-}
-
-.pm-testimonial-card p::after {
-  bottom: -10px;
-  right: 5px;
-}
+.pm-testimonial-card p::before { top: -10px; left: 5px; }
+.pm-testimonial-card p::after { bottom: -10px; right: 5px; }
 
 /* Flechas */
 .pm-carousel-arrow {
@@ -670,21 +633,19 @@ textarea.input1 {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px black;
+  opacity: 0; /* invisibles por defecto */
+  transition: opacity 0.3s ease;
 }
 
+.pm-testimonials-wrapper:hover .pm-carousel-arrow {
+  opacity: 1; /* aparecen al hover */
+}
+
+.pm-left-arrow { left: 20px; opacity: 1;}
+.pm-right-arrow { right: 20px; opacity: 1;}
 
 
 
-.pm-left-arrow { left: -40px;  opacity: 0;}
-
-.pm-left-arrow:hover  { left: -40px;  opacity: 1;}
-
-
-
-
-.pm-right-arrow { right: -40px;  opacity: 0;}
-
-.pm-right-arrow:hover  { right: -40px;  opacity: 1;}
 
 
 
