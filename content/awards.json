@@ -3,7 +3,7 @@
   "showLessText": { "en": "Show less", "es": "Mostrar menos" },
   "en": {
     "title": "Awards & Recognitions",
-    "awardsHeading": "Professional Achievements",
+    "awardsHeading": "Presently",
     "awards": [
       {
         "title": "Honors in Final Degree Project",
@@ -25,7 +25,7 @@
   },
   "es": {
     "title": "Reconocimientos y Premios",
-    "awardsHeading": "Logros Profesionales",
+    "awardsHeading": "Actualidad",
     "awards": [
       {
         "title": "Matrícula de Honor en el TFG",
