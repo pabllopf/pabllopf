@@ -3,7 +3,9 @@
     "license": "Licencia Pública General v3.0",
     "madeBy": "Hecho por",
     "reportIssue": "Reportar incidencia 🤖",
+    "reportLink": "https://example.com/report",
     "donate": "Donar ❤️",
+    "donateLink": "https://example.com/donate",
     "socials": {
       "github": "https://github.com/pabllopf",
       "linkedin": "https://www.linkedin.com/in/pabllopf",
@@ -16,7 +18,9 @@
     "license": "General Public License v3.0",
     "madeBy": "Made by",
     "reportIssue": "Report Issue 🤖",
+    "reportLink": "https://example.com/report",
     "donate": "Donate ❤️",
+    "donateLink": "https://example.com/donate",
     "socials": {
       "github": "https://github.com/pabllopf",
       "linkedin": "https://www.linkedin.com/in/pabllopf",

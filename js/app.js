@@ -661,25 +661,38 @@ async function loadAndRenderFooter(lang) {
         if (!footerData[lang]) return console.error(`No data for language: ${lang}`);
         const data = footerData[lang];
 
-        // Made by
+        // -----------------------------
+        // Made by + License
+        // -----------------------------
         const madeByEl = document.getElementById("footer-madeby");
-        if (madeByEl) madeByEl.innerHTML = `${data.madeBy} <a href="${data.socials.github}" target="_blank">Pabllopf</a> <br> ${data.license}`;
+        if (madeByEl) {
+            madeByEl.innerHTML = `
+                ${data.madeBy} <a href="${data.socials.github}" target="_blank">Pabllopf</a> <br>
+                ${data.license}
+            `;
+        }
 
+        // -----------------------------
         // Botón Reportar incidencia
+        // -----------------------------
         const reportBtn = document.getElementById("footer-report");
         if (reportBtn) {
             reportBtn.innerText = data.reportIssue;
-            reportBtn.href = "#"; // actualizar con link real
+            reportBtn.href = data.reportLink || "#"; // usar link real si se configura en JSON
         }
 
+        // -----------------------------
         // Botón Donar
+        // -----------------------------
         const donateBtn = document.getElementById("footer-donate");
         if (donateBtn) {
             donateBtn.innerText = data.donate;
-            donateBtn.href = "#"; // actualizar con link real
+            donateBtn.href = data.donateLink || "#"; // usar link real si se configura en JSON
         }
 
+        // -----------------------------
         // Redes sociales
+        // -----------------------------
         const socialsContainer = document.getElementById("footer-socials");
         if (socialsContainer) {
             socialsContainer.innerHTML = "";
@@ -695,7 +708,9 @@ async function loadAndRenderFooter(lang) {
             }
         }
 
+        // -----------------------------
         // Visitor badge
+        // -----------------------------
         const visitorImg = document.getElementById("footer-visitor-img");
         if (visitorImg) visitorImg.src = data.visitorBadge;
 
@@ -703,8 +718,6 @@ async function loadAndRenderFooter(lang) {
         console.error("Error loading or rendering footer:", err);
     }
 }
-
-
 
 
 
