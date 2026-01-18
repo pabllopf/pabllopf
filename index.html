@@ -35,7 +35,7 @@
 
 	<!-- Modernizr JS -->
 
-	<script src="js/app.js"></script>
+	
 
 
 </head>
@@ -706,6 +706,7 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<br>
 					<h2 id="projects-title"></h2>
 					<p id="projects-subtitle"></p>
 				</div>
@@ -722,19 +723,33 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2 id="testimonials-title"></h2>
+					<br>
+					<h2 id="pm-testimonials-title"></h2>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-md-12">
-					<div class="testimonials-carousel" id="testimonials-carousel">
-						<!-- Los comentarios se añadirán aquí vía JS -->
+			<div class="row position-relative">
+				<div class="col-md-12 position-relative">
+					<!-- Flechas -->
+					<button class="pm-carousel-arrow pm-left-arrow" id="pm-testimonials-left">&#10094;</button>
+					<button class="pm-carousel-arrow pm-right-arrow" id="pm-testimonials-right">&#10095;</button>
+
+					<!-- Contenedor del carrusel -->
+					<div class="pm-testimonials-wrapper">
+						<div class="pm-testimonials-carousel" id="pm-testimonials-carousel">
+							<!-- JS insertará tarjetas aquí -->
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
+
+
+
+
 
 
 	<!---------------------------------------------------------------------------------------------------->
@@ -853,6 +868,7 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
+	<script src="js/app.js"></script>
 
 
 </body>

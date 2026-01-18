@@ -5,75 +5,199 @@
       {
         "name": "Regina Sánchez",
         "position": "Project Manager",
+        "company": "OpenBank",
         "date": "Jan 2026",
-        "comment": "I had the opportunity to collaborate with Pablo, and his technical leadership and problem-solving skills were outstanding."
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       },
       {
-        "name": "Carlos Martínez",
-        "position": "Business Analyst",
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
         "date": "Jan 2026",
-        "comment": "Pablo was essential in our team, ensuring high-quality solutions and always supporting his colleagues."
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       },
       {
-        "name": "Ángel García",
-        "position": "Front-End Developer",
-        "comment": "Working with Pablo was a great experience. He shares his knowledge and helps integrate new team members smoothly."
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+        {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+      {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+      {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       },
        {
         "name": "Regina Sánchez",
         "position": "Project Manager",
+        "company": "OpenBank",
         "date": "Jan 2026",
-        "comment": "I had the opportunity to collaborate with Pablo, and his technical leadership and problem-solving skills were outstanding."
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       },
       {
-        "name": "Carlos Martínez",
-        "position": "Business Analyst",
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
         "date": "Jan 2026",
-        "comment": "Pablo was essential in our team, ensuring high-quality solutions and always supporting his colleagues."
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       },
       {
-        "name": "Ángel García",
-        "position": "Front-End Developer",
-        "comment": "Working with Pablo was a great experience. He shares his knowledge and helps integrate new team members smoothly."
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+       {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+      {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+      {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       }
     ]
   },
   "es": {
     "title": "Testimonios",
     "testimonials": [
-      {
+        {
         "name": "Regina Sánchez",
         "position": "Project Manager",
-        "date": "Ene 2026",
-        "comment": "Tuve la oportunidad de colaborar con Pablo, y su liderazgo técnico y habilidades para resolver problemas fueron sobresalientes."
-      },
-      {
-        "name": "Carlos Martínez",
-        "position": "Analista de Negocio",
-        "date": "Ene 2026",
-        "comment": "Pablo fue esencial en nuestro equipo, asegurando soluciones de alta calidad y siempre apoyando a sus compañeros."
-      },
-      {
-        "name": "Ángel García",
-        "position": "Desarrollador Front-End",
-        "comment": "Trabajar con Pablo fue una gran experiencia. Comparte su conocimiento y ayuda a integrar nuevos miembros del equipo sin problemas."
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       },
       {
         "name": "Regina Sánchez",
         "position": "Project Manager",
-        "date": "Ene 2026",
-        "comment": "Tuve la oportunidad de colaborar con Pablo, y su liderazgo técnico y habilidades para resolver problemas fueron sobresalientes."
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       },
       {
-        "name": "Carlos Martínez",
-        "position": "Analista de Negocio",
-        "date": "Ene 2026",
-        "comment": "Pablo fue esencial en nuestro equipo, asegurando soluciones de alta calidad y siempre apoyando a sus compañeros."
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+        {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       },
       {
-        "name": "Ángel García",
-        "position": "Desarrollador Front-End",
-        "comment": "Trabajar con Pablo fue una gran experiencia. Comparte su conocimiento y ayuda a integrar nuevos miembros del equipo sin problemas."
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+      {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+       {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+      {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+      {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+       {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+      {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
+      },
+      {
+        "name": "Regina Sánchez",
+        "position": "Project Manager",
+        "company": "OpenBank",
+        "date": "Jan 2026",
+        "comment": "I had the opportunity bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+        "image": "images/monentia.png"
       }
     ]
   }
