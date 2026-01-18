@@ -768,3 +768,73 @@ textarea.input1 {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+/* Contenedor de card moderna */
+.blog-article-card {
+  display: block;
+  background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.08));
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover: levanta y sombra */
+.blog-article-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0,255,255,0.05);
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.blog-article-card:hover::before {
+  transform: rotate(0deg);
+  background: rgba(0,255,255,0.08);
+}
+
+.blog-article-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  border-color: #00ffff;
+}
+
+/* Contenido de la card */
+.blog-article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #00ffff; /* color de acento */
+}
+
+.blog-article-content .blog-meta {
+  display: block;
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.blog-article-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+}

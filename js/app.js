@@ -660,6 +660,43 @@ function prevSlide(index) {
 
 
 
+
+async function loadBlogs(lang) {
+  try {
+    const res = await fetch("content/blogs.json");
+    const data = await res.json();
+    const content = data[lang];
+    if (!content) return console.error(`No data for language: ${lang}`);
+
+    document.getElementById("blogs-title").textContent = content.title;
+
+    const blogsContainer = document.getElementById("blogs-list");
+    blogsContainer.innerHTML = "";
+
+    content.blogs.forEach(blog => {
+      const div = document.createElement("div");
+      div.className = "col-md-6 col-lg-4 mb-4"; // Responsive
+      div.innerHTML = `
+        <a href="${blog.link}" target="_blank" class="blog-article-card">
+          <div class="blog-article-content">
+            <h3>${blog.title}</h3>
+            <span class="blog-meta">${blog.platform} · ${blog.date}</span>
+            <p>${blog.description}</p>
+          </div>
+        </a>
+      `;
+      blogsContainer.appendChild(div);
+    });
+
+  } catch (err) {
+    console.error("Error loading blogs:", err);
+  }
+}
+
+
+
+
+
 async function loadContactContent(lang) {
     try {
         const response = await fetch("content/contact.json");
@@ -711,6 +748,7 @@ function initLanguageSelector() {
     loadTestimonials(initialLang);
     loadCoursesCarousel(initialLang);
     loadAwards(initialLang);
+    loadBlogs(initialLang);
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -729,6 +767,7 @@ function initLanguageSelector() {
             loadTestimonials(lang);
             loadCoursesCarousel(lang);
             loadAwards(lang);
+            loadBlogs(lang);
             setActiveLangButton(lang);
         });
     });
