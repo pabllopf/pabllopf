@@ -747,6 +747,57 @@ function setupSearch() {
 
 
 
+async function loadSkills(lang) {
+  const res = await fetch("content/skills.json");
+  const data = await res.json();
+  const content = data[lang];
+  if (!content) return;
+
+  document.getElementById("skills-title").textContent = content.title;
+  document.getElementById("skills-subtitle").textContent = content.subtitle;
+
+  const container = document.getElementById("skills-groups");
+  container.innerHTML = "";
+
+  content.categories.forEach(cat => {
+    const col = document.createElement("div");
+    col.className = "col-md-12";
+
+    col.innerHTML = `
+      <div class="skills-group">
+        <h3>${cat.name}</h3>
+        <div class="skills-grid">
+          ${cat.items.map(skill => `
+            <div class="skill-card">
+              <i class="${skill.icon}"></i>
+              <span>${skill.name}</span>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+
+    container.appendChild(col);
+  });
+}
+
+
+function setupSkillFilters(categories) {
+  const container = document.getElementById("skills-filters");
+  container.innerHTML = "";
+
+  categories.forEach((cat, index) => {
+    const btn = document.createElement("button");
+    btn.className = "skill-filter-btn";
+    btn.textContent = cat.name;
+    btn.onclick = () => {
+      document.querySelectorAll(".skills-group").forEach((g, i) => {
+        g.style.display = i === index ? "block" : "none";
+      });
+    };
+    container.appendChild(btn);
+  });
+}
 
 
 
@@ -802,6 +853,7 @@ function initLanguageSelector() {
     loadCoursesCarousel(initialLang);
     loadAwards(initialLang);
     loadBlogs(initialLang);
+    loadSkills(initialLang);
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -821,6 +873,7 @@ function initLanguageSelector() {
             loadCoursesCarousel(lang);
             loadAwards(lang);
             loadBlogs(lang);
+            loadSkills(lang);
             setActiveLangButton(lang);
         });
     });

@@ -1,0 +1,127 @@
+{
+  "es": {
+    "title": "Skills Técnicas",
+    "subtitle": "Tecnologías y áreas en las que trabajo",
+    "categories": [
+      {
+        "name": "Lenguajes",
+        "items": [
+          {"name": "Python", "icon": "devicon-python-plain"},
+          {"name": "C#", "icon": "devicon-csharp-plain"},
+          {"name": "Java", "icon": "devicon-java-plain"},
+          {"name": "PHP", "icon": "devicon-php-plain"},
+          {"name": "MATLAB", "icon": "devicon-matlab-plain"},
+          {"name": "Angular", "icon": "devicon-angularjs-plain"},
+          {"name": "VBA", "icon": "devicon-windows8-original"}
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "items": [
+          {"name": ".NET", "icon": "devicon-dot-net-plain"},
+          {"name": "Spring Boot", "icon": "devicon-spring-plain"},
+          {"name": "ASP.NET Core", "icon": "devicon-dot-net-plain"},
+          {"name": "Entity Framework", "icon": "devicon-dot-net-plain"},
+          {"name": "Unity", "icon": "devicon-unity-original"}
+        ]
+      },
+      {
+        "name": "Bases de Datos",
+        "items": [
+          {"name": "MySQL", "icon": "devicon-mysql-plain"},
+          {"name": "SQL Server", "icon": "devicon-microsoftsqlserver-plain"},
+          {"name": "PostgreSQL", "icon": "devicon-postgresql-plain"}
+        ]
+      },
+      {
+        "name": "DevOps",
+        "items": [
+          {"name": "Git", "icon": "devicon-git-plain"},
+          {"name": "Docker", "icon": "devicon-docker-plain"},
+          {"name": "Jenkins", "icon": "devicon-jenkins-line"},
+          {"name": "CI/CD", "icon": "devicon-githubactions-plain"}
+        ]
+      },
+      {
+        "name": "Arquitectura",
+        "items": [
+          {"name": "Microservices", "icon": "devicon-kubernetes-plain"},
+          {"name": "EDA", "icon": "devicon-apachekafka-original"},
+          {"name": "SOA", "icon": "devicon-azure-plain"},
+          {"name": "Modular Monolith", "icon": "devicon-dot-net-plain"}
+        ]
+      },
+      {
+        "name": "Cloud",
+        "items": [
+          {"name": "Azure", "icon": "devicon-azure-plain"},
+          {"name": "AWS", "icon": "devicon-amazonwebservices-original"},
+          {"name": "Docker Virtualization", "icon": "devicon-docker-plain"}
+        ]
+      }
+    ]
+  },
+
+  "en": {
+    "title": "Technical Skills",
+    "subtitle": "Technologies and domains I work with",
+    "categories": [
+      {
+        "name": "Languages",
+        "items": [
+          {"name": "Python", "icon": "devicon-python-plain"},
+          {"name": "C#", "icon": "devicon-csharp-plain"},
+          {"name": "Java", "icon": "devicon-java-plain"},
+          {"name": "PHP", "icon": "devicon-php-plain"},
+          {"name": "MATLAB", "icon": "devicon-matlab-plain"},
+          {"name": "Angular", "icon": "devicon-angularjs-plain"},
+          {"name": "VBA", "icon": "devicon-windows8-original"}
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "items": [
+          {"name": ".NET", "icon": "devicon-dot-net-plain"},
+          {"name": "Spring Boot", "icon": "devicon-spring-plain"},
+          {"name": "ASP.NET Core", "icon": "devicon-dot-net-plain"},
+          {"name": "Entity Framework", "icon": "devicon-dot-net-plain"},
+          {"name": "Unity", "icon": "devicon-unity-original"}
+        ]
+      },
+      {
+        "name": "Databases",
+        "items": [
+          {"name": "MySQL", "icon": "devicon-mysql-plain"},
+          {"name": "SQL Server", "icon": "devicon-microsoftsqlserver-plain"},
+          {"name": "PostgreSQL", "icon": "devicon-postgresql-plain"}
+        ]
+      },
+      {
+        "name": "DevOps",
+        "items": [
+          {"name": "Git", "icon": "devicon-git-plain"},
+          {"name": "Docker", "icon": "devicon-docker-plain"},
+          {"name": "Jenkins", "icon": "devicon-jenkins-line"},
+          {"name": "CI/CD", "icon": "devicon-githubactions-plain"}
+        ]
+      },
+      {
+        "name": "Architecture",
+        "items": [
+          {"name": "Microservices", "icon": "devicon-kubernetes-plain"},
+          {"name": "EDA", "icon": "devicon-apachekafka-original"},
+          {"name": "SOA", "icon": "devicon-azure-plain"},
+          {"name": "Modular Monolith", "icon": "devicon-dot-net-plain"}
+        ]
+      },
+      {
+        "name": "Cloud",
+        "items": [
+          {"name": "Azure", "icon": "devicon-azure-plain"},
+          {"name": "AWS", "icon": "devicon-amazonwebservices-original"},
+          {"name": "Docker Virtualization", "icon": "devicon-docker-plain"}
+        ]
+      }
+    ]
+  }
+}
