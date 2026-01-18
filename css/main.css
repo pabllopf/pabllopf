@@ -1154,3 +1154,65 @@ textarea.input1 {
 #hobbies-list .col-md-4 {
     display: flex;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#fh5co-footer {
+    padding: 40px 0;
+    background: #010f4c;
+    color: #fff;
+}
+
+#fh5co-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#fh5co-footer a:hover {
+    color: #ffffff57;
+}
+
+.btn-footer {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background: transparent;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.btn-footer:hover {
+    background: #ffffff42;
+    color: #010f4c;
+}
+
+#footer-socials {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+#footer-madeby{
+    color: #ffffffcf;
+}
+
+#footer-socials li a {
+    font-size: 2.0rem;
+}

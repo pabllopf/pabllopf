@@ -1,0 +1,28 @@
+{
+  "es": {
+    "license": "Licencia Pública General v3.0",
+    "madeBy": "Hecho por",
+    "reportIssue": "Reportar incidencia 🤖",
+    "donate": "Donar ❤️",
+    "socials": {
+      "github": "https://github.com/pabllopf",
+      "linkedin": "https://www.linkedin.com/in/pabllopf",
+      "instagram": "https://www.instagram.com/pabllopf",
+      "email": "mailto:pabllopf@example.com"
+    },
+    "visitorBadge": "https://visitor-badge.laobi.icu/badge?page_id=pabllopf"
+  },
+  "en": {
+    "license": "General Public License v3.0",
+    "madeBy": "Made by",
+    "reportIssue": "Report Issue 🤖",
+    "donate": "Donate ❤️",
+    "socials": {
+      "github": "https://github.com/pabllopf",
+      "linkedin": "https://www.linkedin.com/in/pabllopf",
+      "instagram": "https://www.instagram.com/pabllopf",
+      "email": "mailto:pabllopf@example.com"
+    },
+    "visitorBadge": "https://visitor-badge.laobi.icu/badge?page_id=pabllopf"
+  }
+}

@@ -595,6 +595,11 @@ async function loadCoursesCarousel(lang) {
 
 
 
+
+
+
+
+
 async function loadHobbies(lang) {
   try {
     const res = await fetch("content/hobbies.json");
@@ -643,6 +648,61 @@ async function loadHobbies(lang) {
   }
 }
 
+
+
+
+
+async function loadAndRenderFooter(lang) {
+    try {
+        // Cargar JSON
+        const res = await fetch("content/footer.json");
+        const footerData = await res.json();
+
+        if (!footerData[lang]) return console.error(`No data for language: ${lang}`);
+        const data = footerData[lang];
+
+        // Made by
+        const madeByEl = document.getElementById("footer-madeby");
+        if (madeByEl) madeByEl.innerHTML = `${data.madeBy} <a href="${data.socials.github}" target="_blank">Pabllopf</a> <br> ${data.license}`;
+
+        // Botón Reportar incidencia
+        const reportBtn = document.getElementById("footer-report");
+        if (reportBtn) {
+            reportBtn.innerText = data.reportIssue;
+            reportBtn.href = "#"; // actualizar con link real
+        }
+
+        // Botón Donar
+        const donateBtn = document.getElementById("footer-donate");
+        if (donateBtn) {
+            donateBtn.innerText = data.donate;
+            donateBtn.href = "#"; // actualizar con link real
+        }
+
+        // Redes sociales
+        const socialsContainer = document.getElementById("footer-socials");
+        if (socialsContainer) {
+            socialsContainer.innerHTML = "";
+            for (const [key, url] of Object.entries(data.socials)) {
+                let iconClass = "";
+                switch(key) {
+                    case "github": iconClass = "icon-github"; break;
+                    case "linkedin": iconClass = "icon-linkedin2"; break;
+                    case "instagram": iconClass = "icon-instagram"; break;
+                    case "email": iconClass = "icon-email"; break;
+                }
+                socialsContainer.innerHTML += `<li class="list-inline-item"><a href="${url}" target="_blank"><i class="${iconClass}"></i></a></li>`;
+            }
+        }
+
+        // Visitor badge
+        const visitorImg = document.getElementById("footer-visitor-img");
+        if (visitorImg) visitorImg.src = data.visitorBadge;
+
+    } catch (err) {
+        console.error("Error loading or rendering footer:", err);
+    }
+}
 
 
 
@@ -988,6 +1048,7 @@ function initLanguageSelector() {
     loadSkills(initialLang);
     loadAndRenderImpact(initialLang);
     loadHobbies(initialLang);
+    loadAndRenderFooter(initialLang);
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -1010,6 +1071,7 @@ function initLanguageSelector() {
             loadSkills(lang);
             loadAndRenderImpact(lang);
             loadHobbies(lang);
+            loadAndRenderFooter(lang);
             setActiveLangButton(lang);
         });
     });
