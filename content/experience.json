@@ -1,44 +1,72 @@
 {
   "readMoreText": {
-  "en": "Read more",
-  "es": "Leer más"
-},
-"showLessText": {
-  "en": "Show less",
-  "es": "Mostrar menos"
-},
+    "en": "Read more",
+    "es": "Leer más"
+  },
+  "showLessText": {
+    "en": "Show less",
+    "es": "Mostrar menos"
+  },
   "en": {
     "title": "Experience",
     "experienceTitle": "Actuality",
     "experience": [
       {
-        "role": "TechLead, B2B Products & Pricing/Demand and Prices Iberia",
-        "company": "🏢 Demand and Prices, <b>Endesa Energia S.A.U</b> <br> 🗄️ Permanent contract  <br> 📍 Madrid, Spain <br> 🗓️  Apr 2022 - Present",
+        "role": "Team Lead",
+        "company": "🏢 UST <br> 🗄️ Full-time  <br> 📍 Canary Islands, Spain · Remote <br> 🗓️ Jan 2026 - Present",
         "description": [
-          "As a TechLead, I lead the development of technical solutions that address business needs in the creation of products and pricing for the Business-to-Business (B2B) segment.",
-          "The main functions of the position are:",
-          "1) Detecting and managing the needs for tools and products.",
-          "2) Support and follow-up in the management of Corporate Tools, acting as a liaison between Demand and Prices and Digital Solutions Iberia (DSI)."
+          "Performing the role of Team Lead in a digital product team, responsible for coordination, functional definition, and delivery of solutions based on services, integrations, and digital channels.",
+          "Main responsibilities:",
+          "1) Define and maintain the product vision, translating strategic planning into clear features and tasks for the development team.",
+          "2) Manage and evolve the product backlog, leading prioritization to align work with project objectives.",
+          "3) Act as the bridge between business, product, and technology, ensuring needs are understood, prioritized, and transformed into viable solutions.",
+          "4) Coordinate dependencies and priorities with other teams, resolving conflicts and ensuring efficient use of time and resources.",
+          "5) Actively participate in functional and technical definition of integrations, using testing and monitoring tools to validate flows.",
+          "6) Supervise product execution and delivery, ensuring quality, tracking, and alignment with planning.",
+          "7) Lead and mentor the development team, both senior and junior, facilitating decision-making, removing blockers, and promoting best practices.",
+          "8) Foster a culture of continuous improvement and accountability, delivering robust, maintainable solutions aligned with organizational standards."
         ]
       },
       {
-        "role": "TechLead, B2B Products & Pricing/Demand and Prices Iberia",
-        "company": "🏢 Demand and Prices, <b>Endesa Energia S.A.U</b> <br> 🗄️ Permanent contract  <br> 📍 Madrid, Spain <br> 🗓️  Apr 2022 - Present",
+        "role": "TechLead, B2B Products & Pricing/Demand & Prices Iberia",
+        "company": "🏢 Endesa <br> 🗄️ Full-time  <br> 📍 Madrid, Spain · Hybrid <br> 🗓️ Mar 2022 - Jan 2026",
         "description": [
-          "As a TechLead, I lead the development of technical solutions that address business needs in the creation of products and pricing for the Business-to-Business (B2B) segment.",
-          "The main functions of the position are:",
-          "1) Detecting and managing the needs for tools and products.",
-          "2) Support and follow-up in the management of Corporate Tools, acting as a liaison between Demand and Prices and Digital Solutions Iberia (DSI)."
+          "This role is linked to Demand & Prices Services and B2B Products & Pricing within the Demand & Prices Iberia area. As Tech Lead, I led the development of technical solutions for product creation and pricing in the B2B segment.",
+          "Main responsibilities:",
+          "1) Technical and strategic leadership: Define and manage architecture and development of pricing tools, ensuring alignment with business objectives and best practices.",
+          "2) Management of tools and processes: Oversee corporate tools, liaise with Digital Solutions Iberia (DSI), and drive process automation and optimization.",
+          "3) Team coordination: Lead a DevTeam of 5-10 people in planning, resource allocation, project tracking, and budget management.",
+          "4) Process analysis and optimization: Identify improvements in demand and pricing management, applying best-practice architectures.",
+          "5) Participation in strategic projects: Represent Demand & Prices in cross-functional projects, ensuring integration of new solutions with existing systems and facilitating digital transformation."
         ]
       },
       {
-        "role": "TechLead, B2B Products & Pricing/Demand and Prices Iberia",
-        "company": "🏢 Demand and Prices, <b>Endesa Energia S.A.U</b> <br> 🗄️ Permanent contract  <br> 📍 Madrid, Spain <br> 🗓️  Apr 2022 - Present",
+        "role": "TechLead, Demand & Prices Services",
+        "company": "🏢 Endesa <br> 🗄️ Temporary contract  <br> 📍 Madrid, Spain · Hybrid <br> 🗓️ Oct 2021 - Mar 2022",
         "description": [
-          "As a TechLead, I lead the development of technical solutions that address business needs in the creation of products and pricing for the Business-to-Business (B2B) segment.",
-          "The main functions of the position are:",
-          "1) Detecting and managing the needs for tools and products.",
-          "2) Support and follow-up in the management of Corporate Tools, acting as a liaison between Demand and Prices and Digital Solutions Iberia (DSI)."
+          "Led technical teams of 7-10 people, enhancing their talent and ensuring project objectives were met. Delivered key solutions exceeding business expectations under tight deadlines.",
+          "Optimized processes by implementing automated solutions that increased operational efficiency by 30%, reducing management times and minimizing errors.",
+          "Designed scalable solutions, enhancing quality, sustainability, and scalability of technology services.",
+          "Collaborated strategically with stakeholders to align technology initiatives with business objectives, strengthening data-driven decision-making.",
+          "Contributed to innovation initiatives aligned with the Enel Group strategic vision, promoting emerging technologies to support energy transition and sustainability goals."
+        ]
+      },
+      {
+        "role": "Tech Lead Intern, Demand & Prices Services",
+        "company": "🏢 Endesa <br> 🗄️ Training contract  <br> 📍 Remote <br> 🗓️ Nov 2020 - Oct 2021",
+        "description": [
+          "Partially led key projects, coordinating functional teams of up to 3 people and achieving 100% compliance with deadlines and budget in more than 5 strategic initiatives.",
+          "Designed and deployed automation tools that reduced processing times by 20% and decreased operational errors by 15%, improving service quality.",
+          "Contributed to optimization of internal systems, increasing operational efficiency by 25% through automated processes and system improvements."
+        ]
+      },
+      {
+        "role": "Internship as Computer Engineer",
+        "company": "🏢 Monentia S.L. <br> 🗄️ Internship  <br> 📍 Las Palmas de Gran Canaria, Spain · Remote <br> 🗓️ Jun 2020 - Nov 2020",
+        "description": [
+          "Worked with a proprietary framework for web/mobile application development based on Lambda architecture, improving scalability and efficiency, reducing loading times by 5%.",
+          "Developed a web/mobile application with a Big Data focus, improving processing and analysis of large data volumes, processing up to 10% more data in less time.",
+          "Optimized data handling, implementing solutions that reduced processing time by 8%, improving data quality for key decision-making."
         ]
       }
     ]
@@ -48,23 +76,61 @@
     "experienceTitle": "Actualidad",
     "experience": [
       {
-        "role": "TechLead, B2B Productos y Pricing/Demand and Prices Iberia",
-        "company": "🏢 Demand and Prices, <b>Endesa Energia S.A.U</b> <br> 🗄️ Contrato permanente  <br> 📍 Madrid, España <br> 🗓️  Abr 2022 - Presente",
+        "role": "Team Lead",
+        "company": "🏢 UST <br> 🗄️ Jornada completa  <br> 📍 Canarias, España · En remoto <br> 🗓️ Ene 2026 - Actualidad",
         "description": [
-          "Como TechLead, lidero el desarrollo de soluciones técnicas que abordan las necesidades del negocio en la creación de productos y precios para el segmento Business-to-Business (B2B).",
-          "Las funciones principales del puesto son:",
-          "1) Detectar y gestionar las necesidades de herramientas y productos.",
-          "2) Apoyo y seguimiento en la gestión de herramientas corporativas, actuando como enlace entre Demand and Prices y Digital Solutions Iberia (DSI)."
+          "Desempeño el rol de Team Lead en un equipo de producto digital, siendo responsable de la coordinación, la definición funcional y la entrega de soluciones basadas en servicios, integraciones y canales digitales.",
+          "Principales responsabilidades:",
+          "1) Definir y mantener la visión del producto, convirtiendo la planificación estratégica en funcionalidades y tareas claras para el equipo de desarrollo.",
+          "2) Gestionar y evolucionar el backlog del producto, liderando la priorización del trabajo y asegurando su alineación con los objetivos del proyecto.",
+          "3) Actuar como nexo entre negocio, producto y tecnología, garantizando que las necesidades se entienden, se priorizan correctamente y se transforman en soluciones viables.",
+          "4) Coordinar dependencias y prioridades con otros equipos, resolviendo conflictos y asegurando un uso eficiente del tiempo y los recursos.",
+          "5) Participar activamente en la definición funcional y técnica de las integraciones, utilizando herramientas de prueba y monitorización para validar el correcto funcionamiento de los flujos.",
+          "6) Supervisar la ejecución y entrega del producto, asegurando calidad, seguimiento y coherencia con la planificación establecida.",
+          "7) Liderar y acompañar al equipo de desarrollo, tanto perfiles senior como junior, facilitando la toma de decisiones, eliminando bloqueos y promoviendo buenas prácticas de trabajo.",
+          "8) Impulsar una cultura de mejora continua y responsabilidad, orientada a entregar soluciones sólidas, mantenibles y alineadas con los estándares de la organización."
         ]
-      }, 
+      },
       {
-        "role": "TechLead, B2B Productos y Pricing/Demand and Prices Iberia",
-        "company": "🏢 Demand and Prices, <b>Endesa Energia S.A.U</b> <br> 🗄️ Contrato permanente  <br> 📍 Madrid, España <br> 🗓️  Abr 2022 - Presente",
+        "role": "TechLead, B2B Productos y Pricing/Demand & Prices Iberia",
+        "company": "🏢 Endesa <br> 🗄️ Jornada completa  <br> 📍 Madrid, España · Híbrido <br> 🗓️ Mar 2022 - Ene 2026",
         "description": [
-          "Como TechLead, lidero el desarrollo de soluciones técnicas que abordan las necesidades del negocio en la creación de productos y precios para el segmento Business-to-Business (B2B).",
-          "Las funciones principales del puesto son:",
-          "1) Detectar y gestionar las necesidades de herramientas y productos.",
-          "2) Apoyo y seguimiento en la gestión de herramientas corporativas, actuando como enlace entre Demand and Prices y Digital Solutions Iberia (DSI)."
+          "Puesto vinculado a Demand & Prices Services y B2B Products & Pricing dentro del área Demand & Prices Iberia. Como Tech Lead, lideré el desarrollo de soluciones técnicas para la creación de productos y fijación de precios en el segmento B2B.",
+          "Responsabilidades principales:",
+          "1) Liderazgo técnico y estratégico: Definir y gestionar la arquitectura y desarrollo de herramientas de pricing, asegurando la alineación con los objetivos del negocio y aplicando buenas prácticas.",
+          "2) Gestión de herramientas y procesos: Supervisar herramientas corporativas, servir de enlace con Digital Solutions Iberia (DSI) e impulsar la automatización y optimización de procesos.",
+          "3) Coordinación del equipo de desarrollo: Liderar el DevTeam (5-10 personas) en planificación, asignación de recursos, seguimiento de proyectos y gestión de presupuestos.",
+          "4) Análisis y optimización de procesos: Identificar mejoras en la gestión de demanda y precios, aplicando soluciones basadas en las mejores arquitecturas.",
+          "5) Participación en proyectos estratégicos: Representar a Demand & Prices en proyectos transversales, asegurando la integración de nuevas soluciones con los sistemas existentes y facilitando la transformación digital."
+        ]
+      },
+      {
+        "role": "TechLead, Demand & Prices Services",
+        "company": "🏢 Endesa <br> 🗄️ Contrato temporal  <br> 📍 Madrid, España · Híbrido <br> 🗓️ Oct 2021 - Mar 2022",
+        "description": [
+          "Lideré equipos técnicos de 7-10 personas, potenciando su talento y asegurando el cumplimiento de los objetivos del proyecto. Entregué soluciones clave que superaron las expectativas del negocio incluso bajo plazos ajustados.",
+          "Optimicé procesos implementando soluciones automatizadas que incrementaron la eficiencia operativa en un 30%, reduciendo tiempos de gestión y minimizando errores.",
+          "Diseñé soluciones escalables que mejoraron la calidad, sostenibilidad y escalabilidad de los servicios tecnológicos.",
+          "Colaboré estratégicamente con stakeholders para alinear iniciativas tecnológicas con objetivos empresariales, fortaleciendo la toma de decisiones basada en datos.",
+          "Contribuí activamente a iniciativas de innovación alineadas con la visión estratégica del Grupo Enel, promoviendo tecnologías emergentes para apoyar la transición energética y objetivos de sostenibilidad."
+        ]
+      },
+      {
+        "role": "Tech Lead Intern, Demand & Prices Services",
+        "company": "🏢 Endesa <br> 🗄️ Contrato de formación  <br> 📍 En remoto <br> 🗓️ Nov 2020 - Oct 2021",
+        "description": [
+          "Lideré parcialmente proyectos clave, coordinando equipos funcionales de hasta 3 personas y logrando un cumplimiento del 100% en plazos y presupuesto en más de 5 iniciativas estratégicas.",
+          "Diseñé y desplegué herramientas de automatización que redujeron los tiempos de procesamiento en un 20% y disminuyeron errores operativos en un 15%, mejorando la calidad del servicio.",
+          "Contribuí a la optimización de sistemas internos, incrementando la eficiencia operativa en un 25% mediante la implementación de procesos automatizados y la mejora de sistemas críticos."
+        ]
+      },
+      {
+        "role": "Prácticas como Ingeniero Informático",
+        "company": "🏢 Monentia S.L. <br> 🗄️ Contrato de prácticas  <br> 📍 Las Palmas de Gran Canaria, España · En remoto <br> 🗓️ Jun 2020 - Nov 2020",
+        "description": [
+          "Trabajé con un framework propio de la empresa para el desarrollo de aplicaciones web/móviles basadas en arquitectura Lambda, mejorando la escalabilidad y eficiencia de las soluciones tecnológicas, reduciendo los tiempos de carga en un 5%.",
+          "Desarrollé una aplicación web/móvil con enfoque en Big Data, mejorando la capacidad de procesamiento y análisis de grandes volúmenes de datos, procesando hasta un 10% más de datos en menor tiempo.",
+          "Optimizé el manejo de datos, implementando soluciones que redujeron el tiempo de procesamiento en un 8%, mejorando la calidad de la información utilizada para decisiones clave."
         ]
       }
     ]
