@@ -608,17 +608,34 @@ async function loadHobbies(lang) {
     const container = document.getElementById("hobbies-list");
     container.innerHTML = "";
 
-    content.hobbies.forEach(hobby => {
+    content.hobbies.forEach((hobby, idx) => {
       const div = document.createElement("div");
       div.className = "col-md-4";
+
+      // Crear carrusel de imágenes
+      const carouselImages = hobby.images.map((img, i) => 
+        `<img src="${img}" class="${i===0 ? "active" : ""}">`
+      ).join("");
+
       div.innerHTML = `
         <div class="hobby-card" onclick="window.open('${hobby.url}', '_blank')">
+          <div class="hobby-carousel">${carouselImages}</div>
           <div class="hobby-icon">${hobby.icon}</div>
           <h3>${hobby.title}</h3>
           <p>${hobby.description}</p>
         </div>
       `;
       container.appendChild(div);
+
+      // Iniciar carrusel automático
+      const carousel = div.querySelector(".hobby-carousel");
+      const images = carousel.querySelectorAll("img");
+      let current = 0;
+      setInterval(() => {
+        images[current].classList.remove("active");
+        current = (current + 1) % images.length;
+        images[current].classList.add("active");
+      }, 2500 + idx * 200); // Desfase para que no cambien todas al mismo tiempo
     });
 
   } catch (err) {
