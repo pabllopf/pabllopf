@@ -186,51 +186,84 @@ async function loadMyExperienceContent(lang) {
 
 
 async function loadMyEducationContent(lang) {
-    try {
-        const response = await fetch("content/education.json"); // JSON de experiencia + educación
-        const data = await response.json();
-        const content = data[lang] || data[DEFAULT_LANG];
+  try {
+    const response = await fetch("content/education.json");
+    const data = await response.json();
 
-        // Título principal de la sección
-        document.getElementById("resume-title-education").textContent = content.title;
-
-        // Heading de Experiencia
-        document.getElementById("education-title").textContent = content.educationTitle;
-
-        const timeline = document.getElementById("resume-timeline-education");
-
-        // Limpiar items previos
-        const existingItems = timeline.querySelectorAll(".timeline-inverted, .timeline-unverted");
-        existingItems.forEach(item => item.remove());
-
-        // Función interna para crear un item (Experiencia o Educación)
-        function createTimelineItem(item, icon = "icon-suitcase", inverted = false) {
-            const li = document.createElement("li");
-            li.className = `animate-box ${inverted ? "timeline-inverted" : "timeline-unverted"}`;
-
-            li.innerHTML = `
-                <div class="timeline-badge"><i class="${icon}"></i></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h3 class="timeline-title">${item.title || item.title}</h3>
-                        <span class="company">${item.title}</span>
-                    </div>
-                    <div class="timeline-body">
-                        ${item.description.map(p => `<p>${p}</p>`).join("")}
-                    </div>
-                </div>
-            `;
-            return li;
-        }
-
-        // Renderizar toda la experiencia
-        content.education.forEach((item, index) => {
-            const li = createTimelineItem(item, "icon-suitcase", index % 2 === 1);
-            timeline.appendChild(li);
-        });
-    } catch (err) {
-        console.error("Error loading experience.json:", err);
+    const content = data[lang];
+    if (!content) {
+      console.error(`No education data for language: ${lang}`);
+      return;
     }
+
+    const titleEl = document.getElementById("resume-title-education");
+    const headingEl = document.getElementById("education-title");
+    const timelineEl = document.getElementById("resume-timeline-education");
+
+    if (!titleEl || !headingEl || !timelineEl) {
+      console.error("Missing HTML elements for education section");
+      return;
+    }
+
+    // Títulos
+    titleEl.textContent = content.title;
+    headingEl.textContent = content.educationTitle;
+
+    // Reset timeline
+    timelineEl.innerHTML = `
+      <li class="timeline-heading text-center animate-box">
+        <div><h3 id="education-title">${content.educationTitle}</h3></div>
+      </li>
+    `;
+
+    const readMoreText = data.readMoreText?.[lang];
+    const showLessText = data.showLessText?.[lang];
+
+    function createTimelineItem(item, inverted = false) {
+      const li = document.createElement("li");
+      li.className = `animate-box ${inverted ? "timeline-inverted" : "timeline-unverted"}`;
+
+      const fullDescription = item.description.map(p => `<p>${p}</p>`).join("");
+      const shortDescription = item.description.length
+        ? `<p>${item.description[0]}</p>`
+        : "";
+
+      li.innerHTML = `
+        <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h3 class="timeline-title">${item.degree}</h3>
+            <span class="company">${item.institution}</span>
+          </div>
+          <div class="timeline-body">
+            <div class="description-short">${shortDescription}</div>
+            <div class="description-full" style="display:none;">${fullDescription}</div>
+            <button class="read-more">${readMoreText}</button>
+          </div>
+        </div>
+      `;
+
+      const btn = li.querySelector(".read-more");
+      const shortDiv = li.querySelector(".description-short");
+      const fullDiv = li.querySelector(".description-full");
+
+      btn.addEventListener("click", () => {
+        const expanded = fullDiv.style.display === "block";
+        fullDiv.style.display = expanded ? "none" : "block";
+        shortDiv.style.display = expanded ? "block" : "none";
+        btn.textContent = expanded ? readMoreText : showLessText;
+      });
+
+      return li;
+    }
+
+    content.education.forEach((item, idx) => {
+      timelineEl.appendChild(createTimelineItem(item, idx % 2 === 1));
+    });
+
+  } catch (err) {
+    console.error("Error loading education.json:", err);
+  }
 }
 
 
