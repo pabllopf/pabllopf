@@ -64,6 +64,45 @@ async function loadAboutContent(lang) {
 }
 
 
+async function loadHowIWorkContent(lang) {
+  try {
+    const res = await fetch("content/howwork.json");
+    const data = await res.json();
+
+    const section = data[lang];
+    if (!section) return console.error("No How I Work data for:", lang);
+
+    document.getElementById("how-i-work-title").textContent = section.title;
+
+    const container = document.querySelector("#fh5co-features .row:last-child");
+    container.innerHTML = "";
+
+    section.items.forEach(item => {
+      const col = document.createElement("div");
+      col.className = "col-md-3 text-center";
+
+      col.innerHTML = `
+        <div class="feature-left">
+          <span class="icon">
+            <i class="${item.icon}"></i>
+          </span>
+          <div class="feature-copy">
+            <h3>${item.title}</h3>
+            <p>${item.text}</p>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(col);
+    });
+
+  } catch (err) {
+    console.error("Error loading how-i-work.json:", err);
+  }
+}
+
+
+
 
 async function loadMyExperienceContent(lang) {
     try {
@@ -370,6 +409,7 @@ function initLanguageSelector() {
 
     loadHeaderContent(initialLang);
     loadAboutContent(initialLang);
+    loadHowIWorkContent(initialLang);
     loadMyExperienceContent(initialLang);
     loadMyEducationContent(initialLang);
     loadContactContent(initialLang);
@@ -383,6 +423,7 @@ function initLanguageSelector() {
             const lang = btn.dataset.lang;
             loadHeaderContent(lang);
             loadAboutContent(lang);
+            loadHowIWorkContent(lang);
             loadMyExperienceContent(lang);
             loadMyEducationContent(lang);
             loadContactContent(lang);

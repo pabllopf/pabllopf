@@ -1,0 +1,52 @@
+{
+  "en": {
+    "title": "How I Work",
+    "items": [
+      {
+        "icon": "icon-cogs",
+        "title": "Technical Leadership",
+        "text": "Aligning teams with architecture and long-term product vision."
+      },
+      {
+        "icon": "icon-refresh",
+        "title": "Agile Mindset",
+        "text": "Delivering value iteratively with strong collaboration."
+      },
+      {
+        "icon": "icon-lightbulb",
+        "title": "Problem Solving",
+        "text": "Transforming business challenges into scalable solutions."
+      },
+      {
+        "icon": "icon-rocket",
+        "title": "Continuous Improvement",
+        "text": "Always refining code quality, processes and performance."
+      }
+    ]
+  },
+  "es": {
+    "title": "Cómo Trabajo",
+    "items": [
+      {
+        "icon": "icon-cogs",
+        "title": "Liderazgo Técnico",
+        "text": "Alineando equipos con la arquitectura y la visión a largo plazo del producto."
+      },
+      {
+        "icon": "icon-refresh",
+        "title": "Mentalidad Ágil",
+        "text": "Entregando valor de forma iterativa y colaborativa."
+      },
+      {
+        "icon": "icon-lightbulb",
+        "title": "Resolución de Problemas",
+        "text": "Transformando retos de negocio en soluciones escalables."
+      },
+      {
+        "icon": "icon-rocket",
+        "title": "Mejora Continua",
+        "text": "Siempre optimizando la calidad del código, los procesos y el rendimiento."
+      }
+    ]
+  }
+}
