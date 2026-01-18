@@ -233,14 +233,16 @@ async function loadMyEducationContent(lang) {
     }
 }
 
+
+
 async function loadCertifications(lang) {
   try {
     const res = await fetch("content/certification.json");
     const data = await res.json();
 
-    // Título y subtítulo
     document.getElementById("certifications-title").textContent =
       data.certificationsSection?.title?.[lang] || data.certificationsSection?.title?.["en"];
+
     document.getElementById("certifications-subtitle").textContent =
       data.certificationsSection?.subtitle?.[lang] || data.certificationsSection?.subtitle?.["en"];
 
@@ -250,24 +252,49 @@ async function loadCertifications(lang) {
     data.certifications.forEach(cert => {
       const div = document.createElement("div");
       div.className = "col-md-4 text-center col-padding animate-box";
+
       div.innerHTML = `
-        <a href="${cert.url}" target="_blank" class="work" style="background-image: url(${cert.image});">
+        <div class="cert-card" data-image="${cert.image}" style="background-image:url('${cert.image}')">
           <div class="desc">
-            <h3>${cert.name?.[lang] || cert.name?.["en"]}</h3>
-            <span>${cert.description?.[lang] || cert.description?.["en"]}</span>
           </div>
-        </a>
+        </div>
+        <br>
       `;
+
       container.appendChild(div);
     });
+
+    enableCertificationPreview();
 
   } catch (err) {
     console.error("Error loading certifications:", err);
   }
 }
 
-// Ejemplo de uso
-loadCertifications("en"); // o "es"
+/* Lightbox Preview */
+function enableCertificationPreview() {
+  document.querySelectorAll(".cert-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const image = card.getAttribute("data-image");
+
+      const overlay = document.createElement("div");
+      overlay.className = "cert-lightbox";
+
+      overlay.innerHTML = `
+        <span class="close-btn">✕</span>
+        <img src="${image}">
+      `;
+
+      overlay.addEventListener("click", e => {
+        if (e.target.classList.contains("cert-lightbox") || e.target.classList.contains("close-btn")) {
+          overlay.remove();
+        }
+      });
+
+      document.body.appendChild(overlay);
+    });
+  });
+}
 
 
 // Mapa de plataformas a SVG

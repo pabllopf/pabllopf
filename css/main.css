@@ -366,3 +366,49 @@ textarea.input1 {
 
 .carousel-prev { left: 8px; }
 .carousel-next { right: 8px; }
+
+
+
+/* Ajuste visual del grid */
+.cert-card {
+  cursor: pointer;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  transition: transform .2s ease;
+}
+
+.cert-card:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox */
+.cert-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.cert-lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+.cert-lightbox .close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}

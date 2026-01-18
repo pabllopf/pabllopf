@@ -19,7 +19,7 @@
         "en": "Certified Product Owner, skilled in managing backlogs and driving value for agile projects.",
         "es": "Product Owner certificado, experto en gestionar backlogs y generar valor en proyectos ágiles."
       },
-      "image": "images/product-owner.webp",
+      "image": "images/productowner.png",
       "url": "#"
     },
     {
@@ -31,19 +31,19 @@
         "en": "Certified Scrum Master, experienced in facilitating agile teams and ensuring smooth sprint execution.",
         "es": "Scrum Master certificado, con experiencia facilitando equipos ágiles y asegurando la ejecución de sprints."
       },
-      "image": "images/scrum-master.webp",
+      "image": "images/scrummaster.png",
       "url": "#"
     },
     {
       "name": {
-        "en": "Kanvas",
-        "es": "Kanvas"
+        "en": "Kanban",
+        "es": "Kanban"
       },
       "description": {
         "en": "Certified in Kanvas methodology, focused on strategic planning and business model design.",
         "es": "Certificado en metodología Kanvas, enfocado en planificación estratégica y diseño de modelos de negocio."
       },
-      "image": "images/kanvas.webp",
+      "image": "images/kanban.png",
       "url": "#"
     }
   ]
