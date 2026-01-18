@@ -981,3 +981,95 @@ textarea.input1 {
   background: #010f4c;
   color: #fff;
 }
+
+
+
+
+
+
+
+/* ========================= */
+/* IMPACT & RESULTS SECTION  */
+/* ========================= */
+
+#fh5co-impact {
+  padding: 40px 0 60px 0;
+}
+
+/* Tarjetas de impacto */
+.impact-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 18px 16px 18px;
+  margin-bottom: 25px;
+  border: 1px solid #010f4c;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  transition: transform .25s ease, box-shadow .25s ease;
+  height: 100%;
+  position: relative;
+}
+
+/* efecto hover */
+.impact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+}
+
+/* etiqueta tipo logro */
+.impact-tag {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: #010f4c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+/* título */
+.impact-card h4 {
+  font-weight: 700;
+  font-size: 15px;
+  color: #010f4c;
+  margin-bottom: 6px;
+}
+
+/* descripción */
+.impact-card p {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* resultados */
+.impact-result {
+  font-size: 13px;
+  font-weight: 600;
+  color: #010f4c;
+  margin-bottom: 6px;
+}
+
+/* tecnologías */
+.impact-tech {
+  font-size: 12px;
+  color: #555;
+  font-style: italic;
+}
+
+/* icono arriba */
+.impact-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #010f4c;
+}
+
+/* grid 3 columnas */
+@media(min-width:992px){
+  .impact-col {
+    width: 33.3333%;
+    float: left;
+    padding: 0 10px;
+  }
+}

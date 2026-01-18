@@ -800,6 +800,49 @@ function setupSkillFilters(categories) {
 }
 
 
+// ==========================
+//  IMPACT SECTION LOADER
+// ==========================
+async function loadAndRenderImpact(lang) {
+  try {
+    // Cargar JSON si no se ha cargado
+    if (!window.impactData) {
+      const response = await fetch("content/impact.json");
+      window.impactData = await response.json();
+    }
+
+    const data = window.impactData[lang];
+    if (!data) return;
+
+    // Actualizar título y subtítulo
+    document.getElementById("impact-title").innerText = data.title;
+    document.getElementById("impact-subtitle").innerText = data.subtitle;
+
+    // Contenedor
+    const container = document.getElementById("impact-list");
+    container.innerHTML = "";
+
+    // Renderizar cada item
+    data.items.forEach(item => {
+      container.innerHTML += `
+        <div class="col-md-4 impact-col">
+          <div class="impact-card">
+            <div class="impact-tag">${item.tag}</div>
+            <div class="impact-icon">${item.icon}</div>
+            <h4>${item.title}</h4>
+            <p>${item.desc}</p>
+            <div class="impact-result">${item.result}</div>
+            <div class="impact-tech">${item.tech}</div>
+          </div>
+        </div>
+      `;
+    });
+
+  } catch (error) {
+    console.error("Error loading or rendering impact section:", error);
+  }
+}
+
 
 async function loadContactContent(lang) {
     try {
@@ -854,6 +897,7 @@ function initLanguageSelector() {
     loadAwards(initialLang);
     loadBlogs(initialLang);
     loadSkills(initialLang);
+    loadAndRenderImpact(initialLang);
     setActiveLangButton(initialLang);
 
     document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
@@ -874,6 +918,7 @@ function initLanguageSelector() {
             loadAwards(lang);
             loadBlogs(lang);
             loadSkills(lang);
+            loadAndRenderImpact(lang);
             setActiveLangButton(lang);
         });
     });

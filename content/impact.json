@@ -1,0 +1,79 @@
+{
+  "es": {
+    "title": "Impacto y Resultados Profesionales",
+    "subtitle": "Proyectos y logros donde aporto valor técnico y estratégico",
+    "items": [
+      {
+        "tag": "Arquitectura",
+        "icon": "🏗️",
+        "title": "Migración a arquitectura modular",
+        "desc": "Rediseño de sistemas legacy hacia un Modular Monolith en banca.",
+        "result": "Reducción de deuda técnica y mayor mantenibilidad.",
+        "tech": ".NET, Kafka, Azure"
+      },
+      {
+        "tag": "Rendimiento",
+        "icon": "🚀",
+        "title": "Optimización de pipelines de datos",
+        "desc": "Refactorización de procesos ETL y automatización.",
+        "result": "Latencia reducida en un 65%.",
+        "tech": "Python, SQL Server, Azure"
+      },
+      {
+        "tag": "Liderazgo",
+        "icon": "👥",
+        "title": "Gestión de equipos cross-functional",
+        "desc": "Coordinación y mentoring de equipos de desarrollo.",
+        "result": "Equipos más autónomos y entregas más eficientes.",
+        "tech": "Git, Jenkins, Azure DevOps"
+      },
+      {
+        "tag": "Cloud",
+        "icon": "☁️",
+        "title": "Despliegue de microservicios en Azure",
+        "desc": "Automatización y escalabilidad de servicios críticos.",
+        "result": "Mayor resiliencia y reducción de tiempos de caída.",
+        "tech": "Azure, Docker, CI/CD"
+      }
+    ]
+  },
+
+  "en": {
+    "title": "Professional Impact & Achievements",
+    "subtitle": "Key contributions delivering technical and strategic value",
+    "items": [
+      {
+        "tag": "Architecture",
+        "icon": "🏗️",
+        "title": "Modular architecture migration",
+        "desc": "Legacy system redesign into a Modular Monolith in banking.",
+        "result": "Reduced technical debt and improved maintainability.",
+        "tech": ".NET, Kafka, Azure"
+      },
+      {
+        "tag": "Performance",
+        "icon": "🚀",
+        "title": "Data pipeline optimization",
+        "desc": "Refactoring and automation of ETL processes.",
+        "result": "65% latency reduction.",
+        "tech": "Python, SQL Server, Azure"
+      },
+      {
+        "tag": "Leadership",
+        "icon": "👥",
+        "title": "Cross-functional team leadership",
+        "desc": "Technical mentoring and coordination of development teams.",
+        "result": "Higher delivery efficiency and team autonomy.",
+        "tech": "Git, Jenkins, Azure DevOps"
+      },
+      {
+        "tag": "Cloud",
+        "icon": "☁️",
+        "title": "Microservices deployment on Azure",
+        "desc": "Scalable and automated cloud service setup.",
+        "result": "Increased system resilience and uptime.",
+        "tech": "Azure, Docker, CI/CD"
+      }
+    ]
+  }
+}
