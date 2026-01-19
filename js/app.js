@@ -1158,3 +1158,43 @@ function initLanguageSelector() {
 
 // Espera a que cargue el DOM
 document.addEventListener("DOMContentLoaded", initLanguageSelector);
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const character = document.getElementById("contact-character");
+  const contactSection = document.querySelector(".contact1");
+  const footer = document.querySelector(".footerflag");
+
+  function checkCharacter() {
+    const sectionRect = contactSection.getBoundingClientRect();
+    const footerRect = footer ? footer.getBoundingClientRect() : null;
+
+    const appearStart = sectionRect.top + sectionRect.height * 0.5; // 20% desde arriba
+    const appearEnd = sectionRect.top + sectionRect.height * 0.5;   // 80% desde arriba
+
+    // Altura máxima para no pisar el footer
+    const maxBottom = footerRect ? footerRect.top : window.innerHeight;
+
+    // Comprobar si el personaje debe aparecer
+    const inSection = appearStart < window.innerHeight && appearEnd > 0;
+    const aboveFooter = (window.innerHeight - 100) < maxBottom; // 100 = bottom fijo del personaje
+
+    if (inSection && aboveFooter) {
+      character.style.left = "20px";
+      character.style.opacity = 1;
+      character.querySelector(".speech-bubble").style.opacity = 1;
+    } else {
+      character.style.left = "-100px";
+      character.style.opacity = 0;
+      character.querySelector(".speech-bubble").style.opacity = 0;
+    }
+  }
+
+  window.addEventListener("scroll", checkCharacter);
+  window.addEventListener("resize", checkCharacter);
+
+  checkCharacter(); // check on load
+});

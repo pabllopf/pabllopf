@@ -2,9 +2,6 @@
   width: 100%;
   min-height: 100%;
   padding: 15px;
-
-  background: #010f4c;
-
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -443,46 +440,59 @@ textarea.input1 {
 
 .recommendation-card {
   position: relative;
-  color: white; /* Texto en blanco */
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Borde blanco fino y elegante */
-  border-radius: 12px; /* Esquinas redondeadas */
+  color: white;
+  /* Texto en blanco */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  /* Borde blanco fino y elegante */
+  border-radius: 12px;
+  /* Esquinas redondeadas */
   padding: 15px;
   cursor: pointer;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05); /* Fondo muy sutil para no romper el estilo */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra ligera para efecto de profundidad */
+  background: rgba(255, 255, 255, 0.05);
+  /* Fondo muy sutil para no romper el estilo */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  /* Sombra ligera para efecto de profundidad */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   height: 500px;
 }
 
 .recommendation-card:hover {
-  transform: translateY(-8px) scale(1.03); /* Hover: elevar y agrandar ligeramente */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada al pasar el ratón */
-  background: rgba(255, 255, 255, 0.08); /* Fondo ligeramente más visible */
+  transform: translateY(-8px) scale(1.03);
+  /* Hover: elevar y agrandar ligeramente */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  /* Sombra más pronunciada al pasar el ratón */
+  background: rgba(255, 255, 255, 0.08);
+  /* Fondo ligeramente más visible */
 }
 
 .recommendation-card img {
   width: 100%;
-  height: 160px; /* Altura uniforme */
-  object-fit: cover; /* Ajuste elegante de la imagen */
+  height: 160px;
+  /* Altura uniforme */
+  object-fit: cover;
+  /* Ajuste elegante de la imagen */
   border-radius: 10px;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
 
 .recommendation-card:hover img {
-  transform: scale(1.05); /* Zoom ligero en la imagen al pasar el ratón */
+  transform: scale(1.05);
+  /* Zoom ligero en la imagen al pasar el ratón */
 }
 
 .recommendation-card h3,
 .recommendation-card p {
   margin: 5px 0;
-  color: white; /* Texto en blanco */
+  color: white;
+  /* Texto en blanco */
   font-size: 1.2em;
 }
 
 .recommendation-card span {
-  color: rgb(185, 184, 184); /* Texto en blanco */
+  color: rgb(185, 184, 184);
+  /* Texto en blanco */
   font-size: 0.8em;
 }
 
@@ -520,7 +530,7 @@ textarea.input1 {
   right: 15px;
   width: 50px;
   height: 50px;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   font-size: 2rem;
   font-weight: bold;
@@ -543,7 +553,8 @@ textarea.input1 {
 
 
 .pm-testimonials-wrapper {
-  overflow-x: hidden; /* ocultar scroll manual */
+  overflow-x: hidden;
+  /* ocultar scroll manual */
   position: relative;
   padding: 20px 60px;
 }
@@ -551,7 +562,8 @@ textarea.input1 {
 .pm-testimonials-carousel {
   display: flex;
   gap: 20px;
-  min-width: max-content; /* fila horizontal */
+  min-width: max-content;
+  /* fila horizontal */
 }
 
 
@@ -561,7 +573,7 @@ textarea.input1 {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   cursor: default;
   position: relative;
@@ -594,6 +606,7 @@ textarea.input1 {
   color: #fff;
   text-align: center;
 }
+
 .testimonial-left .testimonial-position-company,
 .testimonial-left .testimonial-date {
   font-size: 0.85rem;
@@ -612,23 +625,31 @@ textarea.input1 {
 /* Comentario en comillas */
 .testimonial-right p {
   margin: 0;
-  font-size: 1.2rem; /* más grande */
+  font-size: 1.2rem;
+  /* más grande */
   line-height: 1.5;
   color: #fff;
   position: relative;
   padding: 10px 15px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   font-style: italic;
 }
 
-.testimonial-right p::before { top: -10px; left: 5px; }
-.testimonial-right p::after { bottom: -10px; right: 5px; }
+.testimonial-right p::before {
+  top: -10px;
+  left: 5px;
+}
+
+.testimonial-right p::after {
+  bottom: -10px;
+  right: 5px;
+}
 
 /* Hover efecto */
 .pm-testimonial-card:hover {
   transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.12);
 }
 
@@ -640,7 +661,7 @@ textarea.input1 {
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 2rem;
   border-radius: 50%;
@@ -650,19 +671,35 @@ textarea.input1 {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px black;
-  opacity: 0; /* invisibles por defecto */
+  opacity: 0;
+  /* invisibles por defecto */
   transition: opacity 0.3s ease;
 }
 
 .pm-testimonials-wrapper:hover .pm-carousel-arrow {
-  opacity: 1; /* aparecen al hover */
+  opacity: 1;
+  /* aparecen al hover */
 }
 
-.pm-left-arrow { left: 20px; opacity: 1;}
-.pm-right-arrow { right: 20px; opacity: 1;}
+.pm-left-arrow {
+  left: 20px;
+  opacity: 1;
+}
 
-.pm-left-arrow { left: 20px; opacity: 1;}
-.pm-right-arrow { right: 20px; opacity: 1;}
+.pm-right-arrow {
+  right: 20px;
+  opacity: 1;
+}
+
+.pm-left-arrow {
+  left: 20px;
+  opacity: 1;
+}
+
+.pm-right-arrow {
+  right: 20px;
+  opacity: 1;
+}
 
 
 
@@ -674,7 +711,7 @@ textarea.input1 {
 /* Tarjetas de cursos */
 .course-card {
   background: #fff;
-  border: 1px solid rgba(0,0,0,0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   overflow: hidden;
   color: #333;
@@ -682,23 +719,28 @@ textarea.input1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
+
 .course-card:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .course-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
 .course-card .course-content {
   padding: 10px;
 }
+
 .course-card .course-content h3 {
   font-size: 1rem;
   margin: 5px 0;
   color: #111;
 }
+
 .course-card .course-content p {
   font-size: 0.85rem;
   color: #555;
@@ -712,12 +754,13 @@ textarea.input1 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
+
 .course-modal-content {
   position: relative;
   width: 90%;
@@ -726,18 +769,20 @@ textarea.input1 {
   overflow: hidden;
   background: #fff;
 }
+
 .course-modal iframe {
   width: 100%;
   height: 100%;
   border: none;
 }
+
 .course-modal .close-modal {
   position: fixed;
   top: 15px;
   right: 15px;
   width: 50px;
   height: 50px;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   font-size: 2rem;
   font-weight: bold;
@@ -753,6 +798,7 @@ textarea.input1 {
 #courses-pagination {
   margin-top: 20px;
 }
+
 .page-btn {
   display: inline-block;
   margin: 0 5px;
@@ -762,11 +808,13 @@ textarea.input1 {
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
+
 .page-btn.active {
   background: #333;
   color: #fff;
   border-color: #333;
 }
+
 .page-btn:hover {
   background: #555;
   color: #fff;
@@ -795,7 +843,7 @@ textarea.input1 {
   padding: 10px 15px;
   border-radius: 12px;
   border: 1px solid #fff;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   color: #fff;
   font-size: 0.95rem;
   margin: 0 auto;
@@ -825,7 +873,7 @@ textarea.input1 {
 
 .blog-pin-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-color: #00ffff;
 }
 
@@ -1008,7 +1056,7 @@ textarea.input1 {
   padding: 18px 18px 16px 18px;
   margin-bottom: 25px;
   border: 1px solid #010f4c;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
   transition: transform .25s ease, box-shadow .25s ease;
   height: 100%;
   position: relative;
@@ -1017,7 +1065,7 @@ textarea.input1 {
 /* efecto hover */
 .impact-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.25);
 }
 
 /* etiqueta tipo logro */
@@ -1071,7 +1119,7 @@ textarea.input1 {
 }
 
 /* grid 3 columnas */
-@media(min-width:992px){
+@media(min-width:992px) {
   .impact-col {
     width: 33.3333%;
     float: left;
@@ -1090,74 +1138,74 @@ textarea.input1 {
 
 /* Tarjetas de hobbies */
 .hobby-card {
-    background: #fff;
-    border: 2px solid #010f4c;
-    border-radius: 16px;
-    padding: 15px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
+  background: #fff;
+  border: 2px solid #010f4c;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .hobby-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    border-color: #00ffff;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: #00ffff;
 }
 
 .hobby-icon {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #010f4c;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #010f4c;
 }
 
 .hobby-card h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #010f4c;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #010f4c;
 }
 
 .hobby-card p {
-    font-size: 0.95rem;
-    color: #333;
-    line-height: 1.4;
-    margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 10px;
 }
 
 /* Carrusel de imágenes */
 .hobby-carousel {
-    width: 100%;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 10px;
 }
 
 .hobby-carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.6s ease-in-out;
-    opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.6s ease-in-out;
+  opacity: 0;
 }
 
 .hobby-carousel img.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Grid 3 por fila en desktop */
 #hobbies-list .col-md-4 {
-    display: flex;
+  display: flex;
 }
 
 
@@ -1173,52 +1221,121 @@ textarea.input1 {
 
 
 #fh5co-footer {
-    padding: 40px 0;
-    background: #010f4c;
-    color: #fff;
+  padding: 40px 0;
+  background: #010f4c;
+  color: #fff;
 }
 
 #fh5co-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: 0.3s;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 #fh5co-footer a:hover {
-    color: #ffffff57;
+  color: #ffffff57;
 }
 
 .btn-footer {
-    display: inline-block;
-    margin: 5px 10px;
-    padding: 8px 20px;
-    border-radius: 8px;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    background: transparent;
-    font-size: 1.2rem;
-    transition: 0.3s;
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  font-size: 1.2rem;
+  transition: 0.3s;
 }
 
 .btn-footer:hover {
-    background: #ffffff42;
-    color: #010f4c;
+  background: #ffffff42;
+  color: #010f4c;
 }
 
 #footer-socials {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 10px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
 }
 
-#footer-madeby{
-    color: #ffffffcf;
-    margin-bottom: 10px;
+#footer-madeby {
+  color: #ffffffcf;
+  margin-bottom: 10px;
 }
 
 #footer-socials li a {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+#contact-character {
+  position: fixed;
+  left: -150px;
+  /* start off-screen */
+  bottom: 100px;
+  width: 120px;
+  /* ancho visible del personaje */
+  height: 160px;
+  /* altura para mostrar solo la cabeza */
+  margin-left: -20px;
+  padding: 15px;
+
+  overflow: hidden;
+  /* recorta todo lo que sobresalga */
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: left 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+
+#contact-character img {
+  width: 120px;
+  /* escala la imagen para que se ajuste al contenedor */
+  height: auto;
+  transform: rotate(45deg);
+  /* rota la imagen */
+  transform-origin: center top;
+  /* pivote en la base de la cabeza */
+  display: block;
+  margin-bottom: -220px;
+  /* mueve la imagen hacia arriba para centrar la cabeza */
+}
+
+/* Speech bubble */
+#contact-character .speech-bubble {
+  position: relative;
+  background: #e0e6f0;
+  color: #111;
+  padding: 2px 13px;
+  border-radius: 16px;
+  margin-top: 79px;
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+#contact-character .speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 8px 10px 8px;
+  border-style: solid;
+  border-color: transparent transparent #e0e6f0 transparent;
 }
