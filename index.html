@@ -159,62 +159,58 @@
 		</div>
 	</section>
 
+
 	<!---------------------------------------------------------------------------------------------------->
-	<!--                                        HOW I WORK                                               -->
+	<!--                                        TEAM FEEDBACK / TESTIMONIALS                            -->
 	<!---------------------------------------------------------------------------------------------------->
 
-	<div id="fh5co-features" class="animate-box">
+	<div id="fh5co-testimonials" class="fh5co-bg-dark">
 		<div class="container">
-			<div class="services-padding">
 
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2 id="how-i-work-title">How I Work</h2>
-						<p>My approach to delivering high-quality software combines agile practices, collaboration, and
-							continuous learning.</p>
-					</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<br>
+					<h2 id="pm-testimonials-title">Team Feedback & Leadership Recognition</h2>
 				</div>
-
-				<!-- Fallback blocks (will be replaced dynamically by JS) -->
-				<div class="row" id="how-i-work-container">
-
-					<div class="col-md-3 animate-box text-center">
-						<div class="feature-box">
-							<i class="icon-lightbulb"></i>
-							<h3>Innovative Solutions</h3>
-							<p>I design creative and scalable solutions to meet complex software challenges.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 animate-box text-center">
-						<div class="feature-box">
-							<i class="icon-users"></i>
-							<h3>Team Collaboration</h3>
-							<p>I value transparent communication and active collaboration with team members and
-								stakeholders.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 animate-box text-center">
-						<div class="feature-box">
-							<i class="icon-clock"></i>
-							<h3>Agile & Efficient</h3>
-							<p>I follow Agile methodologies to ensure timely delivery and continuous improvement.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 animate-box text-center">
-						<div class="feature-box">
-							<i class="icon-bar-chart"></i>
-							<h3>Results-Driven</h3>
-							<p>I focus on measurable impact, optimizing systems, and delivering value to clients and
-								teams.</p>
-						</div>
-					</div>
-
-				</div>
-
 			</div>
+
+			<div class="row position-relative">
+				<div class="col-md-12 position-relative">
+
+					<!-- Navigation arrows -->
+					<button class="pm-carousel-arrow pm-left-arrow" id="pm-testimonials-left">&#10094;</button>
+					<button class="pm-carousel-arrow pm-right-arrow" id="pm-testimonials-right">&#10095;</button>
+
+					<!-- Carousel wrapper -->
+					<div class="pm-testimonials-wrapper">
+						<div class="pm-testimonials-carousel" id="pm-testimonials-carousel">
+
+							<!-- Fallback testimonial cards -->
+							<div class="pm-testimonial-card">
+								<p>"Pablo’s technical leadership helped us deliver complex projects with confidence and
+									quality."</p>
+								<span>— Senior Software Engineer</span>
+							</div>
+
+							<div class="pm-testimonial-card">
+								<p>"An inspiring Team Lead who combines deep technical knowledge with strong
+									communication skills."</p>
+								<span>— Product Manager</span>
+							</div>
+
+							<div class="pm-testimonial-card">
+								<p>"His ability to align business goals with software architecture is truly
+									exceptional."</p>
+								<span>— Engineering Director</span>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<br>
+
 		</div>
 	</div>
 
@@ -296,65 +292,32 @@
 	</div>
 
 
-
 	<!---------------------------------------------------------------------------------------------------->
-	<!--                                        CERTIFICATIONS                                           -->
+	<!--                                        RECOMMENDATIONS                                           -->
 	<!---------------------------------------------------------------------------------------------------->
 
-	<div id="fh5co-certifications" class="fh5co-bg-dark">
+	<!-- Letters of Recommendation Section -->
+	<div id="fh5co-reco-letters" class="fh5co-bg-dark">
 		<div class="container">
-
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<br>
-					<h2 id="certifications-title">Certifications & Professional Credentials</h2>
-					<p id="certifications-subtitle">
-						A selection of certifications that demonstrate technical expertise and continuous professional
-						development.
-					</p>
+					<h2 id="letters-title"></h2>
+					<p id="letters-subtitle"></p>
 				</div>
 			</div>
-
-			<div class="row" id="certifications-list">
-
-				<!-- Fallback certification cards -->
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-blog">
-						<img src="images/Alis.webp" alt="AWS Certified Solutions Architect" class="img-responsive">
-						<div class="blog-text">
-							<h3>AWS Certified Solutions Architect</h3>
-							<p>Demonstrates expertise in designing and deploying scalable cloud applications on AWS.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-blog">
-						<img src="images/Alis.webp" alt="Scrum Master Certification" class="img-responsive">
-						<div class="blog-text">
-							<h3>Certified Scrum Master (CSM)</h3>
-							<p>Validates skills in agile project management, Scrum framework, and team leadership.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-blog">
-						<img src="images/Alis.webp" alt="Professional Software Architect" class="img-responsive">
-						<div class="blog-text">
-							<h3>Professional Software Architect</h3>
-							<p>Recognizes knowledge in software architecture, system design, and best practices for
-								enterprise solutions.</p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
+			<div class="row" id="letters-list"></div>
 		</div>
+		<br>
 	</div>
 
-
+	<!-- Fullscreen Modal -->
+	<div id="letters-modal" class="recommendation-modal">
+		<span class="close-modal">&times;</span>
+		<div class="recommendation-modal-content">
+			<iframe id="letters-modal-pdf"></iframe>
+		</div>
+	</div>
 
 
 	<!---------------------------------------------------------------------------------------------------->
@@ -419,31 +382,184 @@
 
 
 	<!---------------------------------------------------------------------------------------------------->
-	<!--                                        RECOMMENDATIONS                                           -->
+	<!--                                        CERTIFICATIONS                                           -->
 	<!---------------------------------------------------------------------------------------------------->
 
-	<!-- Letters of Recommendation Section -->
-	<div id="fh5co-reco-letters" class="fh5co-bg-dark">
+	<div id="fh5co-certifications" class="fh5co-bg-dark">
+		<div class="container">
+
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<br>
+					<h2 id="certifications-title">Certifications & Professional Credentials</h2>
+					<p id="certifications-subtitle">
+						A selection of certifications that demonstrate technical expertise and continuous professional
+						development.
+					</p>
+				</div>
+			</div>
+
+			<div class="row" id="certifications-list">
+
+				<!-- Fallback certification cards -->
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-blog">
+						<img src="images/Alis.webp" alt="AWS Certified Solutions Architect" class="img-responsive">
+						<div class="blog-text">
+							<h3>AWS Certified Solutions Architect</h3>
+							<p>Demonstrates expertise in designing and deploying scalable cloud applications on AWS.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-blog">
+						<img src="images/Alis.webp" alt="Scrum Master Certification" class="img-responsive">
+						<div class="blog-text">
+							<h3>Certified Scrum Master (CSM)</h3>
+							<p>Validates skills in agile project management, Scrum framework, and team leadership.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-blog">
+						<img src="images/Alis.webp" alt="Professional Software Architect" class="img-responsive">
+						<div class="blog-text">
+							<h3>Professional Software Architect</h3>
+							<p>Recognizes knowledge in software architecture, system design, and best practices for
+								enterprise solutions.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<!---------------------------------------------------------------------------------------------------->
+	<!--                              AWARDS / RECOGNITIONS                                              -->
+	<!---------------------------------------------------------------------------------------------------->
+
+	<div id="fh5co-awards" class="">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<br>
-					<h2 id="letters-title"></h2>
-					<p id="letters-subtitle"></p>
+					<br>
+					<h2 id="awards-title">Awards & Recognitions</h2>
 				</div>
 			</div>
-			<div class="row" id="letters-list"></div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="timeline" id="awards-timeline">
+
+						<li class="timeline-heading text-center animate-box">
+							<div>
+								<h3 id="awards-heading">Key Achievements</h3>
+							</div>
+						</li>
+
+						<!-- Fallback content for SEO -->
+						<li class="animate-box timeline-unverted">
+							<div class="timeline-badge"><i class="icon-trophy"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Leadership Recognition</h3>
+									<span class="company">UST · 2025</span>
+								</div>
+								<div class="timeline-body">
+									<p>Recognized for leading digital transformation initiatives and delivering
+										high-impact
+										software solutions.</p>
+								</div>
+							</div>
+						</li>
+
+						<li class="animate-box timeline-inverted">
+							<div class="timeline-badge"><i class="icon-award"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Technical Excellence Award</h3>
+									<span class="company">Endesa · 2023</span>
+								</div>
+								<div class="timeline-body">
+									<p>Awarded for outstanding software architecture and performance optimization in
+										large-scale
+										energy platforms.</p>
+								</div>
+							</div>
+						</li>
+
+						<!-- JS will overwrite / append more awards -->
+					</ul>
+				</div>
+			</div>
 		</div>
-		<br>
 	</div>
 
-	<!-- Fullscreen Modal -->
-	<div id="letters-modal" class="recommendation-modal">
-		<span class="close-modal">&times;</span>
-		<div class="recommendation-modal-content">
-			<iframe id="letters-modal-pdf"></iframe>
+
+	<!---------------------------------------------------------------------------------------------------->
+	<!--                                        HOW I WORK                                               -->
+	<!---------------------------------------------------------------------------------------------------->
+
+	<div id="fh5co-features" class="animate-box">
+		<div class="container">
+			<div class="services-padding">
+
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2 id="how-i-work-title">How I Work</h2>
+					</div>
+				</div>
+
+				<!-- Fallback blocks (will be replaced dynamically by JS) -->
+				<div class="row" id="how-i-work-container">
+
+					<div class="col-md-3 animate-box text-center">
+						<div class="feature-box">
+							<i class="icon-lightbulb"></i>
+							<h3>Innovative Solutions</h3>
+							<p>I design creative and scalable solutions to meet complex software challenges.</p>
+						</div>
+					</div>
+
+					<div class="col-md-3 animate-box text-center">
+						<div class="feature-box">
+							<i class="icon-users"></i>
+							<h3>Team Collaboration</h3>
+							<p>I value transparent communication and active collaboration with team members and
+								stakeholders.</p>
+						</div>
+					</div>
+
+					<div class="col-md-3 animate-box text-center">
+						<div class="feature-box">
+							<i class="icon-clock"></i>
+							<h3>Agile & Efficient</h3>
+							<p>I follow Agile methodologies to ensure timely delivery and continuous improvement.</p>
+						</div>
+					</div>
+
+					<div class="col-md-3 animate-box text-center">
+						<div class="feature-box">
+							<i class="icon-bar-chart"></i>
+							<h3>Results-Driven</h3>
+							<p>I focus on measurable impact, optimizing systems, and delivering value to clients and
+								teams.</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
 		</div>
 	</div>
+
+
 
 	<!---------------------------------------------------------------------------------------------------->
 	<!--                                           SKILLS                                               -->
@@ -499,59 +615,7 @@
 
 
 
-	<!---------------------------------------------------------------------------------------------------->
-	<!--                                        TEAM FEEDBACK / TESTIMONIALS                            -->
-	<!---------------------------------------------------------------------------------------------------->
 
-	<div id="fh5co-testimonials" class="fh5co-bg-dark">
-		<div class="container">
-
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<br>
-					<h2 id="pm-testimonials-title">Team Feedback & Leadership Recognition</h2>
-				</div>
-			</div>
-
-			<div class="row position-relative">
-				<div class="col-md-12 position-relative">
-
-					<!-- Navigation arrows -->
-					<button class="pm-carousel-arrow pm-left-arrow" id="pm-testimonials-left">&#10094;</button>
-					<button class="pm-carousel-arrow pm-right-arrow" id="pm-testimonials-right">&#10095;</button>
-
-					<!-- Carousel wrapper -->
-					<div class="pm-testimonials-wrapper">
-						<div class="pm-testimonials-carousel" id="pm-testimonials-carousel">
-
-							<!-- Fallback testimonial cards -->
-							<div class="pm-testimonial-card">
-								<p>"Pablo’s technical leadership helped us deliver complex projects with confidence and
-									quality."</p>
-								<span>— Senior Software Engineer</span>
-							</div>
-
-							<div class="pm-testimonial-card">
-								<p>"An inspiring Team Lead who combines deep technical knowledge with strong
-									communication skills."</p>
-								<span>— Product Manager</span>
-							</div>
-
-							<div class="pm-testimonial-card">
-								<p>"His ability to align business goals with software architecture is truly
-									exceptional."</p>
-								<span>— Engineering Director</span>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<br>
-
-		</div>
-	</div>
 
 
 
@@ -837,71 +901,7 @@
 	</div>
 
 
-	<!---------------------------------------------------------------------------------------------------->
-	<!--                              AWARDS / RECOGNITIONS                                              -->
-	<!---------------------------------------------------------------------------------------------------->
 
-	<div id="fh5co-awards" class="">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<br>
-					<h2 id="awards-title">Awards & Recognitions</h2>
-					<p>
-						A selection of professional achievements, certifications, and recognitions that reflect my
-						impact and
-						contribution across different projects and organizations.
-					</p>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<ul class="timeline" id="awards-timeline">
-
-						<li class="timeline-heading text-center animate-box">
-							<div>
-								<h3 id="awards-heading">Key Achievements</h3>
-							</div>
-						</li>
-
-						<!-- Fallback content for SEO -->
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-trophy"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Leadership Recognition</h3>
-									<span class="company">UST · 2025</span>
-								</div>
-								<div class="timeline-body">
-									<p>Recognized for leading digital transformation initiatives and delivering
-										high-impact
-										software solutions.</p>
-								</div>
-							</div>
-						</li>
-
-						<li class="animate-box timeline-inverted">
-							<div class="timeline-badge"><i class="icon-award"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Technical Excellence Award</h3>
-									<span class="company">Endesa · 2023</span>
-								</div>
-								<div class="timeline-body">
-									<p>Awarded for outstanding software architecture and performance optimization in
-										large-scale
-										energy platforms.</p>
-								</div>
-							</div>
-						</li>
-
-						<!-- JS will overwrite / append more awards -->
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 
@@ -979,7 +979,7 @@
 				</div>
 			</div>
 
-			<div id="hobbies-pagination" class="text-center" ></div>
+			<div id="hobbies-pagination" class="text-center"></div>
 			<br>
 		</div>
 	</div>
