@@ -5,116 +5,36 @@
   },
   "courses": [
     {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
+      "name": { "en": "Be Liquid", "es": "Be Liquid" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Oct 2023", "es": "Oct 2023" },
+      "duration": 5,
+      "image": "files/courses/be_liquid.png",
+      "pdf": "files/courses/be_liquid.pdf"
     },
     {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
+      "name": { "en": "AI SPOILER ESP", "es": "AI SPOILER ESP" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Nov 2025", "es": "Nov 2025" },
+      "duration": 1,
+      "image": "files/courses/ai_spoiler.png",
+      "pdf": "files/courses/ai_spoiler.pdf"
     },
     {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
+      "name": { "en": "Agora se acerca a los clientes KAMS", "es": "Agora se acerca a los clientes KAMS" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Jun 2021", "es": "Jun 2021" },
+      "duration": 4,
+      "image": "files/courses/agora_clientes_kams.png",
+      "pdf": "files/courses/agora_clientes_kams.pdf"
     },
     {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
-    },
-    {
-      "name": { "en": "React Advanced", "es": "React Avanzado" },
-      "institution": { "en": "Udemy", "es": "Udemy" },
-      "date": { "en": "Jan 2026", "es": "Ene 2026" },
-      "duration": 12,
-      "image": "images/banner_1.png",
-      "pdf": "files/monentia.pdf"
+      "name": { "en": "Formación en Clasificación y Protección de la Información", "es": "Formación en Clasificación y Protección de la Información" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Oct 2021", "es": "Oct 2021" },
+      "duration": 1.5,
+      "image": "files/courses/proteccion_de_la_informacion.png",
+      "pdf": "files/courses/proteccion_de_la_informacion.pdf"
     }
   ],
   "showMoreText": { "en": "Show more", "es": "Mostrar más" }

@@ -549,12 +549,6 @@ async function loadCoursesCarousel(lang) {
                 col.innerHTML = `
                     <div class="course-card" data-pdf="${course.pdf || '#'}">
                         <img src="${course.image}" alt="${course.name?.[lang] || course.name?.en}">
-                        <div class="course-content">
-                            <h3>${course.name?.[lang] || course.name?.en}</h3>
-                            <p class="institution">${course.institution?.[lang] || course.institution?.en}</p>
-                            <p class="date">${course.date}</p>
-                            <p class="duration">${course.duration} hours</p>
-                        </div>
                     </div>
                 `;
                 container.appendChild(col);
