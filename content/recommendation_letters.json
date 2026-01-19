@@ -12,25 +12,32 @@
 
   "letters": [
     {
-      "person": "Carlos Fernández",
-      "company": "Endesa",
-      "date": "2024",
-      "pdf": "files/monentia.pdf",
-      "preview": "images/monentia.png"
+      "person": "Maria Gonzalez Evstropova",
+      "company": "Endesa Energía S.A.",
+      "date": "2025",
+      "pdf": "files/letters/Letter_endesa_2.png",
+      "preview": "files/letters/Letter_endesa_2.png"
     },
     {
-      "person": "Laura Gómez",
-      "company": "OpenBank",
-      "date": "2023",
-      "pdf": "files/monentia.pdf",
-      "preview": "images/monentia.png"
+      "person": "Jesus Arsuaga Cao",
+      "company": "Endesa Energía S.A.",
+      "date": "2025",
+      "pdf": "files/letters/Letter_endesa_3.png",
+      "preview": "files/letters/Letter_endesa_3.png"
     },
     {
-      "person": "Laura Gómez",
-      "company": "OpenBank",
-      "date": "2023",
-      "pdf": "files/monentia.pdf",
-      "preview": "images/monentia.png"
+      "person": "Jose Belizón Espinosa",
+      "company": "Monentia SL",
+      "date": "2021",
+      "pdf": "files/letters/Letter_monentia.png",
+      "preview": "files/letters/Letter_monentia.png"
+    },
+    {
+      "person": "Diego A. Correa Fojo",
+      "company": "Endesa Energía S.A.",
+      "date": "2021",
+      "pdf": "files/letters/Letter_endesa_1.png",
+      "preview": "files/letters/Letter_endesa_1.png"
     }
   ]
 }

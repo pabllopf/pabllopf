@@ -446,8 +446,7 @@ textarea.input1 {
   color: white; /* Texto en blanco */
   border: 1px solid rgba(255, 255, 255, 0.5); /* Borde blanco fino y elegante */
   border-radius: 12px; /* Esquinas redondeadas */
-  padding: 20px;
-  margin: 15px;
+  padding: 15px;
   cursor: pointer;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.05); /* Fondo muy sutil para no romper el estilo */
@@ -478,6 +477,12 @@ textarea.input1 {
 .recommendation-card p {
   margin: 5px 0;
   color: white; /* Texto en blanco */
+  font-size: 1.2em;
+}
+
+.recommendation-card span {
+  color: rgb(185, 184, 184); /* Texto en blanco */
+  font-size: 0.8em;
 }
 
 /* Modal */

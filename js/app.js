@@ -350,13 +350,13 @@ async function loadRecommendationLetters(lang) {
 
     data.letters.forEach(letter => {
         const div = document.createElement("div");
-        div.className = "col-md-4 animate-box";
+        div.className = "col-md-3 animate-box";
 
         div.innerHTML = `
       <div class="recommendation-card" style="cursor:pointer;">
         <img src="${letter.preview}" style="width:100%; height:auto; object-fit:cover;">
         <h3>${letter.person}</h3>
-        <span>${letter.company} — ${letter.date}</span>
+        <span>${letter.company}</span>
       </div>
     `;
 
