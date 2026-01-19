@@ -4,37 +4,37 @@
     "subtitle": "Videojuegos creados con cariño y sin fines comerciales ❤️",
     "hobbies": [
       {
-        "title": "Pixel Quest",
-        "description": "Un juego indie de plataformas con mecánicas clásicas y niveles desafiantes.",
-        "icon": "🎮",
+        "title": "Flappy Bird",
+        "description": "Flappy Bird es un proyecto de ejemplo no comercial creado para demostrar las capacidades de Alis",
+        "icon": "🐤",
         "images": [
-          "images/games/default_1.png",
-          "images/games/default_2.png",
-          "images/games/default_3.png"
+          "images/games/flappy_1.png",
+          "images/games/flappy_2.png",
+          "images/games/flappy_3.png"
         ],
-        "url": "https://example.com/pixel-quest"
+        "url": "https://pabllopf.itch.io/alissampleflappybird"
       },
       {
-        "title": "Space Miner",
-        "description": "Juego de estrategia espacial donde gestionas recursos y combates en la galaxia.",
-        "icon": "🪐",
+        "title": "Flappy Bird",
+        "description": "Flappy Bird es un proyecto de ejemplo no comercial creado para demostrar las capacidades de Alis",
+        "icon": "🐤",
         "images": [
-          "images/games/default_1.png",
-          "images/games/default_2.png",
-          "images/games/default_3.png"
+          "images/games/flappy_1.png",
+          "images/games/flappy_2.png",
+          "images/games/flappy_3.png"
         ],
-        "url": "https://example.com/space-miner"
+        "url": "https://pabllopf.itch.io/alissampleflappybird"
       },
       {
-        "title": "Dungeon Runner",
-        "description": "Un roguelike con mazmorras generadas proceduralmente y enemigos únicos.",
-        "icon": "⚔️",
+        "title": "Flappy Bird",
+        "description": "Flappy Bird es un proyecto de ejemplo no comercial creado para demostrar las capacidades de Alis",
+        "icon": "🐤",
         "images": [
-          "images/games/default_1.png",
-          "images/games/default_2.png",
-          "images/games/default_3.png"
+          "images/games/flappy_1.png",
+          "images/games/flappy_2.png",
+          "images/games/flappy_3.png"
         ],
-        "url": "https://example.com/dungeon-runner"
+        "url": "https://pabllopf.itch.io/alissampleflappybird"
       }
     ]
   },
@@ -43,37 +43,37 @@
     "subtitle": "Videogames created with love and without commercial goals ❤️",
     "hobbies": [
       {
-        "title": "Pixel Quest",
-        "description": "An indie platformer with classic mechanics and challenging levels.",
-        "icon": "🎮",
+        "title": "Flappy Bird",
+        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
+        "icon": "🐤",
         "images": [
-          "images/games/default_1.png",
-          "images/games/default_2.png",
-          "images/games/default_3.png"
+          "images/games/flappy_1.png",
+          "images/games/flappy_2.png",
+          "images/games/flappy_3.png"
         ],
-        "url": "https://example.com/pixel-quest"
+        "url": "https://pabllopf.itch.io/alissampleflappybird"
+      },
+     {
+        "title": "Flappy Bird",
+        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
+        "icon": "🐤",
+        "images": [
+          "images/games/flappy_1.png",
+          "images/games/flappy_2.png",
+          "images/games/flappy_3.png"
+        ],
+        "url": "https://pabllopf.itch.io/alissampleflappybird"
       },
       {
-        "title": "Space Miner",
-        "description": "A space strategy game where you manage resources and combat in the galaxy.",
-        "icon": "🪐",
+        "title": "Flappy Bird",
+        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
+        "icon": "🐤",
         "images": [
-          "images/games/default_1.png",
-          "images/games/default_2.png",
-          "images/games/default_3.png"
+          "images/games/flappy_1.png",
+          "images/games/flappy_2.png",
+          "images/games/flappy_3.png"
         ],
-        "url": "https://example.com/space-miner"
-      },
-      {
-        "title": "Dungeon Runner",
-        "description": "A roguelike with procedurally generated dungeons and unique enemies.",
-        "icon": "⚔️",
-        "images": [
-          "images/games/default_1.png",
-          "images/games/default_2.png",
-          "images/games/default_3.png"
-        ],
-        "url": "https://example.com/dungeon-runner"
+        "url": "https://pabllopf.itch.io/alissampleflappybird"
       }
     ]
   }
