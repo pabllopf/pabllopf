@@ -5,7 +5,7 @@
     "hobbies": [
       {
         "title": "Flappy Bird",
-        "description": "Flappy Bird es un proyecto de ejemplo no comercial creado para demostrar las capacidades de Alis",
+        "description": "Flappy Bird es un videojuego arcade en el que controlas un pájaro que debe volar entre tuberías sin chocarse",
         "icon": "🐤",
         "images": [
           "images/games/flappy_1.png",
@@ -15,92 +15,27 @@
         "url": "https://pabllopf.itch.io/alissampleflappybird"
       },
       {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird es un proyecto de ejemplo no comercial creado para demostrar las capacidades de Alis",
-        "icon": "🐤",
+        "title": "Asteroid",
+        "description": "Juego arcade donde controlas una nave espacial que debe destruir asteroides y platillos voladores",
+        "icon": "🚀",
         "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
+          "images/games/asteroid_1.png",
+          "images/games/asteroid_2.png",
+          "images/games/asteroid_3.png"
         ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
+        "url": "https://pabllopf.itch.io/alissampleasteroid"
       },
       {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird es un proyecto de ejemplo no comercial creado para demostrar las capacidades de Alis",
-        "icon": "🐤",
+        "title": "OpenGl",
+        "description": "Ejemplos no comercial creado para demostrar las capacidades de Alis",
+        "icon": "🕹️",
         "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
+          "images/games/opengl_1.png",
+          "images/games/opengl_2.png",
+          "images/games/opengl_3.png",
+          "images/games/opengl_4.png"
         ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-      {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-     {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-      {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-      {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-     {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-      {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
+        "url": "https://pabllopf.itch.io/alissampleopengl"
       }
     ]
   },
@@ -110,7 +45,7 @@
     "hobbies": [
       {
         "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
+        "description": "Flappy Bird is an arcade-style game where you control a bird that must fly between pipes without crashing",
         "icon": "🐤",
         "images": [
           "images/games/flappy_1.png",
@@ -120,92 +55,27 @@
         "url": "https://pabllopf.itch.io/alissampleflappybird"
       },
      {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
+        "title": "Asteroid",
+        "description": "Asteroids is a classic arcade video game where you control a spaceship that must destroy asteroids and flying saucers while avoiding collisions",
+        "icon": "🚀",
         "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
+          "images/games/asteroid_1.png",
+          "images/games/asteroid_2.png",
+          "images/games/asteroid_3.png"
         ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
+        "url": "https://pabllopf.itch.io/alissampleasteroid"
       },
       {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
+        "title": "OpenGl",
+        "description": "Samples non-commercial example created to demonstrate the capabilities of Alis",
+        "icon": "🕹️",
         "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
+          "images/games/opengl_1.png",
+          "images/games/opengl_2.png",
+          "images/games/opengl_3.png",
+          "images/games/opengl_4.png"
         ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-      {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-     {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-      {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-       {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-     {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
-      },
-      {
-        "title": "Flappy Bird",
-        "description": "Flappy Bird is a non-commercial example project created to demonstrate the capabilities of Alis",
-        "icon": "🐤",
-        "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
-        ],
-        "url": "https://pabllopf.itch.io/alissampleflappybird"
+        "url": "https://pabllopf.itch.io/alissampleopengl"
       }
     ]
   }
