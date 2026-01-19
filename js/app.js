@@ -723,81 +723,120 @@ const platformIcons = {
     "iOS": `<span class="project-platform"> <i class="icon-ios"></i> </span>`,
     "Android": `<span class="project-platform"> <i class="icon-android"></i> </span>`
 };
+const PROJECTS_PER_PAGE = 6;
+let currentprojectPage = 1;
+let totalPages = 1;
+let allProjects = [];
 
 async function loadProjects(lang) {
     try {
         const res = await fetch("content/projects.json");
         const config = await res.json();
 
+        // Guardar proyectos globalmente
+        allProjects = config.projects || [];
+        totalPages = Math.ceil(allProjects.length / PROJECTS_PER_PAGE);
+
+        // Títulos
         document.getElementById("projects-title").textContent =
             config.projectsSection?.title?.[lang] || config.projectsSection?.title?.["en"];
         document.getElementById("projects-subtitle").textContent =
             config.projectsSection?.subtitle?.[lang] || config.projectsSection?.subtitle?.["en"];
 
-        const projectsContainer = document.getElementById("projects-list");
-        projectsContainer.innerHTML = "";
+        renderProjectsPage(lang, currentprojectPage);
 
-        config.projects.forEach((proj, index) => {
-            const div = document.createElement("div");
-            div.className = "col-md-4";
-
-            // Plataformas
-            const platformsHTML = (proj.platforms || [])
-                .map(p => platformIcons[p] || p)
-                .join("");
-
-            // Descripción
-            const description = proj.description?.[lang] || proj.description?.["en"] || "";
-
-            // Generar carrusel si hay más de 1 imagen
-            let imagesHTML = "";
-            if (proj.images && proj.images.length > 1) {
-                imagesHTML = `
-          <div class="project-carousel" id="carousel-${index}">
-            ${proj.images.map((img, i) => `
-              <div class="carousel-slide" style="background-image: url(${img}); ${i === 0 ? 'display:block;' : ''}"></div>
-            `).join("")}
-            <button class="carousel-prev" onclick="prevSlide(${index})">&#10094;</button>
-            <button class="carousel-next" onclick="nextSlide(${index})">&#10095;</button>
-          </div>
-        `;
-            } else {
-                imagesHTML = `<a href="${proj.url}" target="_blank" class="blog-bg" style="background-image: url(${proj.images[0]});"></a>`;
-            }
-
-            div.innerHTML = `
-        <div class="fh5co-blog animate-box">
-          ${imagesHTML}
-          <div class="blog-text">
-            <div class="project-platforms">${platformsHTML}</div>
-            <h3><a href="${proj.url}" target="_blank">${proj.name}</a></h3>
-            <p>${description}</p>
-            <ul class="stuff">
-              <li><i class="icon-heart2"></i>${proj.stars}</li>
-              <li><i class="icon-eye2"></i>${proj.forks}</li>
-              <li><i class="icon-download22"></i>${proj.downloads}</li>
-              <li>
-                <a href="${proj.url}" target="_blank">
-                  ${proj.buttonText?.[lang] || proj.buttonText?.["en"] || "View"}
-                  <i class="icon-arrow-right22"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      `;
-
-            projectsContainer.appendChild(div);
-        });
+        renderPaginationControls(lang);
 
     } catch (err) {
         console.error("Error loading projects:", err);
     }
 }
 
-// Carrusel JS simple
+function renderProjectsPage(lang, page) {
+    const projectsContainer = document.getElementById("projects-list");
+    projectsContainer.innerHTML = "";
+
+    const startIndex = (page - 1) * PROJECTS_PER_PAGE;
+    const endIndex = startIndex + PROJECTS_PER_PAGE;
+    const pageProjects = allProjects.slice(startIndex, endIndex);
+
+    pageProjects.forEach((proj, index) => {
+        const div = document.createElement("div");
+        div.className = "col-md-4";
+
+        // Plataformas
+        const platformsHTML = (proj.platforms || [])
+            .map(p => platformIcons[p] || p)
+            .join("");
+
+        // Descripción
+        const description = proj.description?.[lang] || proj.description?.["en"] || "";
+
+        // Carrusel
+        let imagesHTML = "";
+        if (proj.images && proj.images.length > 1) {
+            imagesHTML = `
+                <div class="project-carousel" id="carousel-${startIndex + index}">
+                    ${proj.images.map((img, i) => `
+                        <div class="carousel-slide" style="background-image: url(${img}); ${i === 0 ? 'display:block;' : ''}"></div>
+                    `).join("")}
+                    <button class="carousel-prev" onclick="prevSlide(${startIndex + index})">&#10094;</button>
+                    <button class="carousel-next" onclick="nextSlide(${startIndex + index})">&#10095;</button>
+                </div>
+            `;
+        } else {
+            imagesHTML = `<a href="${proj.url}" target="_blank" class="blog-bg" style="background-image: url(${proj.images[0]});"></a>`;
+        }
+
+        div.innerHTML = `
+            <div class="fh5co-blog animate-box">
+                ${imagesHTML}
+                <div class="blog-text">
+                    <div class="project-platforms">${platformsHTML}</div>
+                    <h3><a href="${proj.url}" target="_blank">${proj.name}</a></h3>
+                    <p>${description}</p>
+                    <ul class="stuff">
+                        <li><i class="icon-heart2"></i>${proj.stars}</li>
+                        <li><i class="icon-eye2"></i>${proj.forks}</li>
+                        <li><i class="icon-download22"></i>${proj.downloads}</li>
+                        <li>
+                            <a href="${proj.url}" target="_blank">
+                                ${proj.buttonText?.[lang] || proj.buttonText?.["en"] || "View"}
+                                <i class="icon-arrow-right22"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        `;
+
+        projectsContainer.appendChild(div);
+    });
+}
+
+// Paginar
+function renderPaginationControls(lang) {
+    const container = document.getElementById("projects-pagination");
+    if (!container) return;
+
+    container.innerHTML = "";
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.className = `pagination-btn ${i === currentprojectPage ? 'active' : ''}`;
+        btn.textContent = i;
+        btn.onclick = () => {
+            currentprojectPage = i;
+            renderProjectsPage(lang, currentprojectPage);
+            renderPaginationControls(lang);
+        };
+        container.appendChild(btn);
+    }
+}
+
+// Carrusel
 function nextSlide(index) {
     const carousel = document.getElementById(`carousel-${index}`);
+    if (!carousel) return;
     const slides = carousel.querySelectorAll(".carousel-slide");
     let current = Array.from(slides).findIndex(slide => slide.style.display === "block");
     slides[current].style.display = "none";
@@ -806,11 +845,14 @@ function nextSlide(index) {
 
 function prevSlide(index) {
     const carousel = document.getElementById(`carousel-${index}`);
+    if (!carousel) return;
     const slides = carousel.querySelectorAll(".carousel-slide");
     let current = Array.from(slides).findIndex(slide => slide.style.display === "block");
     slides[current].style.display = "none";
     slides[(current - 1 + slides.length) % slides.length].style.display = "block";
 }
+
+
 
 
 
