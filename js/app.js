@@ -605,42 +605,71 @@ async function loadHobbies(lang) {
     document.getElementById("hobbies-subtitle").textContent = content.subtitle;
 
     const container = document.getElementById("hobbies-list");
+    const paginationContainer = document.getElementById("hobbies-pagination");
     container.innerHTML = "";
+    paginationContainer.innerHTML = "";
 
-    content.hobbies.forEach((hobby, idx) => {
-      const div = document.createElement("div");
-      div.className = "col-md-4";
+    const hobbiesPerPage = 6;
+    const totalPages = Math.ceil(content.hobbies.length / hobbiesPerPage);
+    let currentPage = 1;
 
-      // Crear carrusel de imágenes
-      const carouselImages = hobby.images.map((img, i) => 
-        `<img src="${img}" class="${i===0 ? "active" : ""}">`
-      ).join("");
+    function renderPage(page) {
+      container.innerHTML = "";
+      const start = (page - 1) * hobbiesPerPage;
+      const end = start + hobbiesPerPage;
+      const pageHobbies = content.hobbies.slice(start, end);
 
-      div.innerHTML = `
-        <div class="hobby-card" onclick="window.open('${hobby.url}', '_blank')">
-          <div class="hobby-carousel">${carouselImages}</div>
-          <div class="hobby-icon">${hobby.icon}</div>
-          <h3>${hobby.title}</h3>
-          <p>${hobby.description}</p>
-        </div>
-      `;
-      container.appendChild(div);
+      pageHobbies.forEach((hobby, idx) => {
+        const div = document.createElement("div");
+        div.className = "col-md-4";
 
-      // Iniciar carrusel automático
-      const carousel = div.querySelector(".hobby-carousel");
-      const images = carousel.querySelectorAll("img");
-      let current = 0;
-      setInterval(() => {
-        images[current].classList.remove("active");
-        current = (current + 1) % images.length;
-        images[current].classList.add("active");
-      }, 2500 + idx * 200); // Desfase para que no cambien todas al mismo tiempo
-    });
+        // Crear carrusel de imágenes
+        const carouselImages = hobby.images.map((img, i) => 
+          `<img src="${img}" class="${i===0 ? "active" : ""}">`
+        ).join("");
+
+        div.innerHTML = `
+          <div class="hobby-card" onclick="window.open('${hobby.url}', '_blank')">
+            <div class="hobby-carousel">${carouselImages}</div>
+            <div class="hobby-icon">${hobby.icon}</div>
+            <h3>${hobby.title}</h3>
+            <p>${hobby.description}</p>
+          </div>
+        `;
+        container.appendChild(div);
+
+        // Iniciar carrusel automático
+        const carousel = div.querySelector(".hobby-carousel");
+        const images = carousel.querySelectorAll("img");
+        let current = 0;
+        setInterval(() => {
+          images[current].classList.remove("active");
+          current = (current + 1) % images.length;
+          images[current].classList.add("active");
+        }, 2500 + idx * 200);
+      });
+
+      // Renderizar paginación
+      paginationContainer.innerHTML = "";
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        btn.className = "page-btn";
+        if (i === page) btn.style.fontWeight = "bold";
+        btn.addEventListener("click", () => renderPage(i));
+        paginationContainer.appendChild(btn);
+      }
+    }
+
+    // Mostrar la primera página al cargar
+    renderPage(currentPage);
 
   } catch (err) {
     console.error("Error loading hobbies:", err);
   }
 }
+
+
 
 
 
