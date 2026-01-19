@@ -452,6 +452,7 @@ textarea.input1 {
   background: rgba(255, 255, 255, 0.05); /* Fondo muy sutil para no romper el estilo */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra ligera para efecto de profundidad */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  height: 500px;
 }
 
 .recommendation-card:hover {
