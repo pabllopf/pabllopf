@@ -1125,7 +1125,7 @@ function initLanguageSelector() {
     loadAwards(initialLang);
     loadBlogs(initialLang);
     loadSkills(initialLang);
-    loadAndRenderImpact(initialLang);
+    //loadAndRenderImpact(initialLang);
     loadHobbies(initialLang);
     loadAndRenderFooter(initialLang);
     setActiveLangButton(initialLang);
@@ -1148,7 +1148,7 @@ function initLanguageSelector() {
             loadAwards(lang);
             loadBlogs(lang);
             loadSkills(lang);
-            loadAndRenderImpact(lang);
+            //loadAndRenderImpact(lang);
             loadHobbies(lang);
             loadAndRenderFooter(lang);
             setActiveLangButton(lang);
