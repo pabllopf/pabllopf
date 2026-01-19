@@ -690,7 +690,7 @@ async function loadAndRenderFooter(lang) {
         const madeByEl = document.getElementById("footer-madeby");
         if (madeByEl) {
             madeByEl.innerHTML = `
-                ${data.madeBy} <a href="${data.socials.github}" target="_blank">Pabllopf</a> <br>
+                ${data.madeBy} <a href="${data.socials.github}" target="_blank">Pabllopf 😎</a> <br>
                 ${data.license}
             `;
         }
