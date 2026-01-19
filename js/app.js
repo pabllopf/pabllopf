@@ -866,14 +866,15 @@ function renderBlogs(filter = '') {
     const div = document.createElement("div");
     div.className = "col-md-3 col-sm-6"; 
     div.innerHTML = `
-      <br>
-      <div class="blog-pin-card" onclick="window.open('${blog.url}', '_blank')">
-        <div class="blog-pin">📍</div>
-        <h3>${blog.title}</h3>
-        <span class="blog-meta">${blog.platform} · ${blog.date}</span>
-        <p>${blog.description}</p>
-      </div>
-    `;
+  <br>
+  <div class="blog-pin-card" onclick="if('${blog.url}'){window.open('${blog.url}', '_blank','noopener,noreferrer')}">
+    <div class="blog-pin">📍</div>
+    <h3>${blog.title}</h3>
+    <span class="blog-meta">${blog.platform} · ${blog.date}</span>
+    <p>${blog.description}</p>
+  </div>
+`;
+
     blogsContainer.appendChild(div);
   });
 

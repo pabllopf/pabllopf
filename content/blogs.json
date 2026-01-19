@@ -1,158 +1,27 @@
 {
   "en": {
     "title": "Blogs & Publications",
+    "subtitle" : "I write about software engineering, leadership, and tech trends. Here are my latest insights and articles",
     "blogs": [
       {
-        "title": "Optimizing Energy Forecasting Models",
-        "date": "Jan 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "A detailed analysis of improving energy demand forecasting using data-driven techniques and machine learning models."
-      },
-      {
-        "title": "Alis Framework: Aspect-Oriented Game Development",
-        "date": "Jun 2022",
-        "platform": "ULPGC Repository",
-        "link": "#",
-        "description": "Presentation of my TFG framework 'Alis' for indie game development using aspect-oriented programming."
-      },
-      {
-        "title": "Optimizing Energy Forecasting Models",
-        "date": "Jan 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "A detailed analysis of improving energy demand forecasting using data-driven techniques and machine learning models."
-      },
-      {
-        "title": "Optimizing Energy Forecasting Models",
-        "date": "Jan 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "A detailed analysis of improving energy demand forecasting using data-driven techniques and machine learning models."
-      },
-      {
-        "title": "Alis Framework: Aspect-Oriented Game Development",
-        "date": "Jun 2022",
-        "platform": "ULPGC Repository",
-        "link": "#",
-        "description": "Presentation of my TFG framework 'Alis' for indie game development using aspect-oriented programming."
-      },
-      {
-        "title": "Optimizing Energy Forecasting Models",
-        "date": "Jan 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "A detailed analysis of improving energy demand forecasting using data-driven techniques and machine learning models."
-      },
-      {
-        "title": "Optimizing Energy Forecasting Models",
-        "date": "Jan 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "A detailed analysis of improving energy demand forecasting using data-driven techniques and machine learning models."
-      },
-      {
-        "title": "Alis Framework: Aspect-Oriented Game Development",
-        "date": "Jun 2022",
-        "platform": "ULPGC Repository",
-        "link": "#",
-        "description": "Presentation of my TFG framework 'Alis' for indie game development using aspect-oriented programming."
-      },
-      {
-        "title": "Optimizing Energy Forecasting Models",
-        "date": "Jan 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "A detailed analysis of improving energy demand forecasting using data-driven techniques and machine learning models."
+        "title": "What is computing and what are its branches?",
+        "date": "Jan 2022",
+        "platform": "Linkedin",
+        "url": "https://www.linkedin.com/pulse/qu%C3%A9-es-la-inform%C3%A1tica-y-cu%C3%A1les-son-sus-ramas-pablo-perdomo-falc%C3%B3n",
+        "description": "Computing studies how computers process information, including areas like software, hardware, networks, AI, cybersecurity, and data science."
       }
     ]
   },
   "es": {
     "title": "Blogs y Publicaciones",
+    "subtitle": "Escribo sobre ingeniería de software, liderazgo y tendencias tecnológicas. Aquí encontrarás mis últimos artículos e ideas",
     "blogs": [
       {
-        "title": "Optimización de Modelos de Predicción Energética",
-        "date": "ene. 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "Análisis detallado de la mejora de predicciones de demanda energética mediante técnicas basadas en datos y modelos de machine learning."
-      },
-      {
-        "title": "Framework Alis: Desarrollo de Videojuegos Orientado a Aspectos",
-        "date": "jun. 2022",
-        "platform": "Repositorio ULPGC",
-        "link": "#",
-        "description": "Presentación de mi TFG 'Alis', un framework para el desarrollo de videojuegos indie usando programación orientada a aspectos."
-      },
-      {
-        "title": "Optimización de Modelos de Predicción Energética",
-        "date": "ene. 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "Análisis detallado de la mejora de predicciones de demanda energética mediante técnicas basadas en datos y modelos de machine learning."
-      },
-      {
-        "title": "Framework Alis: Desarrollo de Videojuegos Orientado a Aspectos",
-        "date": "jun. 2022",
-        "platform": "Repositorio ULPGC",
-        "link": "#",
-        "description": "Presentación de mi TFG 'Alis', un framework para el desarrollo de videojuegos indie usando programación orientada a aspectos."
-      },
-      {
-        "title": "Optimización de Modelos de Predicción Energética",
-        "date": "ene. 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "Análisis detallado de la mejora de predicciones de demanda energética mediante técnicas basadas en datos y modelos de machine learning."
-      },
-      {
-        "title": "Framework Alis: Desarrollo de Videojuegos Orientado a Aspectos",
-        "date": "jun. 2022",
-        "platform": "Repositorio ULPGC",
-        "link": "#",
-        "description": "Presentación de mi TFG 'Alis', un framework para el desarrollo de videojuegos indie usando programación orientada a aspectos."
-      },
-      {
-        "title": "Optimización de Modelos de Predicción Energética",
-        "date": "ene. 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "Análisis detallado de la mejora de predicciones de demanda energética mediante técnicas basadas en datos y modelos de machine learning."
-      },
-      {
-        "title": "Framework Alis: Desarrollo de Videojuegos Orientado a Aspectos",
-        "date": "jun. 2022",
-        "platform": "Repositorio ULPGC",
-        "link": "#",
-        "description": "Presentación de mi TFG 'Alis', un framework para el desarrollo de videojuegos indie usando programación orientada a aspectos."
-      },
-      {
-        "title": "Optimización de Modelos de Predicción Energética",
-        "date": "ene. 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "Análisis detallado de la mejora de predicciones de demanda energética mediante técnicas basadas en datos y modelos de machine learning."
-      },
-      {
-        "title": "Framework Alis: Desarrollo de Videojuegos Orientado a Aspectos",
-        "date": "jun. 2022",
-        "platform": "Repositorio ULPGC",
-        "link": "#",
-        "description": "Presentación de mi TFG 'Alis', un framework para el desarrollo de videojuegos indie usando programación orientada a aspectos."
-      },
-      {
-        "title": "Optimización de Modelos de Predicción Energética",
-        "date": "ene. 2026",
-        "platform": "Medium",
-        "link": "https://medium.com/energy/optimizing-energy-forecasting",
-        "description": "Análisis detallado de la mejora de predicciones de demanda energética mediante técnicas basadas en datos y modelos de machine learning."
-      },
-      {
-        "title": "Framework Alis: Desarrollo de Videojuegos Orientado a Aspectos",
-        "date": "jun. 2022",
-        "platform": "Repositorio ULPGC",
-        "link": "#",
-        "description": "Presentación de mi TFG 'Alis', un framework para el desarrollo de videojuegos indie usando programación orientada a aspectos."
+        "title": "¿Qué es la informática y cuáles son sus ramas?",
+        "date": "Ene 2022",
+        "platform": "Linkedin",
+        "url": "https://www.linkedin.com/pulse/qu%C3%A9-es-la-inform%C3%A1tica-y-cu%C3%A1les-son-sus-ramas-pablo-perdomo-falc%C3%B3n",
+        "description": "La computación estudia cómo los ordenadores procesan información, abarcando áreas como software, hardware, redes, IA, ciberseguridad y ciencia de datos."
       }
     ]
   }
