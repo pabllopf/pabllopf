@@ -7,7 +7,7 @@
     "en": "Show less",
     "es": "Mostrar menos"
   },
-
+  "initialItems": 3,
   "en": {
     "title": "Education",
     "educationTitle": "Actuality",
@@ -15,8 +15,8 @@
       {
         "degree": "Master in Project Management",
         "institution": "🏫 VIU - Universidad Internacional de Valencia <br> 📍 Spain <br> 🗓️ Sept 2022 – Sept 2023",
+        "grade": "8.25/10",
         "description": [
-          "Grade: 8.25/10",
           "Acquired deep knowledge of the project manager profession and context, learning to define strategies for project execution.",
           "Emphasized monitoring project stages, coordinating teams efficiently, anticipating issues, and optimizing resource allocation to achieve objectives in a dynamic global environment.",
           "Skills developed: SharePoint, Microsoft Excel, and 8 more."
@@ -25,8 +25,8 @@
       {
         "degree": "Master in Productivity and Personal Development",
         "institution": "🏫 Universidad de Alcalá <br> 📍 Spain <br> 🗓️ Nov 2020 – Nov 2021",
+        "grade": "8.25/10",
         "description": [
-          "Grade: 8.14/10",
           "Developed transversal skills such as critical thinking, personal and social responsibility, and learning goal organization through project management tools.",
           "Enhanced employability through professional practices and training adapted to market demands.",
           "Applied business planning tools to personal life, improving organization and balance of activities.",
@@ -36,8 +36,8 @@
       {
         "degree": "Bachelor's Degree in Computer Engineering, Software Architecture and Design specialization",
         "institution": "🏫 Universidad de Las Palmas de Gran Canaria <br> 📍 Spain <br> 🗓️ Sept 2017 – May 2021",
+        "grade": "8.25/10",
         "description": [
-          "Grade: 7.12/10",
           "Activities: Co-founder and member of the indie game development group ULPGC INDIES.",
           "Provided solid common foundation in computing to design, develop, maintain, and evaluate applications, systems, and services ensuring reliability, security, and quality.",
           "Specialization in Software Engineering: focused on medium and large-scale application design and development, ensuring usability, maintainability, and quality standards.",
@@ -47,8 +47,8 @@
       {
         "degree": "Baccalaureate in Science and Technology (L.O.E)",
         "institution": "🏫 IES Amurga <br> 📍 Spain <br> 🗓️ Sept 2015 – Jun 2017",
+        "grade": "8.25/10",
         "description": [
-          "Grade: 8.94/10",
           "Activities: Class representative",
           "Skills developed: General IT knowledge"
         ]
@@ -56,8 +56,8 @@
       {
         "degree": "Compulsory Secondary Education (ESO)",
         "institution": "🏫 IES Amurga <br> 📍 Spain <br> 🗓️ Sept 2012 – Jun 2015",
+        "grade": "8.25/10",
         "description": [
-          "Grade: 9.2/10",
           "Activities: Member of the Maspalomas swimming team"
         ]
       }
@@ -71,8 +71,8 @@
       {
         "degree": "Máster Universitario en Gestión de Proyectos/Project Management",
         "institution": "🏫 VIU - Universidad Internacional de Valencia <br> 📍 España <br> 🗓️ Sept 2022 – Sept 2023",
+        "grade": "8.25/10",
         "description": [
-          "Nota: 8,25/10",
           "Durante el máster, adquirí un conocimiento profundo de la profesión de project manager y su contexto, aprendiendo a definir estrategias para la realización de proyectos.",
           "Se enfatizó la supervisión de todas las etapas del proyecto, la coordinación eficiente de equipos y la anticipación a posibles problemas, así como la distribución óptima de recursos humanos y materiales.",
           "Aptitudes: SharePoint, Microsoft Excel y 8 más."
@@ -81,8 +81,8 @@
       {
         "degree": "Máster propio en Productividad y Desarrollo Personal",
         "institution": "🏫 Universidad de Alcalá <br> 📍 España <br> 🗓️ Nov 2020 – Nov 2021",
+        "grade": "8.14/10",
         "description": [
-          "Nota: 8,14/10",
           "Adquirí habilidades transversales como pensamiento crítico, responsabilidad personal y social, y organización de objetivos mediante herramientas de gestión de proyectos.",
           "El programa potenció la empleabilidad mediante prácticas profesionales y formación alineada con las demandas del mercado.",
           "Aprendí a aplicar herramientas de planificación empresarial a la vida personal, mejorando la organización y el equilibrio de actividades.",
@@ -92,8 +92,8 @@
       {
         "degree": "Grado en Ingeniería Informática, Especialidad en Arquitectura y Diseño de Software",
         "institution": "🏫 Universidad de Las Palmas de Gran Canaria <br> 📍 España <br> 🗓️ Sept 2017 – May 2021",
+        "grade": "8.25/10",
         "description": [
-          "Nota: 7,12/10",
           "Actividades: Cofundador y miembro del grupo de desarrolladores de videojuegos indie ULPGC INDIES.",
           "El grado proporciona formación en informática para diseñar, desarrollar, mantener y evaluar aplicaciones, sistemas y servicios asegurando fiabilidad, seguridad y calidad.",
           "Especialidad en Ingeniería del Software: enfocada en el diseño y desarrollo de aplicaciones medianas y grandes, asegurando usabilidad, mantenibilidad y calidad.",
@@ -103,8 +103,8 @@
       {
         "degree": "Bachillerato de Ciencias y Tecnología (L.O.E)",
         "institution": "🏫 IES Amurga <br> 📍 España <br> 🗓️ Sept 2015 – Jun 2017",
+        "grade": "8.25/10",
         "description": [
-          "Nota: 8,94/10",
           "Actividades: Delegado de clase",
           "Aptitudes: Conocimientos informáticos"
         ]
@@ -112,8 +112,8 @@
       {
         "degree": "Educación Secundaria Obligatoria (ESO)",
         "institution": "🏫 IES Amurga <br> 📍 España <br> 🗓️ Sept 2012 – Jun 2015",
+        "grade": "8.25/10",
         "description": [
-          "Nota: 9,2/10",
           "Actividades: Equipo de natación de Maspalomas"
         ]
       }

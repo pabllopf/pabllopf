@@ -190,57 +190,51 @@ async function loadMyEducationContent(lang) {
         const data = await response.json();
 
         const content = data[lang];
-        if (!content) {
-            console.error(`No education data for language: ${lang}`);
-            return;
-        }
+        if (!content) return console.error(`No education data for language: ${lang}`);
 
         const titleEl = document.getElementById("resume-title-education");
         const headingEl = document.getElementById("education-title");
         const timelineEl = document.getElementById("resume-timeline-education");
 
-        if (!titleEl || !headingEl || !timelineEl) {
-            console.error("Missing HTML elements for education section");
-            return;
-        }
+        if (!titleEl || !headingEl || !timelineEl) return console.error("Missing HTML elements");
 
-        // Títulos
         titleEl.textContent = content.title;
         headingEl.textContent = content.educationTitle;
 
-        // Reset timeline
         timelineEl.innerHTML = `
-      <li class="timeline-heading text-center animate-box">
-        <div><h3 id="education-title">${content.educationTitle}</h3></div>
-      </li>
-    `;
+          <li class="timeline-heading text-center animate-box">
+            <div><h3 id="education-title">${content.educationTitle}</h3></div>
+          </li>
+        `;
 
         const readMoreText = data.readMoreText?.[lang];
         const showLessText = data.showLessText?.[lang];
+        const initialItems = data.initialItems || 2;
+
+        let hiddenElements = [];
 
         function createTimelineItem(item, inverted = false) {
             const li = document.createElement("li");
             li.className = `animate-box ${inverted ? "timeline-inverted" : "timeline-unverted"}`;
 
             const fullDescription = item.description.map(p => `<p>${p}</p>`).join("");
-            const shortDescription = item.description.length
-                ? `<p>${item.description[0]}</p>`
-                : "";
+            const shortDescription = item.description.length ? `<p>${item.description[0]}</p>` : "";
 
             li.innerHTML = `
-        <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h3 class="timeline-title">${item.degree}</h3>
-            <span class="company">${item.institution}</span>
-          </div>
-          <div class="timeline-body">
-            <div class="description-short">${shortDescription}</div>
-            <div class="description-full" style="display:none;">${fullDescription}</div>
-            <button class="read-more">${readMoreText}</button>
-          </div>
-        </div>
-      `;
+              <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">${item.degree}</h3>
+                  <span class="grade-badge">${item.grade}</span>
+                  <span class="company">${item.institution}</span>
+                </div>
+                <div class="timeline-body">
+                  <div class="description-short">${shortDescription}</div>
+                  <div class="description-full" style="display:none;">${fullDescription}</div>
+                  <button class="read-more">${readMoreText}</button>
+                </div>
+              </div>
+            `;
 
             const btn = li.querySelector(".read-more");
             const shortDiv = li.querySelector(".description-short");
@@ -257,13 +251,35 @@ async function loadMyEducationContent(lang) {
         }
 
         content.education.forEach((item, idx) => {
-            timelineEl.appendChild(createTimelineItem(item, idx % 2 === 1));
+            const li = createTimelineItem(item, idx % 2 === 1);
+            if (idx >= initialItems) {
+                li.style.display = "none";
+                hiddenElements.push(li);
+            }
+            timelineEl.appendChild(li);
         });
+
+        // Botón mostrar más / menos
+        if (hiddenElements.length) {
+            const moreBtnLi = document.createElement("li");
+            moreBtnLi.className = "timeline-heading text-center animate-box";
+            const moreBtn = document.createElement("button");
+            moreBtn.className = "read-more show-more-btn";
+            moreBtn.textContent = data.readMoreText[lang];
+            moreBtn.addEventListener("click", () => {
+                const isHidden = hiddenElements[0].style.display === "none";
+                hiddenElements.forEach(el => el.style.display = isHidden ? "block" : "none");
+                moreBtn.textContent = isHidden ? data.showLessText[lang] : data.readMoreText[lang];
+            });
+            moreBtnLi.appendChild(moreBtn);
+            timelineEl.appendChild(moreBtnLi);
+        }
 
     } catch (err) {
         console.error("Error loading education.json:", err);
     }
 }
+
 
 
 
