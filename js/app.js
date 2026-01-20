@@ -599,7 +599,7 @@ async function loadCoursesCarousel(lang) {
 
         // Títulos
         document.getElementById("courses-title").textContent = data.coursesSection?.title?.[lang] || data.coursesSection?.title?.["en"];
-        document.getElementById("courses-subtitle").textContent = data.coursesSection?.subtitle?.[lang] || data.coursesSection?.subtitle?.["en"];
+        //document.getElementById("courses-subtitle").textContent = data.coursesSection?.subtitle?.[lang] || data.coursesSection?.subtitle?.["en"];
 
         const itemsPerPage = 8;
         const totalPages = Math.ceil(courses.length / itemsPerPage);

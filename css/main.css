@@ -720,6 +720,7 @@ textarea.input1 {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  margin: 10px;
 }
 
 .course-card:hover {
