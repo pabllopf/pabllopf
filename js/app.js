@@ -144,7 +144,11 @@ async function loadMyExperienceContent(lang) {
             const shortDescription = item.description.length > 0 ? `<p>${item.description[0]}</p>` : "";
 
             li.innerHTML = `
-                <div class="timeline-badge"><img src="${item.logo}" alt="${item.title}"></div>
+                <div class="timeline-badge">
+                    <a href="${item.logo_url}" target="_blank">
+                        <img src="${item.logo}" alt="${item.title}">
+                    </a>
+                </div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h3 class="timeline-title">${item.role || item.title}</h3>
