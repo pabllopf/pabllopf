@@ -1071,6 +1071,24 @@ async function loadAndRenderImpact(lang) {
   }
 }
 
+async function loadContactCharacter(lang) {
+    try {
+        const res = await fetch("content/cta.json");
+        const data = await res.json();
+
+        const content = data[lang] || data["en"];
+        const textEl = document.getElementById("contact-character-text");
+
+        if (textEl) {
+            textEl.textContent = content.text;
+        }
+
+    } catch (err) {
+        console.error("Error loading contact character content:", err);
+    }
+}
+
+
 
 async function loadContactContent(lang) {
     try {
@@ -1126,6 +1144,7 @@ function initLanguageSelector() {
     loadBlogs(initialLang);
     loadSkills(initialLang);
     //loadAndRenderImpact(initialLang);
+    loadContactCharacter(initialLang);
     loadHobbies(initialLang);
     loadAndRenderFooter(initialLang);
     setActiveLangButton(initialLang);
@@ -1145,6 +1164,7 @@ function initLanguageSelector() {
             loadCertifications(lang);
             loadTestimonials(lang);
             loadCoursesCarousel(lang);
+            loadContactCharacter(lang);
             loadAwards(lang);
             loadBlogs(lang);
             loadSkills(lang);
