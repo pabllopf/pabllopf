@@ -33,10 +33,13 @@ async function loadHeaderContent(lang) {
         document.getElementById("menu-skills").querySelector("span").textContent = content.menu.skills;
         document.getElementById("menu-contact").querySelector("span").textContent = content.menu.contact;
 
-        // Emoji Badge dinámico
+        // Emoji Badge dinámico con tooltip
         const emojiBadge = document.getElementById("emoji-badge");
+        const emojiTooltip = document.getElementById("emoji-tooltip");
+
         emojiBadge.textContent = "🚀";
-        emojiBadge.title = content.emojiBadge.tooltip;
+        emojiTooltip.textContent = content.emojiBadge.tooltip;
+
 
     } catch (err) {
         console.error("Error loading header.json:", err);
@@ -135,50 +138,50 @@ async function loadMyExperienceContent(lang) {
         ========================= */
 
         function parseDateFromText(text) {
-        if (!text) return null;
+            if (!text) return null;
 
-        const months = lang === "es"
-            ? { ene:0, feb:1, mar:2, abr:3, may:4, jun:5, jul:6, ago:7, sep:8, oct:9, nov:10, dic:11 }
-            : { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
+            const months = lang === "es"
+                ? { ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5, jul: 6, ago: 7, sep: 8, oct: 9, nov: 10, dic: 11 }
+                : { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
 
-        const match = text.toLowerCase().match(/🗓️\s*([a-z]{3})\s*(\d{4})/);
-        if (!match) return null;
+            const match = text.toLowerCase().match(/🗓️\s*([a-z]{3})\s*(\d{4})/);
+            if (!match) return null;
 
-        return new Date(parseInt(match[2], 10), months[match[1]], 1);
+            return new Date(parseInt(match[2], 10), months[match[1]], 1);
         }
 
         function parseEndDate(text) {
-        if (/actualidad|present/i.test(text)) return new Date();
+            if (/actualidad|present/i.test(text)) return new Date();
 
-        const match = text.toLowerCase().match(/-\s*([a-z]{3})\s*(\d{4})/);
-        if (!match) return null;
+            const match = text.toLowerCase().match(/-\s*([a-z]{3})\s*(\d{4})/);
+            if (!match) return null;
 
-        return new Date(parseInt(match[2], 10), parseDateFromText(`🗓️ ${match[1]} ${match[2]}`).getMonth(), 1);
+            return new Date(parseInt(match[2], 10), parseDateFromText(`🗓️ ${match[1]} ${match[2]}`).getMonth(), 1);
         }
 
         function calculateTotalExperience(experiences) {
-        let earliestStart = null;
-        let latestEnd = new Date(0);
+            let earliestStart = null;
+            let latestEnd = new Date(0);
 
-        experiences.forEach(exp => {
-            const start = parseDateFromText(exp.company);
-            const end = parseEndDate(exp.company) || new Date();
+            experiences.forEach(exp => {
+                const start = parseDateFromText(exp.company);
+                const end = parseEndDate(exp.company) || new Date();
 
-            if (start && (!earliestStart || start < earliestStart)) {
-            earliestStart = start;
-            }
-            if (end > latestEnd) {
-            latestEnd = end;
-            }
-        });
+                if (start && (!earliestStart || start < earliestStart)) {
+                    earliestStart = start;
+                }
+                if (end > latestEnd) {
+                    latestEnd = end;
+                }
+            });
 
-        if (!earliestStart) return 0;
+            if (!earliestStart) return 0;
 
-        const years = (latestEnd - earliestStart) / (1000 * 60 * 60 * 24 * 365.25);
-        return Math.floor(years);
+            const years = (latestEnd - earliestStart) / (1000 * 60 * 60 * 24 * 365.25);
+            return Math.floor(years);
         }
 
-         // Limpiar items previos
+        // Limpiar items previos
         timelineEl.innerHTML = `
             <li class="timeline-heading text-center animate-box">
                 <div><h3 id="experience-title">${content.experienceTitle}</h3></div>
@@ -192,9 +195,9 @@ async function loadMyExperienceContent(lang) {
         const totalYears = calculateTotalExperience(content.experience);
 
         const experienceLabel =
-        lang === "es"
-            ? `💼 +${totalYears} años de experiencia`
-            : `💼 +${totalYears} years of experience`;
+            lang === "es"
+                ? `💼 +${totalYears} años de experiencia`
+                : `💼 +${totalYears} years of experience`;
 
         timelineEl.innerHTML = `
         <li class="timeline-heading text-center animate-box">
@@ -208,7 +211,7 @@ async function loadMyExperienceContent(lang) {
         `;
 
 
-       
+
 
         // Textos del botón desde JSON (nivel superior)
         const readMoreText = data.readMoreText?.[lang] || "Leer más";
@@ -473,40 +476,40 @@ async function loadRecommendationLetters(lang) {
 
 
 async function loadAwards(lang) {
-  try {
-    const res = await fetch("content/awards.json");
-    const data = await res.json();
-    const content = data[lang];
+    try {
+        const res = await fetch("content/awards.json");
+        const data = await res.json();
+        const content = data[lang];
 
-    if (!content) return;
+        if (!content) return;
 
-    document.getElementById("awards-title").textContent = content.title;
-    document.getElementById("awards-heading").textContent = content.heading || "";
+        document.getElementById("awards-title").textContent = content.title;
+        document.getElementById("awards-heading").textContent = content.heading || "";
 
-    const [left, right] = content.awards;
+        const [left, right] = content.awards;
 
-    function renderAward(elId, award) {
-      const el = document.getElementById(elId);
-      const contentEl = el.querySelector(".award-content");
+        function renderAward(elId, award) {
+            const el = document.getElementById(elId);
+            const contentEl = el.querySelector(".award-content");
 
-      contentEl.innerHTML = `
+            contentEl.innerHTML = `
         <h3>${award.title}</h3>
         <div class="award-meta">${award.institution} ${award.date}</div>
         <p>${award.description[0]}</p>
       `;
+        }
+
+        renderAward("award-left", left);
+        renderAward("award-right", right);
+
+        // Aplicar animación float solo a los elementos que deben flotar
+        document.querySelectorAll(".element").forEach(el => {
+            el.style.animation = "float 3s ease-in-out infinite alternate";
+        });
+
+    } catch (err) {
+        console.error("Error loading awards:", err);
     }
-
-    renderAward("award-left", left);
-    renderAward("award-right", right);
-
-    // Aplicar animación float solo a los elementos que deben flotar
-    document.querySelectorAll(".element").forEach(el => {
-      el.style.animation = "float 3s ease-in-out infinite alternate";
-    });
-
-  } catch (err) {
-    console.error("Error loading awards:", err);
-  }
 }
 
 
@@ -668,40 +671,40 @@ async function loadCoursesCarousel(lang) {
 
 
 async function loadHobbies(lang) {
-  try {
-    const res = await fetch("content/hobbies.json");
-    const data = await res.json();
-    const content = data[lang];
-    if (!content) return console.error(`No data for language: ${lang}`);
+    try {
+        const res = await fetch("content/hobbies.json");
+        const data = await res.json();
+        const content = data[lang];
+        if (!content) return console.error(`No data for language: ${lang}`);
 
-    document.getElementById("hobbies-title").textContent = content.title;
-    document.getElementById("hobbies-subtitle").textContent = content.subtitle;
+        document.getElementById("hobbies-title").textContent = content.title;
+        document.getElementById("hobbies-subtitle").textContent = content.subtitle;
 
-    const container = document.getElementById("hobbies-list");
-    const paginationContainer = document.getElementById("hobbies-pagination");
-    container.innerHTML = "";
-    paginationContainer.innerHTML = "";
+        const container = document.getElementById("hobbies-list");
+        const paginationContainer = document.getElementById("hobbies-pagination");
+        container.innerHTML = "";
+        paginationContainer.innerHTML = "";
 
-    const hobbiesPerPage = 6;
-    const totalPages = Math.ceil(content.hobbies.length / hobbiesPerPage);
-    let currentPage = 1;
+        const hobbiesPerPage = 6;
+        const totalPages = Math.ceil(content.hobbies.length / hobbiesPerPage);
+        let currentPage = 1;
 
-    function renderPage(page) {
-      container.innerHTML = "";
-      const start = (page - 1) * hobbiesPerPage;
-      const end = start + hobbiesPerPage;
-      const pageHobbies = content.hobbies.slice(start, end);
+        function renderPage(page) {
+            container.innerHTML = "";
+            const start = (page - 1) * hobbiesPerPage;
+            const end = start + hobbiesPerPage;
+            const pageHobbies = content.hobbies.slice(start, end);
 
-      pageHobbies.forEach((hobby, idx) => {
-        const div = document.createElement("div");
-        div.className = "col-md-4";
+            pageHobbies.forEach((hobby, idx) => {
+                const div = document.createElement("div");
+                div.className = "col-md-4";
 
-        // Crear carrusel de imágenes
-        const carouselImages = hobby.images.map((img, i) => 
-          `<img src="${img}" class="${i===0 ? "active" : ""}">`
-        ).join("");
+                // Crear carrusel de imágenes
+                const carouselImages = hobby.images.map((img, i) =>
+                    `<img src="${img}" class="${i === 0 ? "active" : ""}">`
+                ).join("");
 
-        div.innerHTML = `
+                div.innerHTML = `
           <div class="hobby-card" onclick="window.open('${hobby.url}', '_blank')">
             <div class="hobby-carousel">${carouselImages}</div>
             <div class="hobby-icon">${hobby.icon}</div>
@@ -709,37 +712,37 @@ async function loadHobbies(lang) {
             <p>${hobby.description}</p>
           </div>
         `;
-        container.appendChild(div);
+                container.appendChild(div);
 
-        // Iniciar carrusel automático
-        const carousel = div.querySelector(".hobby-carousel");
-        const images = carousel.querySelectorAll("img");
-        let current = 0;
-        setInterval(() => {
-          images[current].classList.remove("active");
-          current = (current + 1) % images.length;
-          images[current].classList.add("active");
-        }, 2500 + idx * 200);
-      });
+                // Iniciar carrusel automático
+                const carousel = div.querySelector(".hobby-carousel");
+                const images = carousel.querySelectorAll("img");
+                let current = 0;
+                setInterval(() => {
+                    images[current].classList.remove("active");
+                    current = (current + 1) % images.length;
+                    images[current].classList.add("active");
+                }, 2500 + idx * 200);
+            });
 
-      // Renderizar paginación
-      paginationContainer.innerHTML = "";
-      for (let i = 1; i <= totalPages; i++) {
-        const btn = document.createElement("button");
-        btn.textContent = i;
-        btn.className = "page-btn";
-        if (i === page) btn.style.fontWeight = "bold";
-        btn.addEventListener("click", () => renderPage(i));
-        paginationContainer.appendChild(btn);
-      }
+            // Renderizar paginación
+            paginationContainer.innerHTML = "";
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement("button");
+                btn.textContent = i;
+                btn.className = "page-btn";
+                if (i === page) btn.style.fontWeight = "bold";
+                btn.addEventListener("click", () => renderPage(i));
+                paginationContainer.appendChild(btn);
+            }
+        }
+
+        // Mostrar la primera página al cargar
+        renderPage(currentPage);
+
+    } catch (err) {
+        console.error("Error loading hobbies:", err);
     }
-
-    // Mostrar la primera página al cargar
-    renderPage(currentPage);
-
-  } catch (err) {
-    console.error("Error loading hobbies:", err);
-  }
 }
 
 
@@ -794,7 +797,7 @@ async function loadAndRenderFooter(lang) {
             socialsContainer.innerHTML = "";
             for (const [key, url] of Object.entries(data.socials)) {
                 let iconClass = "";
-                switch(key) {
+                switch (key) {
                     case "github": iconClass = "icon-github"; break;
                     case "linkedin": iconClass = "icon-linkedin2"; break;
                     case "instagram": iconClass = "icon-instagram"; break;
@@ -818,30 +821,30 @@ async function loadAndRenderFooter(lang) {
 
 
 async function loadStatsContent(lang) {
-	try {
-		const res = await fetch("content/stats.json");
-		const data = await res.json();
-		const content = data[lang];
+    try {
+        const res = await fetch("content/stats.json");
+        const data = await res.json();
+        const content = data[lang];
 
-		if (!content) {
-			console.error("Stats content not found for language:", lang);
-			return;
-		}
+        if (!content) {
+            console.error("Stats content not found for language:", lang);
+            return;
+        }
 
-		// Título y subtítulo
-		document.getElementById("stats-title").textContent = content.title;
-		document.getElementById("stats-subtitle").textContent = content.subtitle;
+        // Título y subtítulo
+        document.getElementById("stats-title").textContent = content.title;
+        document.getElementById("stats-subtitle").textContent = content.subtitle;
 
-		// Contenedor
-		const container = document.getElementById("stats-container");
-		container.innerHTML = "";
+        // Contenedor
+        const container = document.getElementById("stats-container");
+        container.innerHTML = "";
 
-		// Render stats
-		content.stats.forEach(stat => {
-			const col = document.createElement("div");
-			col.className = "col-md-5 col-sm-12 animate-box text-center stat-card";
+        // Render stats
+        content.stats.forEach(stat => {
+            const col = document.createElement("div");
+            col.className = "col-md-5 col-sm-12 animate-box text-center stat-card";
 
-			col.innerHTML = `
+            col.innerHTML = `
 				<img 
 					src="${stat.image}"
 					alt="${stat.alt}"
@@ -855,12 +858,12 @@ async function loadStatsContent(lang) {
 				/>
 			`;
 
-			container.appendChild(col);
-		});
+            container.appendChild(col);
+        });
 
-	} catch (err) {
-		console.error("Error loading stats.json:", err);
-	}
+    } catch (err) {
+        console.error("Error loading stats.json:", err);
+    }
 }
 
 
@@ -1018,42 +1021,42 @@ const itemsPerPage = 8; // 2 filas de 4
 let allBlogs = [];
 
 async function loadBlogs(lang) {
-  try {
-    const res = await fetch("content/blogs.json");
-    const data = await res.json();
-    const content = data[lang];
-    if (!content) return console.error(`No data for language: ${lang}`);
+    try {
+        const res = await fetch("content/blogs.json");
+        const data = await res.json();
+        const content = data[lang];
+        if (!content) return console.error(`No data for language: ${lang}`);
 
-    document.getElementById("blogs-title").textContent = content.title;
-    allBlogs = content.blogs;
+        document.getElementById("blogs-title").textContent = content.title;
+        allBlogs = content.blogs;
 
-    renderBlogs();
-    setupSearch();
-  } catch (err) {
-    console.error("Error loading blogs:", err);
-  }
+        renderBlogs();
+        setupSearch();
+    } catch (err) {
+        console.error("Error loading blogs:", err);
+    }
 }
 
 function renderBlogs(filter = '') {
-  const blogsContainer = document.getElementById("blogs-list");
-  blogsContainer.innerHTML = "";
+    const blogsContainer = document.getElementById("blogs-list");
+    blogsContainer.innerHTML = "";
 
-  const filteredBlogs = allBlogs.filter(blog =>
-    blog.title.toLowerCase().includes(filter.toLowerCase()) ||
-    blog.description.toLowerCase().includes(filter.toLowerCase())
-  );
+    const filteredBlogs = allBlogs.filter(blog =>
+        blog.title.toLowerCase().includes(filter.toLowerCase()) ||
+        blog.description.toLowerCase().includes(filter.toLowerCase())
+    );
 
-  const totalPages = Math.ceil(filteredBlogs.length / itemsPerPage);
-  if (currentPage > totalPages) currentPage = 1;
+    const totalPages = Math.ceil(filteredBlogs.length / itemsPerPage);
+    if (currentPage > totalPages) currentPage = 1;
 
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const blogsToShow = filteredBlogs.slice(start, end);
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const blogsToShow = filteredBlogs.slice(start, end);
 
-  blogsToShow.forEach(blog => {
-    const div = document.createElement("div");
-    div.className = "col-md-3 col-sm-6"; 
-    div.innerHTML = `
+    blogsToShow.forEach(blog => {
+        const div = document.createElement("div");
+        div.className = "col-md-3 col-sm-6";
+        div.innerHTML = `
   <br>
   <div class="blog-pin-card" onclick="if('${blog.url}'){window.open('${blog.url}', '_blank','noopener,noreferrer')}">
     <div class="blog-pin">📍</div>
@@ -1063,34 +1066,34 @@ function renderBlogs(filter = '') {
   </div>
 `;
 
-    blogsContainer.appendChild(div);
-  });
+        blogsContainer.appendChild(div);
+    });
 
-  renderPagination(totalPages, filter);
+    renderPagination(totalPages, filter);
 }
 
 function renderPagination(totalPages, filter) {
-  const paginationContainer = document.getElementById("blogs-pagination");
-  paginationContainer.innerHTML = "";
+    const paginationContainer = document.getElementById("blogs-pagination");
+    paginationContainer.innerHTML = "";
 
-  for (let i = 1; i <= totalPages; i++) {
-    const btn = document.createElement("button");
-    btn.className = "pagination-btn" + (i === currentPage ? " active" : "");
-    btn.textContent = i;
-    btn.addEventListener("click", () => {
-      currentPage = i;
-      renderBlogs(filter);
-    });
-    paginationContainer.appendChild(btn);
-  }
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.className = "pagination-btn" + (i === currentPage ? " active" : "");
+        btn.textContent = i;
+        btn.addEventListener("click", () => {
+            currentPage = i;
+            renderBlogs(filter);
+        });
+        paginationContainer.appendChild(btn);
+    }
 }
 
 function setupSearch() {
-  const searchInput = document.getElementById("blogs-search");
-  searchInput.addEventListener("input", (e) => {
-    currentPage = 1;
-    renderBlogs(e.target.value);
-  });
+    const searchInput = document.getElementById("blogs-search");
+    searchInput.addEventListener("input", (e) => {
+        currentPage = 1;
+        renderBlogs(e.target.value);
+    });
 }
 
 
@@ -1099,22 +1102,22 @@ function setupSearch() {
 
 
 async function loadSkills(lang) {
-  const res = await fetch("content/skills.json");
-  const data = await res.json();
-  const content = data[lang];
-  if (!content) return;
+    const res = await fetch("content/skills.json");
+    const data = await res.json();
+    const content = data[lang];
+    if (!content) return;
 
-  document.getElementById("skills-title").textContent = content.title;
-  document.getElementById("skills-subtitle").textContent = content.subtitle;
+    document.getElementById("skills-title").textContent = content.title;
+    document.getElementById("skills-subtitle").textContent = content.subtitle;
 
-  const container = document.getElementById("skills-groups");
-  container.innerHTML = "";
+    const container = document.getElementById("skills-groups");
+    container.innerHTML = "";
 
-  content.categories.forEach(cat => {
-    const col = document.createElement("div");
-    col.className = "col-md-12";
+    content.categories.forEach(cat => {
+        const col = document.createElement("div");
+        col.className = "col-md-12";
 
-    col.innerHTML = `
+        col.innerHTML = `
       <div class="skills-group">
         <h3>${cat.name}</h3>
         <div class="skills-grid">
@@ -1128,26 +1131,26 @@ async function loadSkills(lang) {
       </div>
     `;
 
-    container.appendChild(col);
-  });
+        container.appendChild(col);
+    });
 }
 
 
 function setupSkillFilters(categories) {
-  const container = document.getElementById("skills-filters");
-  container.innerHTML = "";
+    const container = document.getElementById("skills-filters");
+    container.innerHTML = "";
 
-  categories.forEach((cat, index) => {
-    const btn = document.createElement("button");
-    btn.className = "skill-filter-btn";
-    btn.textContent = cat.name;
-    btn.onclick = () => {
-      document.querySelectorAll(".skills-group").forEach((g, i) => {
-        g.style.display = i === index ? "block" : "none";
-      });
-    };
-    container.appendChild(btn);
-  });
+    categories.forEach((cat, index) => {
+        const btn = document.createElement("button");
+        btn.className = "skill-filter-btn";
+        btn.textContent = cat.name;
+        btn.onclick = () => {
+            document.querySelectorAll(".skills-group").forEach((g, i) => {
+                g.style.display = i === index ? "block" : "none";
+            });
+        };
+        container.appendChild(btn);
+    });
 }
 
 
@@ -1155,27 +1158,27 @@ function setupSkillFilters(categories) {
 //  IMPACT SECTION LOADER
 // ==========================
 async function loadAndRenderImpact(lang) {
-  try {
-    // Cargar JSON si no se ha cargado
-    if (!window.impactData) {
-      const response = await fetch("content/impact.json");
-      window.impactData = await response.json();
-    }
+    try {
+        // Cargar JSON si no se ha cargado
+        if (!window.impactData) {
+            const response = await fetch("content/impact.json");
+            window.impactData = await response.json();
+        }
 
-    const data = window.impactData[lang];
-    if (!data) return;
+        const data = window.impactData[lang];
+        if (!data) return;
 
-    // Actualizar título y subtítulo
-    document.getElementById("impact-title").innerText = data.title;
-    document.getElementById("impact-subtitle").innerText = data.subtitle;
+        // Actualizar título y subtítulo
+        document.getElementById("impact-title").innerText = data.title;
+        document.getElementById("impact-subtitle").innerText = data.subtitle;
 
-    // Contenedor
-    const container = document.getElementById("impact-list");
-    container.innerHTML = "";
+        // Contenedor
+        const container = document.getElementById("impact-list");
+        container.innerHTML = "";
 
-    // Renderizar cada item
-    data.items.forEach(item => {
-      container.innerHTML += `
+        // Renderizar cada item
+        data.items.forEach(item => {
+            container.innerHTML += `
         <div class="col-md-4 impact-col">
           <div class="impact-card">
             <div class="impact-tag">${item.tag}</div>
@@ -1187,11 +1190,11 @@ async function loadAndRenderImpact(lang) {
           </div>
         </div>
       `;
-    });
+        });
 
-  } catch (error) {
-    console.error("Error loading or rendering impact section:", error);
-  }
+    } catch (error) {
+        console.error("Error loading or rendering impact section:", error);
+    }
 }
 
 async function loadContactCharacter(lang) {
@@ -1309,37 +1312,37 @@ document.addEventListener("DOMContentLoaded", initLanguageSelector);
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const character = document.getElementById("contact-character");
-  const contactSection = document.querySelector(".contact1");
-  const footer = document.querySelector(".footerflag");
+    const character = document.getElementById("contact-character");
+    const contactSection = document.querySelector(".contact1");
+    const footer = document.querySelector(".footerflag");
 
-  function checkCharacter() {
-    const sectionRect = contactSection.getBoundingClientRect();
-    const footerRect = footer ? footer.getBoundingClientRect() : null;
+    function checkCharacter() {
+        const sectionRect = contactSection.getBoundingClientRect();
+        const footerRect = footer ? footer.getBoundingClientRect() : null;
 
-    const appearStart = sectionRect.top + sectionRect.height * 0.5; // 20% desde arriba
-    const appearEnd = sectionRect.top + sectionRect.height * 0.5;   // 80% desde arriba
+        const appearStart = sectionRect.top + sectionRect.height * 0.5; // 20% desde arriba
+        const appearEnd = sectionRect.top + sectionRect.height * 0.5;   // 80% desde arriba
 
-    // Altura máxima para no pisar el footer
-    const maxBottom = footerRect ? footerRect.top : window.innerHeight;
+        // Altura máxima para no pisar el footer
+        const maxBottom = footerRect ? footerRect.top : window.innerHeight;
 
-    // Comprobar si el personaje debe aparecer
-    const inSection = appearStart < window.innerHeight && appearEnd > 0;
-    const aboveFooter = (window.innerHeight - 100) < maxBottom; // 100 = bottom fijo del personaje
+        // Comprobar si el personaje debe aparecer
+        const inSection = appearStart < window.innerHeight && appearEnd > 0;
+        const aboveFooter = (window.innerHeight - 100) < maxBottom; // 100 = bottom fijo del personaje
 
-    if (inSection && aboveFooter) {
-      character.style.left = "20px";
-      character.style.opacity = 1;
-      character.querySelector(".speech-bubble").style.opacity = 1;
-    } else {
-      character.style.left = "-100px";
-      character.style.opacity = 0;
-      character.querySelector(".speech-bubble").style.opacity = 0;
+        if (inSection && aboveFooter) {
+            character.style.left = "20px";
+            character.style.opacity = 1;
+            character.querySelector(".speech-bubble").style.opacity = 1;
+        } else {
+            character.style.left = "-100px";
+            character.style.opacity = 0;
+            character.querySelector(".speech-bubble").style.opacity = 0;
+        }
     }
-  }
 
-  window.addEventListener("scroll", checkCharacter);
-  window.addEventListener("resize", checkCharacter);
+    window.addEventListener("scroll", checkCharacter);
+    window.addEventListener("resize", checkCharacter);
 
-  checkCharacter(); // check on load
+    checkCharacter(); // check on load
 });

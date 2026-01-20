@@ -1565,13 +1565,14 @@ textarea.input1 {
 
 
 
+
 .emoji-badge {
     position: absolute;
     bottom: 10px;
     right: 10px;
     width: 40px;
     height: 40px;
-    background-color: #2b2b2b; /* fondo visible */
+    background-color: #333333;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1580,10 +1581,35 @@ textarea.input1 {
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 10;
 }
 
 .emoji-badge:hover {
     transform: scale(1.2);
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Tooltip personalizado */
+.emoji-tooltip {
+    position: absolute;
+    bottom: 15%;
+    left: 93%;
+    transform: translateY(50%) translateX(10px);
+    background-color: #333333;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 0px 6px 6px 0px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 9;
+}
+
+/* Aparece con animación desde la izquierda hacia la derecha */
+.emoji-badge:hover + .emoji-tooltip {
+    opacity: 1;
+    transform: translateY(50%) translateX(0);
 }
 
