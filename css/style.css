@@ -581,7 +581,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: absolute;
   top: 40px;
   left: 50%;
-  margin-left: -30px;
+  margin-left: -33px;
   background-color: #010f4c;
   z-index: 100;
   display: table;
@@ -592,12 +592,12 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   .timeline > li > .timeline-badge {
-    margin-left: -10px !important;
+    margin-left: -23px !important;
   }
 }
 @media screen and (max-width: 992px) {
   .timeline > li > .timeline-badge {
-    margin-left: -10px !important;
+    margin-left: -23px !important;
   }
 }
 .timeline > li > .timeline-badge i {
