@@ -16,6 +16,7 @@
         "degree": "Master's Degree in Project Management",
         "institution": "🏫 VIU - Universidad Internacional de Valencia <br> 📍 Spain <br> 🗓️ Sept 2022 – Sept 2023",
         "logo": "images/education/viu.png",
+        "logo_url": "https://www.universidadviu.com",
         "grade": "📊 Grade: 8.25/10",
         "description": [
           "Gained in-depth knowledge of the project manager profession and its business context, focusing on defining effective project execution strategies.",
@@ -27,6 +28,7 @@
         "degree": "Master in Productivity and Personal Development",
         "institution": "🏫 University of Alcalá <br> 📍 Spain <br> 🗓️ Nov 2020 – Nov 2021",
         "logo": "images/education/ua.png",
+        "logo_url": "https://uah.es",
         "grade": "📊 Grade: 8.14/10",
         "description": [
           "Developed key transversal skills such as critical thinking, personal and social responsibility, and structured goal organization using project management tools.",
@@ -38,6 +40,7 @@
         "degree": "Bachelor's Degree in Computer Engineering – Software Architecture and Design",
         "institution": "🏫 University of Las Palmas de Gran Canaria <br> 📍 Spain <br> 🗓️ Sept 2017 – May 2021",
         "logo": "images/education/ulpgc.png",
+        "logo_url": "https://www10.ulpgc.es",
         "grade": "📊 Grade: 7.12/10",
         "description": [
           "Provided a solid foundation in computer science to design, develop, maintain, and evaluate software systems and services with high standards of reliability, security, and quality.",
@@ -49,6 +52,7 @@
         "degree": "Science and Technology Baccalaureate (L.O.E.)",
         "institution": "🏫 IES Amurga <br> 📍 Spain <br> 🗓️ Sept 2015 – Jun 2017",
         "logo": "images/education/ies.png",
+        "logo_url": "https://www3.gobiernodecanarias.org/medusa/edublog/iesamurga/",
         "grade": "📊 Grade: 8.94/10",
         "description": [
           "Completed upper secondary education focused on science and technology disciplines, providing a solid academic foundation in mathematics, physics, and applied sciences.",
@@ -59,6 +63,7 @@
         "degree": "Compulsory Secondary Education (ESO)",
         "institution": "🏫 IES Amurga <br> 📍 Spain <br> 🗓️ Sept 2012 – Jun 2015",
         "logo": "images/education/ies.png",
+        "logo_url": "https://www3.gobiernodecanarias.org/medusa/edublog/iesamurga/",
         "grade": "📊 Grade: 9.2/10",
         "description": [
           "Completed compulsory secondary education with strong academic performance.",
@@ -75,6 +80,7 @@
         "degree": "Máster Universitario en Gestión de Proyectos / Project Management",
         "institution": "🏫 VIU - Universidad Internacional de Valencia <br> 📍 España <br> 🗓️ Sept 2022 – Sept 2023",
         "logo": "images/education/viu.png",
+        "logo_url": "https://www.universidadviu.com",
         "grade": "📊 Nota media: 8,25/10",
         "description": [
           "Durante el máster adquirí un conocimiento profundo de la profesión de project manager y de su contexto empresarial, aprendiendo a definir estrategias eficaces para la ejecución de proyectos.",
@@ -86,6 +92,7 @@
         "degree": "Máster propio en Productividad y Desarrollo Personal",
         "institution": "🏫 Universidad de Alcalá <br> 📍 España <br> 🗓️ Nov 2020 – Nov 2021",
         "logo": "images/education/ua.png",
+        "logo_url": "https://uah.es",
         "grade": "📊 Nota media: 8,14/10",
         "description": [
           "Adquirí habilidades transversales clave como pensamiento crítico, responsabilidad personal y social, y organización estructurada de objetivos mediante herramientas de gestión de proyectos.",
@@ -97,6 +104,7 @@
         "degree": "Grado en Ingeniería Informática – Especialidad en Arquitectura y Diseño de Software",
         "institution": "🏫 Universidad de Las Palmas de Gran Canaria <br> 📍 España <br> 🗓️ Sept 2017 – May 2021",
         "logo": "images/education/ulpgc.png",
+        "logo_url": "https://www10.ulpgc.es",
         "grade": "📊 Nota media: 7,12/10",
         "description": [
           "El grado proporciona una sólida formación en informática para diseñar, desarrollar, mantener y evaluar aplicaciones, sistemas y servicios con altos estándares de fiabilidad, seguridad y calidad.",
@@ -108,6 +116,7 @@
         "degree": "Bachillerato de Ciencias y Tecnología (L.O.E.)",
         "institution": "🏫 IES Amurga <br> 📍 España <br> 🗓️ Sept 2015 – Jun 2017",
         "logo": "images/education/ies.png",
+        "logo_url": "https://www3.gobiernodecanarias.org/medusa/edublog/iesamurga/",
         "grade": "📊 Nota media: 8,94/10",
         "description": [
           "Formación de bachillerato orientada a las ramas de ciencias y tecnología, con una base sólida en matemáticas, física y materias científico-técnicas.",
@@ -118,6 +127,7 @@
         "degree": "Educación Secundaria Obligatoria (ESO)",
         "institution": "🏫 IES Amurga <br> 📍 España <br> 🗓️ Sept 2012 – Jun 2015",
         "logo": "images/education/ies.png",
+        "logo_url": "https://www3.gobiernodecanarias.org/medusa/edublog/iesamurga/",
         "grade": "📊 Nota media: 9,2/10",
         "description": [
           "Finalización de la educación secundaria obligatoria con alto rendimiento académico.",
