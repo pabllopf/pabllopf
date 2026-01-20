@@ -1,0 +1,38 @@
+{
+  "es": {
+    "title": "Mis estadísticas",
+    "subtitle": "Un vistazo rápido a mi actividad y tecnologías principales",
+    "stats": [
+      {
+        "id": "github-overview",
+        "alt": "Estadísticas de GitHub",
+        "image": "https://github-readme-stats.vercel.app/api?username=pabllopf&show_icons=true&locale=es",
+        "height": 190
+      },
+      {
+        "id": "top-langs",
+        "alt": "Lenguajes más usados",
+        "image": "https://github-readme-stats.vercel.app/api/top-langs/?username=pabllopf&layout=compact&hide=html&langs_count=8&locale=es",
+        "height": 190
+      }
+    ]
+  },
+  "en": {
+    "title": "My stats",
+    "subtitle": "A quick overview of my activity and main technologies",
+    "stats": [
+      {
+        "id": "github-overview",
+        "alt": "GitHub statistics",
+        "image": "https://github-readme-stats.vercel.app/api?username=pabllopf&show_icons=true&locale=en",
+        "height": 190
+      },
+      {
+        "id": "top-langs",
+        "alt": "Top languages",
+        "image": "https://github-readme-stats.vercel.app/api/top-langs/?username=pabllopf&layout=compact&hide=html&langs_count=8&locale=en",
+        "height": 190
+      }
+    ]
+  }
+}

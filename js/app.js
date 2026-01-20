@@ -743,6 +743,55 @@ async function loadAndRenderFooter(lang) {
 
 
 
+async function loadStatsContent(lang) {
+	try {
+		const res = await fetch("content/stats.json");
+		const data = await res.json();
+		const content = data[lang];
+
+		if (!content) {
+			console.error("Stats content not found for language:", lang);
+			return;
+		}
+
+		// Título y subtítulo
+		document.getElementById("stats-title").textContent = content.title;
+		document.getElementById("stats-subtitle").textContent = content.subtitle;
+
+		// Contenedor
+		const container = document.getElementById("stats-container");
+		container.innerHTML = "";
+
+		// Render stats
+		content.stats.forEach(stat => {
+			const col = document.createElement("div");
+			col.className = "col-md-5 col-sm-12 animate-box text-center stat-card";
+
+			col.innerHTML = `
+				<img 
+					src="${stat.image}"
+					alt="${stat.alt}"
+					style="
+						margin-top:5px;
+						width:100%;
+						height:${stat.height}px;
+						object-fit:contain;
+						box-shadow:0 8px 20px rgba(0,0,0,0.2);
+					"
+				/>
+			`;
+
+			container.appendChild(col);
+		});
+
+	} catch (err) {
+		console.error("Error loading stats.json:", err);
+	}
+}
+
+
+
+
 // Mapa de plataformas a SVG
 const platformIcons = {
     "Windows": `<span class="project-platform"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M96 157.7L279.6 132.4L279.6 309.8L96 309.8L96 157.7zM96 482.3L279.6 507.6L279.6 332.4L96 332.4L96 482.3zM299.8 510.3L544 544L544 332.4L299.8 332.4L299.8 510.3zM299.8 129.7L299.8 309.8L544 309.8L544 96L299.8 129.7z"/></svg> </span>`,
@@ -1143,6 +1192,7 @@ function initLanguageSelector() {
     loadAwards(initialLang);
     loadBlogs(initialLang);
     loadSkills(initialLang);
+    loadStatsContent(initialLang);
     //loadAndRenderImpact(initialLang);
     loadContactCharacter(initialLang);
     loadHobbies(initialLang);
@@ -1168,6 +1218,7 @@ function initLanguageSelector() {
             loadAwards(lang);
             loadBlogs(lang);
             loadSkills(lang);
+            loadStatsContent(lang);
             //loadAndRenderImpact(lang);
             loadHobbies(lang);
             loadAndRenderFooter(lang);
