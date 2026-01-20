@@ -12,12 +12,12 @@
   "projects": [
     {
       "repo": "alis",
-      "name": "ALIS",
+      "name": "Alis",
       "url": "https://github.com/pabllopf/Alis",
       "images": [
-        "images/Alis.webp",
-        "images/inefable.webp",
-        "images/Alis.webp"
+        "images/alis-1.webp",
+        "images/alis-2.webp",
+        "images/alis-3.webp"
       ],
       "platforms": [
         "Windows",
@@ -25,8 +25,8 @@
         "Linux"
       ],
       "description": {
-        "en": "Framework for developing videogames.",
-        "es": "Framework para desarrollar videojuegos."
+        "en": "Cross-platform game development framework written in C#.",
+        "es": "Framework de desarrollo de videojuegos multiplataforma escrito en C#."
       },
       "buttonText": {
         "en": "View",
@@ -34,31 +34,6 @@
       },
       "stars": 28,
       "forks": 4,
-      "downloads": "+500K"
-    },
-     {
-      "repo": "irisstudio",
-      "name": "IrisStudio IDE",
-      "url": "https://github.com/pabllopf/IrisStudio",
-      "images": [
-        "images/inefable.webp",
-        "images/Alis.webp",
-        "images/inefable.webp",
-        "images/Alis.webp"
-      ],
-      "platforms": [
-        "Windows"
-      ],
-      "description": {
-        "en": "C++ programming environment made with Java, JavaFX, Maven and using the MinGW compiler.",
-        "es": "Entorno de programación en C++ hecho con Java, JavaFX, Maven y usando el compilador MinGW."
-      },
-      "buttonText": {
-        "en": "View",
-        "es": "Ver"
-      },
-      "stars": 20,
-      "forks": 50,
       "downloads": "+500"
     },
     {
@@ -66,10 +41,9 @@
       "name": "Inefable",
       "url": "https://github.com/pabllopf/Inefable",
       "images": [
-        "images/inefable.webp",
-        "images/Alis.webp",
-        "images/inefable.webp",
-        "images/Alis.webp"
+        "images/inefable-1.webp",
+        "images/inefable-2.webp",
+        "images/inefable-3.webp"
       ],
       "platforms": [
         "Windows",
@@ -77,50 +51,48 @@
         "Linux"
       ],
       "description": {
-        "en": "2D roguelike multiplayer game with arcade components made with Unity 5 using C#.",
-        "es": "Juego multijugador 2D tipo roguelike con componentes arcade hecho con Unity 5 usando C#."
+        "en": "2D multiplayer roguelike with RPG and arcade components. Developed in C#.",
+        "es": "Roguelike 2D multijugador con componentes RPG y arcade. Desarrollado en C#."
       },
       "buttonText": {
         "en": "View",
         "es": "Ver"
       },
-      "stars": 200,
-      "forks": 600,
-      "downloads": "+5K"
+      "stars": 6,
+      "forks": 1,
+      "downloads": "+500"
     },
     {
       "repo": "irisstudio",
       "name": "IrisStudio IDE",
       "url": "https://github.com/pabllopf/IrisStudio",
       "images": [
-        "images/inefable.webp",
-        "images/Alis.webp",
-        "images/inefable.webp",
-        "images/Alis.webp"
+        "images/irisStudio-1.webp",
+        "images/irisStudio-2.webp",
+        "images/irisStudio-3.webp"
       ],
       "platforms": [
         "Windows"
       ],
       "description": {
-        "en": "C++ programming environment made with Java, JavaFX, Maven and using the MinGW compiler.",
-        "es": "Entorno de programación en C++ hecho con Java, JavaFX, Maven y usando el compilador MinGW."
+        "en": "C++ IDE built with Java, JavaFX and Maven using the MinGW compiler.",
+        "es": "IDE en C++ construido con Java, JavaFX y Maven usando el compilador MinGW."
       },
       "buttonText": {
         "en": "View",
         "es": "Ver"
       },
-      "stars": 20,
-      "forks": 50,
+      "stars": 6,
+      "forks": 1,
       "downloads": "+500"
     },
-     {
-      "repo": "alis",
-      "name": "ALIS",
-      "url": "https://github.com/pabllopf/Alis",
+    {
+      "repo": "playharmony",
+      "name": "PlayHarmony",
+      "url": "https://github.com/pabllopf/PlayHarmony",
       "images": [
-        "images/Alis.webp",
-        "images/inefable.webp",
-        "images/Alis.webp"
+        "images/playharmony-1.webp",
+        "images/playharmony-2.webp"
       ],
       "platforms": [
         "Windows",
@@ -128,124 +100,65 @@
         "Linux"
       ],
       "description": {
-        "en": "Framework for developing videogames.",
-        "es": "Framework para desarrollar videojuegos."
+        "en": "Desktop music player built with Java 8 and JavaFX.",
+        "es": "Aplicación de escritorio para reproducir música desarrollada con Java 8 y JavaFX."
       },
       "buttonText": {
         "en": "View",
         "es": "Ver"
       },
-      "stars": 28,
-      "forks": 4,
-      "downloads": "+500K"
+      "stars": 6,
+      "forks": 1,
+      "downloads": "+500"
     },
     {
-      "repo": "inefable",
-      "name": "Inefable",
-      "url": "https://github.com/pabllopf/Inefable",
+      "repo": "chatting",
+      "name": "ChatTing",
+      "url": "https://github.com/pabllopf/ChatTing",
       "images": [
-        "images/inefable.webp",
-        "images/Alis.webp",
-        "images/inefable.webp",
-        "images/Alis.webp"
+        "images/chatting-1.png",
+        "images/chatting-2.png",
+        "images/chatting-3.png",
+        "images/chatting-4.png",
+        "images/chatting-5.png"
       ],
       "platforms": [
-        "Windows",
-        "MacOS",
-        "Linux"
+        "Web"
       ],
       "description": {
-        "en": "2D roguelike multiplayer game with arcade components made with Unity 5 using C#.",
-        "es": "Juego multijugador 2D tipo roguelike con componentes arcade hecho con Unity 5 usando C#."
+        "en": "Chat with your friends. Java Enterprise web application.",
+        "es": "Chatea con tus amigos. Aplicación web desarrollada con Java Enterprise."
       },
       "buttonText": {
         "en": "View",
         "es": "Ver"
       },
-      "stars": 200,
-      "forks": 600,
-      "downloads": "+5K"
+      "stars": 6,
+      "forks": 1,
+      "downloads": "+500"
     },
     {
-      "repo": "inefable",
-      "name": "Inefable",
-      "url": "https://github.com/pabllopf/Inefable",
+      "repo": "soundrecorder",
+      "name": "SoundRecorder",
+      "url": "https://github.com/pabllopf/SoundRecorder",
       "images": [
-        "images/inefable.webp",
-        "images/Alis.webp",
-        "images/inefable.webp",
-        "images/Alis.webp"
+        "images/soundrecorder-1.webp",
+        "images/soundrecorder-2.png"
       ],
       "platforms": [
-        "Windows",
-        "MacOS",
-        "Linux"
+        "Windows"
       ],
       "description": {
-        "en": "2D roguelike multiplayer game with arcade components made with Unity 5 using C#.",
-        "es": "Juego multijugador 2D tipo roguelike con componentes arcade hecho con Unity 5 usando C#."
+        "en": "Sound recorder built with Windows Forms in C#.",
+        "es": "Grabadora de sonido desarrollada con Windows Forms en C#."
       },
       "buttonText": {
         "en": "View",
         "es": "Ver"
       },
-      "stars": 200,
-      "forks": 600,
-      "downloads": "+5K"
-    },
-    {
-      "repo": "inefable",
-      "name": "Inefable",
-      "url": "https://github.com/pabllopf/Inefable",
-      "images": [
-        "images/inefable.webp",
-        "images/Alis.webp",
-        "images/inefable.webp",
-        "images/Alis.webp"
-      ],
-      "platforms": [
-        "Windows",
-        "MacOS",
-        "Linux"
-      ],
-      "description": {
-        "en": "2D roguelike multiplayer game with arcade components made with Unity 5 using C#.",
-        "es": "Juego multijugador 2D tipo roguelike con componentes arcade hecho con Unity 5 usando C#."
-      },
-      "buttonText": {
-        "en": "View",
-        "es": "Ver"
-      },
-      "stars": 200,
-      "forks": 600,
-      "downloads": "+5K"
-    },
-    {
-      "repo": "inefable",
-      "name": "Inefable",
-      "url": "https://github.com/pabllopf/Inefable",
-      "images": [
-        "images/inefable.webp",
-        "images/Alis.webp",
-        "images/inefable.webp",
-        "images/Alis.webp"
-      ],
-      "platforms": [
-        "Windows",
-        "MacOS",
-        "Linux"
-      ],
-      "description": {
-        "en": "2D roguelike multiplayer game with arcade components made with Unity 5 using C#.",
-        "es": "Juego multijugador 2D tipo roguelike con componentes arcade hecho con Unity 5 usando C#."
-      },
-      "buttonText": {
-        "en": "View",
-        "es": "Ver"
-      },
-      "stars": 200,
-      "forks": 600,
-      "downloads": "+5K"
+      "stars": 6,
+      "forks": 1,
+      "downloads": "+500"
     }
   ]
 }

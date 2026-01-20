@@ -360,6 +360,8 @@ textarea.input1 {
   background-size: cover;
   background-position: center;
   display: none;
+  border: 1px solid #00000040;
+  border-radius: 10px;
 }
 
 .carousel-prev,
