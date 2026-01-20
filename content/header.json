@@ -24,7 +24,7 @@
       "contact": "Contact"
     },
     "emojiBadge": {
-      "tooltip": "'Fail ➡️ Adapt ➡️ Succeed'"
+      "tooltip": "'Fail 🔄 Adapt 🔄 Succeed'"
     }
   },
   "es": {
@@ -52,7 +52,7 @@
       "contact": "Contacto"
     },
     "emojiBadge": {
-      "tooltip": "'Falla ➡️ Adapta ➡️ Triunfa'"
+      "tooltip": "'Falla 🔄 Adapta 🔄 Triunfa'"
     }
   }
 }
