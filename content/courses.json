@@ -43,7 +43,112 @@
       "duration": 9,
       "image": "files/courses/prevencion_riesgos_2020.png",
       "pdf": "files/courses/prevencion_riesgos_2020.pdf"
+    },
+    {
+      "name": { "en": "Orientación a resultados I: Objetivos, OKRs y Planes de Acción", "es": "Orientación a resultados I: Objetivos, OKRs y Planes de Acción" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Mar 2023", "es": "Mar 2023" },
+      "duration": 8,
+      "image": "files/courses/orientación_resultados_okr.png",
+      "pdf": "files/courses/orientación_resultados_okr.pdf"
+    },
+    {
+      "name": { "en": "Entrena tu liderazgo", "es": "Entrena tu liderazgo" },
+      "institution": { "en": "Fundación Estatal", "es": "Fundación Estatal" },
+      "date": { "en": "Feb 2024", "es": "Feb 2024" },
+      "duration": 8,
+      "image": "files/courses/entrena_liderazgo.png",
+      "pdf": "files/courses/entrena_liderazgo.pdf"
+    },
+    {
+      "name": { "en": "Inteligencia Emocional", "es": "Inteligencia Emocional" },
+      "institution": { "en": "Universidad Internacional de Valencia", "es": "Universidad Internacional de Valencia" },
+      "date": { "en": "Sep 2022", "es": "Sep 2022" },
+      "duration": 25,
+      "image": "files/courses/inteligencia_emocional.png",
+      "pdf": "files/courses/inteligencia_emocional.pdf"
+    },
+     {
+      "name": { "en": "Viajes de negocios", "es": "Viajes de negocios" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Jul 2022", "es": "Jul 2022" },
+      "duration": 1,
+      "image": "files/courses/Certificado_Viajes_De_Negocio_Seguros.png",
+      "pdf": "files/courses/Certificado_Viajes_De_Negocio_Seguros.pdf"
+    },
+     {
+      "name": { "en": "Hablamos de Discapacidad", "es": "Hablamos de Discapacidad" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Jul 2021", "es": "Jul 2021" },
+      "duration": 1,
+      "image": "files/courses/Certificado_Valuable_500_Hablamos_Discapacidad.png",
+      "pdf": "files/courses/Certificado_Valuable_500_Hablamos_Discapacidad.pdf"
+    },
+     {
+      "name": { "en": "Primeros Auxilios", "es": "Primeros Auxilios" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Ago 2023", "es": "Ago 2023" },
+      "duration": 3,
+      "image": "files/courses/Certificado_riesgos_perfil_oficinas_primeros_auxilios.png",
+      "pdf": "files/courses/Certificado_riesgos_perfil_oficinas_primeros_auxilios.pdf"
+    },
+     {
+      "name": { "en": "Negociar para sumar", "es": "Negociar para sumar" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Mar 2023", "es": "Mar 2023" },
+      "duration": 8,
+      "image": "files/courses/Certificado_Negociar_Para_Sumar.png",
+      "pdf": "files/courses/Certificado_Negociar_Para_Sumar.pdf"
+    },
+     {
+      "name": { "en": "Testing en Python", "es": "Testing en Python" },
+      "institution": { "en": "Datacamp", "es": "Datacamp" },
+      "date": { "en": "Ago 2024", "es": "Ago 2024" },
+      "duration": 4,
+      "image": "files/courses/Certificado_Introduction_to_Testing_in_Python.png",
+      "pdf": "files/courses/Certificado_Introduction_to_Testing_in_Python.pdf"
+    },
+     {
+      "name": { "en": "Functions en Python", "es": "Functions en Python" },
+      "institution": { "en": "Datacamp", "es": "Datacamp" },
+      "date": { "en": "Ago 2024", "es": "Ago 2024" },
+      "duration": 4,
+      "image": "files/courses/Certificado_Introduction_to_Functions_in_Python.png",
+      "pdf": "files/courses/Certificado_Introduction_to_Functions_in_Python.pdf"
+    },
+     {
+      "name": { "en": "Introducción en Python", "es": "Introducción en Python" },
+      "institution": { "en": "Datacamp", "es": "Datacamp" },
+      "date": { "en": "Ago 2024", "es": "Ago 2024" },
+      "duration": 4,
+      "image": "files/courses/Certificado_introduccion_python.png",
+      "pdf": "files/courses/Certificado_introduccion_python.pdf"
+    },
+     {
+      "name": { "en": "Introducción en Python", "es": "Introducción en Python" },
+      "institution": { "en": "Datacamp", "es": "Datacamp" },
+      "date": { "en": "Ago 2024", "es": "Ago 2024" },
+      "duration": 3,
+      "image": "files/courses/Certificado_intermediate_python.png",
+      "pdf": "files/courses/Certificado_intermediate_python.pdf"
+    },
+     {
+      "name": { "en": "Habilidades de comunicación", "es": "Habilidades de comunicación" },
+      "institution": { "en": "Universidad Internacional de Valencia", "es": "Universidad Internacional de Valencia" },
+      "date": { "en": "Sep 2022", "es": "Sep 2022" },
+      "duration": 25,
+      "image": "files/courses/Certificado_Habilidades_Comunicacion.png",
+      "pdf": "files/courses/Certificado_Habilidades_Comunicacion.pdf"
+    },
+     {
+      "name": { "en": "Dar y recibir feedback", "es": "Dar y recibir feedback" },
+      "institution": { "en": "Enel", "es": "Enel" },
+      "date": { "en": "Sep 2022", "es": "Sep 2022" },
+      "duration": 1,
+      "image": "files/courses/Certificado_dar_y_recibir_feedback_remoto.png",
+      "pdf": "files/courses/Certificado_dar_y_recibir_feedback_remoto.pdf"
     }
+    
   ],
   "showMoreText": { "en": "Show more", "es": "Mostrar más" }
 }
