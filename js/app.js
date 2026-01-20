@@ -17,8 +17,8 @@ async function loadHeaderContent(lang) {
         const data = await response.json();
         const content = data[lang] || data[DEFAULT_LANG];
 
-        document.getElementById("header-name").textContent = content.name;
-        document.getElementById("header-title").textContent = content.title;
+        document.getElementById("header-name").innerHTML = content.name;
+        document.getElementById("header-title").innerHTML = content.title;
 
         const cvBtn = document.getElementById("header-cv");
         cvBtn.href = content.cv;
