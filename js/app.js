@@ -10,41 +10,98 @@ function getSystemLanguage() {
     ).slice(0, 2);
 }
 
+
 async function loadHeaderContent(lang) {
-    try {
-        const response = await fetch("content/header.json");
-        const data = await response.json();
-        const content = data[lang] || data[DEFAULT_LANG];
+  try {
+    const response = await fetch("content/header.json");
+    const data = await response.json();
+    const content = data[lang] || data[DEFAULT_LANG];
 
-        document.getElementById("header-name").innerHTML = content.name;
-        document.getElementById("header-title").innerHTML = content.title;
+    // Nombre y título
+    document.getElementById("header-name").innerHTML = content.name;
+    document.getElementById("header-title").innerHTML = content.title;
 
-        const cvBtn = document.getElementById("header-cv");
-        cvBtn.href = content.cv;
-        cvBtn.textContent = content.cvText;
+    // Botón CV
+    const cvBtn = document.getElementById("header-cv");
+    cvBtn.href = content.cv;
+    cvBtn.textContent = content.cvText;
 
-        document.getElementById("linkedin-link").href = content.social.linkedin;
-        document.getElementById("github-link").href = content.social.github;
-        document.getElementById("email-link").href = content.social.email;
+    // Redes sociales
+    document.getElementById("linkedin-link").href = content.social.linkedin;
+    document.getElementById("github-link").href = content.social.github;
+    document.getElementById("email-link").href = content.social.email;
 
-        // Menú
-        document.getElementById("menu-about").querySelector("span").textContent = content.menu.about;
-        document.getElementById("menu-resume").querySelector("span").textContent = content.menu.resume;
-        document.getElementById("menu-skills").querySelector("span").textContent = content.menu.skills;
-        document.getElementById("menu-contact").querySelector("span").textContent = content.menu.contact;
+    // Emoji Badge y tooltip
+    const emojiBadge = document.getElementById("emoji-badge");
+    const emojiTooltip = document.getElementById("emoji-tooltip");
+    emojiBadge.textContent = "🚀";
+    emojiTooltip.textContent = content.emojiBadge.tooltip;
 
-        // Emoji Badge dinámico con tooltip
-        const emojiBadge = document.getElementById("emoji-badge");
-        const emojiTooltip = document.getElementById("emoji-tooltip");
+    // Menú: iteramos sobre las secciones dinámicamente
+    const menuMap = {
+      "menu-about": "about",
+      "menu-experience": "experience",
+      "menu-education": "education",
+      "menu-certifications": "certifications",
+      "menu-awards": "awards",
+      "menu-howIWork": "howIWork",
+      "menu-skills": "skills",
+      "menu-courses": "courses",
+      "menu-projects": "projects",
+      "menu-blogs": "blogs",
+      "menu-hobbies": "hobbies",
+      "menu-contact": "contact"
+    };
 
-        emojiBadge.textContent = "🚀";
-        emojiTooltip.textContent = content.emojiBadge.tooltip;
-
-
-    } catch (err) {
-        console.error("Error loading header.json:", err);
+    for (const [id, key] of Object.entries(menuMap)) {
+      const menuItem = document.getElementById(id);
+      if (menuItem && content.menu[key]) {
+        menuItem.querySelector("span").textContent = content.menu[key];
+      }
     }
+
+    // Opcional: scroll suave al hacer clic en el menú
+    Object.keys(menuMap).forEach(id => {
+      const menuItem = document.getElementById(id);
+      if (menuItem) {
+        menuItem.addEventListener("click", e => {
+          e.preventDefault();
+          const targetId = menuItem.getAttribute("href").substring(1);
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            window.scrollTo({
+              top: targetEl.offsetTop,
+              behavior: "smooth"
+            });
+          }
+        });
+      }
+    });
+
+  } catch (err) {
+    console.error("Error loading header.json:", err);
+  }
 }
+
+// Inicialización
+document.addEventListener("DOMContentLoaded", () => {
+  // Carga inicial en inglés por defecto
+  loadHeaderContent(DEFAULT_LANG);
+
+  // Cambio de idioma mediante botones
+  document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      const selectedLang = btn.dataset.lang;
+      loadHeaderContent(selectedLang);
+
+      // Actualizamos clases activas
+      document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(b => b.classList.remove("active-yes"));
+      btn.classList.add("active-yes");
+    });
+  });
+});
+
 
 
 // Carga el contenido del About

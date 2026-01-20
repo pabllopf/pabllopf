@@ -11,8 +11,16 @@
     },
     "menu": {
       "about": "About",
-      "resume": "Resume",
+      "experience": "Experience",
+      "education": "Education",
+      "certifications": "Certifications",
+      "awards": "Awards",
+      "howIWork": "How I Work",
       "skills": "Skills",
+      "courses": "Courses",
+      "projects": "Projects",
+      "blogs": "Articles",
+      "hobbies": "Hobbies",
       "contact": "Contact"
     },
     "emojiBadge": {
@@ -21,7 +29,7 @@
   },
   "es": {
     "name": "Pablo Perdomo Falcón",
-    "title": "Team Lead <br> <h3 style='font-size: 15px;margin-top: 7px;color: #e1e1e1;'> 💻 Software Engineering, 🏗️ Architecture & 🌐 Digital Solutions </h3> ",
+    "title": "Team Lead <br> <h3 style='font-size: 15px;margin-top: 7px;color: #e1e1e1;'> 💻 Ingeniería de Software, 🏗️ Arquitectura & 🌐 Soluciones Digitales </h3> ",
     "cv": "files/Pablopf.pdf",
     "cvText": "Descargar Currículum Vitae",
     "social": {
@@ -31,8 +39,16 @@
     },
     "menu": {
       "about": "Sobre mí",
-      "resume": "Resumen",
+      "experience": "Experiencia",
+      "education": "Educación",
+      "certifications": "Certificaciones",
+      "awards": "Reconocimientos",
+      "howIWork": "Cómo Trabajo",
       "skills": "Habilidades",
+      "courses": "Cursos",
+      "projects": "Proyectos",
+      "blogs": "Artículos",
+      "hobbies": "Hobbies",
       "contact": "Contacto"
     },
     "emojiBadge": {
