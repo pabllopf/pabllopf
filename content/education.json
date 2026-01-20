@@ -13,108 +13,105 @@
     "educationTitle": "Actuality",
     "education": [
       {
-        "degree": "Master in Project Management",
+        "degree": "Master's Degree in Project Management",
         "institution": "🏫 VIU - Universidad Internacional de Valencia <br> 📍 Spain <br> 🗓️ Sept 2022 – Sept 2023",
-        "grade": "8.25/10",
+        "grade": "📊 Grade: 8.25/10",
         "description": [
-          "Acquired deep knowledge of the project manager profession and context, learning to define strategies for project execution.",
-          "Emphasized monitoring project stages, coordinating teams efficiently, anticipating issues, and optimizing resource allocation to achieve objectives in a dynamic global environment.",
-          "Skills developed: SharePoint, Microsoft Excel, and 8 more."
+          "Gained in-depth knowledge of the project manager profession and its business context, focusing on defining effective project execution strategies.",
+          "Training emphasized full project lifecycle monitoring, efficient team coordination, risk anticipation, and optimal allocation of human and material resources.",
+          "Developed the ability to achieve predefined business objectives and ensure project success in a constantly evolving global environment."
         ]
       },
       {
         "degree": "Master in Productivity and Personal Development",
-        "institution": "🏫 Universidad de Alcalá <br> 📍 Spain <br> 🗓️ Nov 2020 – Nov 2021",
-        "grade": "8.25/10",
+        "institution": "🏫 University of Alcalá <br> 📍 Spain <br> 🗓️ Nov 2020 – Nov 2021",
+        "grade": "📊 Grade: 8.14/10",
         "description": [
-          "Developed transversal skills such as critical thinking, personal and social responsibility, and learning goal organization through project management tools.",
-          "Enhanced employability through professional practices and training adapted to market demands.",
-          "Applied business planning tools to personal life, improving organization and balance of activities.",
-          "Skills developed: Microsoft Excel, Microsoft Word, and 3 more."
+          "Developed key transversal skills such as critical thinking, personal and social responsibility, and structured goal organization using project management tools.",
+          "The program enhanced employability through professional internships and training aligned with current market demands.",
+          "Applied business planning tools to personal life, achieving better organization, balance, and efficiency in daily activities."
         ]
       },
       {
-        "degree": "Bachelor's Degree in Computer Engineering, Software Architecture and Design specialization",
-        "institution": "🏫 Universidad de Las Palmas de Gran Canaria <br> 📍 Spain <br> 🗓️ Sept 2017 – May 2021",
-        "grade": "8.25/10",
+        "degree": "Bachelor's Degree in Computer Engineering – Software Architecture and Design",
+        "institution": "🏫 University of Las Palmas de Gran Canaria <br> 📍 Spain <br> 🗓️ Sept 2017 – May 2021",
+        "grade": "📊 Grade: 7.12/10",
         "description": [
-          "Activities: Co-founder and member of the indie game development group ULPGC INDIES.",
-          "Provided solid common foundation in computing to design, develop, maintain, and evaluate applications, systems, and services ensuring reliability, security, and quality.",
-          "Specialization in Software Engineering: focused on medium and large-scale application design and development, ensuring usability, maintainability, and quality standards.",
-          "Skills developed: PHP, general IT knowledge, and 13 more."
+          "Co-founder and active member of the indie video game development group ULPGC INDIES.",
+          "Provided a solid foundation in computer science to design, develop, maintain, and evaluate software systems and services with high standards of reliability, security, and quality.",
+          "Software Engineering specialization focused on medium and large-scale application development, ensuring usability, maintainability, efficiency, and compliance with quality standards."
         ]
       },
       {
-        "degree": "Baccalaureate in Science and Technology (L.O.E)",
+        "degree": "Science and Technology Baccalaureate (L.O.E.)",
         "institution": "🏫 IES Amurga <br> 📍 Spain <br> 🗓️ Sept 2015 – Jun 2017",
-        "grade": "8.25/10",
+        "grade": "📊 Grade: 8.94/10",
         "description": [
-          "Activities: Class representative",
-          "Skills developed: General IT knowledge"
+          "Completed upper secondary education focused on science and technology disciplines, providing a solid academic foundation in mathematics, physics, and applied sciences.",
+          "Served as class representative, developing leadership, communication, and organizational skills."
         ]
       },
       {
         "degree": "Compulsory Secondary Education (ESO)",
         "institution": "🏫 IES Amurga <br> 📍 Spain <br> 🗓️ Sept 2012 – Jun 2015",
-        "grade": "8.25/10",
+        "grade": "📊 Grade: 9.2/10",
         "description": [
-          "Activities: Member of the Maspalomas swimming team"
+          "Completed compulsory secondary education with strong academic performance.",
+          "Active member of the Maspalomas swimming team, fostering discipline, teamwork, and commitment."
         ]
       }
     ]
   },
-
   "es": {
     "title": "Educación",
     "educationTitle": "Actualidad",
     "education": [
       {
-        "degree": "Máster Universitario en Gestión de Proyectos/Project Management",
+        "degree": "Máster Universitario en Gestión de Proyectos / Project Management",
         "institution": "🏫 VIU - Universidad Internacional de Valencia <br> 📍 España <br> 🗓️ Sept 2022 – Sept 2023",
-        "grade": "8.25/10",
+        "grade": "📊 Nota media: 8,25/10",
         "description": [
-          "Durante el máster, adquirí un conocimiento profundo de la profesión de project manager y su contexto, aprendiendo a definir estrategias para la realización de proyectos.",
-          "Se enfatizó la supervisión de todas las etapas del proyecto, la coordinación eficiente de equipos y la anticipación a posibles problemas, así como la distribución óptima de recursos humanos y materiales.",
-          "Aptitudes: SharePoint, Microsoft Excel y 8 más."
+          "Durante el máster adquirí un conocimiento profundo de la profesión de project manager y de su contexto empresarial, aprendiendo a definir estrategias eficaces para la ejecución de proyectos.",
+          "La formación enfatizó la supervisión de todas las fases del proyecto, la coordinación eficiente de equipos y la anticipación a riesgos.",
+          "Desarrollé habilidades para la distribución óptima de recursos humanos y materiales con el objetivo de alcanzar los objetivos del negocio en un entorno global en constante cambio."
         ]
       },
       {
         "degree": "Máster propio en Productividad y Desarrollo Personal",
         "institution": "🏫 Universidad de Alcalá <br> 📍 España <br> 🗓️ Nov 2020 – Nov 2021",
-        "grade": "8.14/10",
+        "grade": "📊 Nota media: 8,14/10",
         "description": [
-          "Adquirí habilidades transversales como pensamiento crítico, responsabilidad personal y social, y organización de objetivos mediante herramientas de gestión de proyectos.",
-          "El programa potenció la empleabilidad mediante prácticas profesionales y formación alineada con las demandas del mercado.",
-          "Aprendí a aplicar herramientas de planificación empresarial a la vida personal, mejorando la organización y el equilibrio de actividades.",
-          "Aptitudes: Microsoft Excel, Microsoft Word y 3 más."
+          "Adquirí habilidades transversales clave como pensamiento crítico, responsabilidad personal y social, y organización estructurada de objetivos mediante herramientas de gestión de proyectos.",
+          "El programa potenció mi empleabilidad mediante prácticas profesionales y formación alineada con las demandas actuales del mercado.",
+          "Aprendí a aplicar herramientas de planificación empresarial a mi vida personal, logrando una organización más eficaz y equilibrada."
         ]
       },
       {
-        "degree": "Grado en Ingeniería Informática, Especialidad en Arquitectura y Diseño de Software",
+        "degree": "Grado en Ingeniería Informática – Especialidad en Arquitectura y Diseño de Software",
         "institution": "🏫 Universidad de Las Palmas de Gran Canaria <br> 📍 España <br> 🗓️ Sept 2017 – May 2021",
-        "grade": "8.25/10",
+        "grade": "📊 Nota media: 7,12/10",
         "description": [
-          "Actividades: Cofundador y miembro del grupo de desarrolladores de videojuegos indie ULPGC INDIES.",
-          "El grado proporciona formación en informática para diseñar, desarrollar, mantener y evaluar aplicaciones, sistemas y servicios asegurando fiabilidad, seguridad y calidad.",
-          "Especialidad en Ingeniería del Software: enfocada en el diseño y desarrollo de aplicaciones medianas y grandes, asegurando usabilidad, mantenibilidad y calidad.",
-          "Aptitudes: PHP, conocimientos informáticos y 13 más."
+          "Cofundador y miembro activo del grupo de desarrolladores de videojuegos indie ULPGC INDIES.",
+          "El grado proporciona una sólida formación en informática para diseñar, desarrollar, mantener y evaluar aplicaciones, sistemas y servicios con altos estándares de fiabilidad, seguridad y calidad.",
+          "Especialidad en Ingeniería del Software enfocada al desarrollo de aplicaciones de media y gran escala, garantizando usabilidad, mantenibilidad, eficiencia y cumplimiento de normas de calidad."
         ]
       },
       {
-        "degree": "Bachillerato de Ciencias y Tecnología (L.O.E)",
+        "degree": "Bachillerato de Ciencias y Tecnología (L.O.E.)",
         "institution": "🏫 IES Amurga <br> 📍 España <br> 🗓️ Sept 2015 – Jun 2017",
-        "grade": "8.25/10",
+        "grade": "📊 Nota media: 8,94/10",
         "description": [
-          "Actividades: Delegado de clase",
-          "Aptitudes: Conocimientos informáticos"
+          "Formación de bachillerato orientada a las ramas de ciencias y tecnología, con una base sólida en matemáticas, física y materias científico-técnicas.",
+          "Ejercí el rol de delegado de clase, desarrollando habilidades de liderazgo, comunicación y organización."
         ]
       },
       {
         "degree": "Educación Secundaria Obligatoria (ESO)",
         "institution": "🏫 IES Amurga <br> 📍 España <br> 🗓️ Sept 2012 – Jun 2015",
-        "grade": "8.25/10",
+        "grade": "📊 Nota media: 9,2/10",
         "description": [
-          "Actividades: Equipo de natación de Maspalomas"
+          "Finalización de la educación secundaria obligatoria con alto rendimiento académico.",
+          "Miembro del equipo de natación de Maspalomas, fortaleciendo valores como la constancia, el trabajo en equipo y la disciplina."
         ]
       }
     ]
