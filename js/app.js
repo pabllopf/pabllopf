@@ -10,7 +10,6 @@ function getSystemLanguage() {
     ).slice(0, 2);
 }
 
-// Carga el contenido del header
 async function loadHeaderContent(lang) {
     try {
         const response = await fetch("content/header.json");
@@ -34,10 +33,16 @@ async function loadHeaderContent(lang) {
         document.getElementById("menu-skills").querySelector("span").textContent = content.menu.skills;
         document.getElementById("menu-contact").querySelector("span").textContent = content.menu.contact;
 
+        // Emoji Badge dinámico
+        const emojiBadge = document.getElementById("emoji-badge");
+        emojiBadge.textContent = "🚀";
+        emojiBadge.title = content.emojiBadge.tooltip;
+
     } catch (err) {
         console.error("Error loading header.json:", err);
     }
 }
+
 
 // Carga el contenido del About
 async function loadAboutContent(lang) {
