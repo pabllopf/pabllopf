@@ -581,7 +581,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: absolute;
   top: 40px;
   left: 50%;
-  margin-left: -21px;
+  margin-left: -30px;
   background-color: #010f4c;
   z-index: 100;
   display: table;

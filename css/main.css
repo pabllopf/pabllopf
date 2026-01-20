@@ -1395,3 +1395,32 @@ textarea.input1 {
 .show-more-btn:hover {
     background: #02154d;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== EDUCATION CARDS ===== */
+
+
+.timeline-badge img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #fff;
+  border: 2px solid #eee;
+  padding: 6px;
+}
