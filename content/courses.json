@@ -5,6 +5,14 @@
   },
   "courses": [
     {
+      "name": { "en": "Machine Learning Data Science Python", "es": "Machine Learning Data Science Python" },
+      "institution": { "en": "Udemy", "es": "Udemy" },
+      "date": { "en": "Nov 2021", "es": "Nov 2021" },
+      "duration": 40,
+      "image": "files/courses/machine_learning_data_science_python.png",
+      "pdf": "files/courses/machine_learning_data_science_python.pdf"
+    },
+    {
       "name": { "en": "Be Liquid", "es": "Be Liquid" },
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Oct 2023", "es": "Oct 2023" },
@@ -21,20 +29,20 @@
       "pdf": "files/courses/ai_spoiler.pdf"
     },
     {
-      "name": { "en": "Agora se acerca a los clientes KAMS", "es": "Agora se acerca a los clientes KAMS" },
-      "institution": { "en": "Enel", "es": "Enel" },
-      "date": { "en": "Jun 2021", "es": "Jun 2021" },
-      "duration": 4,
-      "image": "files/courses/agora_clientes_kams.png",
-      "pdf": "files/courses/agora_clientes_kams.pdf"
-    },
-    {
       "name": { "en": "Formación en Clasificación y Protección de la Información", "es": "Formación en Clasificación y Protección de la Información" },
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Oct 2021", "es": "Oct 2021" },
       "duration": 1.5,
       "image": "files/courses/proteccion_de_la_informacion.png",
       "pdf": "files/courses/proteccion_de_la_informacion.pdf"
+    },
+    {
+      "name": { "en": "Prevención de riesgos", "es": "Prevención de riesgos" },
+      "institution": { "en": "Fundación Universidad-Empresa", "es": "Fundación Universidad-Empresa" },
+      "date": { "en": "Dec 2020", "es": "Dic 2020" },
+      "duration": 9,
+      "image": "files/courses/prevencion_riesgos_2020.png",
+      "pdf": "files/courses/prevencion_riesgos_2020.pdf"
     }
   ],
   "showMoreText": { "en": "Show more", "es": "Mostrar más" }
