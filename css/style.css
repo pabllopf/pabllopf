@@ -1363,6 +1363,7 @@ Stretchy Nav style - common to:
   z-index: 2;
   top: 30px;
   left: 1.5%;
+  transition: none;
 }
 
 
@@ -1555,7 +1556,9 @@ Stretchy Nav style - common to:
 }
 
 .cd-stretchy-nav.nav-is-visible ul {
-  visibility: visible;
+    visibility: visible !important;
+  opacity: 1 !important;
+  transition: none;
 }
 .cd-stretchy-nav.nav-is-visible ul a::after {
   /* navigation item icons */
