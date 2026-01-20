@@ -1424,3 +1424,28 @@ textarea.input1 {
   border: 2px solid #eee;
   padding: 6px;
 }
+
+
+
+
+
+
+.experience-years {
+  margin-top: 10px;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #010f4c;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 12px;
+}
+
+.experience-years:hover {
+    background: #02154dcf;
+}
+
+
+
+

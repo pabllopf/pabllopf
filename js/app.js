@@ -124,12 +124,86 @@ async function loadMyExperienceContent(lang) {
         titleEl.textContent = content.title;
         headingEl.textContent = content.experienceTitle;
 
-        // Limpiar items previos
+
+        /* =========================
+        Helpers: fechas
+        ========================= */
+
+        function parseDateFromText(text) {
+        if (!text) return null;
+
+        const months = lang === "es"
+            ? { ene:0, feb:1, mar:2, abr:3, may:4, jun:5, jul:6, ago:7, sep:8, oct:9, nov:10, dic:11 }
+            : { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
+
+        const match = text.toLowerCase().match(/🗓️\s*([a-z]{3})\s*(\d{4})/);
+        if (!match) return null;
+
+        return new Date(parseInt(match[2], 10), months[match[1]], 1);
+        }
+
+        function parseEndDate(text) {
+        if (/actualidad|present/i.test(text)) return new Date();
+
+        const match = text.toLowerCase().match(/-\s*([a-z]{3})\s*(\d{4})/);
+        if (!match) return null;
+
+        return new Date(parseInt(match[2], 10), parseDateFromText(`🗓️ ${match[1]} ${match[2]}`).getMonth(), 1);
+        }
+
+        function calculateTotalExperience(experiences) {
+        let earliestStart = null;
+        let latestEnd = new Date(0);
+
+        experiences.forEach(exp => {
+            const start = parseDateFromText(exp.company);
+            const end = parseEndDate(exp.company) || new Date();
+
+            if (start && (!earliestStart || start < earliestStart)) {
+            earliestStart = start;
+            }
+            if (end > latestEnd) {
+            latestEnd = end;
+            }
+        });
+
+        if (!earliestStart) return 0;
+
+        const years = (latestEnd - earliestStart) / (1000 * 60 * 60 * 24 * 365.25);
+        return Math.floor(years);
+        }
+
+         // Limpiar items previos
         timelineEl.innerHTML = `
             <li class="timeline-heading text-center animate-box">
                 <div><h3 id="experience-title">${content.experienceTitle}</h3></div>
             </li>
         `;
+
+        /* =========================
+        Pintar heading + años
+        ========================= */
+
+        const totalYears = calculateTotalExperience(content.experience);
+
+        const experienceLabel =
+        lang === "es"
+            ? `💼 +${totalYears} años de experiencia`
+            : `💼 +${totalYears} years of experience`;
+
+        timelineEl.innerHTML = `
+        <li class="timeline-heading text-center animate-box">
+            <div>
+            <h3 id="experience-title">${content.experienceTitle}</h3>
+            </div>
+        </li>
+        <li class="timeline-heading text-center animate-box">
+            <button class="experience-years">${experienceLabel}</button>
+        </li>
+        `;
+
+
+       
 
         // Textos del botón desde JSON (nivel superior)
         const readMoreText = data.readMoreText?.[lang] || "Leer más";
