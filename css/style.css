@@ -1477,10 +1477,9 @@ Stretchy Nav style - common to:
   position: relative;
   z-index: 2;
   padding: 60px 0 0;
-  visibility: hidden;
-  -webkit-transition: visibility 0.3s;
-  -moz-transition: visibility 0.3s;
-  transition: visibility 0.3s;
+  visibility: hidden !important;
+  opacity: 0;
+  transition: none !important;
   text-align: right;
 }
 .cd-stretchy-nav ul a {
