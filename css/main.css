@@ -1524,19 +1524,19 @@ textarea.input1 {
 
 /* Award cards */
 .award-card {
-  width: 260px;
+  width: 420px;
   background: rgba(255,255,255,0.85);
   backdrop-filter: blur(10px);
   border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  padding: 20px;
+  box-shadow: 0 35px 70px rgba(0,0,0,0.18);
   cursor: pointer;
   transition: all 0.35s ease;
 }
 
 .award-card:hover {
   transform: scale(1.08) translateY(-10px);
-  box-shadow: 0 35px 70px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 20px #d4af37;
 }
 
 /* Text */

@@ -486,7 +486,7 @@ async function loadAwards(lang) {
 
       contentEl.innerHTML = `
         <h3>${award.title}</h3>
-        <div class="award-meta">${award.institution} · ${award.date}</div>
+        <div class="award-meta">${award.institution} ${award.date}</div>
         <p>${award.description[0]}</p>
       `;
 
