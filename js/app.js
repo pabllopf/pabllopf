@@ -489,12 +489,6 @@ async function loadAwards(lang) {
         <div class="award-meta">${award.institution} ${award.date}</div>
         <p>${award.description[0]}</p>
       `;
-
-      el.addEventListener("click", () => {
-        alert(
-          `${award.title}\n\n${award.description.join("\n\n")}`
-        );
-      });
     }
 
     renderAward("award-left", left);
