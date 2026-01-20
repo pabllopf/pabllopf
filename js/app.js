@@ -471,70 +471,47 @@ async function loadAwards(lang) {
   try {
     const res = await fetch("content/awards.json");
     const data = await res.json();
-
     const content = data[lang];
-    if (!content) return console.error(`No data for language: ${lang}`);
+
+    if (!content) return;
 
     document.getElementById("awards-title").textContent = content.title;
-    document.getElementById("awards-heading").textContent = content.awardsHeading;
+    document.getElementById("awards-heading").textContent = content.heading || "";
 
-    const timelineEl = document.getElementById("awards-timeline");
-    timelineEl.innerHTML = `
-      <li class="timeline-heading text-center animate-box">
-        <div><h3 id="awards-heading">${content.awardsHeading}</h3></div>
-      </li>
-    `;
+    const [left, right] = content.awards;
 
-    const readMoreText = data.readMoreText?.[lang] || "Leer más";
-    const showLessText = data.showLessText?.[lang] || (lang === "es" ? "Mostrar menos" : "Show less");
+    function renderAward(elId, award) {
+      const el = document.getElementById(elId);
+      const contentEl = el.querySelector(".award-content");
 
-    function createTimelineItem(item, inverted = false) {
-      const li = document.createElement("li");
-      li.className = `animate-box ${inverted ? "timeline-inverted" : "timeline-unverted"}`;
-
-      const fullDesc = item.description.map(p => `<p>${p}</p>`).join("");
-      const shortDesc = item.description.length > 0 ? `<p>${item.description[0]}</p>` : "";
-
-      li.innerHTML = `
-        <div class="timeline-badge"><i class="icon-trophy"></i></div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h3 class="timeline-title">${item.title}</h3>
-            <span class="timeline-institution">${item.institution} · ${item.date}</span>
-          </div>
-          <div class="timeline-body">
-            <div class="description-short">${shortDesc}</div>
-            <div class="description-full" style="display:none;">${fullDesc}</div>
-            ${item.description.length > 1 ? `<button class="read-more">${readMoreText}</button>` : ""}
-          </div>
-        </div>
+      contentEl.innerHTML = `
+        <h3>${award.title}</h3>
+        <div class="award-meta">${award.institution} · ${award.date}</div>
+        <p>${award.description[0]}</p>
       `;
 
-      const btn = li.querySelector(".read-more");
-      if (btn) {
-        const shortDiv = li.querySelector(".description-short");
-        const fullDiv = li.querySelector(".description-full");
-
-        btn.addEventListener("click", () => {
-          const isExpanded = fullDiv.style.display === "block";
-          fullDiv.style.display = isExpanded ? "none" : "block";
-          shortDiv.style.display = isExpanded ? "block" : "none";
-          btn.textContent = isExpanded ? readMoreText : showLessText;
-        });
-      }
-
-      return li;
+      el.addEventListener("click", () => {
+        alert(
+          `${award.title}\n\n${award.description.join("\n\n")}`
+        );
+      });
     }
 
-    content.awards.forEach((item, idx) => {
-      const li = createTimelineItem(item, idx % 2 === 1);
-      timelineEl.appendChild(li);
+    renderAward("award-left", left);
+    renderAward("award-right", right);
+
+    // Aplicar animación float solo a los elementos que deben flotar
+    document.querySelectorAll(".element").forEach(el => {
+      el.style.animation = "float 3s ease-in-out infinite alternate";
     });
 
   } catch (err) {
     console.error("Error loading awards:", err);
   }
 }
+
+
+
 
 
 
