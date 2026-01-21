@@ -516,7 +516,7 @@ async function loadRecommendationLetters(lang) {
 
         div.innerHTML = `
       <div class="recommendation-card" style="cursor:pointer;">
-        <img src="${letter.preview}" style="width:100%; height:auto; object-fit:cover;">
+        <img src="${letter.preview}" alt="${letter.person} img" style="width:100%; height:auto; object-fit:cover;">
         <h3>${letter.person}</h3>
         <span>${letter.company}</span>
       </div>
@@ -758,7 +758,7 @@ async function loadHobbies(lang) {
 
                 // Crear carrusel de imágenes
                 const carouselImages = hobby.images.map((img, i) =>
-                    `<img src="${img}" class="${i === 0 ? "active" : ""}">`
+                    `<img src="${img}" alt="${hobby.title} img" class="${i === 0 ? "active" : ""}">`
                 ).join("");
 
                 div.innerHTML = `
