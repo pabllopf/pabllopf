@@ -9,7 +9,7 @@
       "institution": { "en": "Udemy", "es": "Udemy" },
       "date": { "en": "Nov 2021", "es": "Nov 2021" },
       "duration": 40,
-      "image": "files/courses/machine_learning_data_science_python.png",
+      "image": "files/courses/machine_learning_data_science_python.webp",
       "pdf": "files/courses/machine_learning_data_science_python.pdf"
     },
     {
@@ -17,7 +17,7 @@
       "institution": { "en": "International University of Valencia", "es": "Universidad Internacional de Valencia" },
       "date": { "en": "Sep 2022", "es": "Sep 2022" },
       "duration": 25,
-      "image": "files/courses/inteligencia_emocional.png",
+      "image": "files/courses/inteligencia_emocional.webp",
       "pdf": "files/courses/inteligencia_emocional.pdf"
     },
     {
@@ -25,7 +25,7 @@
       "institution": { "en": "International University of Valencia", "es": "Universidad Internacional de Valencia" },
       "date": { "en": "Sep 2022", "es": "Sep 2022" },
       "duration": 25,
-      "image": "files/courses/Certificado_Habilidades_Comunicacion.png",
+      "image": "files/courses/Certificado_Habilidades_Comunicacion.webp",
       "pdf": "files/courses/Certificado_Habilidades_Comunicacion.pdf"
     },
     {
@@ -33,7 +33,7 @@
       "institution": { "en": "Fundación Universidad-Empresa", "es": "Fundación Universidad-Empresa" },
       "date": { "en": "Dec 2020", "es": "Dic 2020" },
       "duration": 9,
-      "image": "files/courses/prevencion_riesgos_2020.png",
+      "image": "files/courses/prevencion_riesgos_2020.webp",
       "pdf": "files/courses/prevencion_riesgos_2020.pdf"
     },
     {
@@ -41,7 +41,7 @@
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Mar 2023", "es": "Mar 2023" },
       "duration": 8,
-      "image": "files/courses/resultados_okr.png",
+      "image": "files/courses/resultados_okr.webp",
       "pdf": "files/courses/resultados_okr.pdf"
     },
     {
@@ -49,7 +49,7 @@
       "institution": { "en": "Fundación Estatal", "es": "Fundación Estatal" },
       "date": { "en": "Feb 2024", "es": "Feb 2024" },
       "duration": 8,
-      "image": "files/courses/entrena_liderazgo.png",
+      "image": "files/courses/entrena_liderazgo.webp",
       "pdf": "files/courses/entrena_liderazgo.pdf"
     },
     {
@@ -57,7 +57,7 @@
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Mar 2023", "es": "Mar 2023" },
       "duration": 8,
-      "image": "files/courses/Certificado_Negociar_Para_Sumar.png",
+      "image": "files/courses/Certificado_Negociar_Para_Sumar.webp",
       "pdf": "files/courses/Certificado_Negociar_Para_Sumar.pdf"
     },
     {
@@ -65,7 +65,7 @@
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Oct 2023", "es": "Oct 2023" },
       "duration": 5,
-      "image": "files/courses/be_liquid.png",
+      "image": "files/courses/be_liquid.webp",
       "pdf": "files/courses/be_liquid.pdf"
     },
     {
@@ -73,7 +73,7 @@
       "institution": { "en": "Datacamp", "es": "Datacamp" },
       "date": { "en": "Aug 2024", "es": "Ago 2024" },
       "duration": 4,
-      "image": "files/courses/Certificado_introduccion_python.png",
+      "image": "files/courses/Certificado_introduccion_python.webp",
       "pdf": "files/courses/Certificado_introduccion_python.pdf"
     },
     {
@@ -81,7 +81,7 @@
       "institution": { "en": "Datacamp", "es": "Datacamp" },
       "date": { "en": "Aug 2024", "es": "Ago 2024" },
       "duration": 4,
-      "image": "files/courses/Certificado_Introduction_to_Functions_in_Python.png",
+      "image": "files/courses/Certificado_Introduction_to_Functions_in_Python.webp",
       "pdf": "files/courses/Certificado_Introduction_to_Functions_in_Python.pdf"
     },
     {
@@ -89,7 +89,7 @@
       "institution": { "en": "Datacamp", "es": "Datacamp" },
       "date": { "en": "Aug 2024", "es": "Ago 2024" },
       "duration": 4,
-      "image": "files/courses/Certificado_Introduction_to_Testing_in_Python.png",
+      "image": "files/courses/Certificado_Introduction_to_Testing_in_Python.webp",
       "pdf": "files/courses/Certificado_Introduction_to_Testing_in_Python.pdf"
     },
     {
@@ -97,7 +97,7 @@
       "institution": { "en": "Datacamp", "es": "Datacamp" },
       "date": { "en": "Aug 2024", "es": "Ago 2024" },
       "duration": 3,
-      "image": "files/courses/Certificado_intermediate_python.png",
+      "image": "files/courses/Certificado_intermediate_python.webp",
       "pdf": "files/courses/Certificado_intermediate_python.pdf"
     },
     {
@@ -105,7 +105,7 @@
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Aug 2023", "es": "Ago 2023" },
       "duration": 3,
-      "image": "files/courses/Certificado_riesgos_perfil_oficinas_primeros_auxilios.png",
+      "image": "files/courses/Certificado_riesgos_perfil_oficinas_primeros_auxilios.webp",
       "pdf": "files/courses/Certificado_riesgos_perfil_oficinas_primeros_auxilios.pdf"
     },
     {
@@ -113,7 +113,7 @@
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Oct 2021", "es": "Oct 2021" },
       "duration": 1.5,
-      "image": "files/courses/proteccion_de_la_informacion.png",
+      "image": "files/courses/proteccion_de_la_informacion.webp",
       "pdf": "files/courses/proteccion_de_la_informacion.pdf"
     },
     {
@@ -121,7 +121,7 @@
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Jul 2022", "es": "Jul 2022" },
       "duration": 1,
-      "image": "files/courses/Certificado_Viajes_De_Negocio_Seguros.png",
+      "image": "files/courses/Certificado_Viajes_De_Negocio_Seguros.webp",
       "pdf": "files/courses/Certificado_Viajes_De_Negocio_Seguros.pdf"
     },
     {
@@ -129,7 +129,7 @@
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Jul 2021", "es": "Jul 2021" },
       "duration": 1,
-      "image": "files/courses/Certificado_Valuable_500_Hablamos_Discapacidad.png",
+      "image": "files/courses/Certificado_Valuable_500_Hablamos_Discapacidad.webp",
       "pdf": "files/courses/Certificado_Valuable_500_Hablamos_Discapacidad.pdf"
     },
     {
@@ -137,7 +137,7 @@
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Sep 2022", "es": "Sep 2022" },
       "duration": 1,
-      "image": "files/courses/Certificado_dar_y_recibir_feedback_remoto.png",
+      "image": "files/courses/Certificado_dar_y_recibir_feedback_remoto.webp",
       "pdf": "files/courses/Certificado_dar_y_recibir_feedback_remoto.pdf"
     },
     {
@@ -145,7 +145,7 @@
       "institution": { "en": "Enel", "es": "Enel" },
       "date": { "en": "Nov 2025", "es": "Nov 2025" },
       "duration": 1,
-      "image": "files/courses/ai_spoiler.png",
+      "image": "files/courses/ai_spoiler.webp",
       "pdf": "files/courses/ai_spoiler.pdf"
     }
   ],

@@ -116,11 +116,11 @@
       "name": "ChatTing",
       "url": "https://github.com/pabllopf/ChatTing",
       "images": [
-        "images/chatting-1.png",
-        "images/chatting-2.png",
-        "images/chatting-3.png",
-        "images/chatting-4.png",
-        "images/chatting-5.png"
+        "images/chatting-1.webp",
+        "images/chatting-2.webp",
+        "images/chatting-3.webp",
+        "images/chatting-4.webp",
+        "images/chatting-5.webp"
       ],
       "platforms": [
         "Web"
@@ -143,7 +143,7 @@
       "url": "https://github.com/pabllopf/SoundRecorder",
       "images": [
         "images/soundrecorder-1.webp",
-        "images/soundrecorder-2.png"
+        "images/soundrecorder-2.webp"
       ],
       "platforms": [
         "Windows"

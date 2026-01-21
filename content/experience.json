@@ -14,7 +14,7 @@
       {
         "role": "Team Lead",
         "company": "🏢 UST <br> 🗄️ Full-time  <br> 📍 Canary Islands, Spain · Remote <br> 🗓️ Jan 2026 - Present",
-        "logo": "images/work/ust.png",
+        "logo": "images/work/ust.webp",
         "logo_url": "https://www.ust.com",
         "description": [
           "Performing the role of Team Lead in a digital product team, responsible for coordination, functional definition, and delivery of solutions based on services, integrations, and digital channels.",
@@ -32,7 +32,7 @@
       {
         "role": "TechLead, B2B Products & Pricing/Demand & Prices Iberia",
         "company": "🏢 Endesa <br> 🗄️ Full-time  <br> 📍 Madrid, Spain · Hybrid <br> 🗓️ Mar 2022 - Jan 2026",
-        "logo": "images/work/endesa.png",
+        "logo": "images/work/endesa.webp",
         "logo_url": "https://www.endesa.com",
         "description": [
           "This role is linked to Demand & Prices Services and B2B Products & Pricing within the Demand & Prices Iberia area. As Tech Lead, I led the development of technical solutions for product creation and pricing in the B2B segment.",
@@ -47,7 +47,7 @@
       {
         "role": "TechLead, Demand & Prices Services",
         "company": "🏢 Endesa <br> 🗄️ Temporary contract  <br> 📍 Madrid, Spain · Hybrid <br> 🗓️ Oct 2021 - Mar 2022",
-        "logo": "images/work/endesa.png",
+        "logo": "images/work/endesa.webp",
         "logo_url": "https://www.endesa.com",
         "description": [
           "Led technical teams of 7-10 people, enhancing their talent and ensuring project objectives were met. Delivered key solutions exceeding business expectations under tight deadlines.",
@@ -60,7 +60,7 @@
       {
         "role": "Tech Lead Intern, Demand & Prices Services",
         "company": "🏢 Endesa <br> 🗄️ Training contract  <br> 📍 Remote <br> 🗓️ Nov 2020 - Oct 2021",
-        "logo": "images/work/endesa.png",
+        "logo": "images/work/endesa.webp",
         "logo_url": "https://www.endesa.com",
         "description": [
           "Partially led key projects, coordinating functional teams of up to 3 people and achieving 100% compliance with deadlines and budget in more than 5 strategic initiatives.",
@@ -71,7 +71,7 @@
       {
         "role": "Internship as Computer Engineer",
         "company": "🏢 Monentia S.L. <br> 🗄️ Internship  <br> 📍 Las Palmas de Gran Canaria, Spain · Remote <br> 🗓️ Jun 2020 - Nov 2020",
-        "logo": "images/work/monentia.png",
+        "logo": "images/work/monentia.webp",
         "logo_url": "https://www.monentia.es",
         "description": [
           "Worked with a proprietary framework for web/mobile application development based on Lambda architecture, improving scalability and efficiency, reducing loading times by 5%.",
@@ -88,7 +88,7 @@
       {
         "role": "Team Lead",
         "company": "🏢 UST <br> 🗄️ Jornada completa  <br> 📍 Canarias, España · En remoto <br> 🗓️ Ene 2026 - Actualidad",
-        "logo": "images/work/ust.png",
+        "logo": "images/work/ust.webp",
         "logo_url": "https://www.ust.com",
         "description": [
           "Desempeño el rol de Team Lead en un equipo de producto digital, siendo responsable de la coordinación, la definición funcional y la entrega de soluciones basadas en servicios, integraciones y canales digitales.",
@@ -106,7 +106,7 @@
       {
         "role": "TechLead, B2B Productos y Pricing/Demand & Prices Iberia",
         "company": "🏢 Endesa <br> 🗄️ Jornada completa  <br> 📍 Madrid, España · Híbrido <br> 🗓️ Mar 2022 - Ene 2026",
-        "logo": "images/work/endesa.png",
+        "logo": "images/work/endesa.webp",
         "logo_url": "https://www.endesa.com",
         "description": [
           "Puesto vinculado a Demand & Prices Services y B2B Products & Pricing dentro del área Demand & Prices Iberia. Como Tech Lead, lideré el desarrollo de soluciones técnicas para la creación de productos y fijación de precios en el segmento B2B.",
@@ -121,7 +121,7 @@
       {
         "role": "TechLead, Demand & Prices Services",
         "company": "🏢 Endesa <br> 🗄️ Contrato temporal  <br> 📍 Madrid, España · Híbrido <br> 🗓️ Oct 2021 - Mar 2022",
-        "logo": "images/work/endesa.png",
+        "logo": "images/work/endesa.webp",
         "logo_url": "https://www.endesa.com",
         "description": [
           "Lideré equipos técnicos de 7-10 personas, potenciando su talento y asegurando el cumplimiento de los objetivos del proyecto. Entregué soluciones clave que superaron las expectativas del negocio incluso bajo plazos ajustados.",
@@ -134,7 +134,7 @@
       {
         "role": "Tech Lead Intern, Demand & Prices Services",
         "company": "🏢 Endesa <br> 🗄️ Contrato de formación  <br> 📍 En remoto <br> 🗓️ Nov 2020 - Oct 2021",
-        "logo": "images/work/endesa.png",
+        "logo": "images/work/endesa.webp",
         "logo_url": "https://www.endesa.com",
         "description": [
           "Lideré parcialmente proyectos clave, coordinando equipos funcionales de hasta 3 personas y logrando un cumplimiento del 100% en plazos y presupuesto en más de 5 iniciativas estratégicas.",
@@ -145,7 +145,7 @@
       {
         "role": "Prácticas como Ingeniero Informático",
         "company": "🏢 Monentia S.L. <br> 🗄️ Contrato de prácticas  <br> 📍 Las Palmas de Gran Canaria, España · En remoto <br> 🗓️ Jun 2020 - Nov 2020",
-        "logo": "images/work/monentia.png",
+        "logo": "images/work/monentia.webp",
         "logo_url": "https://www.monentia.es",
         "description": [
           "Trabajé con un framework propio de la empresa para el desarrollo de aplicaciones web/móviles basadas en arquitectura Lambda, mejorando la escalabilidad y eficiencia de las soluciones tecnológicas, reduciendo los tiempos de carga en un 5%.",

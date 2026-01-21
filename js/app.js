@@ -605,7 +605,7 @@ async function loadTestimonials(lang) {
             div.className = "pm-testimonial-card";
             div.innerHTML = escapeHTMLPolicy.createHTML(`
     <div class="testimonial-left">
-      <img src="${t.image || 'images/default-user.png'}" alt="${t.name}" class="testimonial-img">
+      <img src="${t.image || 'images/default-user.webp'}" alt="${t.name}" class="testimonial-img">
       <div class="testimonial-info">
         <h3>${t.name}</h3>
         <div class="testimonial-position-company">${t.position}${t.company ? " | " + t.company : ""}</div>

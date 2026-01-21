@@ -8,9 +8,9 @@
         "description": "Flappy Bird es un videojuego arcade en el que controlas un pájaro que debe volar entre tuberías sin chocarse",
         "icon": "🐤",
         "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
+          "images/games/flappy_1.webp",
+          "images/games/flappy_2.webp",
+          "images/games/flappy_3.webp"
         ],
         "url": "https://pabllopf.itch.io/alissampleflappybird"
       },
@@ -19,9 +19,9 @@
         "description": "Juego arcade donde controlas una nave espacial que debe destruir asteroides y platillos voladores",
         "icon": "🚀",
         "images": [
-          "images/games/asteroid_1.png",
-          "images/games/asteroid_2.png",
-          "images/games/asteroid_3.png"
+          "images/games/asteroid_1.webp",
+          "images/games/asteroid_2.webp",
+          "images/games/asteroid_3.webp"
         ],
         "url": "https://pabllopf.itch.io/alissampleasteroid"
       },
@@ -30,10 +30,10 @@
         "description": "Ejemplos no comercial creado para demostrar las capacidades de Alis",
         "icon": "🕹️",
         "images": [
-          "images/games/opengl_1.png",
-          "images/games/opengl_2.png",
-          "images/games/opengl_3.png",
-          "images/games/opengl_4.png"
+          "images/games/opengl_1.webp",
+          "images/games/opengl_2.webp",
+          "images/games/opengl_3.webp",
+          "images/games/opengl_4.webp"
         ],
         "url": "https://pabllopf.itch.io/alissampleopengl"
       }
@@ -48,9 +48,9 @@
         "description": "Flappy Bird is an arcade-style game where you control a bird that must fly between pipes without crashing",
         "icon": "🐤",
         "images": [
-          "images/games/flappy_1.png",
-          "images/games/flappy_2.png",
-          "images/games/flappy_3.png"
+          "images/games/flappy_1.webp",
+          "images/games/flappy_2.webp",
+          "images/games/flappy_3.webp"
         ],
         "url": "https://pabllopf.itch.io/alissampleflappybird"
       },
@@ -59,9 +59,9 @@
         "description": "Asteroids is a classic arcade video game where you control a spaceship that must destroy asteroids and flying saucers while avoiding collisions",
         "icon": "🚀",
         "images": [
-          "images/games/asteroid_1.png",
-          "images/games/asteroid_2.png",
-          "images/games/asteroid_3.png"
+          "images/games/asteroid_1.webp",
+          "images/games/asteroid_2.webp",
+          "images/games/asteroid_3.webp"
         ],
         "url": "https://pabllopf.itch.io/alissampleasteroid"
       },
@@ -70,10 +70,10 @@
         "description": "Samples non-commercial example created to demonstrate the capabilities of Alis",
         "icon": "🕹️",
         "images": [
-          "images/games/opengl_1.png",
-          "images/games/opengl_2.png",
-          "images/games/opengl_3.png",
-          "images/games/opengl_4.png"
+          "images/games/opengl_1.webp",
+          "images/games/opengl_2.webp",
+          "images/games/opengl_3.webp",
+          "images/games/opengl_4.webp"
         ],
         "url": "https://pabllopf.itch.io/alissampleopengl"
       }
