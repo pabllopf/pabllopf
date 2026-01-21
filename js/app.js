@@ -297,7 +297,7 @@ async function loadMyExperienceContent(lang) {
 
             li.innerHTML = escapeHTMLPolicy.createHTML(`
                 <div class="timeline-badge">
-                    <a href="${item.logo_url}" rel="noopener" aria-label="Email" target="_blank">
+                    <a href="${item.logo_url}" class="accessible-link" rel="noopener" aria-label="Email" target="_blank">
                         <img src="${item.logo}" alt="${item.title}">
                     </a>
                 </div>
@@ -378,7 +378,7 @@ async function loadMyEducationContent(lang) {
 
             li.innerHTML = escapeHTMLPolicy.createHTML(`
             <div class="timeline-badge">
-                <a href="${item.logo_url}" rel="noopener" aria-label="Email" target="_blank">
+                <a href="${item.logo_url}" class="accessible-link" rel="noopener" aria-label="Email" target="_blank">
                     <img src="${item.logo}" alt="${item.degree}">
                 </a>
             </div>
@@ -836,7 +836,7 @@ async function loadAndRenderFooter(lang) {
         const madeByEl = document.getElementById("footer-madeby");
         if (madeByEl) {
             madeByEl.innerHTML = escapeHTMLPolicy.createHTML(`
-                ${data.madeBy} <a href="${data.socials.github}" rel="noopener" aria-label="Email" target="_blank">Pabllopf 😎</a> <br>
+                ${data.madeBy} <a href="${data.socials.github}" class="accessible-link" rel="noopener" aria-label="Email" target="_blank">Pabllopf 😎</a> <br>
                 ${data.license}
             `);
         }
@@ -873,7 +873,7 @@ async function loadAndRenderFooter(lang) {
                     case "instagram": iconClass = "icon-instagram"; break;
                     case "email": iconClass = "icon-email"; break;
                 }
-                socialsContainer.innerHTML += `<li class="list-inline-item"><a href="${url}" rel="noopener" aria-label="Email" target="_blank"><i class="${iconClass}"></i></a></li>`;
+                socialsContainer.innerHTML += `<li class="list-inline-item"><a href="${url}" class="accessible-link" rel="noopener" aria-label="Email" target="_blank"><i class="${iconClass}"></i></a></li>`;
             }
         }
 
@@ -1010,7 +1010,7 @@ function renderProjectsPage(lang, page) {
                 </div>
             `;
         } else {
-            imagesHTML = `<a href="${proj.url}" rel="noopener" aria-label="Email" target="_blank" class="blog-bg" style="background-image: url(${proj.images[0]});"></a>`;
+            imagesHTML = `<a href="${proj.url}" class="accessible-link" rel="noopener" aria-label="Email" target="_blank" class="blog-bg" style="background-image: url(${proj.images[0]});"></a>`;
         }
 
         div.innerHTML = escapeHTMLPolicy.createHTML(`
@@ -1018,14 +1018,14 @@ function renderProjectsPage(lang, page) {
                 ${imagesHTML}
                 <div class="blog-text">
                     <div class="project-platforms">${platformsHTML}</div>
-                    <h3><a href="${proj.url}" rel="noopener" aria-label="Email" target="_blank">${proj.name}</a></h3>
+                    <h3><a href="${proj.url}" class="accessible-link" rel="noopener" aria-label="Email" target="_blank">${proj.name}</a></h3>
                     <p>${description}</p>
                     <ul class="stuff">
                         <li><i class="icon-heart2"></i>${proj.stars}</li>
                         <li><i class="icon-eye2"></i>${proj.forks}</li>
                         <li><i class="icon-download22"></i>${proj.downloads}</li>
                         <li>
-                            <a href="${proj.url}" rel="noopener" aria-label="Email" target="_blank">
+                            <a href="${proj.url}" class="accessible-link" rel="noopener" aria-label="Email" target="_blank">
                                 ${proj.buttonText?.[lang] || proj.buttonText?.["en"] || "View"}
                                 <i class="icon-arrow-right22"></i>
                             </a>

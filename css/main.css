@@ -1613,3 +1613,22 @@ textarea.input1 {
     transform: translateY(50%) translateX(0);
 }
 
+
+
+
+
+
+
+/* CSS */
+.accessible-link {
+  color: #1a73e8;       /* Color del enlace */
+  text-decoration: underline; /* Subrayado para distinguir visualmente */
+  font-weight: 500;     /* Opcional: un poco más de peso para mejorar visibilidad */
+}
+
+.accessible-link:hover,
+.accessible-link:focus {
+  color: #0c47a1;       /* Color de enlace al pasar el ratón */
+  outline: 2px dashed #0c47a1; /* Borde de enfoque para teclado y lectores de pantalla */
+  text-decoration: underline;
+}
