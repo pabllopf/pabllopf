@@ -14,7 +14,7 @@
 
 .container-contact1 {
   width: 1163px;
-  background: #fff;
+  background: white;
   overflow: hidden;
 
   display: -webkit-box;
@@ -95,7 +95,7 @@ textarea.input1 {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: rgba(0, 14, 77, 0.5);
+  color: #010f4c;
 }
 
 .input1:focus+.shadow-input1 {
@@ -136,7 +136,7 @@ textarea.input1 {
   font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;
-  color: #fff;
+  color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -162,7 +162,7 @@ textarea.input1 {
 }
 
 .contact1-form-btn:hover {
-  background: #333333;
+  background: darkgrey;
 }
 
 .contact1-form-btn:hover i {
@@ -236,7 +236,7 @@ textarea.input1 {
   position: absolute;
   max-width: 70%;
   background-color: white;
-  border: 1px solid #c80000;
+  border: 1px solid red;
   border-radius: 13px;
   padding: 4px 25px 4px 10px;
   top: 50%;
@@ -249,7 +249,7 @@ textarea.input1 {
   pointer-events: none;
 
   font-family: Montserrat-Medium;
-  color: #c80000;
+  color: red;
   font-size: 13px;
   line-height: 1.4;
   text-align: left;
@@ -268,7 +268,7 @@ textarea.input1 {
   font-family: FontAwesome;
   display: block;
   position: absolute;
-  color: #c80000;
+  color: red;
   font-size: 15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -360,7 +360,7 @@ textarea.input1 {
   background-size: cover;
   background-position: center;
   display: none;
-  border: 1px solid #00000040;
+  border: 1px solid #010f4c;
   border-radius: 10px;
 }
 
@@ -369,7 +369,7 @@ textarea.input1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #010f4c;
   color: white;
   border: none;
   padding: 4px 8px;
@@ -409,7 +409,7 @@ textarea.input1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: darkgray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -444,7 +444,7 @@ textarea.input1 {
   position: relative;
   color: white;
   /* Texto en blanco */
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid darkgrey;
   /* Borde blanco fino y elegante */
   border-radius: 12px;
   /* Esquinas redondeadas */
@@ -494,7 +494,7 @@ textarea.input1 {
 }
 
 .recommendation-card span {
-  color: rgb(185, 184, 184);
+  color: darkgrey;
   /* Texto en blanco */
   font-size: 0.8em;
 }
@@ -542,7 +542,7 @@ textarea.input1 {
   border-radius: 50%;
   cursor: pointer;
   z-index: 10000;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px darkgrey;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
@@ -606,14 +606,14 @@ textarea.input1 {
   margin: 0;
   font-size: 1rem;
   font-weight: bold;
-  color: #fff;
+  color: white;
   text-align: center;
 }
 
 .testimonial-left .testimonial-position-company,
 .testimonial-left .testimonial-date {
   font-size: 0.85rem;
-  color: #ccc;
+  color: darkgrey;
   margin-top: 2px;
   text-align: center;
 }
@@ -631,7 +631,7 @@ textarea.input1 {
   font-size: 1.2rem;
   /* más grande */
   line-height: 1.5;
-  color: #fff;
+  color: white;
   position: relative;
   padding: 10px 15px;
   border-radius: 12px;
@@ -713,11 +713,11 @@ textarea.input1 {
 
 /* Tarjetas de cursos */
 .course-card {
-  background: #fff;
+  background: white;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   overflow: hidden;
-  color: #333;
+  color: darkgrey;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
@@ -742,12 +742,12 @@ textarea.input1 {
 .course-card .course-content h3 {
   font-size: 1rem;
   margin: 5px 0;
-  color: #111;
+  color: #010f4c;
 }
 
 .course-card .course-content p {
   font-size: 0.85rem;
-  color: #555;
+  color: darkgrey;
   margin: 3px 0;
 }
 
@@ -771,7 +771,7 @@ textarea.input1 {
   height: 90%;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: white;
 }
 
 .course-modal iframe {
@@ -814,14 +814,14 @@ textarea.input1 {
 }
 
 .page-btn.active {
-  background: #333;
-  color: #fff;
-  border-color: #333;
+  background: darkgrey;
+  color: white;
+  border-color: darkgrey;
 }
 
 .page-btn:hover {
-  background: #555;
-  color: #fff;
+  background: darkgray;
+  color: white;
 }
 
 
@@ -846,16 +846,16 @@ textarea.input1 {
   max-width: 400px;
   padding: 10px 15px;
   border-radius: 12px;
-  border: 1px solid #fff;
+  border: 1px solid white;
   background: rgba(255, 255, 255, 0.05);
-  color: #fff;
+  color: white;
   font-size: 0.95rem;
   margin: 0 auto;
   display: block;
 }
 
 .blogs-search-input::placeholder {
-  color: #ccc;
+  color: darkgrey;
 }
 
 /* Grid artículos */
@@ -866,7 +866,7 @@ textarea.input1 {
 /* Card tipo artículo con esquina partida */
 .blog-pin-card {
   position: relative;
-  background: #fff;
+  background: white;
   border-radius: 16px;
   padding: 25px 20px 15px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -878,7 +878,7 @@ textarea.input1 {
 .blog-pin-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  border-color: #00ffff;
+  border-color: skyblue;
 }
 
 .blog-pin-card h3 {
@@ -890,14 +890,14 @@ textarea.input1 {
 
 .blog-meta {
   font-size: 0.85rem;
-  color: #555;
+  color: darkgrey;
   margin-bottom: 10px;
   display: block;
 }
 
 .blog-pin-card p {
   font-size: 0.95rem;
-  color: #333;
+  color: darkgrey;
   line-height: 1.5;
   margin: 0;
 }
@@ -920,7 +920,7 @@ textarea.input1 {
 }
 
 .pagination-btn {
-  background: #fff;
+  background: white;
   border: 1px solid #010f4c;
   color: #010f4c;
   padding: 6px 12px;
@@ -930,13 +930,13 @@ textarea.input1 {
 }
 
 .pagination-btn.active {
-  background: #fff;
-  border: 2px solid #00ffff;
+  background: white;
+  border: 2px solid skyblue;
   color: #010f4c;
 }
 
 .pagination-btn:hover {
-  border-color: #00ffff;
+  border-color: skyblue;
   color: #010f4c;
 }
 
@@ -949,7 +949,7 @@ textarea.input1 {
 
 
 #fh5co-skills-modern {
-  background: #fff;
+  background: white;
   padding: 60px 0;
 }
 
@@ -976,7 +976,7 @@ textarea.input1 {
 
 /* Tarjeta de skill */
 .skill-card {
-  background: #f2f4f8;
+  background: whitesmoke;
   border-radius: 12px;
   padding: 10px 14px;
   font-size: 0.9rem;
@@ -995,12 +995,12 @@ textarea.input1 {
 .skill-card:hover {
   transform: translateY(-3px);
   background: #010f4c;
-  color: #fff;
+  color: white;
 }
 
 
 .skills-group {
-  background: #ffffff;
+  background: white;
   border: 2px solid #010f4c;
   border-radius: 20px;
   padding: 25px 25px 15px 25px;
@@ -1023,7 +1023,7 @@ textarea.input1 {
 
 
 .skill-filter-btn {
-  background: #fff;
+  background: white;
   border: 2px solid #010f4c;
   color: #010f4c;
   padding: 6px 14px;
@@ -1036,7 +1036,7 @@ textarea.input1 {
 
 .skill-filter-btn:hover {
   background: #010f4c;
-  color: #fff;
+  color: white;
 }
 
 
@@ -1055,7 +1055,7 @@ textarea.input1 {
 
 /* Tarjetas de impacto */
 .impact-card {
-  background: #ffffff;
+  background: white;
   border-radius: 14px;
   padding: 18px 18px 16px 18px;
   margin-bottom: 25px;
@@ -1078,7 +1078,7 @@ textarea.input1 {
   top: -10px;
   left: 15px;
   background: #010f4c;
-  color: #fff;
+  color: white;
   font-size: 12px;
   font-weight: 600;
   padding: 4px 10px;
@@ -1096,7 +1096,7 @@ textarea.input1 {
 /* descripción */
 .impact-card p {
   font-size: 13px;
-  color: #333;
+  color: darkgrey;
   margin-bottom: 8px;
 }
 
@@ -1111,7 +1111,7 @@ textarea.input1 {
 /* tecnologías */
 .impact-tech {
   font-size: 12px;
-  color: #555;
+  color: darkgrey;
   font-style: italic;
 }
 
@@ -1142,7 +1142,7 @@ textarea.input1 {
 
 /* Tarjetas de hobbies */
 .hobby-card {
-  background: #fff;
+  background: white;
   border: 2px solid #010f4c;
   border-radius: 16px;
   padding: 15px;
@@ -1159,7 +1159,7 @@ textarea.input1 {
 .hobby-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  border-color: #00ffff;
+  border-color: skyblue;
 }
 
 .hobby-icon {
@@ -1177,7 +1177,7 @@ textarea.input1 {
 
 .hobby-card p {
   font-size: 0.95rem;
-  color: #333;
+  color: darkgrey;
   line-height: 1.4;
   margin-bottom: 10px;
 }
@@ -1227,17 +1227,17 @@ textarea.input1 {
 #fh5co-footer {
   padding: 40px 0;
   background: #010f4c;
-  color: #fff;
+  color: white;
 }
 
 #fh5co-footer a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   transition: 0.3s;
 }
 
 #fh5co-footer a:hover {
-  color: #ffffff57;
+  color: goldenrod;
 }
 
 .btn-footer {
@@ -1245,15 +1245,15 @@ textarea.input1 {
   margin: 5px 10px;
   padding: 8px 20px;
   border-radius: 8px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid white;
+  color: white;
   background: transparent;
   font-size: 1.2rem;
   transition: 0.3s;
 }
 
 .btn-footer:hover {
-  background: #ffffff42;
+  background: darkgrey;
   color: #010f4c;
 }
 
@@ -1267,7 +1267,7 @@ textarea.input1 {
 }
 
 #footer-madeby {
-  color: #ffffffcf;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -1322,8 +1322,8 @@ textarea.input1 {
 /* Speech bubble */
 #contact-character .speech-bubble {
   position: relative;
-  background: #e0e6f0;
-  color: #111;
+  background: white;
+  color: #010f4c;
   padding: 2px 13px;
   border-radius: 16px;
   margin-top: 79px;
@@ -1353,12 +1353,12 @@ textarea.input1 {
 .cd-stretchy-nav ul li {
 	
 	border-radius: 0px 0px 30px 0px;
-  background-color: #3e443d;
+  background-color: darkgrey;
 }
 
 /* Hover sobre el li */
 .cd-stretchy-nav ul li:hover {
-	background-color: #3e443d;
+	background-color: darkgrey;
 }
 
 /* Asegurar que el link ocupa todo el li */
@@ -1366,16 +1366,16 @@ textarea.input1 {
 	display: block;
 	width: 100%;
 	height: 100%;
-	color: #fff;
+	color: white;
 }
 
 .cd-stretchy-nav ul li a {
-	color: #fff;
+	color: white;
 }
 
 /* Mantener color del texto */
 .cd-stretchy-nav ul li:hover a span {
-	color: #fff;
+	color: white;
 }
 
 
@@ -1386,7 +1386,7 @@ textarea.input1 {
     padding: 3px 10px;
     border-radius: 4px;
     background: #010f4c;
-    color: #fff;
+    color: white;
     font-size: 1.2rem;
 }
 .show-more-btn {
@@ -1395,7 +1395,7 @@ textarea.input1 {
     border: none;
     border-radius: 8px;
     background: #010f4c;
-    color: #fff;
+    color: white;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -1427,8 +1427,8 @@ textarea.input1 {
   height: 70px;
   border-radius: 50%;
   object-fit: contain;
-  background: #fff;
-  border: 2px solid #eee;
+  background: white;
+  border: 2px solid whitesmoke;
   padding: 6px;
 }
 
@@ -1443,7 +1443,7 @@ textarea.input1 {
     border: none;
     border-radius: 8px;
     background: #010f4c;
-    color: #fff;
+    color: white;
     cursor: pointer;
     transition: 0.3s;
     font-size: 12px;
@@ -1464,7 +1464,7 @@ textarea.input1 {
 
 
 .awards-section {
-  background: #ffffff;
+  background: white;
   padding: 80px 0;
 }
 
@@ -1474,7 +1474,7 @@ textarea.input1 {
 }
 
 .awards-subtitle {
-  color: #777;
+  color: darkgrey;
   margin-top: 10px;
   font-size: 18px;
 }
@@ -1493,7 +1493,7 @@ textarea.input1 {
 .award-trophy {
   position: relative;
   font-size: 140px;
-  color: #d4af37;
+  color: darkgoldenrod;
   transform-style: preserve-3d;
   animation: float 5s ease-in-out infinite;
 }
@@ -1532,7 +1532,7 @@ textarea.input1 {
 /* Award cards */
 .award-card {
   width: 420px;
-  background: rgba(255,255,255,0.85);
+  background: whitesmoke;
   backdrop-filter: blur(10px);
   border-radius: 18px;
   padding: 20px;
@@ -1554,13 +1554,13 @@ textarea.input1 {
 
 .award-card .award-meta {
   font-size: 14px;
-  color: #666;
+  color: darkgrey;
   margin: 6px 0 10px;
 }
 
 .award-card p {
   font-size: 14px;
-  color: #444;
+  color: darkgrey;
 }
 
 
@@ -1572,7 +1572,7 @@ textarea.input1 {
     right: 10px;
     width: 40px;
     height: 40px;
-    background-color: #333333;
+    background-color: darkgrey;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1595,8 +1595,8 @@ textarea.input1 {
     bottom: 15%;
     left: 93%;
     transform: translateY(50%) translateX(10px);
-    background-color: #333333;
-    color: #fff;
+    background-color: darkgrey;
+    color: white;
     padding: 6px 12px;
     border-radius: 0px 6px 6px 0px;
     font-size: 14px;
@@ -1621,14 +1621,14 @@ textarea.input1 {
 
 /* CSS */
 .accessible-link {
-  color: #1a73e8;       /* Color del enlace */
+  color: skyblue;       /* Color del enlace */
   text-decoration: underline; /* Subrayado para distinguir visualmente */
   font-weight: 500;     /* Opcional: un poco más de peso para mejorar visibilidad */
 }
 
 .accessible-link:hover,
 .accessible-link:focus {
-  color: #0c47a1;       /* Color de enlace al pasar el ratón */
-  outline: 2px dashed #0c47a1; /* Borde de enfoque para teclado y lectores de pantalla */
+  color: skyblue;       /* Color de enlace al pasar el ratón */
+  outline: 2px dashed skyblue; /* Borde de enfoque para teclado y lectores de pantalla */
   text-decoration: underline;
 }
