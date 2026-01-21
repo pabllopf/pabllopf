@@ -64,14 +64,7 @@ find "$BASE_DIR" -type f \( \
     echo "   ➜ Original: ${size_orig} KB"
     echo "   ➜ WebP nuevo: ${size_new} KB"
 
-    # Eliminar original solo si WebP pesa menos
-    if [ "$size_new" -lt "$size_orig" ]; then
-        rm "$file"
-        echo "   ❌ Archivo original eliminado."
-    else
-        rm "$output"
-        echo "   ↩️  WebP descartado (no mejora tamaño)."
-    fi
+    rm "$file"
 
     echo "----------------------------------------"
 done
