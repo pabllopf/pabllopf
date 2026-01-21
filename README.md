@@ -1,6 +1,6 @@
 <!-- Encabezado tipo banner -->
 <div align="center">
-  <img src="https://github.com/pabllopf/pabllopf/blob/master/images/mi_gif_2.gif" style="width: 1100px; height: 250px;  object-fit: cover;" alt="Banner Image">
+  <img src="https://github.com/pabllopf/pabllopf/blob/master/images/mi_gif_2.webp" style="width: 1100px; height: 250px;  object-fit: cover;" alt="Banner Image">
 </div>
 
 
