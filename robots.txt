@@ -8,6 +8,7 @@ Disallow:
 # User-agent: *
 # Disallow: /private/
 # Disallow: /uploads/
+# Content-signal: search=yes,ai-train=no
 
 # Sitemap URL (absolute)
 Sitemap: https://www.pabllopf.dev/sitemap.xml
