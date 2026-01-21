@@ -19,6 +19,9 @@
 	<meta property="og:url" content="https://www.pabllopf.dev/">
 	<meta property="og:type" content="website">
 	<meta name="twitter:card" content="summary_large_image">
+
+	<!-- Security -->
+	<meta http-equiv="X-Frame-Options" content="DENY">
 	<meta http-equiv="Content-Security-Policy"
 		content="
 		default-src 'self';
@@ -29,7 +32,7 @@
 		connect-src 'self' ws://127.0.0.1:3001;
 		object-src 'none';
 		base-uri 'self';
-		frame-ancestors 'none';
+		frame-ancestors 'self' https://pabllopf.dev;
 		require-trusted-types-for 'script';
 		trusted-types default;
 		">
