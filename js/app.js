@@ -1,5 +1,18 @@
 const DEFAULT_LANG = "en";
 
+let escapeHTMLPolicy;
+
+if (window.trustedTypes && !trustedTypes.defaultPolicy) {
+  escapeHTMLPolicy = trustedTypes.createPolicy("default", {
+    createHTML: (input) => input
+  });
+} else {
+  // fallback navegadores viejos
+  escapeHTMLPolicy = {
+    createHTML: (input) => input
+  };
+}
+
 // Detecta el idioma del sistema operativo
 function getSystemLanguage() {
     return (
@@ -18,8 +31,8 @@ async function loadHeaderContent(lang) {
     const content = data[lang] || data[DEFAULT_LANG];
 
     // Nombre y título
-    document.getElementById("header-name").innerHTML = content.name;
-    document.getElementById("header-title").innerHTML = content.title;
+    document.getElementById("header-name").innerHTML = escapeHTMLPolicy.createHTML(content.name);
+    document.getElementById("header-title").innerHTML = escapeHTMLPolicy.createHTML(content.title);
 
     // Botón CV
     const cvBtn = document.getElementById("header-cv");
@@ -115,11 +128,11 @@ async function loadAboutContent(lang) {
         document.getElementById("about-heading").textContent = content.heading;
 
         const container = document.getElementById("about-content");
-        container.innerHTML = "";
+        container.innerHTML = escapeHTMLPolicy.createHTML("");
 
         content.paragraphs.forEach(text => {
             const p = document.createElement("p");
-            p.innerHTML = text; // permite <b>, <br>, etc.
+            p.innerHTML = escapeHTMLPolicy.createHTML(text); // permite <b>, <br>, etc.
             container.appendChild(p);
         });
     } catch (err) {
@@ -139,13 +152,13 @@ async function loadHowIWorkContent(lang) {
         document.getElementById("how-i-work-title").textContent = section.title;
 
         const container = document.querySelector("#fh5co-features .row:last-child");
-        container.innerHTML = "";
+        container.innerHTML = escapeHTMLPolicy.createHTML("");
 
         section.items.forEach(item => {
             const col = document.createElement("div");
             col.className = "col-md-3 text-center";
 
-            col.innerHTML = `
+            col.innerHTML = escapeHTMLPolicy.createHTML(`
         <div class="feature-left">
           <span class="icon">
             <i class="${item.icon}"></i>
@@ -155,7 +168,7 @@ async function loadHowIWorkContent(lang) {
             <p>${item.text}</p>
           </div>
         </div>
-      `;
+      `);
 
             container.appendChild(col);
         });
@@ -239,11 +252,11 @@ async function loadMyExperienceContent(lang) {
         }
 
         // Limpiar items previos
-        timelineEl.innerHTML = `
+        timelineEl.innerHTML = escapeHTMLPolicy.createHTML(`
             <li class="timeline-heading text-center animate-box">
                 <div><h3 id="experience-title">${content.experienceTitle}</h3></div>
             </li>
-        `;
+        `);
 
         /* =========================
         Pintar heading + años
@@ -256,7 +269,7 @@ async function loadMyExperienceContent(lang) {
                 ? `💼 +${totalYears} años de experiencia`
                 : `💼 +${totalYears} years of experience`;
 
-        timelineEl.innerHTML = `
+        timelineEl.innerHTML = escapeHTMLPolicy.createHTML(`
         <li class="timeline-heading text-center animate-box">
             <div>
             <h3 id="experience-title">${content.experienceTitle}</h3>
@@ -265,7 +278,7 @@ async function loadMyExperienceContent(lang) {
         <li class="timeline-heading text-center animate-box">
             <button class="experience-years">${experienceLabel}</button>
         </li>
-        `;
+        `);
 
 
 
@@ -282,7 +295,7 @@ async function loadMyExperienceContent(lang) {
             const fullDescription = item.description.map(p => `<p>${p}</p>`).join("");
             const shortDescription = item.description.length > 0 ? `<p>${item.description[0]}</p>` : "";
 
-            li.innerHTML = `
+            li.innerHTML = escapeHTMLPolicy.createHTML(`
                 <div class="timeline-badge">
                     <a href="${item.logo_url}" target="_blank">
                         <img src="${item.logo}" alt="${item.title}">
@@ -299,7 +312,7 @@ async function loadMyExperienceContent(lang) {
                         <button class="read-more">${readMoreText}</button>
                     </div>
                 </div>
-            `;
+            `);
 
             // Añadir funcionalidad al botón
             const btn = li.querySelector(".read-more");
@@ -344,11 +357,11 @@ async function loadMyEducationContent(lang) {
         titleEl.textContent = content.title;
         headingEl.textContent = content.educationTitle;
 
-        timelineEl.innerHTML = `
+        timelineEl.innerHTML = escapeHTMLPolicy.createHTML(`
           <li class="timeline-heading text-center animate-box">
             <div><h3 id="education-title">${content.educationTitle}</h3></div>
           </li>
-        `;
+        `);
 
         const readMoreText = data.readMoreText?.[lang];
         const showLessText = data.showLessText?.[lang];
@@ -363,7 +376,7 @@ async function loadMyEducationContent(lang) {
             const fullDescription = item.description.map(p => `<p>${p}</p>`).join("");
             const shortDescription = item.description.length ? `<p>${item.description[0]}</p>` : "";
 
-            li.innerHTML = `
+            li.innerHTML = escapeHTMLPolicy.createHTML(`
             <div class="timeline-badge">
                 <a href="${item.logo_url}" target="_blank">
                     <img src="${item.logo}" alt="${item.degree}">
@@ -381,7 +394,7 @@ async function loadMyEducationContent(lang) {
                   <button class="read-more">${readMoreText}</button>
                 </div>
               </div>
-            `;
+            `);
 
             const btn = li.querySelector(".read-more");
             const shortDiv = li.querySelector(".description-short");
@@ -442,19 +455,19 @@ async function loadCertifications(lang) {
             data.certificationsSection?.subtitle?.[lang] || data.certificationsSection?.subtitle?.["en"];
 
         const container = document.getElementById("certifications-list");
-        container.innerHTML = "";
+        container.innerHTML = escapeHTMLPolicy.createHTML("");
 
         data.certifications.forEach(cert => {
             const div = document.createElement("div");
             div.className = "col-md-4 text-center col-padding animate-box";
 
-            div.innerHTML = `
+            div.innerHTML = escapeHTMLPolicy.createHTML(`
         <div class="cert-card" data-image="${cert.image}" style="background-image:url('${cert.image}')">
           <div class="desc">
           </div>
         </div>
         <br>
-      `;
+      `);
 
             container.appendChild(div);
         });
@@ -475,10 +488,10 @@ function enableCertificationPreview() {
             const overlay = document.createElement("div");
             overlay.className = "cert-lightbox";
 
-            overlay.innerHTML = `
+            overlay.innerHTML = escapeHTMLPolicy.createHTML(`
         <span class="close-btn">✕</span>
         <img src="${image}">
-      `;
+      `);
 
             overlay.addEventListener("click", e => {
                 if (e.target.classList.contains("cert-lightbox") || e.target.classList.contains("close-btn")) {
@@ -499,7 +512,7 @@ async function loadRecommendationLetters(lang) {
     document.getElementById("letters-subtitle").textContent = data.section.subtitle[lang];
 
     const container = document.getElementById("letters-list");
-    container.innerHTML = "";
+    container.innerHTML = escapeHTMLPolicy.createHTML("");
 
     const modal = document.getElementById("letters-modal");
     const iframe = document.getElementById("letters-modal-pdf");
@@ -514,13 +527,13 @@ async function loadRecommendationLetters(lang) {
         const div = document.createElement("div");
         div.className = "col-md-3 animate-box";
 
-        div.innerHTML = `
+        div.innerHTML = escapeHTMLPolicy.createHTML(`
       <div class="recommendation-card" style="cursor:pointer;">
         <img src="${letter.preview}" alt="${letter.person} img" style="width:100%; height:auto; object-fit:cover;">
         <h3>${letter.person}</h3>
         <span>${letter.company}</span>
       </div>
-    `;
+    `);
 
         div.querySelector(".recommendation-card").onclick = () => {
             iframe.src = letter.pdf;   // Si es imagen, cambiar a <img> en el modal
@@ -549,11 +562,11 @@ async function loadAwards(lang) {
             const el = document.getElementById(elId);
             const contentEl = el.querySelector(".award-content");
 
-            contentEl.innerHTML = `
+            contentEl.innerHTML = escapeHTMLPolicy.createHTML(`
         <h3>${award.title}</h3>
         <div class="award-meta">${award.institution} ${award.date}</div>
         <p>${award.description[0]}</p>
-      `;
+      `);
         }
 
         renderAward("award-left", left);
@@ -585,12 +598,12 @@ async function loadTestimonials(lang) {
         document.getElementById("pm-testimonials-title").textContent = content.title;
 
         const carousel = document.getElementById("pm-testimonials-carousel");
-        carousel.innerHTML = "";
+        carousel.innerHTML = escapeHTMLPolicy.createHTML("");
 
         content.testimonials.forEach(t => {
             const div = document.createElement("div");
             div.className = "pm-testimonial-card";
-            div.innerHTML = `
+            div.innerHTML = escapeHTMLPolicy.createHTML(`
     <div class="testimonial-left">
       <img src="${t.image || 'images/default-user.png'}" alt="${t.name}" class="testimonial-img">
       <div class="testimonial-info">
@@ -604,7 +617,7 @@ async function loadTestimonials(lang) {
       </div>
     </div>
     
-  `;
+  `);
             carousel.appendChild(div);
         });
 
@@ -671,7 +684,7 @@ async function loadCoursesCarousel(lang) {
         let currentPage = 1;
 
         function renderPage(page) {
-            container.innerHTML = "";
+            container.innerHTML = escapeHTMLPolicy.createHTML("");
             const start = (page - 1) * itemsPerPage;
             const end = start + itemsPerPage;
             const pageItems = courses.slice(start, end);
@@ -679,11 +692,11 @@ async function loadCoursesCarousel(lang) {
             pageItems.forEach(course => {
                 const col = document.createElement("div");
                 col.className = "col-md-3 col-sm-6 col-xs-12"; // 4 columnas en escritorio
-                col.innerHTML = `
+                col.innerHTML = escapeHTMLPolicy.createHTML(`
                     <div class="course-card" data-pdf="${course.pdf || '#'}">
                         <img src="${course.image}" alt="${course.name?.[lang] || course.name?.en}">
                     </div>
-                `;
+                `);
                 container.appendChild(col);
 
                 // Abrir PDF
@@ -695,7 +708,7 @@ async function loadCoursesCarousel(lang) {
             });
 
             // Actualizar paginación
-            pagination.innerHTML = "";
+            pagination.innerHTML = escapeHTMLPolicy.createHTML("");
             for (let i = 1; i <= totalPages; i++) {
                 const btn = document.createElement("span");
                 btn.className = `page-btn ${i === page ? "active" : ""}`;
@@ -739,15 +752,15 @@ async function loadHobbies(lang) {
 
         const container = document.getElementById("hobbies-list");
         const paginationContainer = document.getElementById("hobbies-pagination");
-        container.innerHTML = "";
-        paginationContainer.innerHTML = "";
+        container.innerHTML = escapeHTMLPolicy.createHTML("");
+        paginationContainer.innerHTML = escapeHTMLPolicy.createHTML("");
 
         const hobbiesPerPage = 6;
         const totalPages = Math.ceil(content.hobbies.length / hobbiesPerPage);
         let currentPage = 1;
 
         function renderPage(page) {
-            container.innerHTML = "";
+            container.innerHTML = escapeHTMLPolicy.createHTML("");
             const start = (page - 1) * hobbiesPerPage;
             const end = start + hobbiesPerPage;
             const pageHobbies = content.hobbies.slice(start, end);
@@ -761,14 +774,14 @@ async function loadHobbies(lang) {
                     `<img src="${img}" alt="${hobby.title} img" class="${i === 0 ? "active" : ""}">`
                 ).join("");
 
-                div.innerHTML = `
+                div.innerHTML = escapeHTMLPolicy.createHTML(`
           <div class="hobby-card" onclick="window.open('${hobby.url}', '_blank')">
             <div class="hobby-carousel">${carouselImages}</div>
             <div class="hobby-icon">${hobby.icon}</div>
             <h3>${hobby.title}</h3>
             <p>${hobby.description}</p>
           </div>
-        `;
+        `);
                 container.appendChild(div);
 
                 // Iniciar carrusel automático
@@ -783,7 +796,7 @@ async function loadHobbies(lang) {
             });
 
             // Renderizar paginación
-            paginationContainer.innerHTML = "";
+            paginationContainer.innerHTML = escapeHTMLPolicy.createHTML("");
             for (let i = 1; i <= totalPages; i++) {
                 const btn = document.createElement("button");
                 btn.textContent = i;
@@ -822,10 +835,10 @@ async function loadAndRenderFooter(lang) {
         // -----------------------------
         const madeByEl = document.getElementById("footer-madeby");
         if (madeByEl) {
-            madeByEl.innerHTML = `
+            madeByEl.innerHTML = escapeHTMLPolicy.createHTML(`
                 ${data.madeBy} <a href="${data.socials.github}" target="_blank">Pabllopf 😎</a> <br>
                 ${data.license}
-            `;
+            `);
         }
 
         // -----------------------------
@@ -851,7 +864,7 @@ async function loadAndRenderFooter(lang) {
         // -----------------------------
         const socialsContainer = document.getElementById("footer-socials");
         if (socialsContainer) {
-            socialsContainer.innerHTML = "";
+            socialsContainer.innerHTML = escapeHTMLPolicy.createHTML("");
             for (const [key, url] of Object.entries(data.socials)) {
                 let iconClass = "";
                 switch (key) {
@@ -894,14 +907,14 @@ async function loadStatsContent(lang) {
 
         // Contenedor
         const container = document.getElementById("stats-container");
-        container.innerHTML = "";
+        container.innerHTML = escapeHTMLPolicy.createHTML("");
 
         // Render stats
         content.stats.forEach(stat => {
             const col = document.createElement("div");
             col.className = "col-md-5 col-sm-12 animate-box text-center stat-card";
 
-            col.innerHTML = `
+            col.innerHTML = escapeHTMLPolicy.createHTML(`
 				<img 
 					src="${stat.image}"
 					alt="${stat.alt}"
@@ -913,7 +926,7 @@ async function loadStatsContent(lang) {
 						box-shadow:0 8px 20px rgba(0,0,0,0.2);
 					"
 				/>
-			`;
+			`);
 
             container.appendChild(col);
         });
@@ -966,7 +979,7 @@ async function loadProjects(lang) {
 
 function renderProjectsPage(lang, page) {
     const projectsContainer = document.getElementById("projects-list");
-    projectsContainer.innerHTML = "";
+    projectsContainer.innerHTML = escapeHTMLPolicy.createHTML("");
 
     const startIndex = (page - 1) * PROJECTS_PER_PAGE;
     const endIndex = startIndex + PROJECTS_PER_PAGE;
@@ -1000,7 +1013,7 @@ function renderProjectsPage(lang, page) {
             imagesHTML = `<a href="${proj.url}" target="_blank" class="blog-bg" style="background-image: url(${proj.images[0]});"></a>`;
         }
 
-        div.innerHTML = `
+        div.innerHTML = escapeHTMLPolicy.createHTML(`
             <div class="fh5co-blog animate-box">
                 ${imagesHTML}
                 <div class="blog-text">
@@ -1020,7 +1033,7 @@ function renderProjectsPage(lang, page) {
                     </ul>
                 </div>
             </div>
-        `;
+        `);
 
         projectsContainer.appendChild(div);
     });
@@ -1031,7 +1044,7 @@ function renderPaginationControls(lang) {
     const container = document.getElementById("projects-pagination");
     if (!container) return;
 
-    container.innerHTML = "";
+    container.innerHTML = escapeHTMLPolicy.createHTML("");
     for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement("button");
         btn.className = `pagination-btn ${i === currentprojectPage ? 'active' : ''}`;
@@ -1096,7 +1109,7 @@ async function loadBlogs(lang) {
 
 function renderBlogs(filter = '') {
     const blogsContainer = document.getElementById("blogs-list");
-    blogsContainer.innerHTML = "";
+    blogsContainer.innerHTML = escapeHTMLPolicy.createHTML("");
 
     const filteredBlogs = allBlogs.filter(blog =>
         blog.title.toLowerCase().includes(filter.toLowerCase()) ||
@@ -1113,7 +1126,7 @@ function renderBlogs(filter = '') {
     blogsToShow.forEach(blog => {
         const div = document.createElement("div");
         div.className = "col-md-3 col-sm-6";
-        div.innerHTML = `
+        div.innerHTML = escapeHTMLPolicy.createHTML(`
   <br>
   <div class="blog-pin-card" onclick="if('${blog.url}'){window.open('${blog.url}', '_blank','noopener,noreferrer')}">
     <div class="blog-pin">📍</div>
@@ -1121,7 +1134,7 @@ function renderBlogs(filter = '') {
     <span class="blog-meta">${blog.platform} · ${blog.date}</span>
     <p>${blog.description}</p>
   </div>
-`;
+`);
 
         blogsContainer.appendChild(div);
     });
@@ -1131,7 +1144,7 @@ function renderBlogs(filter = '') {
 
 function renderPagination(totalPages, filter) {
     const paginationContainer = document.getElementById("blogs-pagination");
-    paginationContainer.innerHTML = "";
+    paginationContainer.innerHTML = escapeHTMLPolicy.createHTML("");
 
     for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement("button");
@@ -1168,13 +1181,13 @@ async function loadSkills(lang) {
     document.getElementById("skills-subtitle").textContent = content.subtitle;
 
     const container = document.getElementById("skills-groups");
-    container.innerHTML = "";
+    container.innerHTML = escapeHTMLPolicy.createHTML("");
 
     content.categories.forEach(cat => {
         const col = document.createElement("div");
         col.className = "col-md-12";
 
-        col.innerHTML = `
+        col.innerHTML = escapeHTMLPolicy.createHTML(`
       <div class="skills-group">
         <h3>${cat.name}</h3>
         <div class="skills-grid">
@@ -1186,7 +1199,7 @@ async function loadSkills(lang) {
           `).join("")}
         </div>
       </div>
-    `;
+    `);
 
         container.appendChild(col);
     });
@@ -1195,7 +1208,7 @@ async function loadSkills(lang) {
 
 function setupSkillFilters(categories) {
     const container = document.getElementById("skills-filters");
-    container.innerHTML = "";
+    container.innerHTML = escapeHTMLPolicy.createHTML("");
 
     categories.forEach((cat, index) => {
         const btn = document.createElement("button");
@@ -1231,7 +1244,7 @@ async function loadAndRenderImpact(lang) {
 
         // Contenedor
         const container = document.getElementById("impact-list");
-        container.innerHTML = "";
+        container.innerHTML = escapeHTMLPolicy.createHTML("");
 
         // Renderizar cada item
         data.items.forEach(item => {
@@ -1291,9 +1304,9 @@ async function loadContactContent(lang) {
 
         document.getElementById("contact-message").placeholder = content.messagePlaceholder;
 
-        document.getElementById("contact-button-text").innerHTML = `
+        document.getElementById("contact-button-text").innerHTML = escapeHTMLPolicy.createHTML(`
 			${content.button} <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-		`;
+		`);
 
     } catch (err) {
         console.error("Error loading contact.json:", err);
