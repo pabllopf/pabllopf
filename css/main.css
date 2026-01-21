@@ -1322,8 +1322,8 @@ textarea.input1 {
 /* Speech bubble */
 #contact-character .speech-bubble {
   position: relative;
-  background: white;
-  color: #010f4c;
+  background: #010f4c;
+  color: white;
   padding: 2px 13px;
   border-radius: 16px;
   margin-top: 79px;
@@ -1341,7 +1341,7 @@ textarea.input1 {
   transform: translateX(-50%);
   border-width: 0 8px 10px 8px;
   border-style: solid;
-  border-color: transparent transparent #e0e6f0 transparent;
+  border-color: transparent transparent #010f4c transparent;
 }
 
 

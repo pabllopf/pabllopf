@@ -451,8 +451,8 @@ async function loadCertifications(lang) {
         document.getElementById("certifications-title").textContent =
             data.certificationsSection?.title?.[lang] || data.certificationsSection?.title?.["en"];
 
-        document.getElementById("certifications-subtitle").textContent =
-            data.certificationsSection?.subtitle?.[lang] || data.certificationsSection?.subtitle?.["en"];
+        //document.getElementById("certifications-subtitle").textContent =
+        //    data.certificationsSection?.subtitle?.[lang] || data.certificationsSection?.subtitle?.["en"];
 
         const container = document.getElementById("certifications-list");
         container.innerHTML = escapeHTMLPolicy.createHTML("");
@@ -509,7 +509,7 @@ async function loadRecommendationLetters(lang) {
     const data = await res.json();
 
     document.getElementById("letters-title").textContent = data.section.title[lang];
-    document.getElementById("letters-subtitle").textContent = data.section.subtitle[lang];
+    //document.getElementById("letters-subtitle").textContent = data.section.subtitle[lang];
 
     const container = document.getElementById("letters-list");
     container.innerHTML = escapeHTMLPolicy.createHTML("");
@@ -554,7 +554,7 @@ async function loadAwards(lang) {
         if (!content) return;
 
         document.getElementById("awards-title").textContent = content.title;
-        document.getElementById("awards-heading").textContent = content.heading || "";
+        //document.getElementById("awards-heading").textContent = content.heading || "";
 
         const [left, right] = content.awards;
 
@@ -748,7 +748,7 @@ async function loadHobbies(lang) {
         if (!content) return console.error(`No data for language: ${lang}`);
 
         document.getElementById("hobbies-title").textContent = content.title;
-        document.getElementById("hobbies-subtitle").textContent = content.subtitle;
+        //document.getElementById("hobbies-subtitle").textContent = content.subtitle;
 
         const container = document.getElementById("hobbies-list");
         const paginationContainer = document.getElementById("hobbies-pagination");
@@ -903,7 +903,7 @@ async function loadStatsContent(lang) {
 
         // Título y subtítulo
         document.getElementById("stats-title").textContent = content.title;
-        document.getElementById("stats-subtitle").textContent = content.subtitle;
+        //document.getElementById("stats-subtitle").textContent = content.subtitle;
 
         // Contenedor
         const container = document.getElementById("stats-container");
@@ -965,8 +965,8 @@ async function loadProjects(lang) {
         // Títulos
         document.getElementById("projects-title").textContent =
             config.projectsSection?.title?.[lang] || config.projectsSection?.title?.["en"];
-        document.getElementById("projects-subtitle").textContent =
-            config.projectsSection?.subtitle?.[lang] || config.projectsSection?.subtitle?.["en"];
+        //document.getElementById("projects-subtitle").textContent =
+        //    config.projectsSection?.subtitle?.[lang] || config.projectsSection?.subtitle?.["en"];
 
         renderProjectsPage(lang, currentprojectPage);
 
@@ -1178,7 +1178,7 @@ async function loadSkills(lang) {
     if (!content) return;
 
     document.getElementById("skills-title").textContent = content.title;
-    document.getElementById("skills-subtitle").textContent = content.subtitle;
+    //document.getElementById("skills-subtitle").textContent = content.subtitle;
 
     const container = document.getElementById("skills-groups");
     container.innerHTML = escapeHTMLPolicy.createHTML("");
@@ -1240,7 +1240,7 @@ async function loadAndRenderImpact(lang) {
 
         // Actualizar título y subtítulo
         document.getElementById("impact-title").innerText = data.title;
-        document.getElementById("impact-subtitle").innerText = data.subtitle;
+        //document.getElementById("impact-subtitle").innerText = data.subtitle;
 
         // Contenedor
         const container = document.getElementById("impact-list");
