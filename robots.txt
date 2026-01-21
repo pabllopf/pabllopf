@@ -1,12 +1,13 @@
 # robots.txt for https://www.pabllopf.dev/
 
-# Allow all crawlers full access
+# Allow all crawlers to access everything
 User-agent: *
 Disallow:
 
-# Specific bot rules (example)
-User-agent: magicsearchbot
-Disallow: /uploads/
+# Optional: block specific directories (uncomment if needed)
+# User-agent: *
+# Disallow: /private/
+# Disallow: /uploads/
 
 # Sitemap URL (absolute)
 Sitemap: https://www.pabllopf.dev/sitemap.xml
