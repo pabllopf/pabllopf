@@ -27,7 +27,7 @@
       },
       {
         "title": "OpenGl",
-        "description": "Ejemplos no comercial creado para demostrar las capacidades de Alis",
+        "description": "Ejemplo Alis.Sample.OpenGl no comercial creado para demostrar las capacidades de Alis",
         "icon": "🕹️",
         "images": [
           "images/games/opengl_1.webp",
@@ -67,7 +67,7 @@
       },
       {
         "title": "OpenGl",
-        "description": "Samples non-commercial example created to demonstrate the capabilities of Alis",
+        "description": "Sample Alis.Sample.OpenGl non-commercial example created to demonstrate the capabilities of Alis",
         "icon": "🕹️",
         "images": [
           "images/games/opengl_1.webp",

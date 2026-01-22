@@ -1230,6 +1230,47 @@ textarea.input1 {
 
 
 
+/* MEDIA QUERY PARA MÓVIL */
+@media (max-width: 1000px) {
+  #hobbies-list {
+    display: flex;          /* fila horizontal */
+    overflow-x: auto;       /* scroll horizontal */
+    scroll-snap-type: x mandatory; /* "snap" al elemento */
+    -webkit-overflow-scrolling: touch; /* suavizado en iOS */
+    gap: 15px;              /* separación entre cards */
+    padding-bottom: 10px;   /* espacio debajo */
+  }
+
+  #hobbies-list .col-md-4 {
+    flex: 0 0 80%;         /* cada card ocupa 80% del ancho del contenedor */
+    max-width: 300px;      /* opcional: limitar ancho máximo */
+    scroll-snap-align: start;
+    display: block;         /* quitar display flex */
+  }
+
+  .hobby-card {
+    height: auto;           /* ajustar altura para scroll horizontal */
+    margin-bottom: 0;       /* eliminar margen inferior */
+  }
+
+  /* Opcional: ocultar paginación en móvil */
+  #hobbies-pagination {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
