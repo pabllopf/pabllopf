@@ -1527,3 +1527,52 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// go up:
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const goTop = document.querySelector(".gototop");
+
+  if (!goTop) return;
+
+  // Función que activa/desactiva el botón según el scroll
+  function toggleGoTop() {
+    if (window.scrollY > 100) { // cambiar 100 si quieres que aparezca más abajo
+      goTop.classList.add("active");
+    } else {
+      goTop.classList.remove("active");
+    }
+  }
+
+  window.addEventListener("scroll", toggleGoTop, { passive: true });
+
+  // Scroll suave al hacer clic
+  goTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
