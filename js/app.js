@@ -1,3 +1,7 @@
+/* =========================
+   Global configuration
+========================= */
+
 const DEFAULT_LANG = "en";
 
 let escapeHTMLPolicy;
@@ -7,22 +11,70 @@ if (window.trustedTypes && !trustedTypes.defaultPolicy) {
     createHTML: (input) => input
   });
 } else {
-  // fallback navegadores viejos
   escapeHTMLPolicy = {
     createHTML: (input) => input
   };
 }
 
-// Detecta el idioma del sistema operativo
 function getSystemLanguage() {
-    return (
-        navigator.languages?.[0] ||
-        navigator.language ||
-        navigator.userLanguage ||
-        DEFAULT_LANG
-    ).slice(0, 2);
+  return (
+    navigator.languages?.[0] ||
+    navigator.language ||
+    navigator.userLanguage ||
+    DEFAULT_LANG
+  ).slice(0, 2);
 }
 
+/* =========================
+   Lazy section loader
+========================= */
+
+function setupLazySections(lang) {
+  const sections = [
+  { id: "fh5co-about", loader: loadAboutContent },
+  { id: "fh5co-testimonials", loader: loadTestimonials },
+  { id: "fh5co-resume", loader: loadMyExperienceContent },
+  { id: "fh5co-reco-letters", loader: loadRecommendationLetters },
+  { id: "fh5co-resume-education", loader: loadMyEducationContent },
+  { id: "fh5co-certifications", loader: loadCertifications },
+  { id: "fh5co-awards", loader: loadAwards },
+  { id: "fh5co-features", loader: loadHowIWorkContent },
+  { id: "fh5co-skills-modern", loader: loadSkills },
+  { id: "fh5co-courses", loader: loadCoursesCarousel },
+  { id: "fh5co-blog", loader: loadProjects },
+  { id: "blogs-section", loader: loadBlogs },
+  { id: "fh5co-hobbies", loader: loadHobbies },
+  { id: "fh5co-stats", loader: loadStatsContent },
+  { id: "fh5co-footer", loader: loadAndRenderFooter }
+];
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const section = sections.find(s => s.id === entry.target.id);
+        if (section) {
+          section.loader(lang);
+          obs.unobserve(entry.target);
+
+          if (window.requestIdleCallback) {
+            requestIdleCallback(() => {
+              //fetch(`content/${entry.target.id}.json`).catch(() => {});
+            });
+          }
+        }
+      }
+    });
+  }, { rootMargin: "300px" });
+
+  sections.forEach(s => {
+    const el = document.getElementById(s.id);
+    if (el) observer.observe(el);
+  });
+}
+
+/* =========================
+   Header (eager)
+========================= */
 
 async function loadHeaderContent(lang) {
   try {
@@ -30,27 +82,25 @@ async function loadHeaderContent(lang) {
     const data = await response.json();
     const content = data[lang] || data[DEFAULT_LANG];
 
-    // Nombre y título
-    document.getElementById("header-name").innerHTML = escapeHTMLPolicy.createHTML(content.name);
-    document.getElementById("header-title").innerHTML = escapeHTMLPolicy.createHTML(content.title);
+    document.getElementById("header-name").innerHTML =
+      escapeHTMLPolicy.createHTML(content.name);
 
-    // Botón CV
+    document.getElementById("header-title").innerHTML =
+      escapeHTMLPolicy.createHTML(content.title);
+
     const cvBtn = document.getElementById("header-cv");
     cvBtn.href = content.cv;
     cvBtn.textContent = content.cvText;
 
-    // Redes sociales
     document.getElementById("linkedin-link").href = content.social.linkedin;
     document.getElementById("github-link").href = content.social.github;
     document.getElementById("email-link").href = content.social.email;
 
-    // Emoji Badge y tooltip
     const emojiBadge = document.getElementById("emoji-badge");
     const emojiTooltip = document.getElementById("emoji-tooltip");
     emojiBadge.textContent = "🚀";
     emojiTooltip.textContent = content.emojiBadge.tooltip;
 
-    // Menú: iteramos sobre las secciones dinámicamente
     const menuMap = {
       "menu-about": "about",
       "menu-experience": "experience",
@@ -67,23 +117,22 @@ async function loadHeaderContent(lang) {
     };
 
     for (const [id, key] of Object.entries(menuMap)) {
-      const menuItem = document.getElementById(id);
-      if (menuItem && content.menu[key]) {
-        menuItem.querySelector("span").textContent = content.menu[key];
+      const el = document.getElementById(id);
+      if (el && content.menu[key]) {
+        el.querySelector("span").textContent = content.menu[key];
       }
     }
 
-    // Opcional: scroll suave al hacer clic en el menú
     Object.keys(menuMap).forEach(id => {
-      const menuItem = document.getElementById(id);
-      if (menuItem) {
-        menuItem.addEventListener("click", e => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener("click", e => {
           e.preventDefault();
-          const targetId = menuItem.getAttribute("href").substring(1);
-          const targetEl = document.getElementById(targetId);
-          if (targetEl) {
+          const targetId = el.getAttribute("href").substring(1);
+          const target = document.getElementById(targetId);
+          if (target) {
             window.scrollTo({
-              top: targetEl.offsetTop,
+              top: target.offsetTop,
               behavior: "smooth"
             });
           }
@@ -92,28 +141,33 @@ async function loadHeaderContent(lang) {
     });
 
   } catch (err) {
-    console.error("Error loading header.json:", err);
+    console.error("Error loading header:", err);
   }
 }
 
-// Inicialización
-document.addEventListener("DOMContentLoaded", () => {
-  // Carga inicial en inglés por defecto
-  loadHeaderContent(DEFAULT_LANG);
 
-  // Cambio de idioma mediante botones
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lang = DEFAULT_LANG;
+
+  loadHeaderContent(lang);
+  setupLazySections(lang);   // ← ESTA LÍNEA FALTA Y ES CRÍTICA
+
   document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
       const selectedLang = btn.dataset.lang;
-      loadHeaderContent(selectedLang);
 
-      // Actualizamos clases activas
-      document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(b => b.classList.remove("active-yes"));
+      loadHeaderContent(selectedLang);
+      setupLazySections(selectedLang); // ← TAMBIÉN AQUÍ
+
+      document.querySelectorAll(".cd-stretchy-nav-lang a")
+        .forEach(b => b.classList.remove("active-yes"));
       btn.classList.add("active-yes");
     });
   });
 });
+
 
 
 
@@ -1318,61 +1372,48 @@ function setActiveLangButton(lang) {
     });
 }
 
-// Inicialización con selector de idiomas
-function initLanguageSelector() {
-    const initialLang = getSystemLanguage();
+/* =========================
+   Boot
+========================= */
 
-    loadHeaderContent(initialLang);
-    loadAboutContent(initialLang);
-    loadHowIWorkContent(initialLang);
-    loadMyExperienceContent(initialLang);
-    loadMyEducationContent(initialLang);
-    loadContactContent(initialLang);
-    loadProjects(initialLang);
-    loadRecommendationLetters(initialLang);
-    loadCertifications(initialLang);
-    loadTestimonials(initialLang);
-    loadCoursesCarousel(initialLang);
-    loadAwards(initialLang);
-    loadBlogs(initialLang);
-    loadSkills(initialLang);
-    loadStatsContent(initialLang);
-    //loadAndRenderImpact(initialLang);
-    loadContactCharacter(initialLang);
-    loadHobbies(initialLang);
-    loadAndRenderFooter(initialLang);
-    setActiveLangButton(initialLang);
+document.addEventListener("DOMContentLoaded", () => {
+  const lang = getSystemLanguage() || DEFAULT_LANG;
 
-    document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
-        btn.addEventListener("click", e => {
-            e.preventDefault();
-            const lang = btn.dataset.lang;
-            loadHeaderContent(lang);
-            loadAboutContent(lang);
-            loadHowIWorkContent(lang);
-            loadMyExperienceContent(lang);
-            loadMyEducationContent(lang);
-            loadContactContent(lang);
-            loadRecommendationLetters(lang);
-            loadProjects(lang);
-            loadCertifications(lang);
-            loadTestimonials(lang);
-            loadCoursesCarousel(lang);
-            loadContactCharacter(lang);
-            loadAwards(lang);
-            loadBlogs(lang);
-            loadSkills(lang);
-            loadStatsContent(lang);
-            //loadAndRenderImpact(lang);
-            loadHobbies(lang);
-            loadAndRenderFooter(lang);
-            setActiveLangButton(lang);
-        });
+  loadHeaderContent(lang);
+  setupLazySections(lang);
+
+  document.querySelectorAll(".cd-stretchy-nav-lang a").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      const selectedLang = btn.dataset.lang;
+      loadHeaderContent(selectedLang);
+      setupLazySections(selectedLang);
+
+      document
+        .querySelectorAll(".cd-stretchy-nav-lang a")
+        .forEach(b => b.classList.remove("active-yes"));
+
+      btn.classList.add("active-yes");
     });
-}
+  });
+});
 
-// Espera a que cargue el DOM
-document.addEventListener("DOMContentLoaded", initLanguageSelector);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
