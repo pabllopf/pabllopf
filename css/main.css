@@ -2,11 +2,11 @@
   --font-family: monospace;
 
   --primary: #010f4c;
-  --secondary: white;
-  --tersary: gold;
-  --muted-text: grey;
-  --hover-accent: blue;  
-  --alert-color: red;
+  --secondary: #ffffff;
+  --tersary: #ffd700;
+  --muted-text: #808080;
+  --hover-accent: #0000ff;  
+  --alert-color: #ff0000;
 }
 
 
@@ -416,7 +416,7 @@ textarea.input1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--muted-text)
+  background: var(--muted-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -829,7 +829,7 @@ textarea.input1 {
 }
 
 .page-btn:hover {
-  background: var(--muted-text)
+  background: var(--muted-text);
   color: var(--secondary);
 }
 
