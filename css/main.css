@@ -878,7 +878,7 @@ textarea.input1 {
 .blog-pin-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  border-color: skyblue;
+  outline: 2px dashed #1E90FF;
 }
 
 .blog-pin-card h3 {
@@ -890,14 +890,14 @@ textarea.input1 {
 
 .blog-meta {
   font-size: 0.85rem;
-  color: darkgrey;
+  color: #010f4c;
   margin-bottom: 10px;
   display: block;
 }
 
 .blog-pin-card p {
   font-size: 0.95rem;
-  color: darkgrey;
+  color: #010f4c;
   line-height: 1.5;
   margin: 0;
 }
@@ -1592,7 +1592,7 @@ textarea.input1 {
 /* Tooltip personalizado */
 .emoji-tooltip {
     position: absolute;
-    bottom: 15%;
+    bottom: 15%; 
     left: 93%;
     transform: translateY(50%) translateX(10px);
     background-color: darkgrey;
