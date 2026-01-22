@@ -580,7 +580,8 @@ textarea.input1 {
   background: var(--primary);
   border-radius: 16px;
   padding: 15px;
-  box-shadow: 0 8px 20px var(--primary);
+  box-shadow: 0 2px 4px var(--secondary);
+  border: 1px solid var(--secondary);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   cursor: default;
   position: relative;
