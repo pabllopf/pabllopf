@@ -1543,7 +1543,7 @@ textarea.input1 {
 
 .award-card:hover {
   transform: scale(1.08) translateY(-10px);
-  box-shadow: 0 2px 20px #d4af37;
+  box-shadow: 0 2px 20px goldenrod;
 }
 
 /* Text */
@@ -1619,16 +1619,15 @@ textarea.input1 {
 
 
 
-/* CSS */
 .accessible-link {
-  color: skyblue;       /* Color del enlace */
-  text-decoration: underline; /* Subrayado para distinguir visualmente */
-  font-weight: 500;     /* Opcional: un poco más de peso para mejorar visibilidad */
+  color: #1E90FF; /* DodgerBlue - WCAG compliant */
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 .accessible-link:hover,
 .accessible-link:focus {
-  color: skyblue;       /* Color de enlace al pasar el ratón */
-  outline: 2px dashed skyblue; /* Borde de enfoque para teclado y lectores de pantalla */
+  color: #1E90FF;
+  outline: 2px dashed #1E90FF;
   text-decoration: underline;
 }
