@@ -146,6 +146,36 @@ async function loadHeaderContent(lang) {
   }
 }
 
+/* =========================
+   Dynamic Full Height Header
+========================= */
+
+function setRealFullHeight() {
+  // Altura REAL visible (no vh teórico)
+  const realVH = window.innerHeight;
+
+  // Todos los elementos que deben ocupar la altura completa
+  const fullHeightEls = document.querySelectorAll(
+    "#fh5co-header, .display-t, .display-tc"
+  );
+
+  fullHeightEls.forEach(el => {
+    el.style.height = realVH + "px";
+  });
+}
+
+// Ejecutar cuando el DOM esté listo
+document.addEventListener("DOMContentLoaded", () => {
+  setRealFullHeight();
+
+  // Recalcular en todos los casos donde cambia el viewport real
+  window.addEventListener("resize", setRealFullHeight);
+  window.addEventListener("orientationchange", setRealFullHeight);
+
+  // iOS / Chrome móvil cuando aparece/desaparece la barra
+  window.visualViewport?.addEventListener("resize", setRealFullHeight);
+});
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
