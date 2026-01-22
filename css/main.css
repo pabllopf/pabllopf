@@ -1433,7 +1433,6 @@ textarea.input1 {
 
 
 
-
 /* ===== EDUCATION CARDS ===== */
 
 
@@ -1660,4 +1659,12 @@ textarea.input1 {
   color: var(--hover-accent);
   outline: 2px dashed var(--hover-accent);
   text-decoration: underline;
+}
+
+
+
+
+
+.timeline li .timeline-badge {
+  z-index: -1;
 }
