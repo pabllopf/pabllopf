@@ -869,7 +869,7 @@ textarea.input1 {
 }
 
 .blogs-search-input::placeholder {
-  color: var(--muted-text);
+  color: var(--secondary);
 }
 
 /* Grid artículos */

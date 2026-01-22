@@ -318,7 +318,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-features .feature-left p {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  color: whitesmoke;
 }
 #fh5co-features .feature-left p:last-child {
   margin-bottom: 0;
