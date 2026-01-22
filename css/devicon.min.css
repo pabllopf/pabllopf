@@ -4,7 +4,7 @@
     src: url("../fonts/devicon/devicon.eot?qd25fp#iefix") format("embedded-opentype"), url("../fonts/devicon/devicon.ttf?qd25fp") format("truetype"), url("../fonts/devicon/devicon.woff?qd25fp") format("woff"), url("../fonts/devicon/devicon.svg?qd25fp#devicon") format("svg");
     font-weight: normal;
     font-style: normal;
-    font-display: block
+    font-display: swap;
 }
 
 [class^=devicon-],
