@@ -1490,44 +1490,14 @@ Stretchy Nav style - common to:
   color: rgba(255, 255, 255, 0);
   height: 50px;
   line-height: 50px;
-  padding: 0 calc(1em + 60px) 0 1em;
+  padding: 0 calc(1em + 10px) 0 1em;
   color: rgba(255, 255, 255, 255);
   font-size: 1.4rem;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   transition: color 0.2s;
 }
-.cd-stretchy-nav ul a::after {
-  /* navigation item icons */
-  content: '';
-  position: absolute;
-  height: 16px;
-  width: 16px;
-  right: 22px;
-  top: 50%;
-  -webkit-transform: translateY(-50%) scale(0);
-  -moz-transform: translateY(-50%) scale(0);
-  -ms-transform: translateY(-50%) scale(0);
-  -o-transform: translateY(-50%) scale(0);
-  transform: translateY(-50%) scale(0);
-  opacity: .6;
-  background: url(../images/menu/cd-sprite-1.webp) no-repeat 0 0;
-}
-.cd-stretchy-nav ul a::before {
-  /* line visible next to the active navigation item */
-  content: '';
-  position: absolute;
-  
-  width: 3px;
-  height: 16px;
-  top: 50%;
-  right: 60px;
-  -webkit-transform: translateX(3px) translateY(-50%) scaleY(0);
-  -moz-transform: translateX(3px) translateY(-50%) scaleY(0);
-  -ms-transform: translateX(3px) translateY(-50%) scaleY(0);
-  -o-transform: translateX(3px) translateY(-50%) scaleY(0);
-  transform: translateX(3px) translateY(-50%) scaleY(0);
-}
+
 .cd-stretchy-nav ul li:first-of-type a::after {
   /* change custom icon using image sprites */
   background-position: -32px 0;
@@ -1545,14 +1515,6 @@ Stretchy Nav style - common to:
   background-position: -16px 0;
 }
 .cd-stretchy-nav ul span {
-  /* navigation item labels */
-  display: block;
-  opacity: 0;
-  -webkit-transform: translateX(-25px);
-  -moz-transform: translateX(-25px);
-  -ms-transform: translateX(-25px);
-  -o-transform: translateX(-25px);
-  transform: translateX(-25px);
   text-align: left;
 }
 

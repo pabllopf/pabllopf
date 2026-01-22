@@ -108,11 +108,11 @@ async function loadHeaderContent(lang) {
       "menu-experience": "experience",
       "menu-education": "education",
       "menu-certifications": "certifications",
-      "menu-awards": "awards",
+      "menu-projects": "projects",
       "menu-howIWork": "howIWork",
       "menu-skills": "skills",
       "menu-courses": "courses",
-      "menu-projects": "projects",
+      "menu-awards": "awards",
       "menu-blogs": "blogs",
       "menu-hobbies": "hobbies",
       "menu-contact": "contact"
@@ -121,7 +121,7 @@ async function loadHeaderContent(lang) {
     for (const [id, key] of Object.entries(menuMap)) {
       const el = document.getElementById(id);
       if (el && content.menu[key]) {
-        el.querySelector("span").textContent = content.menu[key];
+        el.querySelector("span").textContent = content.menu[key] + "  ";
       }
     }
 
