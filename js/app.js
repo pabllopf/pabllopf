@@ -1025,10 +1025,7 @@ function renderProjectsPage(lang, page) {
                         <li><i class="icon-eye2"></i>${proj.forks}</li>
                         <li><i class="icon-download22"></i>${proj.downloads}</li>
                         <li>
-                            <a href="${proj.url}" class="accessible-link" rel="noopener" aria-label="Email" target="_blank">
-                                ${proj.buttonText?.[lang] || proj.buttonText?.["en"] || "View"}
-                                <i class="icon-arrow-right22"></i>
-                            </a>
+                            <a href="${proj.url}" class="accessible-link" rel="noopener" aria-label="Email" target="_blank">${proj.buttonText?.[lang] || proj.buttonText?.["en"] || "View"}</a>
                         </li>
                     </ul>
                 </div>
