@@ -613,7 +613,7 @@ textarea.input1 {
 .testimonial-left .testimonial-position-company,
 .testimonial-left .testimonial-date {
   font-size: 0.85rem;
-  color: darkgrey;
+  color: whitesmoke;
   margin-top: 2px;
   text-align: center;
 }
@@ -635,7 +635,7 @@ textarea.input1 {
   position: relative;
   padding: 10px 15px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   font-style: italic;
 }
 
@@ -654,6 +654,7 @@ textarea.input1 {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.12);
+  outline: 2px dashed #1E90FF;
 }
 
 
