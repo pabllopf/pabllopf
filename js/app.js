@@ -1447,7 +1447,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.classList.add('nav-is-visible');
     trigger.setAttribute('aria-expanded', 'true');
     isOpen = true;
-    document.body.style.overflow = 'hidden'; // evita scroll fondo en móvil
+    //document.body.style.overflow = 'hidden'; // evita scroll fondo en móvil
   }
 
   function closeNav() {
