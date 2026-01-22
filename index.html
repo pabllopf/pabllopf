@@ -38,20 +38,28 @@
 	<!-- Hreflang -->
 	<link rel="alternate" hreflang="x-default" href="https://www.pabllopf.dev/" />
 
-	<!--Fonts-->
-	<link href="/css/fonts.css" rel="stylesheet">
+	<!-- CRITICAL CSS (el único bloqueante permitido) -->
+	<link rel="stylesheet" href="/css/main.css">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/flag-icon.css">
+	<!-- Carga asíncrona del resto -->
+	<link rel="preload" href="/css/bootstrap.css" as="style" onload="this.rel='stylesheet'">
+	<link rel="preload" href="/css/icomoon.css" as="style" onload="this.rel='stylesheet'">
+	<link rel="preload" href="/css/devicon.min.css" as="style" onload="this.rel='stylesheet'">
+	<link rel="preload" href="/css/flag-icon.css" as="style" onload="this.rel='stylesheet'">
+	<link rel="preload" href="/css/style.css" as="style" onload="this.rel='stylesheet'">
+	<link rel="preload" href="/css/fonts.css" as="style" onload="this.rel='stylesheet'">
+	<link rel="preload" href="/css/animate.css" as="style" onload="this.rel='stylesheet'">
 
-
-	<link rel="stylesheet" href="css/devicon.min.css">
-
+	<noscript>
+		<link rel="stylesheet" href="/css/bootstrap.css">
+		<link rel="stylesheet" href="/css/icomoon.css">
+		<link rel="stylesheet" href="/css/devicon.min.css">
+		<link rel="stylesheet" href="/css/flag-icon.css">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		<link rel="stylesheet" href="/css/animate.css">
+	</noscript>
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="images/logo_v4.webp" />
@@ -64,7 +72,8 @@
 	<!--                                        HEADER                                                  -->
 	<!---------------------------------------------------------------------------------------------------->
 
-	<header role="banner" id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" data-stellar-background-ratio="0.5">
+	<header role="banner" id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
+		data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -124,30 +133,29 @@
 				<span aria-hidden="true"></span>
 			</a>
 			<ul>
-				<li><a href="#fh5co-about"  rel="noopener" aria-label="Email"
-						id="menu-about"><span>About</span></a></li>
-				<li><a href="#fh5co-resume"  rel="noopener" aria-label="Email"
+				<li><a href="#fh5co-about" rel="noopener" aria-label="Email" id="menu-about"><span>About</span></a></li>
+				<li><a href="#fh5co-resume" rel="noopener" aria-label="Email"
 						id="menu-experience"><span>Experience</span></a></li>
-				<li><a href="#fh5co-resume-education"  rel="noopener" aria-label="Email"
+				<li><a href="#fh5co-resume-education" rel="noopener" aria-label="Email"
 						id="menu-education"><span>Education</span></a></li>
-				<li><a href="#fh5co-certifications"  rel="noopener" aria-label="Email"
+				<li><a href="#fh5co-certifications" rel="noopener" aria-label="Email"
 						id="menu-certifications"><span>Certifications</span></a></li>
-				<li><a href="#fh5co-awards"  rel="noopener" aria-label="Email"
-						id="menu-awards"><span>Awards</span></a></li>
-				<li><a href="#fh5co-features"  rel="noopener" aria-label="Email"
-						id="menu-howIWork"><span>How I Work</span></a></li>
-				<li><a href="#fh5co-skills-modern"  rel="noopener" aria-label="Email"
+				<li><a href="#fh5co-awards" rel="noopener" aria-label="Email" id="menu-awards"><span>Awards</span></a>
+				</li>
+				<li><a href="#fh5co-features" rel="noopener" aria-label="Email" id="menu-howIWork"><span>How I
+							Work</span></a></li>
+				<li><a href="#fh5co-skills-modern" rel="noopener" aria-label="Email"
 						id="menu-skills"><span>Skills</span></a></li>
-				<li><a href="#fh5co-courses"  rel="noopener" aria-label="Email"
+				<li><a href="#fh5co-courses" rel="noopener" aria-label="Email"
 						id="menu-courses"><span>Courses</span></a></li>
-				<li><a href="#fh5co-blog"  rel="noopener" aria-label="Email"
-						id="menu-projects"><span>Projects</span></a></li>
-				<li><a href="#blogs-section"  rel="noopener" aria-label="Email"
-						id="menu-blogs"><span>Articles</span></a></li>
-				<li><a href="#fh5co-hobbies"  rel="noopener" aria-label="Email"
+				<li><a href="#fh5co-blog" rel="noopener" aria-label="Email" id="menu-projects"><span>Projects</span></a>
+				</li>
+				<li><a href="#blogs-section" rel="noopener" aria-label="Email" id="menu-blogs"><span>Articles</span></a>
+				</li>
+				<li><a href="#fh5co-hobbies" rel="noopener" aria-label="Email"
 						id="menu-hobbies"><span>Hobbies</span></a></li>
-				<li><a href="#contact-form"  rel="noopener" aria-label="Email"
-						id="menu-contact"><span>Contact</span></a></li>
+				<li><a href="#contact-form" rel="noopener" aria-label="Email" id="menu-contact"><span>Contact</span></a>
+				</li>
 			</ul>
 			<span aria-hidden="true" class="stretchy-nav-bg"></span>
 		</nav>
