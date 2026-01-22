@@ -45,6 +45,7 @@ function setupLazySections(lang) {
   { id: "blogs-section", loader: loadBlogs },
   { id: "fh5co-hobbies", loader: loadHobbies },
   { id: "fh5co-stats", loader: loadStatsContent },
+  { id: "contact-form", loader: loadContactContent },
   { id: "fh5co-footer", loader: loadAndRenderFooter }
 ];
 

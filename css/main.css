@@ -72,6 +72,14 @@ input.input1 {
   border-width: 2px;
 }
 
+
+/* Placeholder */
+.input::placeholder {
+  color: #888;
+  opacity: 1; /* Safari */
+}
+
+
 textarea.input1 {
   min-height: 150px;
   padding: 12px 30px;
@@ -1660,7 +1668,6 @@ textarea.input1 {
   outline: 2px dashed var(--hover-accent);
   text-decoration: underline;
 }
-
 
 
 
