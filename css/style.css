@@ -597,9 +597,9 @@ h1, h2, h3, h4, h5, h6, figure {
     margin-left: -23px !important;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
   .timeline > li > .timeline-badge {
-    margin-left: -23px !important;
+    margin-left: 40px !important;
   }
 }
 .timeline > li > .timeline-badge i {
