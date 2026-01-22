@@ -1,3 +1,15 @@
+:root{
+  --font-family: monospace;
+
+  --primary: #010f4c;
+  --secondary: white;
+  --tersary: gold;
+  --muted-text: grey;
+  --hover-accent: blue;  
+  --alert-color: red;
+}
+
+
 .contact1 {
   width: 100%;
   min-height: 100%;
@@ -14,7 +26,7 @@
 
 .container-contact1 {
   width: 1163px;
-  background: white;
+  background: var(--secondary);
   overflow: hidden;
 
   display: -webkit-box;
@@ -48,9 +60,8 @@
 
 .contact1-form-title {
   display: block;
-  font-family: Montserrat-ExtraBold;
   font-size: 24px;
-  color: #010f4c;
+  color: var(--primary);
   line-height: 1.2;
   text-align: center;
   padding-bottom: 44px;
@@ -80,7 +91,6 @@ textarea.input1 {
 .input1 {
   display: block;
   width: 100%;
-  font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;
 }
@@ -95,7 +105,7 @@ textarea.input1 {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: #010f4c;
+  color: var(--primary);
 }
 
 .input1:focus+.shadow-input1 {
@@ -132,11 +142,10 @@ textarea.input1 {
   min-width: 193px;
   height: 50px;
   border-radius: 25px;
-  background: #010f4c;
-  font-family: Montserrat-Bold;
+  background: var(--primary);
   font-size: 15px;
   line-height: 1.5;
-  color: white;
+  color: var(--secondary);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -162,7 +171,7 @@ textarea.input1 {
 }
 
 .contact1-form-btn:hover {
-  background: darkgrey;
+  background: var(--muted-text);
 }
 
 .contact1-form-btn:hover i {
@@ -235,8 +244,8 @@ textarea.input1 {
   content: attr(data-validate);
   position: absolute;
   max-width: 70%;
-  background-color: white;
-  border: 1px solid red;
+  background-color: var(--secondary);
+  border: 1px solid var(--alert-color);
   border-radius: 13px;
   padding: 4px 25px 4px 10px;
   top: 50%;
@@ -248,8 +257,7 @@ textarea.input1 {
   right: 8px;
   pointer-events: none;
 
-  font-family: Montserrat-Medium;
-  color: red;
+  color: var(--alert-color);
   font-size: 13px;
   line-height: 1.4;
   text-align: left;
@@ -265,10 +273,9 @@ textarea.input1 {
 
 .alert-validate::after {
   content: "\f06a";
-  font-family: FontAwesome;
   display: block;
   position: absolute;
-  color: red;
+  color: var(--alert-color);
   font-size: 15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -307,7 +314,7 @@ textarea.input1 {
   flex: 1 1 auto;
   /* se encogen proporcionalmente */
   min-width: 0;
-  /* permite que se reduzcan más allá de su contenido */
+  /* permite que se var(--alert-color)uzcan más allá de su contenido */
   text-align: center;
   white-space: nowrap;
   /* evita salto de línea dentro de la caja */
@@ -320,7 +327,7 @@ textarea.input1 {
   border-radius: 4px;
   font-size: clamp(6px, 1vw, 10px);
   /* fuente que se ajusta a la pantalla */
-  background-color: white;
+  background-color: var(--secondary);
   box-sizing: border-box;
   /* incluye padding en ancho total */
   display: flex;
@@ -360,7 +367,7 @@ textarea.input1 {
   background-size: cover;
   background-position: center;
   display: none;
-  border: 1px solid #010f4c;
+  border: 1px solid var(--primary);
   border-radius: 10px;
 }
 
@@ -369,8 +376,8 @@ textarea.input1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #010f4c;
-  color: white;
+  background-color: var(--primary);
+  color: var(--secondary);
   border: none;
   padding: 4px 8px;
   cursor: pointer;
@@ -409,7 +416,7 @@ textarea.input1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: darkgray;
+  background: var(--muted-text)
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,7 +434,7 @@ textarea.input1 {
   top: 30px;
   right: 40px;
   font-size: 28px;
-  color: white;
+  color: var(--secondary);
   cursor: pointer;
 }
 
@@ -442,18 +449,18 @@ textarea.input1 {
 
 .recommendation-card {
   position: relative;
-  color: white;
+  color: var(--secondary);
   /* Texto en blanco */
-  border: 1px solid darkgrey;
+  border: 1px solid var(--muted-text);
   /* Borde blanco fino y elegante */
   border-radius: 12px;
-  /* Esquinas redondeadas */
+  /* Esquinas var(--alert-color)ondeadas */
   padding: 15px;
   cursor: pointer;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--primary);
   /* Fondo muy sutil para no romper el estilo */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px var(--primary);
   /* Sombra ligera para efecto de profundidad */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   height: 500px;
@@ -463,9 +470,9 @@ textarea.input1 {
 .recommendation-card:hover {
   transform: translateY(-8px) scale(1.03);
   /* Hover: elevar y agrandar ligeramente */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 25px var(--primary);
   /* Sombra más pronunciada al pasar el ratón */
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--primary);
   /* Fondo ligeramente más visible */
 }
 
@@ -488,13 +495,13 @@ textarea.input1 {
 .recommendation-card h3,
 .recommendation-card p {
   margin: 5px 0;
-  color: white;
+  color: var(--secondary);
   /* Texto en blanco */
   font-size: 1.2em;
 }
 
 .recommendation-card span {
-  color: darkgrey;
+  color: var(--muted-text);
   /* Texto en blanco */
   font-size: 0.8em;
 }
@@ -506,7 +513,7 @@ textarea.input1 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--primary);
   display: none;
   justify-content: center;
   align-items: center;
@@ -533,8 +540,8 @@ textarea.input1 {
   right: 15px;
   width: 50px;
   height: 50px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -542,12 +549,12 @@ textarea.input1 {
   border-radius: 50%;
   cursor: pointer;
   z-index: 10000;
-  box-shadow: 0 0 10px darkgrey;
+  box-shadow: 0 0 10px var(--muted-text);
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .close-modal:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--primary);
   transform: scale(1.2);
 }
 
@@ -573,10 +580,10 @@ textarea.input1 {
 .pm-testimonial-card {
   flex: 0 0 500px;
   display: flex;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--primary);
   border-radius: 16px;
   padding: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 20px var(--primary);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   cursor: default;
   position: relative;
@@ -597,7 +604,7 @@ textarea.input1 {
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid white;
+  border: 2px solid var(--secondary);
   margin-bottom: 10px;
 }
 
@@ -606,14 +613,14 @@ textarea.input1 {
   margin: 0;
   font-size: 1rem;
   font-weight: bold;
-  color: white;
+  color: var(--secondary);
   text-align: center;
 }
 
 .testimonial-left .testimonial-position-company,
 .testimonial-left .testimonial-date {
   font-size: 0.85rem;
-  color: whitesmoke;
+  color: var(--secondary);
   margin-top: 2px;
   text-align: center;
 }
@@ -631,11 +638,11 @@ textarea.input1 {
   font-size: 1.2rem;
   /* más grande */
   line-height: 1.5;
-  color: white;
+  color: var(--secondary);
   position: relative;
   padding: 10px 15px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--primary);
   font-style: italic;
 }
 
@@ -652,9 +659,9 @@ textarea.input1 {
 /* Hover efecto */
 .pm-testimonial-card:hover {
   transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.12);
-  outline: 2px dashed #1E90FF;
+  box-shadow: 0 12px 25px var(--primary);
+  background: var(--primary);
+  outline: 2px dashed var(--hover-accent);
 }
 
 
@@ -665,8 +672,8 @@ textarea.input1 {
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
   font-size: 2rem;
   border-radius: 50%;
   cursor: pointer;
@@ -674,7 +681,7 @@ textarea.input1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px var(--primary);
   opacity: 0;
   /* invisibles por defecto */
   transition: opacity 0.3s ease;
@@ -714,11 +721,11 @@ textarea.input1 {
 
 /* Tarjetas de cursos */
 .course-card {
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: var(--secondary);
+  border: 1px solid var(--primary);
   border-radius: 12px;
   overflow: hidden;
-  color: darkgrey;
+  color: var(--muted-text);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
@@ -727,8 +734,8 @@ textarea.input1 {
 
 .course-card:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  outline: 2px dashed #1E90FF;
+  box-shadow: 0 10px 20px var(--primary);
+  outline: 2px dashed var(--hover-accent);
 }
 
 .course-card img {
@@ -744,12 +751,12 @@ textarea.input1 {
 .course-card .course-content h3 {
   font-size: 1rem;
   margin: 5px 0;
-  color: #010f4c;
+  color: var(--primary);
 }
 
 .course-card .course-content p {
   font-size: 0.85rem;
-  color: darkgrey;
+  color: var(--muted-text);
   margin: 3px 0;
 }
 
@@ -760,7 +767,7 @@ textarea.input1 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
+  background: var(--primary);
   display: none;
   justify-content: center;
   align-items: center;
@@ -773,7 +780,7 @@ textarea.input1 {
   height: 90%;
   border-radius: 12px;
   overflow: hidden;
-  background: white;
+  background: var(--secondary);
 }
 
 .course-modal iframe {
@@ -788,8 +795,8 @@ textarea.input1 {
   right: 15px;
   width: 50px;
   height: 50px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -797,7 +804,7 @@ textarea.input1 {
   border-radius: 50%;
   cursor: pointer;
   z-index: 10000;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px var(--primary);
 }
 
 /* Paginación */
@@ -810,20 +817,20 @@ textarea.input1 {
   margin: 0 5px;
   padding: 6px 12px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--primary);
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
 
 .page-btn.active {
-  background: darkgrey;
-  color: white;
-  border-color: darkgrey;
+  background: var(--muted-text);
+  color: var(--secondary);
+  border-color: var(--muted-text);
 }
 
 .page-btn:hover {
-  background: darkgray;
-  color: white;
+  background: var(--muted-text)
+  color: var(--secondary);
 }
 
 
@@ -848,16 +855,16 @@ textarea.input1 {
   max-width: 400px;
   padding: 10px 15px;
   border-radius: 12px;
-  border: 1px solid white;
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
+  border: 1px solid var(--secondary);
+  background: var(--primary);
+  color: var(--secondary);
   font-size: 0.95rem;
   margin: 0 auto;
   display: block;
 }
 
 .blogs-search-input::placeholder {
-  color: darkgrey;
+  color: var(--muted-text);
 }
 
 /* Grid artículos */
@@ -868,38 +875,38 @@ textarea.input1 {
 /* Card tipo artículo con esquina partida */
 .blog-pin-card {
   position: relative;
-  background: white;
+  background: var(--secondary);
   border-radius: 16px;
   padding: 25px 20px 15px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
-  border: 1px solid #010f4c;
+  border: 1px solid var(--primary);
   height: 100%;
 }
 
 .blog-pin-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  outline: 2px dashed #1E90FF;
+  box-shadow: 0 15px 30px var(--primary);
+  outline: 2px dashed var(--hover-accent);
 }
 
 .blog-pin-card h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #010f4c;
+  color: var(--primary);
   margin-bottom: 5px;
 }
 
 .blog-meta {
   font-size: 0.85rem;
-  color: #010f4c;
+  color: var(--primary);
   margin-bottom: 10px;
   display: block;
 }
 
 .blog-pin-card p {
   font-size: 0.95rem;
-  color: #010f4c;
+  color: var(--primary);
   line-height: 1.5;
   margin: 0;
 }
@@ -922,9 +929,9 @@ textarea.input1 {
 }
 
 .pagination-btn {
-  background: white;
-  border: 1px solid #010f4c;
-  color: #010f4c;
+  background: var(--secondary);
+  border: 1px solid var(--primary);
+  color: var(--primary);
   padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
@@ -932,14 +939,14 @@ textarea.input1 {
 }
 
 .pagination-btn.active {
-  background: white;
-  border: 2px solid #1E90FF;
-  color: #010f4c;
+  background: var(--secondary);
+  border: 2px solid var(--hover-accent);
+  color: var(--primary);
 }
 
 .pagination-btn:hover {
-  border-color: #1E90FF;
-  color: #010f4c;
+  border-color: var(--hover-accent);
+  color: var(--primary);
 }
 
 
@@ -951,13 +958,13 @@ textarea.input1 {
 
 
 #fh5co-skills-modern {
-  background: white;
+  background: var(--secondary);
   padding: 60px 0;
 }
 
 /* Bloques grandes */
 .skills-group {
-  border: 1px solid #e4e7ec;
+  border: 1px solid var(--secondary);
   border-radius: 18px;
   padding: 25px;
   margin-bottom: 30px;
@@ -965,7 +972,7 @@ textarea.input1 {
 
 .skills-group h3 {
   font-weight: 600;
-  color: #010f4c;
+  color: var(--primary);
   margin-bottom: 15px;
 }
 
@@ -978,12 +985,12 @@ textarea.input1 {
 
 /* Tarjeta de skill */
 .skill-card {
-  background: whitesmoke;
+  background: var(--secondary);
   border-radius: 12px;
   padding: 10px 14px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #010f4c;
+  color: var(--primary);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -996,14 +1003,14 @@ textarea.input1 {
 
 .skill-card:hover {
   transform: translateY(-3px);
-  background: #010f4c;
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
 }
 
 
 .skills-group {
-  background: white;
-  border: 2px solid #010f4c;
+  background: var(--secondary);
+  border: 2px solid var(--primary);
   border-radius: 20px;
   padding: 25px 25px 15px 25px;
   margin-bottom: 25px;
@@ -1018,16 +1025,16 @@ textarea.input1 {
   left: 0;
   width: 100%;
   height: 6px;
-  background: #010f4c;
+  background: var(--primary);
   border-radius: 20px 20px 0 0;
 }
 
 
 
 .skill-filter-btn {
-  background: white;
-  border: 2px solid #010f4c;
-  color: #010f4c;
+  background: var(--secondary);
+  border: 2px solid var(--primary);
+  color: var(--primary);
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -1037,8 +1044,8 @@ textarea.input1 {
 }
 
 .skill-filter-btn:hover {
-  background: #010f4c;
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
 }
 
 
@@ -1057,12 +1064,12 @@ textarea.input1 {
 
 /* Tarjetas de impacto */
 .impact-card {
-  background: white;
+  background: var(--secondary);
   border-radius: 14px;
   padding: 18px 18px 16px 18px;
   margin-bottom: 25px;
-  border: 1px solid #010f4c;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--primary);
+  box-shadow: 0 6px 14px var(--tersary);
   transition: transform .25s ease, box-shadow .25s ease;
   height: 100%;
   position: relative;
@@ -1071,7 +1078,7 @@ textarea.input1 {
 /* efecto hover */
 .impact-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 22px var(--primary);
 }
 
 /* etiqueta tipo logro */
@@ -1079,8 +1086,8 @@ textarea.input1 {
   position: absolute;
   top: -10px;
   left: 15px;
-  background: #010f4c;
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
   font-size: 12px;
   font-weight: 600;
   padding: 4px 10px;
@@ -1091,14 +1098,14 @@ textarea.input1 {
 .impact-card h4 {
   font-weight: 700;
   font-size: 15px;
-  color: #010f4c;
+  color: var(--primary);
   margin-bottom: 6px;
 }
 
 /* descripción */
 .impact-card p {
   font-size: 13px;
-  color: darkgrey;
+  color: var(--muted-text);
   margin-bottom: 8px;
 }
 
@@ -1106,14 +1113,14 @@ textarea.input1 {
 .impact-result {
   font-size: 13px;
   font-weight: 600;
-  color: #010f4c;
+  color: var(--primary);
   margin-bottom: 6px;
 }
 
 /* tecnologías */
 .impact-tech {
   font-size: 12px;
-  color: darkgrey;
+  color: var(--muted-text);
   font-style: italic;
 }
 
@@ -1121,7 +1128,7 @@ textarea.input1 {
 .impact-icon {
   font-size: 24px;
   margin-bottom: 8px;
-  color: #010f4c;
+  color: var(--primary);
 }
 
 /* grid 3 columnas */
@@ -1144,8 +1151,8 @@ textarea.input1 {
 
 /* Tarjetas de hobbies */
 .hobby-card {
-  background: white;
-  border: 2px solid #010f4c;
+  background: var(--secondary);
+  border: 2px solid var(--primary);
   border-radius: 16px;
   padding: 15px;
   margin-bottom: 20px;
@@ -1160,27 +1167,27 @@ textarea.input1 {
 
 .hobby-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  border-color: #1E90FF;
-  outline: 2px dashed #1E90FF;
+  box-shadow: 0 15px 30px var(--primary);
+  border-color: var(--hover-accent);
+  outline: 2px dashed var(--hover-accent);
 }
 
 .hobby-icon {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #010f4c;
+  color: var(--primary);
 }
 
 .hobby-card h3 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 8px;
-  color: #010f4c;
+  color: var(--primary);
 }
 
 .hobby-card p {
   font-size: 0.95rem;
-  color: #010f4c;
+  color: var(--primary);
   line-height: 1.4;
   margin-bottom: 10px;
 }
@@ -1229,18 +1236,18 @@ textarea.input1 {
 
 #fh5co-footer {
   padding: 40px 0;
-  background: #010f4c;
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
 }
 
 #fh5co-footer a {
-  color: white;
+  color: var(--secondary);
   text-decoration: none;
   transition: 0.3s;
 }
 
 #fh5co-footer a:hover {
-  color: goldenrod;
+  color: var(--tersary);
 }
 
 .btn-footer {
@@ -1248,16 +1255,16 @@ textarea.input1 {
   margin: 5px 10px;
   padding: 8px 20px;
   border-radius: 8px;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
   background: transparent;
   font-size: 1.2rem;
   transition: 0.3s;
 }
 
 .btn-footer:hover {
-  background: darkgrey;
-  color: #010f4c;
+  background: var(--muted-text);
+  color: var(--primary);
 }
 
 #footer-socials {
@@ -1270,7 +1277,7 @@ textarea.input1 {
 }
 
 #footer-madeby {
-  color: white;
+  color: var(--secondary);
   margin-bottom: 10px;
 }
 
@@ -1325,8 +1332,8 @@ textarea.input1 {
 /* Speech bubble */
 #contact-character .speech-bubble {
   position: relative;
-  background: #010f4c;
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
   padding: 2px 13px;
   border-radius: 16px;
   margin-top: 79px;
@@ -1344,7 +1351,7 @@ textarea.input1 {
   transform: translateX(-50%);
   border-width: 0 8px 10px 8px;
   border-style: solid;
-  border-color: transparent transparent #010f4c transparent;
+  border-color: transparent transparent var(--primary) transparent;
 }
 
 
@@ -1356,12 +1363,12 @@ textarea.input1 {
 .cd-stretchy-nav ul li {
 
   border-radius: 0px 0px 30px 0px;
-  background-color: darkgrey;
+  background-color: var(--muted-text);
 }
 
 /* Hover sobre el li */
 .cd-stretchy-nav ul li:hover {
-  background-color: darkgrey;
+  background-color: var(--muted-text);
 }
 
 /* Asegurar que el link ocupa todo el li */
@@ -1369,16 +1376,16 @@ textarea.input1 {
   display: block;
   width: 100%;
   height: 100%;
-  color: white;
+  color: var(--secondary);
 }
 
 .cd-stretchy-nav ul li a {
-  color: white;
+  color: var(--secondary);
 }
 
 /* Mantener color del texto */
 .cd-stretchy-nav ul li:hover a span {
-  color: white;
+  color: var(--secondary);
 }
 
 
@@ -1388,8 +1395,8 @@ textarea.input1 {
   margin-bottom: 10px;
   padding: 3px 10px;
   border-radius: 4px;
-  background: #010f4c;
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
   font-size: 1.2rem;
 }
 
@@ -1398,14 +1405,14 @@ textarea.input1 {
   padding: 6px 15px;
   border: none;
   border-radius: 8px;
-  background: #010f4c;
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
   cursor: pointer;
   transition: 0.3s;
 }
 
 .show-more-btn:hover {
-  background: #02154d;
+  background: var(--primary);
 }
 
 
@@ -1432,8 +1439,8 @@ textarea.input1 {
   height: 70px;
   border-radius: 50%;
   object-fit: contain;
-  background: white;
-  border: 2px solid whitesmoke;
+  background: var(--secondary);
+  border: 2px solid var(--secondary);
   padding: 6px;
 }
 
@@ -1447,15 +1454,15 @@ textarea.input1 {
   padding: 6px 15px;
   border: none;
   border-radius: 8px;
-  background: #010f4c;
-  color: white;
+  background: var(--primary);
+  color: var(--secondary);
   cursor: pointer;
   transition: 0.3s;
   font-size: 12px;
 }
 
 .experience-years:hover {
-  background: #02154dcf;
+  background: var(--primary);
 }
 
 
@@ -1469,7 +1476,7 @@ textarea.input1 {
 
 
 .awards-section {
-  background: white;
+  background: var(--secondary);
   padding: 80px 0;
 }
 
@@ -1479,7 +1486,7 @@ textarea.input1 {
 }
 
 .awards-subtitle {
-  color: darkgrey;
+  color: var(--muted-text);
   margin-top: 10px;
   font-size: 18px;
 }
@@ -1498,7 +1505,7 @@ textarea.input1 {
 .award-trophy {
   position: relative;
   font-size: 140px;
-  color: darkgoldenrod;
+  color: var(--tersary);
   transform-style: preserve-3d;
   animation: float 5s ease-in-out infinite;
 }
@@ -1511,7 +1518,7 @@ textarea.input1 {
 .trophy-glow {
   position: absolute;
   inset: -30px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.4), transparent 70%);
+  background: radial-gradient(circle, var(--tersary), transparent 70%);
   filter: blur(30px);
   z-index: 1;
 }
@@ -1551,18 +1558,18 @@ textarea.input1 {
 /* Award cards */
 .award-card {
   width: 420px;
-  background: whitesmoke;
+  background: var(--secondary);
   backdrop-filter: blur(10px);
   border-radius: 18px;
   padding: 20px;
-  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 35px 70px var(--tersary);
   cursor: pointer;
   transition: all 0.35s ease;
 }
 
 .award-card:hover {
   transform: scale(1.08) translateY(-10px);
-  box-shadow: 0 2px 20px goldenrod;
+  box-shadow: 0 2px 20px var(--tersary);
 }
 
 /* Text */
@@ -1573,13 +1580,13 @@ textarea.input1 {
 
 .award-card .award-meta {
   font-size: 14px;
-  color: #010f4c;
+  color: var(--primary);
   margin: 6px 0 10px;
 }
 
 .award-card p {
   font-size: 14px;
-  color: #010f4c;
+  color: var(--primary);
 }
 
 
@@ -1591,21 +1598,21 @@ textarea.input1 {
   right: 10px;
   width: 40px;
   height: 40px;
-  background-color: darkgrey;
+  background-color: var(--muted-text);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px var(--primary);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   z-index: 10;
 }
 
 .emoji-badge:hover {
   transform: scale(1.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px var(--primary);
 }
 
 /* Tooltip personalizado */
@@ -1614,8 +1621,8 @@ textarea.input1 {
   bottom: 15%;
   left: 93%;
   transform: translateY(50%) translateX(10px);
-  background-color: darkgrey;
-  color: white;
+  background-color: var(--muted-text);
+  color: var(--secondary);
   padding: 6px 12px;
   border-radius: 0px 6px 6px 0px;
   font-size: 14px;
@@ -1639,7 +1646,7 @@ textarea.input1 {
 
 
 .accessible-link {
-  color: #1E90FF;
+  color: var(--hover-accent);
   /* DodgerBlue - WCAG compliant */
   text-decoration: underline;
   font-weight: 500;
@@ -1647,7 +1654,7 @@ textarea.input1 {
 
 .accessible-link:hover,
 .accessible-link:focus {
-  color: #1E90FF;
-  outline: 2px dashed #1E90FF;
+  color: var(--hover-accent);
+  outline: 2px dashed var(--hover-accent);
   text-decoration: underline;
 }
