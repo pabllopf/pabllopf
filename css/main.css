@@ -498,7 +498,7 @@ textarea.input1 {
 }
 
 .recommendation-card span {
-  color: var(--muted-text);
+  color: var(--secondary);
   /* Texto en blanco */
   font-size: 0.8em;
 }
