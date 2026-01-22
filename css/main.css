@@ -1599,6 +1599,33 @@ textarea.input1 {
 
 
 
+/* Media query para móviles */
+@media (max-width: 768px) {
+  /* Ocultar el trofeo central */
+  .award-trophy {
+    display: none;
+  }
+
+  /* Mostrar las tarjetas en bloque vertical */
+  .awards-showcase {
+    display: block; /* quitar flex */
+    margin-top: 30px;
+    gap: 0; /* ya no hace falta */
+    perspective: none; /* opcional, si quieres quitar el efecto 3D */
+  }
+
+  .award-card {
+    width: 100%; /* que ocupen todo el contenedor */
+    margin: 20px 0; /* margen superior e inferior */
+    box-sizing: border-box;
+  }
+}
+
+
+
+
+
+
 
 .emoji-badge {
   position: absolute;
