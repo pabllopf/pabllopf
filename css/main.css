@@ -41,8 +41,7 @@
   padding: 90px 130px 88px 148px;
 }
 
-/*------------------------------------------------------------------
-[  ]*/
+
 .contact1-pic {
   width: 480px;
 }
@@ -52,8 +51,7 @@
 }
 
 
-/*------------------------------------------------------------------
-[  ]*/
+
 .contact1-form {
   width: 390px;
 }
@@ -322,7 +320,7 @@ textarea.input1 {
   /* corta cualquier exceso de contenido */
   text-overflow: ellipsis;
   /* agrega "..." si el texto se queda corto */
-  border: 1px solid gray;
+  border: 1px solid var(--muted-text);
   padding: 2px 4px;
   border-radius: 4px;
   font-size: clamp(6px, 1vw, 10px);
@@ -469,11 +467,8 @@ textarea.input1 {
 
 .recommendation-card:hover {
   transform: translateY(-8px) scale(1.03);
-  /* Hover: elevar y agrandar ligeramente */
   box-shadow: 0 12px 25px var(--primary);
-  /* Sombra más pronunciada al pasar el ratón */
   background: var(--primary);
-  /* Fondo ligeramente más visible */
 }
 
 .recommendation-card img {
@@ -636,7 +631,6 @@ textarea.input1 {
 .testimonial-right p {
   margin: 0;
   font-size: 1.2rem;
-  /* más grande */
   line-height: 1.5;
   color: var(--secondary);
   position: relative;
@@ -962,7 +956,6 @@ textarea.input1 {
   padding: 60px 0;
 }
 
-/* Bloques grandes */
 .skills-group {
   border: 1px solid var(--secondary);
   border-radius: 18px;
