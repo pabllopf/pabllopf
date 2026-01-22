@@ -1413,3 +1413,117 @@ document.addEventListener("DOMContentLoaded", () => {
 
     checkCharacter(); // check on load
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(function () {
+  const nav = document.querySelector('.cd-stretchy-nav');
+  const trigger = nav.querySelector('.cd-nav-trigger');
+  const links = nav.querySelectorAll('ul li a');
+
+  let isOpen = false;
+
+  /* =========================
+     Helpers
+  ========================= */
+
+  function openNav() {
+    nav.classList.add('nav-is-visible');
+    trigger.setAttribute('aria-expanded', 'true');
+    isOpen = true;
+    document.body.style.overflow = 'hidden'; // evita scroll fondo en móvil
+  }
+
+  function closeNav() {
+    nav.classList.remove('nav-is-visible');
+    trigger.setAttribute('aria-expanded', 'false');
+    isOpen = false;
+    document.body.style.overflow = '';
+  }
+
+  function toggleNav(e) {
+    e.preventDefault();
+    isOpen ? closeNav() : openNav();
+  }
+
+  /* =========================
+     Trigger (botón hamburguesa)
+  ========================= */
+
+  trigger.addEventListener('click', toggleNav);
+
+  /* =========================
+     Click fuera del menú
+  ========================= */
+
+  document.addEventListener('click', function (e) {
+    if (!nav.contains(e.target) && isOpen) {
+      closeNav();
+    }
+  });
+
+  /* =========================
+     Tecla ESC
+  ========================= */
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen) {
+      closeNav();
+    }
+  });
+
+  /* =========================
+     Scroll suave + cerrar menú
+  ========================= */
+
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+
+      if (href.startsWith('#')) {
+        e.preventDefault();
+
+        const target = document.querySelector(href);
+        if (target) {
+          const headerOffset = 80; // ajusta si tu header es mayor
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+
+      closeNav();
+    });
+  });
+
+  /* =========================
+     Cerrar si cambia a desktop
+  ========================= */
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 1024 && isOpen) {
+      closeNav();
+    }
+  });
+
+})();

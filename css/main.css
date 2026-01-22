@@ -4,7 +4,7 @@
   --primary: #010f4c;
   --secondary: #ffffff;
   --tersary: #ffd700;
-  --muted-text: #808080;
+  --muted-text: #3e443d;
   --hover-accent: #0000ff;  
   --alert-color: #ff0000;
 }
@@ -1356,6 +1356,12 @@ textarea.input1 {
 /* ================================
    Stretchy Nav – LI hover background
    ================================ */
+
+.cd-stretchy-nav ul {
+  list-style: none;
+
+}
+
 
 .cd-stretchy-nav ul li {
 
