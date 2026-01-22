@@ -43,6 +43,7 @@ function setupLazySections(lang) {
   { id: "fh5co-courses", loader: loadCoursesCarousel },
   { id: "fh5co-blog", loader: loadProjects },
   { id: "blogs-section", loader: loadBlogs },
+  { id: "contact-character", loader: loadContactCharacter },
   { id: "fh5co-hobbies", loader: loadHobbies },
   { id: "fh5co-stats", loader: loadStatsContent },
   { id: "contact-form", loader: loadContactContent },
