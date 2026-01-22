@@ -2,7 +2,7 @@
    Global configuration
 ========================= */
 
-const DEFAULT_LANG = "en";
+const DEFAULT_LANG = "es";
 
 let escapeHTMLPolicy;
 
