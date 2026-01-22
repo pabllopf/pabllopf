@@ -561,6 +561,44 @@ textarea.input1 {
   transform: scale(1.2);
 }
 
+/* Media query para móviles */
+@media (max-width: 1000px) {
+  #letters-list {
+    display: flex;             /* fila horizontal */
+    overflow-x: auto;          /* scroll horizontal */
+    scroll-snap-type: x mandatory; /* encaje de cartas */
+    -webkit-overflow-scrolling: touch; /* suavizado en iOS */
+    gap: 15px;                 /* separación entre cartas */
+    padding-bottom: 10px;
+  }
+
+  #letters-list .recommendation-card {
+    flex: 0 0 80%;             /* ancho de cada carta */
+    max-width: 300px;          /* opcional: limitar ancho */
+    scroll-snap-align: start;  /* encaje al inicio */
+    margin-bottom: 0;          /* quitar margen inferior */
+  }
+
+  /* Ajuste de altura para evitar scroll vertical */
+  .recommendation-card {
+    height: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
